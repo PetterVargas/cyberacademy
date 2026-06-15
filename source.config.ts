@@ -55,6 +55,6 @@ export const blogPosts = defineCollections({
     title: z.string(),
     description: z.string().optional(),
     author: z.string().optional(),
-    date: z.string(),
+    date: z.union([z.string(), z.date().transform(d => d.toISOString().split('T')[0])]),
   }),
 });

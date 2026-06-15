@@ -103,7 +103,7 @@ export const getAdrPageMarkdownUrl = _adr.getPageMarkdownUrl;
 
 // ─── LLM text ─────────────────────────────────────────────────────────────────
 export async function getLLMText(page: {
-  data: { getText: (mode: string) => Promise<string>; title: string };
+  data: { getText: (type: 'processed' | 'raw') => Promise<string>; title: string };
   url: string;
 }) {
   const processed = await page.data.getText('processed');

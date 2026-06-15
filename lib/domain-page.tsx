@@ -6,7 +6,6 @@ import { notFound } from 'next/navigation';
 import { getMDXComponents } from '@/components/mdx';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
 import { gitConfig } from '@/lib/shared';
-import { Feedback } from '@/components/feedback/client';
 import type { Metadata } from 'next';
 
 type AnySource = {
@@ -45,13 +44,6 @@ export async function renderDomainPage(
       <DocsBody>
         <MDX components={getMDXComponents({ a: createRelativeLink(source as any, page) })} />
       </DocsBody>
-      <Feedback
-        onSendAction={async (feedback) => {
-          'use server';
-          console.log(feedback);
-          return {};
-        }}
-      />
     </DocsPage>
   );
 }

@@ -12,7 +12,6 @@ import { getMDXComponents } from '@/components/mdx';
 import type { Metadata } from 'next';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
 import { gitConfig } from '@/lib/shared';
-import { Feedback } from '@/components/feedback/client';
 
 export default async function Page(props: PageProps<'/overview/[[...slug]]'>) {
   const params = await props.params;
@@ -40,13 +39,6 @@ export default async function Page(props: PageProps<'/overview/[[...slug]]'>) {
           })}
         />
       </DocsBody>
-      <Feedback
-        onSendAction={async (feedback) => {
-          'use server';
-          console.log(feedback);
-          return {};
-        }}
-      />
     </DocsPage>
   );
 }

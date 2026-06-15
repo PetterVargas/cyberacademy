@@ -1,3 +1,4 @@
+import { z } from 'zod';
 import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
 import { remarkMdxMermaid, rehypeCodeDefaultOptions } from 'fumadocs-core/mdx-plugins';
@@ -50,4 +51,10 @@ export default defineConfig({
 export const blogPosts = defineCollections({
   type: 'doc',
   dir: 'content/blog',
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    author: z.string().optional(),
+    date: z.string(),
+  }),
 });

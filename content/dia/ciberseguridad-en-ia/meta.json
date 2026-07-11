@@ -1,0 +1,19 @@
+{
+  "title": "Curso de Ciberseguridad en IA",
+  "description": "Riesgos, gobernanza y protección de sistemas de inteligencia artificial",
+  "root": true,
+  "pages": [
+    "---Overview---",
+    "index",
+    "---Módulo 1---",
+    "modulo-1-fundamentos-de-seguridad-en-inteligencia-artificial",
+    "---Módulo 2---",
+    "modulo-2-seguridad-en-el-ciclo-de-vida-del-modelo",
+    "---Módulo 3---",
+    "modulo-3-amenazas-especificas-a-modelos-de-ia",
+    "---Módulo 4---",
+    "modulo-4-privacidad-y-etica-en-la-ia",
+    "---Módulo 5---",
+    "modulo-5-gobierno-de-la-seguridad-en-ia"
+  ]
+}

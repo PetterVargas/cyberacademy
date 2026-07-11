@@ -20,7 +20,6 @@ const docsConfig = {
   },
 };
 
-export const overviewDocs = defineDocs({ dir: 'content/overview', ...docsConfig });
 export const cyberusuarioDocs = defineDocs({ dir: 'content/cyberusuario', ...docsConfig });
 export const corDocs = defineDocs({ dir: 'content/cor', ...docsConfig });
 export const cipDocs = defineDocs({ dir: 'content/cip', ...docsConfig });

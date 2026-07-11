@@ -1,0 +1,10 @@
+{
+  "title": "Plan de Recuperación ante Desastres (DRP)",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "estrategias-de-recuperacion-de-infraestructura-tecnologica",
+    "respaldo-y-recuperacion-de-datos-criticos",
+    "priorizacion-de-sistemas-en-el-proceso-de-recuperacion"
+  ]
+}

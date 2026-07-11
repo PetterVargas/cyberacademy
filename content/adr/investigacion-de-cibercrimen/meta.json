@@ -1,0 +1,19 @@
+{
+  "title": "Curso de Investigación de CiberCrimen",
+  "description": "Técnicas de investigación y análisis de delitos informáticos",
+  "root": true,
+  "pages": [
+    "---Overview---",
+    "index",
+    "---Módulo 1---",
+    "modulo-1-panorama-del-cibercrimen",
+    "---Módulo 2---",
+    "modulo-2-marco-legal-de-la-investigacion-de-cibercrimen",
+    "---Módulo 3---",
+    "modulo-3-tecnicas-de-investigacion-digital",
+    "---Módulo 4---",
+    "modulo-4-evidencia-digital-en-procesos-penales",
+    "---Módulo 5---",
+    "modulo-5-coordinacion-con-autoridades"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Pruebas de Seguridad",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "analisis-estatico-de-codigo-sast",
+    "analisis-dinamico-y-pruebas-de-penetracion-dast-pentesting",
+    "gestion-de-dependencias-y-vulnerabilidades-sca"
+  ]
+}

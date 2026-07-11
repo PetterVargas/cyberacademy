@@ -1,0 +1,19 @@
+{
+  "title": "Curso de Ciberseguridad para el Negocio y Producto",
+  "description": "Seguridad aplicada a la estrategia de negocio y al ciclo de vida de productos",
+  "root": true,
+  "pages": [
+    "---Overview---",
+    "index",
+    "---Módulo 1---",
+    "modulo-1-seguridad-como-ventaja-competitiva",
+    "---Módulo 2---",
+    "modulo-2-seguridad-en-el-diseno-de-producto",
+    "---Módulo 3---",
+    "modulo-3-datos-y-modelos-de-negocio",
+    "---Módulo 4---",
+    "modulo-4-seguridad-en-alianzas-y-terceros",
+    "---Módulo 5---",
+    "modulo-5-comunicacion-del-riesgo-al-negocio"
+  ]
+}

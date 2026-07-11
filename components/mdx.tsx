@@ -12,7 +12,6 @@ import { InlineTOC } from 'fumadocs-ui/components/inline-toc';
 import { Step, Steps } from 'fumadocs-ui/components/steps';
 import * as TabsComponents from 'fumadocs-ui/components/tabs';
 import { TypeTable } from 'fumadocs-ui/components/type-table';
-import { RutasGraph } from '@/components/rutas-graph';
 import type { MDXComponents } from 'mdx/types';
 
 export function getMDXComponents(components?: MDXComponents) {
@@ -38,7 +37,6 @@ export function getMDXComponents(components?: MDXComponents) {
     Steps,
     ...TabsComponents,
     TypeTable,
-    RutasGraph,
     ...components,
   } satisfies MDXComponents;
 }

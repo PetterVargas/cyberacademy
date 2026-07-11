@@ -1,0 +1,19 @@
+{
+  "title": "Curso de Ciberseguridad para Líderes",
+  "description": "El rol de los líderes en la cultura de seguridad y la toma de decisiones informadas",
+  "root": true,
+  "pages": [
+    "---Overview---",
+    "index",
+    "---Módulo 1---",
+    "modulo-1-ciberseguridad-como-prioridad-estrategica",
+    "---Módulo 2---",
+    "modulo-2-gobierno-y-gestion-de-riesgos",
+    "---Módulo 3---",
+    "modulo-3-toma-de-decisiones-ante-incidentes",
+    "---Módulo 4---",
+    "modulo-4-liderazgo-y-cultura-organizacional",
+    "---Módulo 5---",
+    "modulo-5-ciberseguridad-en-la-cadena-de-valor"
+  ]
+}

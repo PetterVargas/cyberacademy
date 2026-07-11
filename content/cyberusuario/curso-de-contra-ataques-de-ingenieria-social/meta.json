@@ -1,0 +1,19 @@
+{
+  "title": "Curso contra Ataques de Ingeniería Social",
+  "description": "Cómo identificar y responder ante phishing, pretexting y otras técnicas de manipulación",
+  "root": true,
+  "pages": [
+    "---Overview---",
+    "index",
+    "---Módulo 1---",
+    "modulo-1-fundamentos-de-la-ingenieria-social",
+    "---Módulo 2---",
+    "modulo-2-phishing-y-sus-variantes",
+    "---Módulo 3---",
+    "modulo-3-tecnicas-de-manipulacion-presencial-y-digital",
+    "---Módulo 4---",
+    "modulo-4-senales-de-alerta-y-verificacion",
+    "---Módulo 5---",
+    "modulo-5-respuesta-ante-un-ataque-de-ingenieria-social"
+  ]
+}

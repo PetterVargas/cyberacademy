@@ -1,0 +1,10 @@
+{
+  "title": "Seguridad en el Código",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "owasp-top-10-y-vulnerabilidades-comunes-en-aplicaciones",
+    "analisis-estatico-de-codigo-sast",
+    "gestion-de-dependencias-y-componentes-de-terceros-sca"
+  ]
+}

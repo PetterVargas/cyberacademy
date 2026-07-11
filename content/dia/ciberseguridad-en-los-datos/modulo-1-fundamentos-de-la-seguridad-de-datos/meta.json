@@ -1,0 +1,10 @@
+{
+  "title": "Fundamentos de la Seguridad de Datos",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "clasificacion-de-datos-segun-sensibilidad-y-criticidad",
+    "ciclo-de-vida-de-los-datos-y-sus-riesgos-asociados",
+    "marco-normativo-de-proteccion-de-datos"
+  ]
+}

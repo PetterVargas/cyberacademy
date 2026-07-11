@@ -1,0 +1,10 @@
+{
+  "title": "Fundamentos del Threat Modeling",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "que-es-el-modelado-de-amenazas-y-cuando-aplicarlo",
+    "beneficios-del-threat-modeling-en-el-ciclo-de-desarrollo",
+    "roles-involucrados-en-un-ejercicio-de-modelado-de-amenazas"
+  ]
+}

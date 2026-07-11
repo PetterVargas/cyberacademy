@@ -1,0 +1,19 @@
+{
+  "title": "Curso de Ciberseguridad en Recursos Humanos",
+  "description": "Capacitación, onboarding seguro y cultura de seguridad del talento humano",
+  "root": true,
+  "pages": [
+    "---Overview---",
+    "index",
+    "---Módulo 1---",
+    "modulo-1-el-rol-de-recursos-humanos-en-la-ciberseguridad",
+    "---Módulo 2---",
+    "modulo-2-seguridad-en-el-proceso-de-contratacion",
+    "---Módulo 3---",
+    "modulo-3-gestion-de-accesos-durante-la-relacion-laboral",
+    "---Módulo 4---",
+    "modulo-4-gestion-de-la-desvinculacion",
+    "---Módulo 5---",
+    "modulo-5-cultura-de-seguridad-desde-recursos-humanos"
+  ]
+}

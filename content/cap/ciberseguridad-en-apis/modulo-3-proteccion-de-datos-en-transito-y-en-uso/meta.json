@@ -1,0 +1,10 @@
+{
+  "title": "Protección de Datos en Tránsito y en Uso",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "cifrado-y-proteccion-de-datos-en-las-comunicaciones-de-api",
+    "validacion-de-entradas-y-manejo-seguro-de-datos",
+    "exposicion-excesiva-de-datos-y-sobreexposicion-de-campos"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Seguridad en el Diseño de Producto",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "privacidad-y-seguridad-desde-el-diseno-security-by-design",
+    "requisitos-de-seguridad-en-historias-de-usuario",
+    "evaluacion-de-riesgo-en-nuevas-funcionalidades"
+  ]
+}

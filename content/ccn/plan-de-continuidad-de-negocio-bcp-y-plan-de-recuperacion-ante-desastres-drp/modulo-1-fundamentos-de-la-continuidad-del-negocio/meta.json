@@ -1,0 +1,10 @@
+{
+  "title": "Fundamentos de la Continuidad del Negocio",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "diferencias-entre-bcp-drp-y-gestion-de-crisis",
+    "marco-normativo-de-referencia-iso-22301",
+    "roles-y-responsabilidades-en-la-continuidad-del-negocio"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Seguridad en el Pipeline CI/CD",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "integracion-de-controles-de-seguridad-en-el-pipeline",
+    "gestion-de-secretos-y-credenciales-en-la-automatizacion",
+    "gates-de-seguridad-y-criterios-de-bloqueo-de-despliegues"
+  ]
+}

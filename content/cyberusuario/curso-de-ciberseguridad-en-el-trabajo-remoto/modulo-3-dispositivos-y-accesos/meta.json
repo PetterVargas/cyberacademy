@@ -1,0 +1,10 @@
+{
+  "title": "Dispositivos y Accesos",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "buenas-practicas-en-equipos-corporativos-y-byod",
+    "autenticacion-segura-y-gestion-de-accesos-remotos",
+    "actualizaciones-y-parches-en-dispositivos-remotos"
+  ]
+}

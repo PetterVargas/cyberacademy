@@ -1,0 +1,10 @@
+{
+  "title": "Phishing y sus Variantes",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "phishing-por-correo-electronico",
+    "smishing-sms-y-vishing-llamadas",
+    "spear-phishing-y-business-email-compromise-bec"
+  ]
+}

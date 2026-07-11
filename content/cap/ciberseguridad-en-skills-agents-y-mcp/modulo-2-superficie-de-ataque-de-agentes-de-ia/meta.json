@@ -1,0 +1,10 @@
+{
+  "title": "Superficie de Ataque de Agentes de IA",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "riesgos-de-inyeccion-de-prompts-y-manipulacion-de-instrucciones",
+    "riesgos-de-herramientas-y-permisos-otorgados-a-los-agentes",
+    "exposicion-de-datos-sensibles-a-traves-de-agentes-e-integraciones"
+  ]
+}

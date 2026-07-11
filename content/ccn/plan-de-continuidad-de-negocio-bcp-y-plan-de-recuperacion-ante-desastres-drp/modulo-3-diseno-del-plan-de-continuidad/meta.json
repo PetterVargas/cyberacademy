@@ -1,0 +1,10 @@
+{
+  "title": "Diseño del Plan de Continuidad",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "estrategias-de-continuidad-y-recuperacion",
+    "elaboracion-de-procedimientos-y-protocolos-de-activacion",
+    "diseno-de-sitios-alternos-y-capacidades-de-respaldo"
+  ]
+}

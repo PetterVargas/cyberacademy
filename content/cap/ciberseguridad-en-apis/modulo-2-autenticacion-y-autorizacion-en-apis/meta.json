@@ -1,0 +1,10 @@
+{
+  "title": "Autenticación y Autorización en APIs",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "mecanismos-de-autenticacion-api-keys-oauth-2-0-jwt",
+    "control-de-acceso-y-autorizacion-a-nivel-de-recurso",
+    "errores-comunes-de-autorizacion-en-apis-bola-bfla"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Seguridad del Puesto de Trabajo",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "gestion-y-hardening-de-endpoints-corporativos",
+    "politicas-de-seguridad-para-equipos-de-colaboradores",
+    "gestion-de-parches-y-actualizaciones-de-software"
+  ]
+}

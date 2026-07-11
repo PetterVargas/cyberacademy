@@ -1,0 +1,10 @@
+{
+  "title": "Seguridad en Integración y Despliegue",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "seguridad-en-pipelines-ci-cd",
+    "gestion-segura-de-contenedores-e-infraestructura-como-codigo",
+    "control-de-acceso-y-segregacion-de-ambientes"
+  ]
+}

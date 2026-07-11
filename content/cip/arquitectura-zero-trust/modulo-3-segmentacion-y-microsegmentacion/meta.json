@@ -1,0 +1,10 @@
+{
+  "title": "Segmentación y Microsegmentación",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "principios-de-microsegmentacion-de-redes",
+    "control-de-acceso-a-nivel-de-aplicacion-y-recurso",
+    "reduccion-de-la-superficie-de-ataque-mediante-segmentacion"
+  ]
+}

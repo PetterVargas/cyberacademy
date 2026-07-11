@@ -1,0 +1,19 @@
+{
+  "title": "Curso de Respuesta a Incidentes",
+  "description": "Playbooks, contención, erradicación y lecciones aprendidas",
+  "root": true,
+  "pages": [
+    "---Overview---",
+    "index",
+    "---Módulo 1---",
+    "modulo-1-fundamentos-de-la-respuesta-a-incidentes",
+    "---Módulo 2---",
+    "modulo-2-preparacion-y-deteccion",
+    "---Módulo 3---",
+    "modulo-3-contencion-erradicacion-y-recuperacion",
+    "---Módulo 4---",
+    "modulo-4-comunicacion-y-coordinacion",
+    "---Módulo 5---",
+    "modulo-5-lecciones-aprendidas-y-mejora-continua"
+  ]
+}

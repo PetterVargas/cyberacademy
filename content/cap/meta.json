@@ -1,4 +1,9 @@
 {
   "title": "CAP",
-  "pages": ["principal", "secundario"]
+  "pages": [
+    "threat-modeling",
+    "devops-y-appsec",
+    "ciberseguridad-en-apis",
+    "ciberseguridad-en-skills-agents-y-mcp"
+  ]
 }

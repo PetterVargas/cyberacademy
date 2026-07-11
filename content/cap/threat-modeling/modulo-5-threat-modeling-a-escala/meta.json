@@ -1,0 +1,10 @@
+{
+  "title": "Threat Modeling a Escala",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "automatizacion-y-herramientas-de-threat-modeling",
+    "threat-modeling-continuo-en-entornos-agiles",
+    "casos-practicos-de-modelado-de-amenazas-en-distintos-productos"
+  ]
+}

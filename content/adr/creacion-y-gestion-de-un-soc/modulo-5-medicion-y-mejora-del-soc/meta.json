@@ -1,0 +1,10 @@
+{
+  "title": "Medición y Mejora del SOC",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "metricas-clave-de-desempeno-mttd-mttr-cobertura",
+    "evaluacion-periodica-de-la-efectividad-del-soc",
+    "roadmap-de-evolucion-hacia-mayor-madurez"
+  ]
+}

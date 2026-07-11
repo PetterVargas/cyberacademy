@@ -1,0 +1,19 @@
+{
+  "title": "Curso de Ciberseguridad para Niños, Niñas y Adolescentes",
+  "description": "Ciberseguridad adaptada para las infancias y adolescencias, con lenguaje y ejemplos accesibles",
+  "root": true,
+  "pages": [
+    "---Overview---",
+    "index",
+    "---Módulo 1---",
+    "modulo-1-mi-vida-en-internet",
+    "---Módulo 2---",
+    "modulo-2-cuidando-mi-informacion",
+    "---Módulo 3---",
+    "modulo-3-reconociendo-el-peligro",
+    "---Módulo 4---",
+    "modulo-4-actuando-con-seguridad",
+    "---Módulo 5---",
+    "modulo-5-buenos-habitos-digitales"
+  ]
+}

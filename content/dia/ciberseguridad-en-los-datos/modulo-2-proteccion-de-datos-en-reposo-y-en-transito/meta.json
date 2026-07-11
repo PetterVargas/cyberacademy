@@ -1,0 +1,10 @@
+{
+  "title": "Protección de Datos en Reposo y en Tránsito",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "cifrado-de-datos-en-bases-de-datos-y-almacenamiento",
+    "proteccion-de-datos-durante-su-transmision",
+    "tokenizacion-y-enmascaramiento-de-datos-sensibles"
+  ]
+}

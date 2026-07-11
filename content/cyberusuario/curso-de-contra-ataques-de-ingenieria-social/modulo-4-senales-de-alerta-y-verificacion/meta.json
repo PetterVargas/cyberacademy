@@ -1,0 +1,10 @@
+{
+  "title": "Señales de Alerta y Verificación",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "como-identificar-solicitudes-sospechosas",
+    "verificacion-de-identidad-por-canales-alternativos",
+    "simulacros-de-phishing-y-su-valor-formativo"
+  ]
+}

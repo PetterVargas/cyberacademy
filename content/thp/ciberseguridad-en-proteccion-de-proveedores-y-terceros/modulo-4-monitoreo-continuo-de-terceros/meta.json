@@ -1,0 +1,10 @@
+{
+  "title": "Monitoreo Continuo de Terceros",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "monitoreo-continuo-de-la-postura-de-seguridad-de-proveedores",
+    "gestion-de-incidentes-que-involucran-a-terceros",
+    "reevaluacion-periodica-de-proveedores-criticos"
+  ]
+}

@@ -1,13 +1,12 @@
 import puppeteer from 'puppeteer';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { overviewSource, cyberusuarioSource, allDomainSources } from '@/lib/source';
+import { cyberusuarioSource, allDomainSources } from '@/lib/source';
 
 const BASE_URL = process.env.BASE_URL ?? 'http://localhost:3000';
 const OUT_DIR = 'pdfs';
 
 const urls = [
-  ...overviewSource.getPages().map((p) => p.url),
   ...cyberusuarioSource.getPages().map((p) => p.url),
   ...allDomainSources.flatMap((s) => s.getPages().map((p) => p.url)),
 ];

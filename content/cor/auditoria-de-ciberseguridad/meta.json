@@ -1,0 +1,19 @@
+{
+  "title": "Curso de Auditoría de Ciberseguridad",
+  "description": "Planificación, ejecución y seguimiento de auditorías de seguridad",
+  "root": true,
+  "pages": [
+    "---Overview---",
+    "index",
+    "---Módulo 1---",
+    "modulo-1-fundamentos-de-la-auditoria-de-ciberseguridad",
+    "---Módulo 2---",
+    "modulo-2-planificacion-de-la-auditoria",
+    "---Módulo 3---",
+    "modulo-3-ejecucion-de-la-auditoria",
+    "---Módulo 4---",
+    "modulo-4-reporte-de-hallazgos",
+    "---Módulo 5---",
+    "modulo-5-seguimiento-y-mejora-continua"
+  ]
+}

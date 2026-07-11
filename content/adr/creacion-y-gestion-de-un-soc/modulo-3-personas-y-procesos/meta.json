@@ -1,0 +1,10 @@
+{
+  "title": "Personas y Procesos",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "estructura-de-turnos-y-niveles-de-analistas",
+    "procesos-de-escalamiento-y-gestion-de-alertas",
+    "capacitacion-y-desarrollo-continuo-del-equipo-del-soc"
+  ]
+}

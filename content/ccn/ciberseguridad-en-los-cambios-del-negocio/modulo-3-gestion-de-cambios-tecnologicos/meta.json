@@ -1,0 +1,10 @@
+{
+  "title": "Gestión de Cambios Tecnológicos",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "evaluacion-de-riesgo-en-la-adopcion-de-nuevas-tecnologias",
+    "gestion-segura-del-cambio-en-la-infraestructura-tecnologica",
+    "control-de-versiones-y-aprobacion-de-cambios-criticos"
+  ]
+}

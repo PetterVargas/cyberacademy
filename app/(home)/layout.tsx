@@ -129,6 +129,7 @@ function Footer() {
                 <li><a href="https://divisioncero.com/herramientas?utm_source=kudo.divisioncero.com" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Herramientas</a></li>
                 <li><a href="https://docs.divisioncero.com?utm_source=kudo.divisioncero.com" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Documentación</a></li>
                 <li><a href="/cyberusuario" className="text-sm hover:underline">CyberUsuario</a></li>
+                <li><a href="#cyberguardianes" className="text-sm hover:underline">CyberGuardian</a></li>
               </ul>
             </div>
 
@@ -138,7 +139,7 @@ function Footer() {
               <ul className="space-y-2">
                 <li><a href="https://cyberacademy.divisioncero.com/?utm_source=kudo.divisioncero.com" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">CyberAcademy</a></li>
                 <li><a href="https://divisioncero.com/home/empresas?utm_source=kudo.divisioncero.com" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Ciberseguridad Empresarial</a></li>
-                <li><a href="/overview" className="text-sm hover:underline">Overview Kudo</a></li>
+                <li><a href="https://kudo.divisioncero.com/?utm_source=cyberacademy.divisioncero.com" className="text-sm hover:underline">Framework Kudo</a></li>
               </ul>
             </div>
 

@@ -1,0 +1,10 @@
+{
+  "title": "Gobierno de Identidad",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "revision-y-certificacion-periodica-de-accesos",
+    "segregacion-de-funciones-y-prevencion-de-conflictos-de-acceso",
+    "automatizacion-del-aprovisionamiento-y-desaprovisionamiento"
+  ]
+}

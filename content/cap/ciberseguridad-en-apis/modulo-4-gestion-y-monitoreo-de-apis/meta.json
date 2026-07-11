@@ -1,0 +1,10 @@
+{
+  "title": "Gestión y Monitoreo de APIs",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "uso-de-gateways-de-api-para-aplicar-controles-de-seguridad",
+    "limites-de-tasa-rate-limiting-y-proteccion-contra-abuso",
+    "monitoreo-y-deteccion-de-comportamiento-anomalo-en-apis"
+  ]
+}

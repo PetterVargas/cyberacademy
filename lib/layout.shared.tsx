@@ -1,22 +1,16 @@
 import type { BaseLayoutProps, LayoutTab } from 'fumadocs-ui/layouts/shared';
 import { getSidebarTabs } from 'fumadocs-ui/components/sidebar/tabs';
-import { appName, gitConfig, overviewRoute, cyberusuarioRoute } from './shared';
-import { overviewSource, cyberusuarioSource } from './source';
+import { appName, gitConfig, cyberusuarioRoute } from './shared';
+import { cyberusuarioSource } from './source';
 import * as PageTree from 'fumadocs-core/page-tree';
 import {
-  LayoutDashboard, ShieldCheck,
-  BookOpen, FileText, BookMarked, Map, UserCheck,
+  ShieldCheck,
+  FileText, BookMarked,
   Building2, Cloud, Code, RefreshCw, Users, Database, Search,
 } from 'lucide-react';
 import type { ReactNode } from 'react';
 
 export const sectionTabs: LayoutTab[] = [
-  {
-    title: 'Overview',
-    description: 'Visión general',
-    icon: <LayoutDashboard className="size-4" />,
-    url: overviewRoute,
-  },
   {
     title: 'CyberUsuario',
     description: 'Sistema de Gestión',
@@ -38,24 +32,9 @@ export const domainTabs: LayoutTab[] = [
 
 export const allTabs: LayoutTab[] = [...sectionTabs, ...domainTabs];
 
-const overviewIcons: Record<string, ReactNode> = {
-  Rutas: <Map className="size-4" />,
-  CyberUsuario: <UserCheck className="size-4" />,
-  'CyberGuardián': <ShieldCheck className="size-4" />,
-};
-
 const cyberusuarioIcons: Record<string, ReactNode> = {
   Políticas: <FileText className="size-4" />,
 };
-
-export function getOverviewSubTabs(): LayoutTab[] {
-  return getSidebarTabs(overviewSource.getPageTree(), {
-    transform: (option) => ({
-      ...option,
-      icon: overviewIcons[String(option.title)] ?? option.icon,
-    }),
-  });
-}
 
 export function getCyberusuarioSubTabs(): LayoutTab[] {
   return getSidebarTabs(cyberusuarioSource.getPageTree(), {

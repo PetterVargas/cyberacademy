@@ -1,0 +1,10 @@
+{
+  "title": "Privacidad y Ética en la IA",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "riesgos-de-privacidad-en-el-uso-de-datos-personales-por-ia",
+    "sesgos-algoritmicos-y-su-impacto-en-la-seguridad-y-confianza",
+    "principios-de-ia-responsable-y-transparente"
+  ]
+}

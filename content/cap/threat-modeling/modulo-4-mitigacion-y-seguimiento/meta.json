@@ -1,0 +1,10 @@
+{
+  "title": "Mitigación y Seguimiento",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "definicion-de-controles-y-contramedidas",
+    "documentacion-y-seguimiento-de-amenazas-identificadas",
+    "integracion-del-threat-modeling-en-el-ciclo-de-vida-del-producto"
+  ]
+}

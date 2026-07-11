@@ -1,0 +1,10 @@
+{
+  "title": "Cultura de Ciberseguridad y Reporte de Incidentes",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "politicas-de-seguridad-de-la-organizacion",
+    "como-reportar-un-incidente-o-sospecha",
+    "responsabilidad-compartida-en-la-seguridad"
+  ]
+}

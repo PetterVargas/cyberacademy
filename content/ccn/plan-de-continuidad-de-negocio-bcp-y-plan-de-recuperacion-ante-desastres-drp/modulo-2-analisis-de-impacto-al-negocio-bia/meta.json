@@ -1,0 +1,10 @@
+{
+  "title": "Análisis de Impacto al Negocio (BIA)",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "metodologia-para-realizar-un-business-impact-analysis",
+    "identificacion-de-procesos-criticos-y-tiempos-de-recuperacion",
+    "definicion-de-rto-y-rpo-por-proceso-critico"
+  ]
+}

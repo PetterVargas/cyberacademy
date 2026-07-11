@@ -1,0 +1,10 @@
+{
+  "title": "Fundamentos de la Informática Forense",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "principios-de-la-ciencia-forense-aplicada-a-lo-digital",
+    "marco-legal-y-admisibilidad-de-la-evidencia-digital",
+    "tipos-de-analisis-forense-disco-memoria-red-y-movil"
+  ]
+}

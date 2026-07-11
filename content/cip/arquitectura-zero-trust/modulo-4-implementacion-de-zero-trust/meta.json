@@ -1,0 +1,10 @@
+{
+  "title": "Implementación de Zero Trust",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "hoja-de-ruta-para-la-adopcion-progresiva-de-zero-trust",
+    "tecnologias-habilitadoras-ztna-sase-y-casb",
+    "retos-comunes-en-la-implementacion-de-zero-trust"
+  ]
+}

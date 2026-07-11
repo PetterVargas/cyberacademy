@@ -1,0 +1,10 @@
+{
+  "title": "Protección de Datos en el Dispositivo",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "bloqueo-de-pantalla-y-autenticacion-biometrica",
+    "cifrado-y-copias-de-seguridad",
+    "que-hacer-ante-perdida-o-robo-del-dispositivo"
+  ]
+}

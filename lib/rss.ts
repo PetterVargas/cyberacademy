@@ -1,5 +1,5 @@
 import { Feed } from 'feed';
-import { overviewSource, cyberusuarioSource, allDomainSources } from '@/lib/source';
+import { cyberusuarioSource, allDomainSources } from '@/lib/source';
 import { appName } from '@/lib/shared';
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000';
@@ -14,7 +14,6 @@ export function getRSS() {
   });
 
   const pages = [
-    ...overviewSource.getPages(),
     ...cyberusuarioSource.getPages(),
     ...allDomainSources.flatMap((s) => s.getPages()),
   ];

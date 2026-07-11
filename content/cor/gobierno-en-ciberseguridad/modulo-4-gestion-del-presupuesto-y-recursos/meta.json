@@ -1,0 +1,10 @@
+{
+  "title": "Gestión del Presupuesto y Recursos",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "elaboracion-del-presupuesto-del-programa-de-ciberseguridad",
+    "priorizacion-de-inversiones-segun-el-riesgo",
+    "justificacion-del-retorno-de-la-inversion-en-seguridad"
+  ]
+}

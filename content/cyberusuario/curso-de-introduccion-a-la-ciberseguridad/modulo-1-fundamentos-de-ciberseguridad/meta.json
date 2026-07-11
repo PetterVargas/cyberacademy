@@ -1,0 +1,10 @@
+{
+  "title": "Fundamentos de Ciberseguridad",
+  "description": "La importancia de la ciberseguridad en el mundo actual",
+  "pages": [
+    "index",
+    "que-es-la-ciberseguridad-y-por-que-importa",
+    "triada-cia-confidencialidad-integridad-y-disponibilidad",
+    "panorama-actual-de-amenazas-digitales"
+  ]
+}

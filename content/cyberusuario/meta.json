@@ -1,4 +1,17 @@
 {
-  "title": "SGSI",
-  "pages": ["politicas"]
+  "title": "CyberUsuario",
+  "pages": [
+    "curso-de-introduccion-a-la-ciberseguridad",
+    "curso-de-ciberseguridad-para-lideres",
+    "curso-de-ciberseguridad-para-el-negocio-y-producto",
+    "curso-de-contra-ataques-de-ingenieria-social",
+    "curso-de-desarrollo-seguro",
+    "curso-de-ciberseguridad-para-padres-y-adultos-responsables",
+    "curso-de-ciberseguridad-para-ninos-ninas-y-adolescentes",
+    "curso-de-ciberseguridad-en-el-trabajo-remoto",
+    "curso-de-ciberseguridad-en-proteccion-de-marca",
+    "curso-de-ciberseguridad-en-dispositivos-moviles",
+    "curso-de-ciberseguridad-en-entornos-digitales",
+    "curso-de-ciberseguridad-en-la-gestion-de-informacion-sensible"
+  ]
 }

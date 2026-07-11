@@ -1,0 +1,10 @@
+{
+  "title": "Pruebas Dinámicas y de Seguridad",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "analisis-dinamico-de-aplicaciones-dast",
+    "pruebas-de-seguridad-interactivas-iast",
+    "pruebas-de-penetracion-de-aplicaciones-antes-del-despliegue"
+  ]
+}

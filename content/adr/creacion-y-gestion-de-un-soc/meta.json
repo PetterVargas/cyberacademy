@@ -1,0 +1,19 @@
+{
+  "title": "Curso de Creación y Gestión de un SOC",
+  "description": "Diseño, implementación y operación de un centro de operaciones de seguridad",
+  "root": true,
+  "pages": [
+    "---Overview---",
+    "index",
+    "---Módulo 1---",
+    "modulo-1-fundamentos-de-un-soc",
+    "---Módulo 2---",
+    "modulo-2-diseno-del-soc",
+    "---Módulo 3---",
+    "modulo-3-personas-y-procesos",
+    "---Módulo 4---",
+    "modulo-4-operacion-del-soc",
+    "---Módulo 5---",
+    "modulo-5-medicion-y-mejora-del-soc"
+  ]
+}

@@ -1,4 +1,13 @@
 {
   "title": "ADR",
-  "pages": ["principal", "secundario"]
+  "pages": [
+    "ethical-hacking-red-team-pentesting-y-bug-bounty",
+    "investigacion-de-cibercrimen",
+    "informatica-forense",
+    "respuesta-a-incidentes",
+    "creacion-y-gestion-de-un-csirt-y-sirt",
+    "creacion-y-gestion-de-un-soc",
+    "investigaciones-tecnologicas",
+    "threat-intelligence"
+  ]
 }

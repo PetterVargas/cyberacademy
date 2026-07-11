@@ -1,9 +1,8 @@
 import { type FileObject, printErrors, scanURLs, validateFiles } from 'next-validate-link';
-import { overviewSource, cyberusuarioSource, allDomainSources } from '@/lib/source';
+import { cyberusuarioSource, allDomainSources } from '@/lib/source';
 import { domains } from '@/lib/shared';
 
 async function checkLinks() {
-  const allOverviewPages = overviewSource.getPages();
   const allCyberusuarioPages = cyberusuarioSource.getPages();
 
   const domainPopulate = Object.fromEntries(
@@ -19,10 +18,6 @@ async function checkLinks() {
   const scanned = await scanURLs({
     preset: 'next',
     populate: {
-      'overview/[[...slug]]': allOverviewPages.map((page) => ({
-        value: { slug: page.slugs },
-        hashes: page.data.toc.map((item) => item.url.slice(1)),
-      })),
       'cyberusuario/[[...slug]]': allCyberusuarioPages.map((page) => ({
         value: { slug: page.slugs },
         hashes: page.data.toc.map((item) => item.url.slice(1)),
@@ -32,7 +27,6 @@ async function checkLinks() {
   });
 
   const files = await Promise.all([
-    ...allOverviewPages.map(toFileObject),
     ...allCyberusuarioPages.map(toFileObject),
     ...allDomainSources.flatMap((s) => s.getPages().map(toFileObject)),
   ]);

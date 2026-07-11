@@ -1,0 +1,10 @@
+{
+  "title": "Fundamentos de Zero Trust",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "principios-del-modelo-zero-trust-nunca-confies-siempre-verifica",
+    "diferencias-entre-el-modelo-perimetral-tradicional-y-zero-trust",
+    "pilares-de-una-arquitectura-zero-trust-nist-sp-800-207"
+  ]
+}

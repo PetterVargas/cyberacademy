@@ -1,9 +1,5 @@
 export const appName = 'CyberAcademy';
 
-export const overviewRoute = '/overview';
-export const overviewImageRoute = '/og/overview';
-export const overviewContentRoute = '/llms.mdx/overview';
-
 export const cyberusuarioRoute = '/cyberusuario';
 export const cyberusuarioImageRoute = '/og/cyberusuario';
 export const cyberusuarioContentRoute = '/llms.mdx/cyberusuario';

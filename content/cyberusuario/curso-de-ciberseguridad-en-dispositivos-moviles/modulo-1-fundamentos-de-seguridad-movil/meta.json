@@ -1,0 +1,10 @@
+{
+  "title": "Fundamentos de Seguridad Móvil",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "riesgos-especificos-de-smartphones-y-tablets",
+    "diferencias-entre-ecosistemas-ios-y-android",
+    "actualizaciones-del-sistema-operativo-y-parches"
+  ]
+}

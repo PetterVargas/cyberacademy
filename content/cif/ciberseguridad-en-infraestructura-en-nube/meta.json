@@ -1,0 +1,19 @@
+{
+  "title": "Curso de Ciberseguridad en Infraestructura en Nube",
+  "description": "Controles, postura y monitoreo de seguridad en AWS, Azure y GCP",
+  "root": true,
+  "pages": [
+    "---Overview---",
+    "index",
+    "---Módulo 1---",
+    "modulo-1-fundamentos-de-seguridad-en-la-nube",
+    "---Módulo 2---",
+    "modulo-2-gestion-de-identidad-y-acceso-en-la-nube",
+    "---Módulo 3---",
+    "modulo-3-seguridad-de-redes-y-configuracion",
+    "---Módulo 4---",
+    "modulo-4-monitoreo-y-deteccion-en-entornos-cloud",
+    "---Módulo 5---",
+    "modulo-5-cumplimiento-y-gobierno-de-la-nube"
+  ]
+}

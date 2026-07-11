@@ -1,0 +1,10 @@
+{
+  "title": "Manejo y Almacenamiento Seguro",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "buenas-practicas-de-almacenamiento-fisico-y-digital",
+    "cifrado-de-informacion-sensible",
+    "control-de-acceso-basado-en-necesidad-de-conocer"
+  ]
+}

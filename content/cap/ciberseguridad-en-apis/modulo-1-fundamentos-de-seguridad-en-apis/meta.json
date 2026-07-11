@@ -1,0 +1,10 @@
+{
+  "title": "Fundamentos de Seguridad en APIs",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "arquitecturas-de-api-rest-graphql-y-grpc",
+    "owasp-api-security-top-10",
+    "superficie-de-ataque-especifica-de-las-apis"
+  ]
+}

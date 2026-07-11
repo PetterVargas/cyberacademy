@@ -1,0 +1,10 @@
+{
+  "title": "Seguridad en el Diseño y Codificación",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "principios-de-codificacion-segura-owasp-top-10",
+    "gestion-segura-de-secretos-y-credenciales",
+    "validacion-de-entradas-y-manejo-de-errores"
+  ]
+}

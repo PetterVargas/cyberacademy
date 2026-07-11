@@ -1,0 +1,10 @@
+{
+  "title": "Operación del SOC",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "gestion-diaria-de-alertas-y-priorizacion",
+    "integracion-de-fuentes-de-inteligencia-de-amenazas",
+    "automatizacion-de-tareas-mediante-soar"
+  ]
+}

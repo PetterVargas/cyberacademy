@@ -1,8 +1,8 @@
-import { overviewSource, cyberusuarioSource, allDomainSources } from '@/lib/source';
+import { cyberusuarioSource, allDomainSources } from '@/lib/source';
 import type { Graph } from '../components/graph-view';
 
 export function buildGraph(): Graph {
-  const sources = [overviewSource, cyberusuarioSource, ...allDomainSources];
+  const sources = [cyberusuarioSource, ...allDomainSources];
   const graph: Graph = { links: [], nodes: [] };
 
   for (const source of sources) {

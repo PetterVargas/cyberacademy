@@ -1,0 +1,10 @@
+{
+  "title": "Metodologías de Threat Modeling",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "metodologia-stride-para-la-identificacion-de-amenazas",
+    "metodologia-pasta-y-su-enfoque-orientado-a-riesgo",
+    "otras-metodologias-dread-vast-y-attack-trees"
+  ]
+}

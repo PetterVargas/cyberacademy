@@ -189,6 +189,10 @@ export default function HomePage() {
           },
         });
       });
+      gsap.from('.roles-cta', {
+        y: 18, opacity: 0, duration: 0.6, ease: 'power2.out',
+        scrollTrigger: { trigger: '.roles-cta', start: 'top 90%', once: true },
+      });
     }, rolesEl);
 
     // ── CyberGuardianes — dominios ──────────────────────────────────────
@@ -319,22 +323,35 @@ export default function HomePage() {
               Sin importar tu especialidad, hay un camino de aprendizaje diseñado para ti.
             </p>
           </div>
+        </div>
 
-          <div className="roles-grid flex flex-wrap items-center justify-center gap-3 sm:gap-4">
-            {roles.map((role, i) => {
-              const offset = roleOffsets[i % roleOffsets.length];
-              const sizeClasses = role.size === 'lg'
-                ? 'text-base sm:text-lg font-semibold px-6 py-3'
-                : 'text-sm font-medium px-4 py-2.5';
-              return (
-                <span
-                  key={role.name}
-                  className={`role-card ${offset} inline-flex items-center rounded-full border border-fd-border bg-fd-background text-fd-foreground ${sizeClasses} shadow-sm`}
-                >
-                  {role.name}
-                </span>
-              );
-            })}
+        <div className="roles-grid w-full flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+          {roles.map((role, i) => {
+            const offset = roleOffsets[i % roleOffsets.length];
+            const sizeClasses = role.size === 'lg'
+              ? 'text-base sm:text-lg font-semibold px-6 py-3'
+              : 'text-sm font-medium px-4 py-2.5';
+            return (
+              <span
+                key={role.name}
+                className={`role-card ${offset} inline-flex items-center rounded-full border border-fd-border bg-fd-background text-fd-foreground ${sizeClasses} shadow-sm`}
+              >
+                {role.name}
+              </span>
+            );
+          })}
+        </div>
+
+        <div className="max-w-4xl mx-auto">
+          <div className="roles-cta mt-14 flex justify-center">
+            <Link
+              href="/que-quieres-aprender-hoy"
+              className="group inline-flex items-center gap-3 px-6 py-4 rounded-2xl border border-fd-primary/30 bg-fd-primary/5 hover:border-fd-primary/60 hover:bg-fd-primary/10 transition-all duration-300 shadow-sm hover:shadow-md"
+            >
+              <Search className="h-5 w-5 text-fd-primary shrink-0" />
+              <span className="text-base sm:text-lg font-semibold text-fd-foreground">¿Qué quieres aprender hoy?</span>
+              <ArrowRight className="h-4 w-4 text-fd-primary shrink-0 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
       </section>

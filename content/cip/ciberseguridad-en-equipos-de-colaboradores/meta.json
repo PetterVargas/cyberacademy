@@ -1,0 +1,19 @@
+{
+  "title": "Curso de Ciberseguridad en Equipos de Colaboradores",
+  "description": "EDR, gestión de dispositivos y protección de los equipos de trabajo",
+  "root": true,
+  "pages": [
+    "---Overview---",
+    "index",
+    "---Módulo 1---",
+    "modulo-1-seguridad-del-puesto-de-trabajo",
+    "---Módulo 2---",
+    "modulo-2-proteccion-contra-amenazas-en-el-endpoint",
+    "---Módulo 3---",
+    "modulo-3-gestion-de-dispositivos-corporativos-y-byod",
+    "---Módulo 4---",
+    "modulo-4-cifrado-y-proteccion-de-datos-en-el-endpoint",
+    "---Módulo 5---",
+    "modulo-5-gestion-del-ciclo-de-vida-del-equipo"
+  ]
+}

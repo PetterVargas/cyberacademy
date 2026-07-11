@@ -1,0 +1,19 @@
+{
+  "title": "Curso de Cumplimiento Normativo Continuo",
+  "description": "ISO 27001, NIST CSF, GDPR y regulaciones locales de forma continua",
+  "root": true,
+  "pages": [
+    "---Overview---",
+    "index",
+    "---Módulo 1---",
+    "modulo-1-fundamentos-del-cumplimiento-normativo",
+    "---Módulo 2---",
+    "modulo-2-mapeo-y-gestion-de-requisitos",
+    "---Módulo 3---",
+    "modulo-3-monitoreo-continuo-del-cumplimiento",
+    "---Módulo 4---",
+    "modulo-4-gestion-de-auditorias-y-evaluaciones",
+    "---Módulo 5---",
+    "modulo-5-cultura-y-mejora-del-programa-de-cumplimiento"
+  ]
+}

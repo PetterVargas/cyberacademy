@@ -1,0 +1,10 @@
+{
+  "title": "Técnicas de Investigación Digital",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "rastreo-de-transacciones-y-direcciones-en-criptomonedas",
+    "analisis-de-infraestructura-de-atacantes-dominios-ips-servidores",
+    "atribucion-de-ataques-y-sus-limitaciones"
+  ]
+}

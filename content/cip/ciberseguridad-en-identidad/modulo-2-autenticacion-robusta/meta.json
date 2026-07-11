@@ -1,0 +1,10 @@
+{
+  "title": "Autenticación Robusta",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "autenticacion-multifactor-mfa-y-sus-metodos",
+    "autenticacion-sin-contrasena-passwordless",
+    "gestion-de-identidad-federada-y-single-sign-on-sso"
+  ]
+}

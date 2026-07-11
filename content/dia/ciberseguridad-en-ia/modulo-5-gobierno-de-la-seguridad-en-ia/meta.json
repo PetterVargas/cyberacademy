@@ -1,0 +1,10 @@
+{
+  "title": "Gobierno de la Seguridad en IA",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "politicas-organizacionales-para-el-uso-seguro-de-ia",
+    "evaluacion-de-riesgo-antes-de-adoptar-soluciones-de-ia",
+    "monitoreo-continuo-y-auditoria-de-sistemas-de-ia-en-produccion"
+  ]
+}

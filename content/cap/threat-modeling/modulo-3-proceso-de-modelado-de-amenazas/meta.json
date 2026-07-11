@@ -1,0 +1,10 @@
+{
+  "title": "Proceso de Modelado de Amenazas",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "descomposicion-de-la-aplicacion-y-diagramas-de-flujo-de-datos",
+    "identificacion-de-amenazas-y-superficies-de-ataque",
+    "priorizacion-de-amenazas-segun-impacto-y-probabilidad"
+  ]
+}

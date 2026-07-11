@@ -1,0 +1,10 @@
+{
+  "title": "Monitoreo y Mejora Continua",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "monitoreo-continuo-de-politicas-y-accesos-bajo-zero-trust",
+    "evaluacion-de-la-efectividad-del-modelo-implementado",
+    "evolucion-del-modelo-ante-nuevas-amenazas-y-tecnologias"
+  ]
+}

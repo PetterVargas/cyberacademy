@@ -1,4 +1,9 @@
 {
   "title": "COR",
-  "pages": ["principal", "secundario"]
+  "pages": [
+    "gobierno-en-ciberseguridad",
+    "gestion-de-riesgos",
+    "cumplimiento-normativo-continuo",
+    "auditoria-de-ciberseguridad"
+  ]
 }

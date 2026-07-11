@@ -1,0 +1,10 @@
+{
+  "title": "Seguridad del Protocolo MCP y sus Integraciones",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "principios-de-seguridad-en-la-conexion-entre-agentes-y-servidores-mcp",
+    "gestion-de-credenciales-y-permisos-en-integraciones-mcp",
+    "validacion-de-fuentes-de-datos-y-herramientas-conectadas"
+  ]
+}

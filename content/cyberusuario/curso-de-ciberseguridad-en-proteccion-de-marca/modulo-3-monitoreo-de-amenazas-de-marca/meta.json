@@ -1,0 +1,10 @@
+{
+  "title": "Monitoreo de Amenazas de Marca",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "monitoreo-de-menciones-y-dominios-similares",
+    "uso-de-inteligencia-de-amenazas-threat-intelligence",
+    "deteccion-temprana-de-campanas-de-fraude"
+  ]
+}

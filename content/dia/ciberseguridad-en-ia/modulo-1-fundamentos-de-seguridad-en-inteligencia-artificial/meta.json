@@ -1,0 +1,10 @@
+{
+  "title": "Fundamentos de Seguridad en Inteligencia Artificial",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "panorama-de-riesgos-de-seguridad-asociados-a-sistemas-de-ia",
+    "diferencias-entre-seguridad-de-la-ia-y-seguridad-tradicional",
+    "marco-de-referencia-owasp-ml-llm-top-10-nist-ai-rmf"
+  ]
+}

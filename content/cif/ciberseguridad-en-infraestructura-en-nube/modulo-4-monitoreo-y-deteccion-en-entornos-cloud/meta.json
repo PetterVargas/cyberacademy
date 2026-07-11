@@ -1,0 +1,10 @@
+{
+  "title": "Monitoreo y Detección en Entornos Cloud",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "herramientas-nativas-de-monitoreo-y-seguridad-en-la-nube",
+    "deteccion-de-amenazas-especificas-de-entornos-cloud",
+    "gestion-de-logs-y-trazabilidad-de-eventos-en-la-nube"
+  ]
+}

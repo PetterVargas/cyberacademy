@@ -1,0 +1,10 @@
+{
+  "title": "Forense de Red y Dispositivos Móviles",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "analisis-de-trafico-de-red-y-logs-de-conectividad",
+    "forense-de-dispositivos-moviles-y-aplicaciones",
+    "correlacion-de-evidencia-entre-distintas-fuentes"
+  ]
+}

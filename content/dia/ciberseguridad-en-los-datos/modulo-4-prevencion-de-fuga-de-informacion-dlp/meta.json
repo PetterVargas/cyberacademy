@@ -1,0 +1,10 @@
+{
+  "title": "Prevención de Fuga de Información (DLP)",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "principios-de-las-soluciones-de-data-loss-prevention",
+    "monitoreo-de-flujos-de-datos-y-deteccion-de-fugas",
+    "respuesta-ante-incidentes-de-exposicion-de-datos"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Análisis de Amenazas",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "modelado-de-adversarios-y-perfiles-de-amenaza",
+    "uso-de-marcos-como-mitre-att-y-ck-y-diamond-model",
+    "analisis-de-campanas-y-atribucion-de-amenazas"
+  ]
+}

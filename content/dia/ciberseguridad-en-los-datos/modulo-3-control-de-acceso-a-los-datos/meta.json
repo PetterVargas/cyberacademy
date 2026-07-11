@@ -1,0 +1,10 @@
+{
+  "title": "Control de Acceso a los Datos",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "principio-de-minimo-privilegio-aplicado-a-los-datos",
+    "gestion-de-permisos-y-roles-sobre-repositorios-de-informacion",
+    "auditoria-de-accesos-a-datos-criticos"
+  ]
+}

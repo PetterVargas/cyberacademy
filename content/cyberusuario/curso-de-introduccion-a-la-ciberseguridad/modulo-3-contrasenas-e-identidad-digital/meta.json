@@ -1,0 +1,15 @@
+{
+  "title": "Contraseñas e Identidad Digital",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "buenas-prácticas-para-crear-contraseñas-seguras",
+    "gestores-de-contrasenas",
+    "uso-de-keepsass",
+    "uso-de-lastpass",
+    "uso-de-1password",
+    "autenticacion-multifactor-mfa",
+    "uso-de-google-authenticator",
+    "uso-de-microsoft-authenticator"
+  ]
+}

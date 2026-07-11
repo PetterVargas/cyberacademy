@@ -3,12 +3,27 @@ title: CAP — Ciberseguridad en Aplicaciones
 description: Desarrollo seguro, pruebas y gestión de vulnerabilidades
 ---
 
+import { Workflow, GitMerge, Webhook, Bot } from 'lucide-react';
+
 Bienvenido al dominio **CAP — Ciberseguridad en Aplicaciones**.
 
 ## Descripción
 
 Desarrollo seguro, pruebas y gestión de vulnerabilidades.
 
-## Controles
+## Cursos
 
-Próximamente los controles y guías de implementación de este dominio.
+<Cards>
+  <Card icon={<Workflow />} title="Curso de Threat Modeling" href="/cap/threat-modeling">
+    Metodologías para identificar y mitigar amenazas desde el diseño.
+  </Card>
+  <Card icon={<GitMerge />} title="Curso DevOps y AppSec" href="/cap/devops-y-appsec">
+    Integración de seguridad en pipelines de CI/CD y prácticas DevSecOps.
+  </Card>
+  <Card icon={<Webhook />} title="Curso de Ciberseguridad en APIs" href="/cap/ciberseguridad-en-apis">
+    Diseño, autenticación y protección segura de APIs.
+  </Card>
+  <Card icon={<Bot />} title="Curso de Ciberseguridad en Skills, Agents y MCP" href="/cap/ciberseguridad-en-skills-agents-y-mcp">
+    Seguridad en agentes de IA, skills y el protocolo MCP.
+  </Card>
+</Cards>

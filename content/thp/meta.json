@@ -1,4 +1,7 @@
 {
   "title": "THP",
-  "pages": ["principal", "secundario"]
+  "pages": [
+    "ciberseguridad-en-recursos-humanos",
+    "ciberseguridad-en-proteccion-de-proveedores-y-terceros"
+  ]
 }

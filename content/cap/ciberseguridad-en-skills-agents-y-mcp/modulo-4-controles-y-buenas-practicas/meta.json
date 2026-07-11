@@ -1,0 +1,10 @@
+{
+  "title": "Controles y Buenas Prácticas",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "principio-de-minimo-privilegio-aplicado-a-agentes-y-skills",
+    "sandboxing-y-limitacion-del-alcance-de-acciones-del-agente",
+    "registro-y-trazabilidad-de-las-acciones-ejecutadas-por-agentes"
+  ]
+}

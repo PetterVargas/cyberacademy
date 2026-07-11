@@ -1,0 +1,10 @@
+{
+  "title": "Fundamentos de la Respuesta a Incidentes",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "que-es-un-incidente-de-seguridad-y-su-clasificacion",
+    "marco-nist-sans-de-respuesta-a-incidentes",
+    "roles-y-responsabilidades-del-equipo-de-respuesta"
+  ]
+}

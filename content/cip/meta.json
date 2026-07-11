@@ -1,4 +1,8 @@
 {
   "title": "CIP",
-  "pages": ["principal", "secundario"]
+  "pages": [
+    "ciberseguridad-en-identidad",
+    "arquitectura-zero-trust",
+    "ciberseguridad-en-equipos-de-colaboradores"
+  ]
 }

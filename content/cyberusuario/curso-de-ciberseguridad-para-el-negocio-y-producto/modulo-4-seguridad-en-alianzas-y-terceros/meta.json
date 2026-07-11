@@ -1,0 +1,10 @@
+{
+  "title": "Seguridad en Alianzas y Terceros",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "evaluacion-de-seguridad-de-proveedores-y-partners",
+    "contratos-y-acuerdos-de-nivel-de-servicio-sla-de-seguridad",
+    "apis-e-integraciones-seguras"
+  ]
+}

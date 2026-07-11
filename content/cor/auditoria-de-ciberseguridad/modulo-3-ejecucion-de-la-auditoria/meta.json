@@ -1,0 +1,10 @@
+{
+  "title": "Ejecución de la Auditoría",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "tecnicas-de-recoleccion-de-evidencia-de-auditoria",
+    "evaluacion-de-la-efectividad-de-los-controles-implementados",
+    "identificacion-y-documentacion-de-hallazgos"
+  ]
+}

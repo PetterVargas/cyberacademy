@@ -1,0 +1,10 @@
+{
+  "title": "Amenazas Específicas a Modelos de IA",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "ataques-de-inyeccion-de-prompts-y-manipulacion-de-modelos",
+    "extraccion-y-robo-de-modelos-model-stealing",
+    "ataques-adversarios-y-evasion-de-modelos"
+  ]
+}

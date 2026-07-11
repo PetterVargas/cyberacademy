@@ -1,0 +1,10 @@
+{
+  "title": "Fundamentos de los Agentes de IA y Skills",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "que-son-los-agentes-de-ia-skills-y-el-protocolo-mcp",
+    "casos-de-uso-y-arquitectura-tipica-de-soluciones-basadas-en-agentes",
+    "diferencias-de-riesgo-entre-modelos-de-ia-tradicionales-y-agentes-autonomos"
+  ]
+}

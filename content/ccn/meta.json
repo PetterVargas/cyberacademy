@@ -1,4 +1,7 @@
 {
   "title": "CCN",
-  "pages": ["principal", "secundario"]
+  "pages": [
+    "plan-de-continuidad-de-negocio-bcp-y-plan-de-recuperacion-ante-desastres-drp",
+    "ciberseguridad-en-los-cambios-del-negocio"
+  ]
 }

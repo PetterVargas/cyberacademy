@@ -1,0 +1,10 @@
+{
+  "title": "Gobierno de Soluciones basadas en Agentes",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "evaluacion-de-riesgo-antes-de-desplegar-soluciones-con-agentes",
+    "supervision-humana-y-mecanismos-de-aprobacion-human-in-the-loop",
+    "monitoreo-continuo-y-respuesta-ante-comportamiento-anomalo-de-agentes"
+  ]
+}

@@ -1,4 +1,7 @@
 {
   "title": "DIA",
-  "pages": ["principal", "secundario"]
+  "pages": [
+    "ciberseguridad-en-los-datos",
+    "ciberseguridad-en-ia"
+  ]
 }

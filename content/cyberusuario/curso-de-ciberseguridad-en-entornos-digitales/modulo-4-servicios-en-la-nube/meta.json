@@ -1,0 +1,10 @@
+{
+  "title": "Servicios en la Nube",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "uso-seguro-de-almacenamiento-en-la-nube",
+    "comparticion-de-archivos-y-control-de-accesos",
+    "riesgos-de-la-sincronizacion-automatica"
+  ]
+}

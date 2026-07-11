@@ -1,0 +1,19 @@
+{
+  "title": "Curso de Ciberseguridad en Dispositivos Móviles",
+  "description": "Apps, permisos y protección de teléfonos y tablets corporativos",
+  "root": true,
+  "pages": [
+    "---Overview---",
+    "index",
+    "---Módulo 1---",
+    "modulo-1-fundamentos-de-seguridad-movil",
+    "---Módulo 2---",
+    "modulo-2-aplicaciones-y-permisos",
+    "---Módulo 3---",
+    "modulo-3-conectividad-y-redes",
+    "---Módulo 4---",
+    "modulo-4-proteccion-de-datos-en-el-dispositivo",
+    "---Módulo 5---",
+    "modulo-5-uso-responsable-y-privacidad"
+  ]
+}

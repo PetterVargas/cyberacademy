@@ -1,0 +1,19 @@
+{
+  "title": "Curso de Ciberseguridad en Entornos Digitales",
+  "description": "Huella digital, redes sociales y buenas prácticas de navegación segura",
+  "root": true,
+  "pages": [
+    "---Overview---",
+    "index",
+    "---Módulo 1---",
+    "modulo-1-panorama-de-los-entornos-digitales",
+    "---Módulo 2---",
+    "modulo-2-redes-sociales-de-forma-segura",
+    "---Módulo 3---",
+    "modulo-3-comercio-electronico-y-pagos-digitales",
+    "---Módulo 4---",
+    "modulo-4-servicios-en-la-nube",
+    "---Módulo 5---",
+    "modulo-5-convivencia-y-ciudadania-digital"
+  ]
+}

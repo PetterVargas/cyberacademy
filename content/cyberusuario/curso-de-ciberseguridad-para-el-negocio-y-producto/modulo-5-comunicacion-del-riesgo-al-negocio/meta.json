@@ -1,0 +1,10 @@
+{
+  "title": "Comunicación del Riesgo al Negocio",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "traducir-riesgos-tecnicos-a-lenguaje-de-negocio",
+    "business-case-para-inversion-en-seguridad",
+    "reporte-de-metricas-de-seguridad-a-stakeholders"
+  ]
+}

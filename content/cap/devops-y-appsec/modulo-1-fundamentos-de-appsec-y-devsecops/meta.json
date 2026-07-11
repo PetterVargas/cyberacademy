@@ -1,0 +1,10 @@
+{
+  "title": "Fundamentos de AppSec y DevSecOps",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "principios-de-seguridad-de-aplicaciones-appsec",
+    "integracion-de-la-seguridad-en-la-cultura-devops",
+    "el-modelo-shift-left-en-el-desarrollo-seguro"
+  ]
+}

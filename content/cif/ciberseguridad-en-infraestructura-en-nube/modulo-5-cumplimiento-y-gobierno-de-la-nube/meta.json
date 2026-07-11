@@ -1,0 +1,10 @@
+{
+  "title": "Cumplimiento y Gobierno de la Nube",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "marco-de-cumplimiento-aplicable-a-proveedores-cloud",
+    "gestion-de-riesgos-de-proveedores-de-servicios-en-la-nube",
+    "estrategias-multicloud-e-hibridas-y-su-gobierno-de-seguridad"
+  ]
+}

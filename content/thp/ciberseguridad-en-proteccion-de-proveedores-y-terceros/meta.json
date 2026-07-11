@@ -1,0 +1,19 @@
+{
+  "title": "Curso de Ciberseguridad en Protección de Proveedores y Terceros",
+  "description": "Gestión de riesgos y seguridad en la cadena de suministro",
+  "root": true,
+  "pages": [
+    "---Overview---",
+    "index",
+    "---Módulo 1---",
+    "modulo-1-fundamentos-del-riesgo-de-terceros",
+    "---Módulo 2---",
+    "modulo-2-evaluacion-de-proveedores",
+    "---Módulo 3---",
+    "modulo-3-contratacion-y-clausulas-de-seguridad",
+    "---Módulo 4---",
+    "modulo-4-monitoreo-continuo-de-terceros",
+    "---Módulo 5---",
+    "modulo-5-gobierno-del-programa-de-terceros"
+  ]
+}

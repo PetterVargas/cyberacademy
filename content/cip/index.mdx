@@ -3,12 +3,24 @@ title: CIP — Ciberseguridad en Identidad y Puntos Finales
 description: Gestión de identidades, accesos y dispositivos
 ---
 
+import { Fingerprint, ShieldCheck, Laptop } from 'lucide-react';
+
 Bienvenido al dominio **CIP — Ciberseguridad en Identidad y Puntos Finales**.
 
 ## Descripción
 
 Gestión de identidades, accesos y dispositivos.
 
-## Controles
+## Cursos
 
-Próximamente los controles y guías de implementación de este dominio.
+<Cards>
+  <Card icon={<Fingerprint />} title="Curso de Ciberseguridad en Identidad" href="/cip/ciberseguridad-en-identidad">
+    IAM, PAM y gestión del ciclo de vida de identidades.
+  </Card>
+  <Card icon={<ShieldCheck />} title="Curso de Arquitectura Zero Trust" href="/cip/arquitectura-zero-trust">
+    Principios, diseño e implementación de Zero Trust.
+  </Card>
+  <Card icon={<Laptop />} title="Curso de Ciberseguridad en Equipos de Colaboradores" href="/cip/ciberseguridad-en-equipos-de-colaboradores">
+    EDR, gestión de dispositivos y protección de los equipos de trabajo.
+  </Card>
+</Cards>

@@ -1,19 +1,12 @@
 import {
-  overviewDocs, cyberusuarioDocs, blogPosts,
+  cyberusuarioDocs, blogPosts,
   corDocs, cipDocs, cifDocs, capDocs, ccnDocs, thpDocs, diaDocs, adrDocs,
 } from 'collections/server';
 import { loader } from 'fumadocs-core/source';
 import { toFumadocsSource } from 'fumadocs-mdx/runtime/server';
 import {
-  overviewRoute, overviewImageRoute, overviewContentRoute,
   cyberusuarioRoute, cyberusuarioImageRoute, cyberusuarioContentRoute,
 } from './shared';
-
-export const overviewSource = loader({
-  baseUrl: overviewRoute,
-  source: overviewDocs.toFumadocsSource(),
-  plugins: [],
-});
 
 export const cyberusuarioSource = loader({
   baseUrl: cyberusuarioRoute,
@@ -34,16 +27,6 @@ export const blog = loader({
   baseUrl: '/blog',
   source: toFumadocsSource(blogPosts, []),
 });
-
-// ─── Overview ────────────────────────────────────────────────────────────────
-export function getOverviewPageImage(page: (typeof overviewSource)['$inferPage']) {
-  const segments = [...page.slugs, 'image.png'];
-  return { segments, url: `${overviewImageRoute}/${segments.join('/')}` };
-}
-export function getOverviewPageMarkdownUrl(page: (typeof overviewSource)['$inferPage']) {
-  const segments = [...page.slugs, 'content.md'];
-  return { segments, url: `${overviewContentRoute}/${segments.join('/')}` };
-}
 
 // ─── CyberUsuario ─────────────────────────────────────────────────────────────
 export function getCyberusuarioPageImage(page: (typeof cyberusuarioSource)['$inferPage']) {

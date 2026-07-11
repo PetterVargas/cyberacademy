@@ -1,4 +1,6 @@
 {
   "title": "CIF",
-  "pages": ["principal", "secundario"]
+  "pages": [
+    "ciberseguridad-en-infraestructura-en-nube"
+  ]
 }

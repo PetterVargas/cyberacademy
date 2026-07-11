@@ -1,0 +1,10 @@
+{
+  "title": "Gestión de Identidad y Acceso en la Nube",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "principios-de-iam-en-proveedores-cloud",
+    "gestion-de-roles-politicas-y-privilegios-minimos",
+    "proteccion-de-credenciales-y-cuentas-privilegiadas-en-la-nube"
+  ]
+}

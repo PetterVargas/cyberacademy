@@ -1,0 +1,19 @@
+{
+  "title": "Curso de Ciberseguridad en los Cambios del Negocio",
+  "description": "Gestión segura de cambios organizacionales y tecnológicos",
+  "root": true,
+  "pages": [
+    "---Overview---",
+    "index",
+    "---Módulo 1---",
+    "modulo-1-gestion-del-riesgo-en-los-cambios-organizacionales",
+    "---Módulo 2---",
+    "modulo-2-seguridad-en-fusiones-y-adquisiciones",
+    "---Módulo 3---",
+    "modulo-3-gestion-de-cambios-tecnologicos",
+    "---Módulo 4---",
+    "modulo-4-continuidad-de-la-seguridad-durante-la-transformacion",
+    "---Módulo 5---",
+    "modulo-5-gobierno-del-cambio-y-mejora-continua"
+  ]
+}

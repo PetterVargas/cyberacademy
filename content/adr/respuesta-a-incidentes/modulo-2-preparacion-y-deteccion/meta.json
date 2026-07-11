@@ -1,0 +1,10 @@
+{
+  "title": "Preparación y Detección",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "elaboracion-de-planes-y-runbooks-de-respuesta",
+    "herramientas-para-la-deteccion-temprana-de-incidentes",
+    "clasificacion-de-severidad-e-impacto-del-incidente"
+  ]
+}

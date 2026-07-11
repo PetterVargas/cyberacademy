@@ -1,0 +1,10 @@
+{
+  "title": "Cultura y Gobierno de AppSec",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "programas-de-campeones-de-seguridad-en-equipos-de-desarrollo",
+    "metricas-de-madurez-de-un-programa-de-appsec",
+    "gestion-de-vulnerabilidades-en-produccion"
+  ]
+}

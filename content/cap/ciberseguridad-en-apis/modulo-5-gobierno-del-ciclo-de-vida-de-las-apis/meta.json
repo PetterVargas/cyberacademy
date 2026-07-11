@@ -1,0 +1,10 @@
+{
+  "title": "Gobierno del Ciclo de Vida de las APIs",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "inventario-y-descubrimiento-de-apis-shadow-apis",
+    "gestion-de-versiones-y-deprecacion-segura-de-apis",
+    "pruebas-de-seguridad-continuas-para-apis"
+  ]
+}

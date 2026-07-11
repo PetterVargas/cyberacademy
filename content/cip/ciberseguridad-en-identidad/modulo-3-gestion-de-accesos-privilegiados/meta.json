@@ -1,0 +1,10 @@
+{
+  "title": "Gestión de Accesos Privilegiados",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "principios-de-pam-privileged-access-management",
+    "bovedas-de-credenciales-y-rotacion-de-contrasenas-privilegiadas",
+    "monitoreo-de-sesiones-privilegiadas"
+  ]
+}

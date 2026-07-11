@@ -1,0 +1,10 @@
+{
+  "title": "Gobierno de Datos",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "roles-de-gobierno-de-datos-data-owners-data-stewards",
+    "politicas-de-retencion-y-eliminacion-segura-de-datos",
+    "calidad-trazabilidad-y-confianza-en-los-datos-organizacionales"
+  ]
+}

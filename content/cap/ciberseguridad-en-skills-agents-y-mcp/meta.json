@@ -1,0 +1,19 @@
+{
+  "title": "Curso de Ciberseguridad en Skills, Agents y MCP",
+  "description": "Seguridad en agentes de IA, skills y el protocolo MCP",
+  "root": true,
+  "pages": [
+    "---Overview---",
+    "index",
+    "---Módulo 1---",
+    "modulo-1-fundamentos-de-los-agentes-de-ia-y-skills",
+    "---Módulo 2---",
+    "modulo-2-superficie-de-ataque-de-agentes-de-ia",
+    "---Módulo 3---",
+    "modulo-3-seguridad-del-protocolo-mcp-y-sus-integraciones",
+    "---Módulo 4---",
+    "modulo-4-controles-y-buenas-practicas",
+    "---Módulo 5---",
+    "modulo-5-gobierno-de-soluciones-basadas-en-agentes"
+  ]
+}

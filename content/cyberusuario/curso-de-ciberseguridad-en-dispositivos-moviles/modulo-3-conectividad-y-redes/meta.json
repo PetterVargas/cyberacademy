@@ -1,0 +1,10 @@
+{
+  "title": "Conectividad y Redes",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "riesgos-de-redes-wi-fi-publicas-y-bluetooth",
+    "uso-de-datos-moviles-y-vpn",
+    "configuracion-segura-de-conexiones-nfc"
+  ]
+}

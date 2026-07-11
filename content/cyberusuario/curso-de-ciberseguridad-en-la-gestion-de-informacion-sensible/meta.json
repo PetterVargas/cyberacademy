@@ -1,0 +1,19 @@
+{
+  "title": "Curso de Ciberseguridad en la Gestión de Información Sensible",
+  "description": "Clasificación de datos y cómo compartir información sensible de forma segura",
+  "root": true,
+  "pages": [
+    "---Overview---",
+    "index",
+    "---Módulo 1---",
+    "modulo-1-fundamentos-de-informacion-sensible",
+    "---Módulo 2---",
+    "modulo-2-manejo-y-almacenamiento-seguro",
+    "---Módulo 3---",
+    "modulo-3-transmision-y-comparticion-de-informacion",
+    "---Módulo 4---",
+    "modulo-4-ciclo-de-vida-y-retencion",
+    "---Módulo 5---",
+    "modulo-5-cumplimiento-y-respuesta-ante-incidentes"
+  ]
+}

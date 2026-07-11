@@ -1,0 +1,10 @@
+{
+  "title": "Producción y Difusión de Inteligencia",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "elaboracion-de-reportes-de-inteligencia-para-distintas-audiencias",
+    "estandares-de-intercambio-de-inteligencia-stix-taxii",
+    "integracion-de-inteligencia-en-las-herramientas-de-deteccion"
+  ]
+}

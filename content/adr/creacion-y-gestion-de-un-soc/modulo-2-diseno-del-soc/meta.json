@@ -1,0 +1,10 @@
+{
+  "title": "Diseño del SOC",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "definicion-de-la-arquitectura-tecnologica-del-soc",
+    "seleccion-de-herramientas-siem-soar-edr-xdr",
+    "diseno-de-casos-de-uso-y-reglas-de-correlacion"
+  ]
+}

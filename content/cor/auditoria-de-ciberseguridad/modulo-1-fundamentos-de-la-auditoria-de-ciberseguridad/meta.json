@@ -1,0 +1,10 @@
+{
+  "title": "Fundamentos de la Auditoría de Ciberseguridad",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "objetivos-y-alcance-de-una-auditoria-de-ciberseguridad",
+    "diferencia-entre-auditoria-basada-en-cumplimiento-y-en-riesgo",
+    "marco-de-referencia-para-auditorias-cobit-isaca"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Cifrado y Protección de Datos en el Endpoint",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "cifrado-de-disco-completo-y-proteccion-de-datos-en-reposo",
+    "prevencion-de-fuga-de-datos-dlp-en-el-equipo-del-colaborador",
+    "copias-de-seguridad-y-recuperacion-de-informacion"
+  ]
+}

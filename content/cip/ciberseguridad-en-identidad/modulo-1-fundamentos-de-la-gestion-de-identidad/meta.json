@@ -1,0 +1,10 @@
+{
+  "title": "Fundamentos de la Gestión de Identidad",
+  "description": "Descripción",
+  "pages": [
+    "index",
+    "conceptos-de-identidad-digital-y-gestion-de-accesos-iam",
+    "ciclo-de-vida-de-la-identidad-alta-modificacion-y-baja",
+    "modelos-de-autenticacion-y-factores-de-verificacion"
+  ]
+}

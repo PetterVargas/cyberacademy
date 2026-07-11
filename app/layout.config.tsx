@@ -1,9 +1,9 @@
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
 import {
-  FileTextIcon,
+  FileTextIcon, LayoutGridIcon,
   Building2Icon, ShieldCheckIcon, CloudIcon, CodeIcon,
   RefreshCwIcon, SearchIcon, UsersIcon, DatabaseIcon,
-  NewspaperIcon, LayoutDashboardIcon,
+  NewspaperIcon,
 } from 'lucide-react';
 
 export const baseOptions: BaseLayoutProps = {
@@ -36,9 +36,9 @@ export const baseOptions: BaseLayoutProps = {
   },
   links: [
     {
-      icon: <LayoutDashboardIcon />,
-      text: 'Overview',
-      url: '/overview',
+      icon: <LayoutGridIcon />,
+      text: 'Cursos',
+      url: '/cursos',
       secondary: false,
     },
     {

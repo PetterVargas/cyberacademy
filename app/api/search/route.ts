@@ -1,9 +1,9 @@
-import { overviewSource, cyberusuarioSource, allDomainSources } from '@/lib/source';
+import { cyberusuarioSource, allDomainSources } from '@/lib/source';
 import { createSearchAPI } from 'fumadocs-core/search/server';
 
 export const revalidate = false;
 
-const allSources = [overviewSource, cyberusuarioSource, ...allDomainSources];
+const allSources = [cyberusuarioSource, ...allDomainSources];
 
 export const { staticGET: GET } = createSearchAPI('advanced', {
   indexes: allSources.flatMap((source) =>

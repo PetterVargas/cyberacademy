@@ -10,6 +10,8 @@ import {
 } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { HeroUniverse } from '@/components/hero-universe';
+import { FullViewportSection } from '@/components/full-viewport-section';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -238,22 +240,10 @@ export default function HomePage() {
     <main className="flex flex-1 flex-col min-h-[calc(100vh-var(--header-height)-var(--footer-height))] font-sans">
 
       {/* ── Hero ── */}
-      <section ref={heroRef} className="relative flex flex-col items-center justify-center py-28 px-4 text-center overflow-hidden">
+      <FullViewportSection ref={heroRef} className="relative flex flex-col items-center justify-center py-28 px-4 text-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-fd-primary/8 via-transparent to-fd-secondary/8 pointer-events-none" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-fd-primary/5 via-transparent to-transparent pointer-events-none" />
-
-        <svg
-          className="absolute inset-0 w-full h-full pointer-events-none text-fd-foreground"
-          aria-hidden="true"
-          preserveAspectRatio="none"
-        >
-          <defs>
-            <pattern id="hero-dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-              <circle cx="1" cy="1" r="0.7" fill="currentColor" opacity="0.1" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#hero-dots)" />
-        </svg>
+        <HeroUniverse className="absolute inset-0 w-full h-full pointer-events-none opacity-90" />
 
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="gsap-hi inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-fd-primary/30 bg-fd-primary/10 text-fd-primary text-sm font-medium mb-8">
@@ -312,7 +302,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </FullViewportSection>
 
       {/* ── Roles beneficiados ── */}
       <section ref={rolesRef} className="py-20 px-4 bg-fd-muted/40 overflow-hidden">

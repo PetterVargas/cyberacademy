@@ -3,8 +3,10 @@ import {
   FileTextIcon, LayoutGridIcon,
   Building2Icon, ShieldCheckIcon, CloudIcon, CodeIcon,
   RefreshCwIcon, SearchIcon, UsersIcon, DatabaseIcon,
-  NewspaperIcon,
+  NewspaperIcon, UserIcon,
 } from 'lucide-react';
+
+const signUpUrl = 'https://app.divisioncero.com/auth/sign-up?utm_source=cyberacademy.divisioncero.com&utm_medium=text_link&utm_campaign=principal_website';
 
 export const baseOptions: BaseLayoutProps = {
   nav: {
@@ -117,6 +119,12 @@ export const baseOptions: BaseLayoutProps = {
         </svg>
       ),
       external: true,
+    },
+    {
+      icon: <UserIcon />,
+      text: <span className="bg-fd-primary hover:bg-fd-primary/90 dark:bg-fd-primary/80 dark:hover:bg-fd-primary text-fd-primary-foreground rounded-md px-3 py-1 font-bold block md:inline-block">Co-creemos</span>,
+      url: signUpUrl,
+      secondary: true,
     },
   ],
 };

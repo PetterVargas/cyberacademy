@@ -21,7 +21,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       >
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-2">
           <a
-            href="https://divisioncero.com/herramientas"
+            href="https://herramientas.divisioncero.com/?utm_source=cyberacademy.divisioncero.com"
             target="_blank"
             rel="noopener noreferrer"
             className="font-medium underline hover:text-white/80 transition-colors"
@@ -126,10 +126,10 @@ function Footer() {
             <div className="flex flex-col gap-y-2.5">
               <h3 className="font-medium mb-4">Productos</h3>
               <ul className="space-y-2">
-                <li><a href="https://cyberacademy.divisioncero.com/?utm_source=kudo.divisioncero.com" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">CyberAcademy</a></li>
+                <li><a href="https://cyberacademy.divisioncero.com/?utm_source=cyberacademy.divisioncero.com" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">CyberAcademy</a></li>
                 <li><a href="https://kudo.divisioncero.com/?utm_source=cyberacademy.divisioncero.com" className="text-sm hover:underline">Framework Kudo</a></li>
-                <li><a href="https://divisioncero.com/home/empresas?utm_source=kudo.divisioncero.com" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Ciberseguridad Empresarial</a></li>
-                <li><a href="https://divisioncero.com/herramientas?utm_source=kudo.divisioncero.com" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Herramientas</a></li>
+                <li><a href="https://divisioncero.com/home/empresas?utm_source=cyberacademy.divisioncero.com" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Ciberseguridad Empresarial</a></li>
+                <li><a href="https://herramientas.divisioncero.com/?utm_source=cyberacademy.divisioncero.com" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Herramientas</a></li>
               </ul>
             </div>
 
@@ -137,7 +137,7 @@ function Footer() {
             <div className="flex flex-col gap-y-2.5">
               <h3 className="font-medium mb-4">Acerca de</h3>
               <ul className="space-y-2">
-                <li><a href="https://docs.divisioncero.com?utm_source=kudo.divisioncero.com" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Documentación</a></li>
+                <li><a href="https://docs.divisioncero.com?utm_source=cyberacademy.divisioncero.com" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Documentación</a></li>
                 <li><a href="https://kudo.divisioncero.com/sgx" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">SGX</a></li>
                 <li><a href="/cyberusuario" className="text-sm hover:underline">CyberUsuario</a></li>
                 <li><a href="#cyberguardianes" className="text-sm hover:underline">CyberGuardian</a></li>
@@ -149,10 +149,10 @@ function Footer() {
             <div className="flex flex-col gap-y-2.5">
               <h3 className="font-medium mb-4">Legal</h3>
               <ul className="space-y-2">
-                <li><a href="https://divisioncero.com/terminos-de-servicio?utm_source=kudo.divisioncero.com" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Términos de Servicio</a></li>
-                <li><a href="https://divisioncero.com/politica-de-privacidad?utm_source=kudo.divisioncero.com" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Política de Privacidad</a></li>
-                <li><a href="https://divisioncero.com/politica-de-cookies?utm_source=kudo.divisioncero.com" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Política de Cookies</a></li>
-                <li><a href="https://divisioncero.com/trust-center?utm_source=kudo.divisioncero.com" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Centro de Confianza</a></li>
+                <li><a href="https://divisioncero.com/terminos-de-servicio?utm_source=cyberacademy.divisioncero.com" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Términos de Servicio</a></li>
+                <li><a href="https://divisioncero.com/politica-de-privacidad?utm_source=cyberacademy.divisioncero.com" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Política de Privacidad</a></li>
+                <li><a href="https://divisioncero.com/politica-de-cookies?utm_source=cyberacademy.divisioncero.com" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Política de Cookies</a></li>
+                <li><a href="https://divisioncero.com/trust-center?utm_source=cyberacademy.divisioncero.com" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Centro de Confianza</a></li>
               </ul>
             </div>
           </div>

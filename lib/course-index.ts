@@ -66,7 +66,9 @@ function parseModuleMdx(mdxPath: string, modSlug: string, baseUrl: string, cours
 function buildCourse(sectionDir: string, courseSlug: string, baseUrl: string): CursoNode {
   const courseDir = path.join(sectionDir, courseSlug);
   const courseMeta = readJson(path.join(courseDir, 'meta.json'));
-  const modSlugs = readOrderedSlugs(path.join(courseDir, 'meta.json'));
+  const modSlugs = readOrderedSlugs(path.join(courseDir, 'meta.json')).filter((slug) =>
+    fs.existsSync(path.join(courseDir, slug, 'meta.json')),
+  );
 
   const modulos: ModuloNode[] = modSlugs.map((modSlug) => {
     const modDir = path.join(courseDir, modSlug);

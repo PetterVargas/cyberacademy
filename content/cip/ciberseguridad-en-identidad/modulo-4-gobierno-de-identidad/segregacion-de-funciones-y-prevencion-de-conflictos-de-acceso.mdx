@@ -1,6 +1,6 @@
 ---
 title: Segregación de Funciones y Prevención de Conflictos de Acceso
-description: Descripción tema
+description: Evitar que una sola persona controle todo un proceso
 ---
 
-Aún sin contenido.
+La segregación de funciones es el principio de diseñar los permisos de acceso de forma que ninguna persona controle por sí sola todas las etapas de un proceso crítico, como crear un proveedor y aprobar sus pagos, evitando así que un solo individuo pueda cometer fraude o error grave sin que otra persona lo detecte en algún punto del flujo. Esto importa en la práctica no solo por razones de seguridad sino de cumplimiento normativo, ya que marcos como Sarbanes-Oxley o auditorías financieras exigen explícitamente demostrar que existen controles de este tipo en procesos con impacto económico. Un ejemplo concreto es un sistema de gestión de identidad configurado para detectar automáticamente combinaciones de permisos conflictivas, alertando si un mismo usuario acumula simultáneamente la capacidad de crear una orden de compra y de aprobarla, una combinación que en la mayoría de las organizaciones representa un riesgo de fraude que debe corregirse separando esas funciones entre distintas personas.

@@ -1,6 +1,6 @@
 ---
 title: Pruebas de Seguridad Interactivas (IAST)
-description: Descripción tema
+description: Combinar código y ejecución para menos falsos positivos
 ---
 
-Aún sin contenido.
+Las pruebas de seguridad interactivas, o IAST, ocupan un punto intermedio entre SAST y DAST, instrumentando la aplicación con un agente que observa desde dentro cómo se ejecuta el código mientras se realizan pruebas funcionales normales, sin necesidad de una fase de escaneo separada dedicada exclusivamente a seguridad. Esta posición híbrida le da una ventaja concreta sobre ambos enfoques por separado, al tener visibilidad tanto del código fuente como del flujo real de ejecución, IAST puede confirmar con mucha más precisión si una vulnerabilidad detectada es realmente explotable en la práctica, reduciendo significativamente la tasa de falsos positivos que suele frustrar a los equipos de desarrollo con SAST tradicional. Su punto débil es que la cobertura depende directamente de qué funcionalidad se ejercita durante las pruebas instrumentadas, igual que ocurre con DAST, por lo que rutas de código poco cubiertas por las pruebas funcionales existentes simplemente no generan ningún hallazgo. IAST resulta especialmente útil en organizaciones que ya cuentan con suites de pruebas funcionales robustas y automatizadas, porque aprovecha ese trabajo existente para obtener análisis de seguridad prácticamente sin costo adicional de tiempo de ejecución en el pipeline.

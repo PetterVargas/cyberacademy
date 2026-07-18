@@ -1,6 +1,6 @@
 ---
 title: Validación de Entradas y Manejo de Errores
-description: Descripción tema
+description: Validar entradas y manejar errores bien
 ---
 
-Aún sin contenido.
+Casi toda vulnerabilidad de inyección, ya sea SQL, de comandos o de scripts en el navegador, tiene su origen en confiar en datos de entrada sin validarlos correctamente antes de procesarlos. La regla base es simple pero se olvida con frecuencia: toda entrada proveniente de un usuario, una API externa o un archivo debe tratarse como potencialmente maliciosa hasta que se valide su formato, longitud y contenido esperado. Igual de importante es el manejo de errores: un mensaje de error demasiado detallado, que revela la estructura de una base de datos o la versión exacta de un framework, le regala información valiosa a un atacante. Los errores deben registrarse en detalle en logs internos para el equipo de desarrollo, pero mostrarse al usuario de forma genérica, sin exponer detalles técnicos del sistema que los generó.

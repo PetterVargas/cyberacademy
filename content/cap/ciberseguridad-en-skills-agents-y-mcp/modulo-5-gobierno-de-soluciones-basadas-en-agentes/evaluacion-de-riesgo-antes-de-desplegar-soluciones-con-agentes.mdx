@@ -1,6 +1,6 @@
 ---
 title: Evaluación de Riesgo Antes de Desplegar Soluciones con Agentes
-description: Descripción tema
+description: Checklist de riesgo previo al despliegue de un agente
 ---
 
-Aún sin contenido.
+Antes de poner en producción cualquier solución basada en agentes, conviene aplicar una evaluación de riesgo estructurada que vaya más allá de validar que la funcionalidad cumple el caso de uso previsto, porque un agente que funciona correctamente en condiciones normales puede representar un riesgo severo bajo manipulación adversarial que nunca se probó. Esta evaluación debe responder preguntas concretas, qué herramientas tiene conectadas el agente y qué podría hacer un atacante con cada una de ellas si logra controlar sus instrucciones, qué datos sensibles puede llegar a tocar durante su operación normal, qué acciones son reversibles y cuáles no, y qué mecanismos de aprobación humana o límites automáticos existen para contener un comportamiento inesperado. Un criterio práctico útil es clasificar el riesgo según el producto entre el impacto potencial de una acción y la probabilidad de que las defensas existentes fallen en detenerla, priorizando controles adicionales donde ambos factores son altos, por ejemplo un agente con acceso a transacciones financieras y sin ningún paso de confirmación humana. Saltarse esta evaluación bajo presión de tiempo de lanzamiento es, en la práctica, la causa más común de incidentes de seguridad en despliegues tempranos de agentes autónomos.

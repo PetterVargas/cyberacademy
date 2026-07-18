@@ -1,6 +1,6 @@
 ---
 title: "Arquitecturas de API: REST, GraphQL y gRPC"
-description: Descripción tema
+description: Comparativa de estilos de API y sus riesgos
 ---
 
-Aún sin contenido.
+REST, GraphQL y gRPC son los tres estilos arquitectónicos más usados para exponer funcionalidad entre sistemas, y cada uno trae su propio perfil de riesgo. REST organiza los recursos en endpoints predecibles sobre HTTP, lo que facilita aplicar controles perimetrales clásicos pero puede derivar en sobreexposición de datos si los recursos no se diseñan con cuidado. GraphQL centraliza todo en un único endpoint donde el cliente decide qué consultar, lo que da flexibilidad pero abre la puerta a consultas anidadas abusivas que agotan recursos del servidor si no hay límites de profundidad y complejidad. gRPC, por su parte, usa Protocol Buffers y HTTP/2 para comunicación de alto rendimiento entre servicios internos, con un contrato estricto que reduce errores de tipado pero cuya naturaleza binaria complica la inspección con herramientas tradicionales de proxy. Entender estas diferencias es el primer paso antes de aplicar cualquier control de seguridad, porque las mismas amenazas conocidas se materializan de forma distinta según la arquitectura elegida.

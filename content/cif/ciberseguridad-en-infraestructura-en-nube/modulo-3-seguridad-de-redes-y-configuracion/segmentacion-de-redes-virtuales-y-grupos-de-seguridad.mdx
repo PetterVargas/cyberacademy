@@ -1,6 +1,6 @@
 ---
 title: Segmentación de Redes Virtuales y Grupos de Seguridad
-description: Descripción tema
+description: Aislar recursos para limitar el movimiento lateral
 ---
 
-Aún sin contenido.
+Segmentar la red virtual en la nube significa dividir el entorno en zonas aisladas mediante subredes, grupos de seguridad y listas de control de acceso, de forma que un recurso comprometido no tenga automáticamente visibilidad ni conectividad hacia el resto de la infraestructura. Esta práctica limita directamente el movimiento lateral de un atacante, que suele ser una de las fases más efectivas de un ataque, ganar un punto de entrada pequeño y expandirse desde ahí hacia sistemas más valiosos. Definir grupos de seguridad con reglas restrictivas por defecto, permitiendo solo el tráfico estrictamente necesario entre componentes específicos, es más laborioso de configurar que una red plana abierta, pero reduce drásticamente el impacto potencial de cualquier incidente. Un ejemplo práctico es aislar la base de datos de una aplicación en su propia subred privada, accesible únicamente desde los servidores de aplicación autorizados y nunca directamente desde internet.

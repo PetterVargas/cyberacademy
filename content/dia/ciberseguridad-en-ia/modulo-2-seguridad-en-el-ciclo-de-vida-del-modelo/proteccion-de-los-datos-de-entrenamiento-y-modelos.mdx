@@ -1,6 +1,6 @@
 ---
 title: Protección de los Datos de Entrenamiento y Modelos
-description: Descripción tema
+description: Cómo proteger datasets y artefactos de modelos
 ---
 
-Aún sin contenido.
+Los datos de entrenamiento y los pesos de un modelo son activos tan valiosos como el código fuente de una aplicación, pero suelen recibir mucha menos protección, conjuntos de datos completos circulan en buckets sin cifrar, notebooks compartidos, o repositorios con permisos demasiado amplios. Proteger estos activos implica cifrar los datos en reposo y en tránsito, controlar el acceso con el principio de mínimo privilegio, y aplicar técnicas de anonimización o privacidad diferencial cuando los datos contienen información personal. Los pesos del modelo también deben protegerse, ya que representan una inversión significativa en cómputo y pueden filtrar información sobre los datos con los que fueron entrenados. Un caso habitual es el de un dataset de entrenamiento almacenado en un bucket de nube mal configurado, accesible públicamente por error, que termina exponiendo información sensible de clientes meses antes de que alguien lo detecte.

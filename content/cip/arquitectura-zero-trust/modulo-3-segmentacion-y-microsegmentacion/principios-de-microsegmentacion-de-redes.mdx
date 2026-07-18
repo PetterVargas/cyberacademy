@@ -1,6 +1,6 @@
 ---
 title: Principios de Microsegmentación de Redes
-description: Descripción tema
+description: Dividir la red en zonas de confianza reducidas
 ---
 
-Aún sin contenido.
+La microsegmentación de redes consiste en dividir el entorno corporativo en zonas mucho más pequeñas y aisladas que las tradicionales VLAN o subredes, aplicando políticas de acceso específicas entre cada carga de trabajo, servidor o incluso proceso individual, en lugar de confiar en una única frontera perimetral. Esto importa en la práctica porque limita drásticamente el movimiento lateral de un atacante, ya que comprometer un servidor web ya no significa tener vía libre hacia la base de datos, el servidor de archivos y el resto de la infraestructura, sino que cada salto requiere superar una nueva política de control. Un ejemplo habitual es el de un centro de datos donde cada aplicación se ejecuta en su propio segmento lógico con reglas que solo permiten comunicación explícita hacia los servicios que realmente necesita, de forma que un ransomware que infecta un servidor queda contenido sin poder propagarse automáticamente al resto de la red.

@@ -1,6 +1,6 @@
 ---
 title: "Mecanismos de Autenticación: API Keys, OAuth 2.0, JWT"
-description: Descripción tema
+description: Comparativa de métodos de autenticación de APIs
 ---
 
-Aún sin contenido.
+Elegir el mecanismo de autenticación correcto depende de quién consume la API y con qué nivel de confianza, y confundir estos casos de uso es una fuente común de decisiones de diseño inseguras. Las API keys son simples de implementar y adecuadas para identificar aplicaciones o servicios en integraciones máquina a máquina, pero no representan identidad de usuario ni deberían usarse para autorizar acciones sensibles en nombre de una persona, ya que suelen quedar embebidas en código cliente y son fáciles de filtrar. OAuth 2.0 resuelve la delegación de acceso, permitiendo que una aplicación actúe en nombre de un usuario sin conocer su contraseña, y es el estándar recomendado cuando terceros necesitan acceso limitado y revocable a recursos protegidos. JWT, por su parte, no es un mecanismo de autenticación en sí mismo sino un formato de token que suele usarse junto con OAuth para transportar la sesión de forma autocontenida y sin estado; su riesgo principal aparece cuando se firman con algoritmos débiles o no se valida correctamente la firma en el servidor, lo que permite a un atacante fabricar tokens válidos y suplantar identidades sin necesidad de robar credenciales reales.

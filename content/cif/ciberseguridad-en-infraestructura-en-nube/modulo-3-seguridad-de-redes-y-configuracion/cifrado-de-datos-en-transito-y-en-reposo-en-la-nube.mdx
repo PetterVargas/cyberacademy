@@ -1,6 +1,6 @@
 ---
 title: Cifrado de Datos en Tránsito y en Reposo en la Nube
-description: Descripción tema
+description: Proteger los datos, se muevan o estén guardados
 ---
 
-Aún sin contenido.
+El cifrado en tránsito protege los datos mientras viajan entre sistemas, típicamente mediante TLS, mientras que el cifrado en reposo protege los datos almacenados en discos, bases de datos o servicios de almacenamiento, y ambos son necesarios porque cubren momentos de exposición distintos frente a un atacante. Los proveedores cloud suelen ofrecer cifrado en reposo activable con pocos clics, pero dejarlo desactivado por defecto en algunos servicios sigue siendo un error habitual que expone datos sensibles si alguien accede al almacenamiento físico o lógico subyacente. Gestionar las llaves de cifrado con un servicio dedicado, en lugar de dejar que el proveedor las administre por completo, añade una capa adicional de control cuando la sensibilidad de los datos lo justifica. Un ejemplo práctico es cifrar una base de datos de clientes con llaves gestionadas por la propia organización, de modo que ni siquiera el proveedor cloud pueda leer los datos sin autorización explícita.

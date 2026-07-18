@@ -1,10 +1,11 @@
 {
   "title": "Curso de Creación y Gestión de un CSIRT y SIRT",
-  "description": "Estructura, procesos y operación de equipos de respuesta a incidentes",
+  "description": "Estructura y operación de un CSIRT/SIRT",
   "root": true,
   "pages": [
     "---Overview---",
     "index",
+    "draw",
     "---Módulo 1---",
     "modulo-1-fundamentos-de-un-csirt-sirt",
     "---Módulo 2---",

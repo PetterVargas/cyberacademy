@@ -1,10 +1,11 @@
 {
   "title": "Curso de Threat Modeling",
-  "description": "Metodologías para identificar y mitigar amenazas desde el diseño",
+  "description": "Identificación y mitigación de amenazas",
   "root": true,
   "pages": [
     "---Overview---",
     "index",
+    "draw",
     "---Módulo 1---",
     "modulo-1-fundamentos-del-threat-modeling",
     "---Módulo 2---",

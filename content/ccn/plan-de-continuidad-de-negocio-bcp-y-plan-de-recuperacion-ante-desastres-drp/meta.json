@@ -1,10 +1,11 @@
 {
   "title": "Curso de Plan de Continuidad de Negocio (BCP) y Plan de Recuperación ante Desastres (DRP)",
-  "description": "Diseño e implementación de planes BCP y DRP ante incidentes cibernéticos",
+  "description": "Planes BCP y DRP ante incidentes",
   "root": true,
   "pages": [
     "---Overview---",
     "index",
+    "draw",
     "---Módulo 1---",
     "modulo-1-fundamentos-de-la-continuidad-del-negocio",
     "---Módulo 2---",

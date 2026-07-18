@@ -1,6 +1,6 @@
 ---
 title: Procedimientos de Recuperación Segura de Sistemas
-description: Descripción tema
+description: Restaurar sistemas sin reintroducir riesgo
 ---
 
-Aún sin contenido.
+La recuperación segura de sistemas consiste en devolver la operación normal a la organización después de un incidente sin reintroducir la misma vulnerabilidad o dejar puertas traseras que el atacante pudo haber instalado durante su presencia en el entorno. En la práctica, esto exige verificar con evidencia técnica, no solo suposición, que la causa raíz fue erradicada antes de restaurar sistemas desde copias de seguridad, porque restaurar un backup tomado después de que el atacante ya tenía acceso simplemente reintroduce el problema. Un procedimiento sólido incluye reconstruir sistemas críticos desde cero cuando existe duda razonable sobre su integridad, en lugar de confiar en limpiezas parciales, y monitorear intensivamente los sistemas recuperados durante los días posteriores para detectar cualquier señal de reinfección. Un caso frecuente donde esto falla es restaurar rápidamente por presión del negocio sin cambiar las credenciales comprometidas, lo que permite al atacante regresar usando el mismo acceso que originalmente utilizó para entrar.

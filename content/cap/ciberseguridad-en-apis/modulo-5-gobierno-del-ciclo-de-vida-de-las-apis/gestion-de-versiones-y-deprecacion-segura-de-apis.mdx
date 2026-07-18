@@ -1,6 +1,6 @@
 ---
 title: Gestión de Versiones y Deprecación Segura de APIs
-description: Descripción tema
+description: Cómo retirar versiones de API sin dejar huecos
 ---
 
-Aún sin contenido.
+Cuando una API evoluciona, mantener versiones antiguas vivas indefinidamente crea una superficie de ataque que rara vez recibe el mismo nivel de mantenimiento que la versión actual, y ahí es donde suelen aparecer vulnerabilidades olvidadas. Una gestión de versiones responsable exige comunicar con anticipación los plazos de deprecación, documentar claramente qué endpoints quedarán obsoletos y establecer fechas límite firmes de apagado, no sugerencias indefinidas. En la práctica, muchas organizaciones dejan versiones v1 accesibles "por si acaso" mientras concentran todos los controles de seguridad en v2 o v3, dejando esa versión antigua como el camino de menor resistencia para un atacante que la descubra en un escaneo de reconocimiento. Un proceso maduro incluye monitoreo activo del tráfico hacia versiones deprecadas para identificar consumidores que aún dependen de ellas, alertas automáticas cuando se acerca la fecha de apagado y, finalmente, el retiro efectivo del código y la infraestructura asociada, no solo su desactivación en la documentación pública.

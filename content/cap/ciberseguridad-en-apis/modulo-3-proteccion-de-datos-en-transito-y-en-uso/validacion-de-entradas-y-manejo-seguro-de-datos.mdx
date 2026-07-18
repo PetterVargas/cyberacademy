@@ -1,6 +1,6 @@
 ---
 title: Validación de Entradas y Manejo Seguro de Datos
-description: Descripción tema
+description: Sanitizar entradas para evitar inyecciones y abusos
 ---
 
-Aún sin contenido.
+Toda API que acepta datos de un cliente externo debe tratarlos como potencialmente hostiles, sin importar si provienen de una aplicación móvil propia o de un tercero, porque cualquier petición puede ser modificada antes de llegar al servidor. La validación de entradas consiste en verificar tipo, longitud, formato y rango de cada campo antes de procesarlo, idealmente contra una lista blanca de valores permitidos en vez de intentar bloquear patrones maliciosos conocidos, que siempre queda un paso por detrás de nuevas técnicas de evasión. Este control previene desde inyecciones SQL o NoSQL hasta ataques de deserialización insegura, donde un payload manipulado ejecuta código arbitrario al ser procesado por el backend. Un matiz que se pasa por alto con frecuencia es que la validación debe ocurrir en el servidor, nunca solo en el cliente, porque las validaciones de frontend son triviales de saltarse llamando directamente al endpoint; además, conviene aplicar límites de tamaño en el payload completo, no solo en campos individuales, para evitar que una petición desproporcionadamente grande agote memoria o cause denegación de servicio.

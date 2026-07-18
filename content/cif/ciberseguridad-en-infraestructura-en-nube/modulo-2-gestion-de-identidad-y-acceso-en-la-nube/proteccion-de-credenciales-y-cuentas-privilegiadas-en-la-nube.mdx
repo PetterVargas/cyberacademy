@@ -1,6 +1,6 @@
 ---
 title: Protección de Credenciales y Cuentas Privilegiadas en la Nube
-description: Descripción tema
+description: Blindar accesos con máximo poder sobre la nube
 ---
 
-Aún sin contenido.
+Las cuentas privilegiadas, como las de administrador raíz de una cuenta cloud, concentran capacidad de daño desproporcionada frente a cualquier otra identidad, porque su compromiso puede significar el control total de toda la infraestructura, incluidos los respaldos y los registros de auditoría. Protegerlas exige medidas más estrictas que el resto de las cuentas, autenticación multifactor con hardware físico, uso restringido solo para tareas que realmente lo requieran, monitoreo especial de cada acción que ejecutan, y almacenamiento de credenciales en bóvedas dedicadas en lugar de archivos de configuración o variables de entorno accesibles. Esto importa porque los atacantes con acceso inicial limitado invierten buena parte de su esfuerzo en escalar privilegios precisamente hacia este tipo de cuentas. Un ejemplo frecuente y evitable es encontrar claves de acceso de una cuenta administrativa escritas directamente en el código fuente de una aplicación, visibles para cualquiera con acceso al repositorio.

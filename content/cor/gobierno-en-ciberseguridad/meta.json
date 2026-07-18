@@ -1,10 +1,11 @@
 {
   "title": "Curso de Gobierno en Ciberseguridad",
-  "description": "Marcos de referencia, roles y responsabilidades del CISO",
+  "description": "Roles y responsabilidades del CISO",
   "root": true,
   "pages": [
     "---Overview---",
     "index",
+    "draw",
     "---Módulo 1---",
     "modulo-1-fundamentos-del-gobierno-de-ciberseguridad",
     "---Módulo 2---",

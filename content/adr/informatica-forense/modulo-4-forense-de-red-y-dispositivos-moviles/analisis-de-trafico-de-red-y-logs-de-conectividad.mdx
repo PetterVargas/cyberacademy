@@ -1,6 +1,6 @@
 ---
 title: Análisis de Tráfico de Red y Logs de Conectividad
-description: Descripción tema
+description: Reconstruir un incidente a partir del tráfico de red
 ---
 
-Aún sin contenido.
+El tráfico de red y los logs de conectividad, generados por firewalls, routers, servidores proxy o sistemas de detección de intrusiones, permiten reconstruir cómo se comunicó un atacante con la infraestructura comprometida, incluso cuando ya borró rastros directos en los sistemas afectados. Analizar capturas completas de paquetes ofrece el mayor nivel de detalle, incluyendo el contenido exacto de comunicaciones no cifradas, pero exige almacenamiento considerable, por lo que muchas organizaciones dependen en la práctica de logs de flujo (NetFlow) o registros de conexión, que documentan quién se comunicó con quién, cuándo y cuánto tráfico se transfirió, sin capturar el contenido íntegro. En la práctica, cruzar estos registros con marcas de tiempo de otros sistemas es lo que permite construir una narrativa coherente del incidente, por ejemplo confirmar que la exfiltración de datos ocurrió minutos después de que un usuario abriera un archivo malicioso. La ausencia de retención adecuada de estos logs es una de las limitaciones más frecuentes que enfrentan los investigadores forenses.

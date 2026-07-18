@@ -1,6 +1,6 @@
 ---
 title: Monitoreo Continuo y Respuesta ante Comportamiento Anómalo de Agentes
-description: Descripción tema
+description: Detectar y responder a desviaciones del agente
 ---
 
-Aún sin contenido.
+Un agente en producción no se comporta como un sistema estático, sus respuestas y acciones varían según el contexto de cada conversación, lo que hace que definir qué es "normal" sea más complejo que en un sistema tradicional basado en reglas fijas, y precisamente por eso el monitoreo continuo es indispensable, no opcional. Establecer una línea base de comportamiento esperado por tipo de tarea permite detectar desviaciones significativas, como un agente de soporte que de pronto empieza a invocar herramientas administrativas fuera de su patrón habitual, o una skill que genera un volumen inusual de llamadas a una API externa en un período corto, señales que suelen indicar manipulación exitosa o un error de configuración grave. La respuesta ante estas anomalías debe estar automatizada al menos en su primera fase, con la capacidad de suspender temporalmente los permisos del agente o pausar la sesión activa mientras un humano investiga, en vez de depender exclusivamente de revisión manual posterior que llega demasiado tarde para evitar el daño. Un elemento que distingue un programa maduro es incorporar retroalimentación de estos incidentes de vuelta al diseño del agente, ajustando permisos, filtros de entrada o reglas de aprobación humana según los patrones de abuso realmente observados en producción.

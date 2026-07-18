@@ -1,6 +1,6 @@
 ---
 title: Ataques Adversarios y Evasión de Modelos
-description: Descripción tema
+description: Cómo se engaña a un modelo con entradas manipuladas
 ---
 
-Aún sin contenido.
+Los ataques adversarios consisten en modificar de forma mínima y a menudo imperceptible una entrada, como una imagen o un texto, con el objetivo de que el modelo la clasifique incorrectamente sin que un humano note la diferencia. Estos cambios se calculan explotando cómo el modelo pondera cada característica, y pueden aplicarse tanto en el momento de la inferencia, para evadir una detección puntual, como de forma sistemática para degradar el desempeño general del sistema. Es un riesgo especialmente crítico en sistemas de seguridad que dependen de clasificadores automáticos, como el filtrado de malware o la detección de fraude, donde un atacante con conocimiento del modelo puede diseñar variantes que pasan desapercibidas para el sistema pero mantienen su comportamiento malicioso. Defenderse implica entrenar con ejemplos adversarios de forma deliberada, usar ensambles de modelos que dificulten la transferencia de un ataque, y no depender de un único clasificador para decisiones críticas de seguridad.

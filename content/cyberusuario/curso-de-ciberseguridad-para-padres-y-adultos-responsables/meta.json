@@ -1,10 +1,11 @@
 {
   "title": "Curso de Ciberseguridad para Padres y Adultos Responsables",
-  "description": "Herramientas para acompañar y proteger a niñas, niños y adolescentes en entornos digitales",
+  "description": "Proteger a niños y adolescentes en línea",
   "root": true,
   "pages": [
     "---Overview---",
     "index",
+    "draw",
     "---Módulo 1---",
     "modulo-1-el-mundo-digital-de-ninos-y-adolescentes",
     "---Módulo 2---",

@@ -1,6 +1,6 @@
 ---
 title: Integración de Controles de Seguridad en el Pipeline
-description: Descripción tema
+description: Insertar seguridad en cada etapa del pipeline CI/CD
 ---
 
-Aún sin contenido.
+Integrar seguridad en el pipeline de CI/CD significa que cada control, análisis de código, escaneo de dependencias, pruebas dinámicas y verificación de configuración, se ejecuta de forma automática en el momento adecuado del flujo de construcción y despliegue, sin depender de que un equipo de seguridad revise manualmente cada cambio antes de que salga a producción. El diseño efectivo distribuye estos controles según su costo y velocidad, los análisis rápidos y de bajo costo, como el escaneo estático de código o de dependencias, se ejecutan en cada commit para dar retroalimentación inmediata, mientras que pruebas más lentas, como el análisis dinámico completo o pruebas de penetración automatizadas, se reservan para etapas posteriores donde el impacto en la velocidad de desarrollo es menor. Un matiz que distingue una integración madura de una superficial es que los resultados de estos controles deben ser accionables directamente por el desarrollador, mostrando exactamente qué línea de código o qué dependencia generó el hallazgo, en vez de producir reportes genéricos que terminan ignorados. Cuando la seguridad se convierte en parte natural del pipeline en vez de un paso adicional y externo, la resistencia cultural del equipo de desarrollo hacia estos controles disminuye considerablemente.

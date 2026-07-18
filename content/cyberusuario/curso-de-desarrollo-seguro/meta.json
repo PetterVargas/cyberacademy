@@ -1,10 +1,11 @@
 {
   "title": "Curso de Desarrollo Seguro",
-  "description": "Buenas prácticas de programación segura a lo largo del ciclo de desarrollo de software",
+  "description": "Buenas prácticas de programación segura",
   "root": true,
   "pages": [
     "---Overview---",
     "index",
+    "draw",
     "---Módulo 1---",
     "modulo-1-fundamentos-de-desarrollo-seguro",
     "---Módulo 2---",

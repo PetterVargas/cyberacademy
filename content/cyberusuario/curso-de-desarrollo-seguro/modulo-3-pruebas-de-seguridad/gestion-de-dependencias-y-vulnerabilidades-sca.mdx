@@ -1,6 +1,6 @@
 ---
 title: Gestión de Dependencias y Vulnerabilidades (SCA)
-description: Descripción tema
+description: Gestionar riesgo de librerías externas
 ---
 
-Aún sin contenido.
+El código propio de una aplicación suele ser una fracción pequeña de todo lo que realmente se ejecuta: la mayoría son librerías y frameworks de terceros, cada uno con sus propias vulnerabilidades potenciales que se descubren y publican constantemente. El análisis de composición de software (SCA) escanea automáticamente estas dependencias, comparándolas contra bases de datos públicas de vulnerabilidades conocidas, y alerta cuando una librería usada en el proyecto tiene una falla reportada, indicando además si existe una versión corregida disponible. Ignorar esta capa de riesgo es común y peligroso: incidentes de gran escala, como la vulnerabilidad de Log4j, se propagaron precisamente porque muchas organizaciones no sabían con certeza en qué proyectos usaban esa librería. Mantener un inventario actualizado de dependencias es tan importante como escribir código seguro propio.

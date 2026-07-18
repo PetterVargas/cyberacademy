@@ -1,6 +1,6 @@
 ---
 title: Gestión de Credenciales y Permisos en Integraciones MCP
-description: Descripción tema
+description: Manejar de forma segura las credenciales de MCP
 ---
 
-Aún sin contenido.
+Cada servidor MCP conectado a un agente típicamente requiere sus propias credenciales para autenticarse contra el sistema que representa, ya sea una base de datos, un servicio en la nube o una API de terceros, y la forma en que se gestionan esas credenciales determina en gran medida el radio de impacto de un compromiso. Un error frecuente es usar una única credencial con permisos amplios y compartirla entre múltiples integraciones por simplicidad operativa, lo que significa que si un solo servidor MCP resulta comprometido, el atacante hereda acceso a todos los sistemas conectados con esa misma credencial, no solo al que originalmente se pretendía exponer. La práctica recomendada es emitir credenciales específicas y de alcance mínimo para cada integración, almacenarlas en un gestor de secretos dedicado en vez de en archivos de configuración planos, y rotarlas con regularidad, especialmente después de cualquier incidente sospechoso. Igual de importante es que estas credenciales nunca queden expuestas al propio modelo de lenguaje dentro del contexto de la conversación, el agente debe poder invocar la herramienta sin que el token de acceso subyacente forme parte del texto que procesa, evitando que una fuga de contexto se traduzca directamente en una fuga de credenciales.

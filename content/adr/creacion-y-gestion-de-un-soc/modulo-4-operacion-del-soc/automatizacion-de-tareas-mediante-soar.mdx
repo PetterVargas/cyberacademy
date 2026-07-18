@@ -1,6 +1,6 @@
 ---
 title: Automatización de Tareas mediante SOAR
-description: Descripción tema
+description: Automatizar tareas repetitivas de respuesta con SOAR
 ---
 
-Aún sin contenido.
+Las plataformas SOAR (Security Orchestration, Automation and Response) permiten encadenar acciones repetitivas, como enriquecer una alerta con inteligencia de amenazas, bloquear una IP maliciosa o aislar un endpoint comprometido, sin que un analista tenga que ejecutar manualmente cada paso. El valor práctico está en liberar tiempo humano para el análisis que realmente requiere criterio, mientras el playbook automatizado se encarga de las tareas mecánicas que consumen minutos valiosos en cada incidente. Sin embargo, automatizar mal puede ser peor que no automatizar: un playbook mal probado que bloquea automáticamente direcciones IP sin validación adecuada puede terminar interrumpiendo servicios legítimos o, en el peor caso, notificando al atacante de que fue detectado antes de que el equipo termine la investigación. La automatización efectiva empieza con procesos manuales bien documentados y maduros, que luego se traducen en playbooks probados en ambientes controlados antes de desplegarse en producción, priorizando siempre casos de alto volumen y baja ambigüedad.

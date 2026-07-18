@@ -1,6 +1,6 @@
 ---
 title: Inventario y Descubrimiento de APIs (Shadow APIs)
-description: Descripción tema
+description: Detectar APIs no documentadas antes que un atacante
 ---
 
-Aún sin contenido.
+No se puede proteger lo que no se sabe que existe, y en organizaciones donde distintos equipos publican APIs de forma independiente es habitual que el inventario oficial de seguridad quede desactualizado frente a la realidad del tráfico en producción. Las shadow APIs surgen de varias formas típicas, un endpoint de prueba que nunca se retiró tras pasar a producción, una versión legacy que sigue activa en paralelo a la actual, o una integración creada por un equipo de negocio sin pasar por el proceso estándar de revisión de seguridad; en todos los casos, comparten el mismo problema, no están sujetas a los controles y monitoreo que sí aplican a las APIs conocidas. El descubrimiento efectivo combina varias fuentes, análisis del tráfico real en los gateways y proxies para identificar rutas que no aparecen en la documentación, escaneo activo del espacio de nombres de dominios y subdominios, y revisión de los repositorios de código en busca de definiciones de rutas huérfanas. Mantener este inventario vivo, actualizado automáticamente y no como un ejercicio manual anual, es lo que permite cerrar la brecha entre la superficie de ataque real de la organización y la que el equipo de seguridad efectivamente vigila.

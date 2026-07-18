@@ -1,6 +1,6 @@
 ---
 title: Requisitos de Seguridad en Historias de Usuario
-description: Descripción tema
+description: Cómo incluir seguridad en el desarrollo de producto
 ---
 
-Aún sin contenido.
+Incluir requisitos de seguridad directamente en las historias de usuario significa que, al escribir "como usuario quiero restablecer mi contraseña", el equipo también define desde el inicio cómo se validará la identidad, cuántos intentos se permiten y qué pasa si alguien intenta abusar de esa función, en vez de dejarlo para revisarlo después de que el producto ya esté construido. Esta práctica importa porque agregar seguridad al final de un desarrollo suele ser más caro y genera fricciones entre los equipos de producto e ingeniería, mientras que pensarla desde el diseño evita retrabajos y vulnerabilidades que después son difíciles de corregir sin romper la experiencia del usuario. Un ejemplo simple es agregar un criterio de aceptación que diga explícitamente que la función de recuperación de cuenta debe bloquearse tras varios intentos fallidos, evitando que se convierta en una puerta abierta para ataques automatizados.

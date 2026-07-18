@@ -1,6 +1,6 @@
 ---
 title: Gestión de Roles, Políticas y Privilegios Mínimos
-description: Descripción tema
+description: Otorgar solo el acceso estrictamente necesario
 ---
 
-Aún sin contenido.
+El principio de privilegio mínimo establece que cada identidad, sea una persona o un servicio automatizado, debe tener únicamente los permisos necesarios para cumplir su función, ni uno más, y en la nube esto se implementa mediante roles y políticas granulares en lugar de asignar permisos amplios por comodidad administrativa. Aplicarlo correctamente exige revisar periódicamente qué permisos están realmente en uso, ya que es habitual que una identidad acumule accesos otorgados para tareas puntuales que nunca se revocan después. Esto importa en la práctica porque cuando un atacante compromete una credencial, el daño real que puede causar está limitado directamente por los privilegios que esa credencial tenía asignados, no por la sofisticación del ataque. Un ejemplo común es una función automatizada que solo necesita leer datos de un servicio, pero que por descuido se configura con permisos de administrador completo sobre toda la cuenta cloud.

@@ -1,6 +1,6 @@
 ---
 title: Monitoreo y Detección de Comportamiento Anómalo en APIs
-description: Descripción tema
+description: Identificar abuso de API mediante patrones de tráfico
 ---
 
-Aún sin contenido.
+Muchos ataques contra APIs no dependen de una vulnerabilidad técnica sino de un uso legítimo llevado al extremo, como un scraping masivo de datos de usuarios o una enumeración lenta de identificadores para explotar BOLA, y ese tipo de abuso solo se detecta observando el comportamiento a lo largo del tiempo, no inspeccionando peticiones individuales. El monitoreo efectivo parte de establecer una línea base de tráfico normal por endpoint, cliente y usuario, y luego vigilar desviaciones como picos de volumen desde una sola cuenta, secuencias de IDs consultados en orden que sugieren automatización, o patrones geográficos inconsistentes con el uso habitual. Una práctica valiosa es correlacionar señales de distintas capas, por ejemplo cruzar tasas de error 403 elevadas en un cliente con intentos de acceso a recursos fuera de su alcance, lo que suele indicar un intento activo de explotación de autorización más que un error de integración. Sin esta visibilidad continua, un atacante paciente puede operar durante semanas extrayendo datos en volúmenes pequeños que individualmente parecen inofensivos pero que en conjunto representan una fuga masiva de información.

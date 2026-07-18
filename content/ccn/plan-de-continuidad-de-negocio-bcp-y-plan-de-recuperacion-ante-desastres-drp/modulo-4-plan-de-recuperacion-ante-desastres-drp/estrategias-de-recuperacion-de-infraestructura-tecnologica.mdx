@@ -1,6 +1,6 @@
 ---
 title: Estrategias de Recuperación de Infraestructura Tecnológica
-description: Descripción tema
+description: Cómo restaurar sistemas tras una interrupción
 ---
 
-Aún sin contenido.
+La recuperación de infraestructura tecnológica requiere una estrategia técnica definida con antelación, no improvisada durante el incidente, que especifique en qué orden se restauran los sistemas, qué configuraciones y respaldos se usan, y qué validaciones se ejecutan antes de declarar un servicio nuevamente operativo. Las opciones típicas van desde la restauración manual de servidores desde respaldos, más lenta pero de menor costo, hasta la conmutación automática hacia infraestructura redundante en otra región, casi instantánea pero más costosa de mantener en el tiempo. Elegir la estrategia adecuada depende del RTO definido para cada sistema en el BIA, y de la complejidad real de las dependencias entre aplicaciones, porque restaurar un sistema aislado no sirve de nada si depende de otro que aún no está disponible. Un matiz importante es documentar y probar el orden real de dependencias, ya que muchas organizaciones descubren durante un incidente real que su base de datos depende de un servicio de autenticación que nadie priorizó restaurar primero.

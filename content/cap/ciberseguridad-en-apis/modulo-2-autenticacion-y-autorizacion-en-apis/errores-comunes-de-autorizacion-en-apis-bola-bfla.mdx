@@ -1,6 +1,6 @@
 ---
 title: Errores Comunes de Autorización en APIs (BOLA, BFLA)
-description: Descripción tema
+description: Fallos típicos de autorización que exponen datos ajenos
 ---
 
-Aún sin contenido.
+BOLA (Broken Object Level Authorization) y BFLA (Broken Function Level Authorization) encabezan el OWASP API Security Top 10 porque son, con diferencia, las vulnerabilidades más explotadas en APIs reales. BOLA ocurre cuando un endpoint recibe un identificador de recurso, como el número de un pedido o el ID de un usuario, y el servidor confía en que el cliente solo pedirá los suyos, sin verificar que el usuario autenticado realmente tenga permiso sobre ese recurso específico; basta con cambiar un número en la URL para acceder a datos ajenos. BFLA es su equivalente a nivel de función: un endpoint administrativo queda accesible para cualquier usuario autenticado porque la aplicación solo valida que hay sesión activa, no que el rol correspondiente autorice esa acción. Ambos fallos son especialmente peligrosos porque no dependen de vulnerabilidades técnicas complejas sino de lógica de negocio ausente, lo que significa que escáneres automáticos rara vez los detectan y solo aparecen mediante pruebas manuales o revisión de código enfocadas específicamente en validar autorización por cada objeto y cada función, no solo la autenticación general.

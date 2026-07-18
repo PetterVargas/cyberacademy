@@ -1,6 +1,6 @@
 ---
 title: Riesgos de Herramientas y Permisos Otorgados a los Agentes
-description: Descripción tema
+description: Cómo cada herramienta conectada amplía el riesgo
 ---
 
-Aún sin contenido.
+Cada herramienta que se conecta a un agente, ya sea acceso a correo, a un repositorio de código, a una base de datos o a una API de pagos, amplía directamente su superficie de ataque, porque el agente hereda de facto todos los permisos de esa herramienta, sin distinguir por sí mismo entre una instrucción legítima del usuario y una manipulada por contenido externo malicioso. El riesgo no está solo en otorgar demasiadas herramientas, sino en otorgarlas con permisos más amplios de los que la tarea realmente necesita, como conceder acceso de escritura completo a un repositorio cuando el agente solo necesita leer código para responder preguntas. Un patrón de ataque frecuente combina varias herramientas para escalar impacto, un agente con acceso a lectura de correo y a envío de mensajes puede, si es manipulado mediante contenido malicioso incrustado en un email recibido, terminar reenviando información sensible a un destinatario externo sin que el usuario lo haya solicitado. La práctica recomendada es auditar cada herramienta antes de conectarla, preguntando específicamente qué puede hacer con ella un atacante que logre controlar las instrucciones del agente, no solo qué necesita el caso de uso legítimo.

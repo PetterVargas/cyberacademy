@@ -1,6 +1,6 @@
 ---
 title: Supervisión Humana y Mecanismos de Aprobación (Human in the Loop)
-description: Descripción tema
+description: Cuándo exigir aprobación humana antes de actuar
 ---
 
-Aún sin contenido.
+Human in the loop es el diseño donde un agente, antes de ejecutar una acción de alto impacto, se detiene y solicita confirmación explícita de una persona en vez de proceder de forma completamente autónoma, y es uno de los controles más efectivos disponibles hoy para contener el riesgo de decisiones erróneas o manipuladas del modelo. La clave está en decidir con criterio qué acciones requieren esa pausa y cuáles no, porque exigir aprobación para cada paso trivial elimina el valor práctico de automatizar con agentes, mientras que no exigirla para acciones irreversibles, como transferencias de dinero, eliminación de datos o envío de comunicaciones externas, deja la puerta abierta a errores costosos sin posibilidad de corrección. Un enfoque maduro clasifica las acciones por nivel de riesgo e irreversibilidad, dejando que el agente ejecute de forma autónoma tareas de bajo impacto y reversibles, como generar un borrador o consultar información, mientras reserva la aprobación humana para lo que realmente lo justifica. Un matiz importante es que la aprobación debe mostrar a la persona el contexto suficiente para decidir con criterio, no solo un botón genérico de confirmar, porque una aprobación otorgada sin entender realmente qué se está autorizando no aporta ninguna protección real.

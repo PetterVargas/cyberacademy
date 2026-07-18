@@ -1,6 +1,6 @@
 ---
 title: Definición de RTO y RPO por Proceso Crítico
-description: Descripción tema
+description: Tiempos máximos de caída y pérdida de datos
 ---
 
-Aún sin contenido.
+El RTO, tiempo objetivo de recuperación, define cuánto tiempo puede estar caído un proceso antes de causar un daño inaceptable al negocio, mientras que el RPO, punto objetivo de recuperación, define cuánta información es aceptable perder medida en tiempo, por ejemplo los últimos quince minutos de transacciones. Estos dos valores deben definirse por proceso crítico y no de forma genérica para toda la organización, porque un sistema de facturación puede tolerar horas de interrupción mientras que una plataforma de pagos en línea puede necesitar un RTO de minutos. Su importancia práctica está en que determinan directamente cuánto debe invertir la organización en redundancia, replicación de datos y capacidad de respaldo, invertir de más es desperdicio y de menos es riesgo asumido sin decisión consciente. Un matiz clave es que un RPO ambicioso, cercano a cero, suele requerir replicación en tiempo real, mucho más costosa que un respaldo diario tradicional.

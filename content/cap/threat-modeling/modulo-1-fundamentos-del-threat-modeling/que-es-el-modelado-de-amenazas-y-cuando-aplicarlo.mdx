@@ -1,6 +1,6 @@
 ---
 title: Qué Es el Modelado de Amenazas y Cuándo Aplicarlo
-description: Descripción tema
+description: Definición base y momento correcto para aplicarlo
 ---
 
-Aún sin contenido.
+El modelado de amenazas, o threat modeling, es un proceso estructurado para identificar de forma anticipada cómo un sistema podría ser atacado, analizando su arquitectura, sus flujos de datos y los puntos donde interactúa con usuarios o componentes externos, con el objetivo de encontrar y mitigar riesgos antes de que el sistema esté construido, no después de que un incidente los revele. A diferencia de una prueba de penetración, que evalúa un sistema ya existente buscando vulnerabilidades explotables, el threat modeling se hace idealmente durante el diseño, cuando todavía es posible cambiar decisiones arquitectónicas a bajo costo, y se centra en pensar sistemáticamente en el atacante, sus motivaciones y sus capacidades, más que en encontrar fallos técnicos concretos ya presentes. Aplicarlo tiene más sentido en momentos específicos, cuando se diseña una funcionalidad nueva que maneja datos sensibles, cuando se introduce un cambio arquitectónico significativo como una nueva integración externa, o cuando el perfil de riesgo del producto cambia, por ejemplo al pasar de uso interno a exposición pública. Un matiz importante es que no todo sistema requiere el mismo nivel de rigor, un ejercicio ligero y rápido para una funcionalidad de bajo riesgo aporta más valor real que aplicar el mismo proceso exhaustivo a todo por igual, lo que suele generar fatiga y abandono del proceso.

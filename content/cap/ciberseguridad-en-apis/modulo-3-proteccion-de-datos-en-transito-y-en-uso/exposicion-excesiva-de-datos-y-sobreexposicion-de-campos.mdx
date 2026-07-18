@@ -1,6 +1,6 @@
 ---
 title: Exposición Excesiva de Datos y Sobreexposición de Campos
-description: Descripción tema
+description: Evitar que la API devuelva más datos de los necesarios
 ---
 
-Aún sin contenido.
+Es común que las APIs devuelvan el objeto completo de un recurso desde la capa de datos, confiando en que el cliente filtrará y mostrará solo los campos relevantes en su interfaz, pero esa confianza es el origen de una de las fugas de información más frecuentes en producción. Si el endpoint de un perfil de usuario responde con el hash de la contraseña, el número de documento o notas internas del equipo de soporte, cualquiera que inspeccione el tráfico de red con herramientas básicas del navegador puede acceder a esos datos, sin necesidad de explotar ninguna vulnerabilidad técnica. La solución pasa por definir explícitamente qué campos expone cada endpoint según el contexto y el rol del solicitante, en vez de serializar directamente el modelo de base de datos, y aplicar ese filtrado en el servidor, nunca delegarlo al cliente. Este problema se agrava en APIs que sirven a múltiples consumidores, como una app móvil y un panel administrativo, donde reutilizar el mismo endpoint sin diferenciar la respuesta según el nivel de privilegio termina filtrando al público general información pensada solo para uso interno.

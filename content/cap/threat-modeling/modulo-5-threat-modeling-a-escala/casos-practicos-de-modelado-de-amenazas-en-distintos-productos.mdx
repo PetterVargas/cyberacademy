@@ -1,6 +1,6 @@
 ---
 title: Casos Prácticos de Modelado de Amenazas en Distintos Productos
-description: Descripción tema
+description: Cómo varía el análisis según el tipo de producto
 ---
 
-Aún sin contenido.
+El threat modeling no se aplica de la misma forma en todos los productos, porque el perfil de riesgo, los componentes involucrados y los atacantes más probables cambian radicalmente según el contexto. En una aplicación web tradicional, el análisis suele centrarse en flujos de autenticación, gestión de sesiones y validación de entradas del usuario, mientras que en un producto de infraestructura en la nube el foco se desplaza hacia la configuración de permisos entre servicios, la segmentación de redes virtuales y la gestión de credenciales entre componentes automatizados. Un sistema de dispositivos conectados, o IoT, introduce consideraciones distintas todavía, como la seguridad física del hardware, la actualización remota de firmware y la comunicación con servidores centrales sobre redes potencialmente no confiables, amenazas que no existen en un producto puramente basado en software. Revisar casos prácticos concretos de cada tipo de producto, en vez de estudiar solo la teoría general de las metodologías, es lo que permite a un equipo anticipar qué categorías de amenaza son realmente relevantes para su contexto específico, evitando tanto el exceso de análisis en riesgos poco probables como el descuido de amenazas propias de su tipo particular de arquitectura que un enfoque genérico fácilmente pasaría por alto.

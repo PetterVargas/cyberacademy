@@ -1,6 +1,6 @@
 ---
 title: Seguridad en el Despliegue y Actualización de Modelos
-description: Descripción tema
+description: Buenas prácticas para desplegar modelos con seguridad
 ---
 
-Aún sin contenido.
+El paso de un modelo de un entorno de pruebas a producción introduce riesgos que rara vez se contemplan en el desarrollo, pipelines de CI/CD sin controles de integridad, artefactos de modelo firmados de forma laxa, o actualizaciones automáticas que sobrescriben una versión validada por otra comprometida. Asegurar el despliegue implica versionar y firmar digitalmente cada modelo, validar su procedencia antes de promoverlo, y mantener la capacidad de hacer rollback inmediato si una actualización introduce un comportamiento anómalo o una vulnerabilidad. También es crítico separar los entornos de entrenamiento, staging y producción, y limitar quién puede desplegar cambios en el modelo activo. Un caso frecuente es el de equipos que actualizan modelos vía notebooks conectados directamente a producción, sin pipeline ni aprobación, lo que elimina cualquier trazabilidad y abre la puerta a errores o manipulaciones difíciles de detectar después del hecho.

@@ -1,6 +1,6 @@
 ---
 title: Ataques de Inyección de Prompts y Manipulación de Modelos
-description: Descripción tema
+description: Cómo funciona el prompt injection y cómo mitigarlo
 ---
 
-Aún sin contenido.
+El prompt injection consiste en insertar instrucciones maliciosas dentro de la entrada de un modelo de lenguaje para que ignore sus reglas originales y ejecute acciones no autorizadas, como revelar el system prompt, filtrar datos confidenciales o ejecutar comandos en herramientas conectadas. Es especialmente riesgoso en aplicaciones que dan al modelo acceso a APIs, bases de datos o navegación web, porque el ataque puede llegar de forma indirecta, oculto en un documento, correo o página web que el modelo procesa sin que el usuario lo redacte directamente. A diferencia de una inyección SQL clásica, no existe un patrón fijo que bloquear, lo que obliga a combinar validación de entradas, aislamiento de privilegios de las herramientas que el modelo puede invocar, y revisión humana en las acciones sensibles. Ignorar este riesgo en un asistente conectado a sistemas internos puede traducirse en fuga de datos o acciones no deseadas ejecutadas en nombre del usuario.

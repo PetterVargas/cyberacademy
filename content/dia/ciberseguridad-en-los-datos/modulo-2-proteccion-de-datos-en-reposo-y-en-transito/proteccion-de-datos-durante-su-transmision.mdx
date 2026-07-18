@@ -1,6 +1,6 @@
 ---
 title: Protección de Datos durante su Transmisión
-description: Descripción tema
+description: Cómo proteger datos que viajan por la red
 ---
 
-Aún sin contenido.
+Los datos en tránsito, aquellos que viajan entre sistemas, aplicaciones o hacia el usuario final, son vulnerables a la interceptación si no se protegen con cifrado adecuado, ya sea mediante TLS para comunicaciones web, VPN para conexiones entre sitios, o protocolos cifrados para transferencia de archivos. Un error común es asumir que el cifrado en tránsito ya está garantizado por defecto, cuando en realidad muchas integraciones internas entre servicios, especialmente en arquitecturas de microservicios, siguen transmitiendo datos sin cifrar bajo la suposición de que la red interna es confiable. Además del cifrado, es importante validar certificados correctamente para evitar ataques de intermediario, y evitar el uso de protocolos obsoletos que aún se mantienen activos por compatibilidad. Un caso típico es el de una API interna que expone datos sensibles sin TLS porque nunca se pensó que sería accedida desde fuera del entorno original, hasta que un cambio de arquitectura la deja expuesta sin que nadie revise sus controles de transporte.

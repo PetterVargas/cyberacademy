@@ -1,6 +1,6 @@
 ---
 title: Principio de Mínimo Privilegio Aplicado a los Datos
-description: Descripción tema
+description: Aplicar mínimo privilegio al acceso a datos
 ---
 
-Aún sin contenido.
+El principio de mínimo privilegio establece que cada usuario o sistema debe tener acceso únicamente a los datos estrictamente necesarios para cumplir su función, ni más ni menos, y aplicado a los datos significa ir más allá del acceso a nivel de sistema para pensar también en qué campos, filas o categorías de información específicas requiere cada rol. Un analista de soporte, por ejemplo, puede necesitar ver el historial de pedidos de un cliente sin necesitar acceso al número completo de su tarjeta de pago. Aplicar este principio de forma consistente reduce el impacto de una cuenta comprometida, ya que el atacante solo obtiene acceso al subconjunto de datos que esa cuenta tenía autorizado, en lugar de a todo el repositorio. La dificultad práctica está en mantenerlo en el tiempo, los accesos amplios suelen otorgarse por conveniencia inicial y rara vez se revisan después, por lo que ajustar permisos periódicamente es tan importante como definirlos correctamente al inicio.

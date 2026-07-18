@@ -1,10 +1,11 @@
 {
   "title": "Curso de Ciberseguridad en Protección de Marca",
-  "description": "Cómo proteger la reputación e identidad digital de la organización y sus colaboradores",
+  "description": "Protección de la reputación digital",
   "root": true,
   "pages": [
     "---Overview---",
     "index",
+    "draw",
     "---Módulo 1---",
     "modulo-1-fundamentos-de-proteccion-de-marca-digital",
     "---Módulo 2---",

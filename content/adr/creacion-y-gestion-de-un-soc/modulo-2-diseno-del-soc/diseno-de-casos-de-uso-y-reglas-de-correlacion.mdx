@@ -1,6 +1,6 @@
 ---
 title: Diseño de Casos de Uso y Reglas de Correlación
-description: Descripción tema
+description: Diseñar casos de uso que detecten amenazas reales
 ---
 
-Aún sin contenido.
+Un caso de uso es la traducción de una amenaza específica, por ejemplo un movimiento lateral tras un compromiso inicial, en una regla de correlación concreta que el SIEM puede evaluar sobre los eventos que recibe. Diseñar casos de uso bien pensados es lo que separa a un SOC que genera ruido constante de uno que detecta ataques reales con pocos falsos positivos, y por eso el proceso debe partir de un marco de referencia como MITRE ATT&CK, priorizando las técnicas más probables según el perfil de amenazas de la organización en lugar de copiar reglas genéricas de un proveedor. En la práctica, cada caso de uso debe documentar la lógica de detección, los umbrales que la disparan, el contexto necesario para triaje y el resultado esperado de la respuesta, porque una regla sin ese contexto termina generando alertas que los analistas aprenden a ignorar, lo que anula por completo su valor.

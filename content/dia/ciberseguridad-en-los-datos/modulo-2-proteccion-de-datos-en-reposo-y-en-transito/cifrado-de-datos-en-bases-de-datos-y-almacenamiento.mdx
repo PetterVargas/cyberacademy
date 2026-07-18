@@ -1,6 +1,6 @@
 ---
 title: Cifrado de Datos en Bases de Datos y Almacenamiento
-description: Descripción tema
+description: Cómo cifrar datos en bases y almacenamiento
 ---
 
-Aún sin contenido.
+Cifrar datos en reposo significa que la información almacenada en una base de datos, un disco o un bucket de nube queda ilegible sin la clave correspondiente, incluso si un atacante logra acceder directamente al almacenamiento subyacente. Existen distintos niveles de aplicación, cifrado a nivel de disco completo, que protege ante robo físico pero no ante un atacante con acceso a la aplicación, cifrado a nivel de base de datos, y cifrado a nivel de columna o campo, más granular y adecuado para proteger específicamente los datos más sensibles sin cifrar toda la tabla. La gestión de claves es tan importante como el cifrado mismo, una clave almacenada junto a los datos que protege anula buena parte del beneficio. En la práctica, muchas brechas de datos no ocurren porque el atacante rompa el cifrado, sino porque encuentra las credenciales o claves de acceso mal protegidas en el mismo entorno que los datos cifrados.

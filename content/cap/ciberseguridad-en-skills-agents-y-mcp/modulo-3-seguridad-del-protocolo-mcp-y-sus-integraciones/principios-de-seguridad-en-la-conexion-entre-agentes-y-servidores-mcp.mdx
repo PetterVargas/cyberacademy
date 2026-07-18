@@ -1,6 +1,6 @@
 ---
 title: Principios de Seguridad en la Conexión entre Agentes y Servidores MCP
-description: Descripción tema
+description: Reglas base para conectar agentes a servidores MCP
 ---
 
-Aún sin contenido.
+La conexión entre un agente y un servidor MCP establece un canal de confianza que, si no se asegura correctamente, se convierte en un punto crítico de compromiso, ya que por ese canal viajan tanto las instrucciones que el agente envía como los datos y herramientas que el servidor expone a cambio. Un primer principio básico es autenticar mutuamente ambos extremos, el servidor debe verificar que el cliente que se conecta está autorizado, y el agente debe poder confirmar que efectivamente está hablando con el servidor legítimo y no con uno suplantado mediante un ataque de intermediario. Otro principio central es cifrar el canal de comunicación de extremo a extremo y no confiar en que la red local o interna ya ofrece protección suficiente, un supuesto que ha demostrado ser falso repetidamente en incidentes reales. Igual de relevante es limitar explícitamente qué herramientas y qué alcance de datos expone cada servidor, en vez de otorgar acceso completo por defecto, y establecer límites de tiempo de sesión y de tasa de invocación, de forma que un servidor comprometido o mal configurado no pueda usarse como canal para exfiltrar datos de manera masiva y sostenida en el tiempo.

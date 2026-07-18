@@ -1,10 +1,11 @@
 {
   "title": "Curso de Gestión de Riesgos",
-  "description": "Metodologías de análisis, evaluación y tratamiento del riesgo",
+  "description": "Análisis y tratamiento del riesgo",
   "root": true,
   "pages": [
     "---Overview---",
     "index",
+    "draw",
     "---Módulo 1---",
     "modulo-1-fundamentos-de-la-gestion-de-riesgos",
     "---Módulo 2---",

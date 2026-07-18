@@ -1,6 +1,6 @@
 ---
 title: Gestión Segura de Contenedores e Infraestructura como Código
-description: Descripción tema
+description: Seguridad en contenedores e IaC
 ---
 
-Aún sin contenido.
+Los contenedores y la infraestructura como código (IaC) aceleran enormemente el despliegue de aplicaciones, pero también pueden replicar configuraciones inseguras a gran escala si no se gestionan con cuidado: una imagen base desactualizada o mal configurada se convierte automáticamente en cientos de instancias vulnerables. Buenas prácticas incluyen escanear imágenes de contenedores en busca de vulnerabilidades antes de publicarlas en un registro, evitar ejecutar procesos dentro del contenedor con privilegios de administrador, y tratar los archivos de definición de infraestructura (como plantillas de Terraform o Kubernetes) con el mismo rigor de revisión que el código de la aplicación. Un error en un archivo de configuración de IaC puede exponer accidentalmente un bucket de almacenamiento o una base de datos completa a internet, por lo que su revisión no debería tratarse como un detalle menor.

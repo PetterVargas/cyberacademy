@@ -1,6 +1,6 @@
 ---
 title: Modelo de Amenazas (Threat Modeling)
-description: Descripción tema
+description: Anticipar amenazas antes de programar
 ---
 
-Aún sin contenido.
+El threat modeling consiste en identificar de forma sistemática qué puede salir mal en una aplicación antes de escribir la primera línea de código, en lugar de descubrirlo después mediante un incidente real. Un enfoque muy usado es STRIDE, que evalúa cada componente del sistema contra seis categorías de amenaza: suplantación, manipulación de datos, repudio, divulgación de información, denegación de servicio y elevación de privilegios. El resultado no es un documento que se archiva, sino una lista concreta de mitigaciones que se incorporan directamente al diseño: qué datos cifrar, qué validaciones agregar, qué permisos restringir. Hacerlo temprano en el diseño, y no como una auditoría posterior, permite corregir decisiones arquitectónicas que serían mucho más costosas de cambiar una vez que el sistema ya está en producción.

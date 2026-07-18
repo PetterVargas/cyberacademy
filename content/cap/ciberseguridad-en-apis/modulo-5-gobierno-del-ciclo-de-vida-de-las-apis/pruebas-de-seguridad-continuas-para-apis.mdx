@@ -1,6 +1,6 @@
 ---
 title: Pruebas de Seguridad Continuas para APIs
-description: Descripción tema
+description: Integrar pruebas de seguridad en cada cambio de API
 ---
 
-Aún sin contenido.
+Las APIs cambian con una frecuencia mucho mayor que las aplicaciones tradicionales, con nuevos endpoints y campos agregados en cada sprint, lo que vuelve insuficiente una auditoría de seguridad puntual una vez al año; para mantener un nivel de riesgo aceptable, las pruebas deben ejecutarse de forma continua, integradas al ciclo de desarrollo. Esto implica combinar distintas técnicas según el momento del pipeline, análisis estático sobre el código y la especificación OpenAPI para detectar diseños inseguros antes de escribir una sola línea de implementación, pruebas dinámicas automatizadas contra la API desplegada en ambientes de prueba para validar autenticación y autorización en tiempo real, y pruebas de penetración manuales periódicas enfocadas en lógica de negocio, que las herramientas automáticas no logran evaluar. Un aspecto que marca la diferencia entre un programa maduro y uno superficial es probar específicamente los escenarios de autorización rota, como acceder a recursos de otro usuario o invocar funciones administrativas con una cuenta regular, porque son justamente los fallos que los escáneres genéricos pasan por alto y que representan el mayor riesgo real en producción.

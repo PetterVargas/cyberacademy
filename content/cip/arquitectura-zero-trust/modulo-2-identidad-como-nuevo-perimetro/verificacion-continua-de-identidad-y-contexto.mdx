@@ -1,6 +1,6 @@
 ---
 title: Verificación Continua de Identidad y Contexto
-description: Descripción tema
+description: Reevaluar el acceso durante toda la sesión
 ---
 
-Aún sin contenido.
+La verificación continua de identidad y contexto rompe con la idea de que autenticarse una vez al inicio de la sesión es suficiente, y en su lugar reevalúa constantemente si el usuario y el dispositivo siguen mereciendo el nivel de acceso que tienen, observando señales como cambios de ubicación, patrones de tráfico inusuales o alteraciones en la postura de seguridad del equipo. Esto importa en la práctica porque una sesión puede comenzar de forma completamente legítima y volverse riesgosa minutos después, por ejemplo si el dispositivo se conecta a una red pública insegura o si se detecta actividad de malware, y un modelo que solo verifica al inicio no reacciona ante ese cambio. Un ejemplo concreto es el de un empleado que accede a un sistema financiero desde la oficina, pero cuya sesión es interrumpida automáticamente al detectarse que el dispositivo comenzó a comunicarse con un servidor de comando y control minutos después de haber iniciado sesión.

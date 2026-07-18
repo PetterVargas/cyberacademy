@@ -1,6 +1,6 @@
 ---
 title: Seguridad en Pipelines CI/CD
-description: Descripción tema
+description: Proteger el pipeline de despliegue
 ---
 
-Aún sin contenido.
+El pipeline de integración y despliegue continuo (CI/CD) es, en sí mismo, un objetivo atractivo para un atacante: quien logra comprometerlo puede inyectar código malicioso directamente en el proceso de construcción, afectando a todas las versiones que se publiquen después. Proteger el pipeline implica restringir quién puede modificar su configuración, firmar y verificar los artefactos generados en cada etapa, y usar credenciales de alcance mínimo y temporal para cada paso de despliegue, en lugar de una única clave con acceso total y permanente. Integrar controles de seguridad automatizados dentro del propio pipeline (escaneo de código, de dependencias y de imágenes) asegura que ningún cambio llegue a producción sin pasar por esas validaciones, sin depender de que un humano recuerde ejecutarlas manualmente cada vez.

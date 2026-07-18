@@ -1,6 +1,6 @@
 ---
 title: Control de Acceso y Autorización a Nivel de Recurso
-description: Descripción tema
+description: Verificar permisos sobre cada recurso individual
 ---
 
-Aún sin contenido.
+Autenticar a un usuario confirma quién es, pero no dice nada sobre qué recursos específicos puede consultar o modificar, y confundir ambos conceptos es la raíz de gran parte de las brechas de seguridad en APIs. El control de acceso a nivel de recurso exige que, además de validar la sesión, el servidor verifique en cada petición que el usuario autenticado tiene permiso explícito sobre el objeto solicitado, comparando la propiedad o relación del recurso con la identidad de quien lo pide, no asumiendo que un ID válido implica autorización válida. En la práctica, esto significa que un endpoint como obtener el detalle de una factura debe consultar, antes de responder, si esa factura pertenece efectivamente al usuario o a la organización que hace la petición, y no simplemente buscarla por su identificador en la base de datos. Un enfoque robusto centraliza esta lógica en una capa común, en vez de reimplementarla endpoint por endpoint, porque olvidar la verificación en una sola ruta nueva es suficiente para introducir una vulnerabilidad crítica de exposición de datos ajenos.

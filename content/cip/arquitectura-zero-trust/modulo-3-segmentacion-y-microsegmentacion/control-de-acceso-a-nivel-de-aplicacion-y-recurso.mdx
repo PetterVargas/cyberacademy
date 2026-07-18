@@ -1,6 +1,6 @@
 ---
 title: Control de Acceso a Nivel de Aplicación y Recurso
-description: Descripción tema
+description: Permisos granulares por aplicación y no por red
 ---
 
-Aún sin contenido.
+El control de acceso a nivel de aplicación y recurso desplaza la lógica de permisos desde la red hacia cada aplicación o dato individual, de modo que en lugar de otorgar acceso genérico a un segmento de red completo, se define explícitamente qué usuario puede interactuar con qué recurso específico y bajo qué condiciones. Esto es relevante en la práctica porque muchas brechas graves ocurren no por una intrusión inicial sofisticada, sino porque una vez dentro de la red el atacante encuentra acceso amplio a sistemas que nunca debió poder tocar. Un ejemplo concreto es el de una aplicación de recursos humanos donde un empleado de ventas, aunque esté conectado a la misma red corporativa que el equipo de nómina, no puede ni siquiera ver que el sistema de nómina existe, porque el control de acceso se aplica a nivel de la aplicación misma y no depende de la segmentación de red subyacente.

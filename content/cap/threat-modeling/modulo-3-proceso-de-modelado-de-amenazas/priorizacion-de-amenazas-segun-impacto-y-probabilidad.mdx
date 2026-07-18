@@ -1,6 +1,6 @@
 ---
 title: Priorización de Amenazas según Impacto y Probabilidad
-description: Descripción tema
+description: Decidir qué amenazas atender primero
 ---
 
-Aún sin contenido.
+Un ejercicio de threat modeling completo suele producir una lista de amenazas mucho más larga de lo que el equipo puede razonablemente mitigar de inmediato, y sin un criterio claro de priorización, ese listado se convierte en una fuente de parálisis o, peor, en una excusa para no actuar sobre ninguna. La priorización efectiva combina dos dimensiones, el impacto que tendría la amenaza si se materializara, considerando pérdida de datos, interrupción del servicio o daño reputacional, y la probabilidad realista de que ocurra, tomando en cuenta la sofisticación requerida para explotarla y si existen ya controles parciales que la dificultan. Una amenaza de impacto catastrófico pero extremadamente improbable de explotar puede justificar menos inversión inmediata que una de impacto moderado pero trivial de ejecutar, por ejemplo un endpoint sin autenticación accesible desde internet, que cualquier atacante oportunista con herramientas básicas de escaneo puede encontrar en minutos. Un matiz que distingue una priorización madura es que la probabilidad no es estática, cambia con el tiempo conforme aparecen nuevas herramientas de explotación automatizada o se publica un exploit conocido, por lo que la lista de amenazas priorizadas debe revisarse periódicamente, no fijarse una única vez al final del ejercicio inicial.

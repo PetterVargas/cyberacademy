@@ -1,6 +1,6 @@
 ---
 title: Principios de IAM en Proveedores Cloud
-description: Descripción tema
+description: Bases del control de identidad en la nube
 ---
 
-Aún sin contenido.
+La gestión de identidad y acceso, IAM, es el sistema de control central que decide quién puede hacer qué sobre los recursos de una cuenta cloud, y entender sus principios básicos es indispensable porque un error aquí afecta a todos los servicios que dependen de esa cuenta. Los proveedores cloud organizan IAM alrededor de identidades, políticas que definen permisos, y recursos sobre los que esas políticas aplican, permitiendo controles muy granulares pero también fáciles de configurar mal si no se entiende cómo se combinan las reglas cuando existen políticas superpuestas. Autenticación multifactor obligatoria, rotación de credenciales y separación entre cuentas de uso diario y cuentas administrativas son prácticas básicas derivadas de estos principios. Su importancia práctica es que IAM suele ser el primer objetivo de un atacante en la nube, porque comprometer una identidad con permisos amplios es más eficiente que buscar vulnerabilidades técnicas en cada servicio individual desplegado.

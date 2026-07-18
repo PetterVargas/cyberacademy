@@ -1,6 +1,6 @@
 ---
 title: Metodología STRIDE para la Identificación de Amenazas
-description: Descripción tema
+description: Marco clásico de Microsoft para clasificar amenazas
 ---
 
-Aún sin contenido.
+STRIDE es la metodología de threat modeling más ampliamente adoptada, desarrollada originalmente por Microsoft, y organiza la búsqueda de amenazas en seis categorías representadas por su acrónimo en inglés, Spoofing o suplantación de identidad, Tampering o manipulación no autorizada de datos, Repudiation o la capacidad de negar haber realizado una acción sin dejar evidencia, Information disclosure o divulgación de información a quien no debería tener acceso, Denial of service o interrupción de la disponibilidad del sistema, y Elevation of privilege o la obtención de permisos superiores a los legítimamente otorgados. Su valor práctico está en que ofrece una checklist estructurada y memorable que se aplica sistemáticamente a cada componente y cada flujo de datos del diagrama de la aplicación, forzando al equipo a considerar explícitamente las seis categorías en vez de detenerse solo en las amenazas más obvias o familiares para cada participante de la sesión. Un matiz importante es que no todas las categorías aplican con la misma relevancia a todos los componentes, un almacén de datos rara vez enfrenta amenazas de suplantación de identidad directa, pero sí es altamente relevante para divulgación de información y manipulación, por lo que aplicar STRIDE con criterio, priorizando las categorías realmente pertinentes a cada elemento, resulta más productivo que aplicarlo de forma mecánica y uniforme sobre todo el sistema por igual.

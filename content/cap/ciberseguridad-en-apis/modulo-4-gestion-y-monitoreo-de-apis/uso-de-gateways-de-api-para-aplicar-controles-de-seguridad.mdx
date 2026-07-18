@@ -1,6 +1,6 @@
 ---
 title: Uso de Gateways de API para Aplicar Controles de Seguridad
-description: Descripción tema
+description: Centralizar seguridad de API en una capa común
 ---
 
-Aún sin contenido.
+Un gateway de API actúa como punto único de entrada frente a todos los consumidores externos, y eso lo convierte en el lugar natural para centralizar controles que de otro modo habría que reimplementar en cada microservicio individual, como autenticación, límites de tasa, validación de esquema y terminación TLS. Esta centralización reduce el riesgo de inconsistencias, porque si cada equipo implementa su propia lógica de rate limiting o su propia validación de tokens, tarde o temprano alguno lo hará mal o se olvidará de actualizarlo cuando cambien las políticas. Sin embargo, apoyarse en el gateway no exime a los servicios internos de aplicar también sus propios controles de autorización, ya que un gateway mal configurado o un servicio accesible directamente sin pasar por él anula toda la protección centralizada; este patrón de defensa en profundidad es especialmente relevante en arquitecturas de microservicios, donde el tráfico interno entre servicios también debe validarse, no solo el que llega desde internet. Configurar correctamente el gateway, con reglas específicas por ruta y no solo políticas globales genéricas, es lo que marca la diferencia entre un control de seguridad real y una falsa sensación de protección.

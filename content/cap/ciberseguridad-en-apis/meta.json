@@ -1,10 +1,11 @@
 {
   "title": "Curso de Ciberseguridad en APIs",
-  "description": "Diseño, autenticación y protección segura de APIs",
+  "description": "Diseño y protección segura de APIs",
   "root": true,
   "pages": [
     "---Overview---",
     "index",
+    "draw",
     "---Módulo 1---",
     "modulo-1-fundamentos-de-seguridad-en-apis",
     "---Módulo 2---",

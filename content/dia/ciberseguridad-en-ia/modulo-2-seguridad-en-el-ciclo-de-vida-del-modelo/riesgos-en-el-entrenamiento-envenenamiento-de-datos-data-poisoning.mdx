@@ -1,6 +1,6 @@
 ---
 title: "Riesgos en el Entrenamiento: Envenenamiento de Datos (Data Poisoning)"
-description: Descripción tema
+description: Cómo el data poisoning corrompe el entrenamiento
 ---
 
-Aún sin contenido.
+El data poisoning consiste en manipular deliberadamente los datos usados para entrenar o reentrenar un modelo, de forma que este aprenda patrones erróneos o incorpore una puerta trasera que se activa ante una entrada específica. Es una amenaza especialmente peligrosa porque no ataca el modelo en producción sino su origen, y sus efectos solo se manifiestan después del despliegue, cuando ya es tarde para intervenir sin reentrenar desde cero. Los vectores más comunes incluyen fuentes de datos públicas o scrapeadas sin control, colaboradores internos con acceso al pipeline de datos, y sistemas que aprenden de forma continua a partir de la interacción con usuarios. Mitigarlo requiere validar la procedencia de cada fuente, aplicar detección de anomalías estadísticas antes de entrenar, y establecer líneas base de comportamiento del modelo para detectar desviaciones sospechosas tras cada actualización.

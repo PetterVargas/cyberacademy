@@ -1,6 +1,6 @@
 ---
 title: Priorización de Sistemas en el Proceso de Recuperación
-description: Descripción tema
+description: Orden correcto para restaurar sistemas críticos
 ---
 
-Aún sin contenido.
+Cuando ocurre un desastre que afecta múltiples sistemas simultáneamente, restaurar todo a la vez casi nunca es posible por limitaciones de personal, ancho de banda o capacidad de cómputo disponible en el sitio alterno, por lo que la priorización decide qué se recupera primero y en qué orden, siguiendo directamente la criticidad definida en el análisis de impacto al negocio. Esta priorización debe considerar no solo la importancia individual de cada sistema, sino sus dependencias técnicas, de nada sirve priorizar una aplicación de cara al cliente si el sistema de identidad del que depende está más abajo en la lista de recuperación. Definir este orden con anticipación evita discusiones improvisadas durante el incidente, cuando distintas áreas presionan por que su sistema se recupere primero sin considerar el impacto global. Un ejemplo práctico es priorizar siempre la infraestructura de red y autenticación antes que cualquier aplicación de negocio, porque todo lo demás depende de que esos dos elementos estén disponibles primero.

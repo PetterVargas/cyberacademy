@@ -1,6 +1,6 @@
 ---
 title: Integración de Inteligencia en las Herramientas de Detección
-description: Descripción tema
+description: Convertir inteligencia en detecciones activas
 ---
 
-Aún sin contenido.
+La inteligencia de amenazas solo genera valor real cuando se integra activamente en las herramientas de detección de la organización, como SIEM, sistemas de detección en endpoints y firewalls, convirtiendo indicadores y patrones de comportamiento en reglas y alertas que operan de forma continua sin depender de que un analista revise manualmente cada reporte. En la práctica, esta integración requiere automatización, ya que actualizar reglas de detección manualmente cada vez que aparece un nuevo indicador es inviable a la escala en que se publican amenazas hoy en día, y las plataformas de inteligencia de amenazas suelen exponer APIs precisamente para alimentar estas herramientas de forma automática. Un matiz crítico es evitar la integración ciega de todo indicador recibido, porque aplicar automáticamente reglas de bloqueo basadas en fuentes de baja confianza puede interrumpir operaciones legítimas del negocio. La práctica recomendada es escalonar la integración según el nivel de confianza del indicador, aplicando bloqueo automático solo a fuentes de alta confianza y dejando el resto en modo de alerta para revisión humana antes de actuar.

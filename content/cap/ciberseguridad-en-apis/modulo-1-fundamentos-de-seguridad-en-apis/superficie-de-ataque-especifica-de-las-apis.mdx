@@ -1,6 +1,6 @@
 ---
 title: Superficie de Ataque Específica de las APIs
-description: Descripción tema
+description: Qué hace única la exposición de riesgo de una API
 ---
 
-Aún sin contenido.
+Las APIs amplían la superficie de ataque de una organización de forma distinta a una aplicación web tradicional, porque exponen directamente la lógica de negocio y los datos subyacentes sin la capa de interfaz gráfica que normalmente oculta u ofusca ciertos comportamientos internos. Cada endpoint es, en esencia, una puerta de entrada independiente con su propia superficie de riesgo, lo que significa que una API con cientos de rutas tiene cientos de puntos que deben protegerse individualmente, no un único perímetro que asegurar. A esto se suma que las APIs suelen consumirse desde múltiples clientes, aplicaciones móviles, integraciones de terceros y otros microservicios, cada uno con distinto nivel de confianza, lo que complica aplicar controles uniformes. Un riesgo particularmente relevante es el de las APIs no documentadas o "shadow APIs", versiones antiguas o endpoints de prueba que quedan activos sin que el equipo de seguridad los conozca, y que representan un camino de ataque invisible incluso para organizaciones con buenos controles sobre su API principal; por eso el inventario completo y actualizado de endpoints es la base de cualquier estrategia seria de seguridad de APIs.

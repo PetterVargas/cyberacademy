@@ -1,6 +1,6 @@
 ---
 title: APIs e Integraciones Seguras
-description: Descripción tema
+description: Cómo proteger las conexiones entre sistemas y terceros
 ---
 
-Aún sin contenido.
+Las APIs son las puertas por las que distintos sistemas y aplicaciones de terceros se comunican con la plataforma de una empresa, y cada integración nueva es, en la práctica, un punto adicional que puede ser explotado si no se protege correctamente con autenticación robusta, límites de uso y validación estricta de los datos que entran y salen. Para el área de producto esto importa porque cada vez que se habilita una integración con un socio comercial o una app externa, se está confiando parte de la seguridad del sistema a decisiones que esa empresa tomó fuera del control directo del equipo. Un caso frecuente es exponer más información de la necesaria en una respuesta de API, por ejemplo devolver el registro completo de un usuario cuando la aplicación externa solo necesitaba confirmar si existe una cuenta, dejando datos sensibles expuestos sin que nadie lo note hasta que ya es tarde.

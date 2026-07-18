@@ -73,6 +73,14 @@ scripts/           # Scripts de lint y exportación PDF
 
 El contenido vive en archivos `.mdx` dentro de `content/`. No se requiere conocimiento de React para contribuir documentación.
 
+## Atribuciones
+
+Este proyecto utiliza algunos iconos proporcionados por **Flaticon**. Agradecemos a sus autores por poner a disposición estos recursos gráficos.
+
+Los iconos se utilizan de acuerdo con los términos de licencia de Flaticon.
+
+* Flaticon: [https://www.flaticon.es/](https://www.flaticon.es/)
+
 ## Licencia
 
 Ver [LICENSE](LICENSE).

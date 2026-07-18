@@ -1,6 +1,6 @@
 ---
 title: Recolección de Indicadores de Compromiso (IoCs)
-description: Descripción tema
+description: Recopilar rastros técnicos de amenazas
 ---
 
-Aún sin contenido.
+Los indicadores de compromiso, o IoCs, son artefactos técnicos observables que señalan actividad maliciosa, como direcciones IP, hashes de archivos, dominios o patrones de tráfico asociados a un ataque, y su recolección sistemática permite alimentar herramientas de detección con datos concretos y accionables. En la práctica, recolectar IoCs no es simplemente acumular listas interminables de datos, sino validar su vigencia y relevancia antes de aplicarlos, porque muchos indicadores compartidos públicamente quedan obsoletos en días cuando el atacante cambia de infraestructura, y aplicar indicadores caducados genera ruido sin valor real de detección. Un matiz importante es la diferencia entre indicadores de baja confianza, como una dirección IP que apareció una sola vez en un reporte, y de alta confianza, verificados y observados repetidamente en contextos distintos, y tratar ambos con el mismo peso en las reglas de bloqueo puede generar tanto falsos positivos como una falsa sensación de cobertura. Enriquecer cada IoC con contexto, como cuándo se observó y en qué campaña, es lo que lo convierte en inteligencia útil en lugar de solo un dato aislado.

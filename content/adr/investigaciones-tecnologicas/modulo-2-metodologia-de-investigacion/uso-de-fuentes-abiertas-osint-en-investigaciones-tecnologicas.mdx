@@ -1,6 +1,74 @@
 ---
 title: Uso de Fuentes Abiertas (OSINT) en Investigaciones Tecnológicas
-description: Descripción tema
+description: Aprovechar información pública disponible
 ---
 
-Aún sin contenido.
+El uso de fuentes abiertas, u OSINT, consiste en recolectar y analizar información disponible públicamente, como redes sociales, registros de dominios, foros, filtraciones publicadas y bases de datos públicas, para complementar la evidencia interna de una investigación. 
+
+En la práctica, OSINT es especialmente valioso cuando la investigación involucra actores externos, ya que permite construir perfiles de infraestructura maliciosa, verificar identidades reclamadas o encontrar rastros que el atacante dejó fuera del entorno controlado de la organización. 
+
+Herramientas como WHOIS, motores de búsqueda especializados y plataformas de análisis de reputación de dominios permiten, por ejemplo, vincular una dirección IP usada en un ataque con infraestructura previamente reportada en campañas similares. El matiz que todo investigador debe tener presente es que la información de fuentes abiertas debe verificarse y documentarse con el mismo rigor que la evidencia interna, porque su naturaleza pública no la exime de errores, desinformación deliberada o manipulación por parte del propio actor investigado.
+
+## Herramientas OSINT
+
+### Dominios e infraestructura
+
+- [WHOIS (DomainTools)](https://whois.domaintools.com/) - consulta de registros de dominio: propietario, fechas de registro y servidores DNS asociados.
+- [Shodan](https://www.shodan.io/) - buscador de dispositivos e infraestructura expuesta en internet (servidores, cámaras, IoT).
+- [Censys](https://search.censys.io/) - motor de búsqueda de hosts, certificados y servicios expuestos en internet.
+- [SecurityTrails](https://securitytrails.com/) - historial de DNS y datos de infraestructura para correlacionar dominios e IPs.
+- [DNSDumpster](https://dnsdumpster.com/) - reconocimiento de DNS y mapeo de subdominios de un dominio objetivo.
+- [ViewDNS.info](https://viewdns.info/) - conjunto de utilidades DNS: IP histórica, dominios inversos, geolocalización.
+- [BuiltWith](https://builtwith.com/) - identificación de tecnologías y proveedores usados por un sitio web.
+- [Netcraft](https://www.netcraft.com/) - reportes de sitios web, hosting y detección de phishing.
+
+### Reputación y análisis de amenazas
+
+- [VirusTotal](https://www.virustotal.com/) - análisis y reputación de archivos, dominios, IPs y URLs mediante múltiples motores antivirus.
+- [urlscan.io](https://urlscan.io/) - escaneo y análisis del comportamiento de sitios web sospechosos.
+- [AbuseIPDB](https://www.abuseipdb.com/) - reportes comunitarios de direcciones IP asociadas a abuso o ataques.
+- [Talos Intelligence](https://talosintelligence.com/) - reputación de IPs, dominios y correo de Cisco Talos.
+- [AlienVault OTX](https://otx.alienvault.com/) - plataforma de intercambio de indicadores de amenazas (IOCs).
+- [Hybrid Analysis](https://www.hybrid-analysis.com/) - sandbox público para analizar comportamiento de archivos maliciosos.
+
+### Filtraciones y bases de datos expuestas
+
+- [Have I Been Pwned](https://haveibeenpwned.com/) - verificación de correos y dominios comprometidos en filtraciones de datos conocidas.
+- [DeHashed](https://dehashed.com/) - búsqueda en bases de datos filtradas de credenciales.
+- [Intelligence X](https://intelx.io/) - motor de búsqueda de filtraciones, documentos y contenido de la dark web.
+
+### Personas y redes sociales
+
+- [Sherlock](https://github.com/sherlock-project/sherlock) - búsqueda de un nombre de usuario a través de cientos de plataformas.
+- [Namechk](https://namechk.com/) - verificación de disponibilidad/uso de un mismo usuario en múltiples redes.
+- [Social Searcher](https://www.social-searcher.com/) - monitoreo y búsqueda de menciones en redes sociales en tiempo real.
+- [Pipl](https://pipl.com/) - búsqueda de personas a partir de correos, nombres o números telefónicos.
+
+### Imágenes y metadatos
+
+- [TinEye](https://tineye.com/) - búsqueda inversa de imágenes para identificar su origen o usos previos.
+- [Yandex Images](https://yandex.com/images/) - búsqueda inversa de imágenes, especialmente útil para reconocimiento facial.
+- [ExifTool](https://exiftool.org/) - extracción de metadatos (geolocalización, dispositivo, fecha) de archivos.
+
+### Archivo y contenido histórico
+
+- [Wayback Machine](https://web.archive.org/) - archivo histórico de páginas web, útil para reconstruir infraestructura o contenido eliminado.
+- [archive.today](https://archive.ph/) - captura y preservación manual de páginas web específicas.
+
+### Correo electrónico
+
+- [Hunter.io](https://hunter.io/) - localización y verificación de correos corporativos asociados a un dominio.
+- [EmailRep.io](https://emailrep.io/) - reputación y contexto de riesgo de una dirección de correo.
+
+### Suites y frameworks de reconocimiento
+
+- [Maltego](https://www.maltego.com/) - plataforma de análisis de vínculos para correlacionar entidades (dominios, personas, infraestructura).
+- [theHarvester](https://github.com/laramies/theHarvester) - recolección de correos, subdominios y hosts a partir de fuentes públicas.
+- [Recon-ng](https://github.com/lanmaster53/recon-ng) - framework modular de reconocimiento web con múltiples fuentes integradas.
+- [SpiderFoot](https://www.spiderfoot.net/) - automatización de reconocimiento OSINT combinando decenas de fuentes.
+- [OSINT Framework](https://osintframework.com/) - directorio categorizado de herramientas OSINT para distintos tipos de investigación.
+
+### Motores de búsqueda avanzada
+
+- [Google Dorks](https://www.exploit-db.com/google-hacking-database) - técnicas de búsqueda avanzada en motores de búsqueda para descubrir información expuesta.
+- [Wigle.net](https://www.wigle.net/) - mapeo de redes WiFi y su geolocalización recolectada por la comunidad.

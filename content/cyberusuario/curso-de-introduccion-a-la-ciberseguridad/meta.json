@@ -1,10 +1,11 @@
 {
   "title": "Curso de Introducción a la Ciberseguridad",
-  "description": "Conceptos básicos, importancia de la ciberseguridad y hábitos seguros para el día a día",
+  "description": "Conceptos básicos de ciberseguridad",
   "root": true,
   "pages": [
     "---Overview---",
     "index",
+    "draw",
     "---Módulo 1---",
     "modulo-1-fundamentos-de-ciberseguridad",
     "---Módulo 2---",

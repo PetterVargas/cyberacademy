@@ -1,0 +1,6 @@
+---
+title: Correlación de Evidencia de Múltiples Fuentes
+description: Cruzar datos de distintos orígenes
+---
+
+La correlación de evidencia consiste en cruzar información proveniente de fuentes independientes, como logs de firewall, registros de autenticación, capturas de tráfico y artefactos de endpoint, para confirmar o descartar hipótesis con un nivel de certeza que ninguna fuente aislada podría ofrecer por sí sola. En la práctica, ningún registro individual cuenta la historia completa: un log de acceso puede mostrar una IP sospechosa, pero solo al correlacionarlo con el tráfico de red y los eventos del endpoint se puede confirmar si esa conexión realmente resultó en compromiso o fue un intento fallido. Este proceso también sirve para detectar inconsistencias que delatan manipulación de evidencia, como un archivo cuya fecha de modificación no coincide con los registros de acceso del sistema donde supuestamente se creó. Dominar la correlación reduce falsos positivos y evita que la investigación se base en una sola fuente de datos que podría estar incompleta, corrupta o deliberadamente alterada por el actor de la amenaza.

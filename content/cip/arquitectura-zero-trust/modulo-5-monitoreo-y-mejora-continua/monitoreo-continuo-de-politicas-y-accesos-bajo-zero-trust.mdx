@@ -1,6 +1,6 @@
 ---
 title: Monitoreo Continuo de Políticas y Accesos bajo Zero Trust
-description: Descripción tema
+description: Vigilancia permanente del comportamiento de accesos
 ---
 
-Aún sin contenido.
+El monitoreo continuo de políticas y accesos consiste en observar de forma constante cómo se están usando los permisos otorgados dentro de la arquitectura Zero Trust, comparando el comportamiento real de usuarios y dispositivos contra patrones esperados, para detectar desviaciones que podrían indicar una cuenta comprometida o una política mal configurada. Esto importa en la práctica porque definir políticas de acceso estrictas al inicio no garantiza que sigan siendo correctas con el tiempo, ya que los roles cambian, se crean cuentas de servicio temporales que nunca se eliminan, y los atacantes buscan activamente las excepciones que quedaron abiertas por descuido. Un ejemplo concreto es el de un sistema de monitoreo que detecta que una cuenta de servicio, que normalmente solo accede a un recurso específico durante la madrugada para ejecutar respaldos automáticos, comienza a solicitar acceso a otros sistemas en horario diurno, una señal que dispara una alerta para revisión inmediata antes de que se convierta en un incidente mayor.

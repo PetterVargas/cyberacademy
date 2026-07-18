@@ -1,10 +1,11 @@
 {
   "title": "Curso de Arquitectura Zero Trust",
-  "description": "Principios, diseño e implementación de Zero Trust",
+  "description": "Principios y diseño de Zero Trust",
   "root": true,
   "pages": [
     "---Overview---",
     "index",
+    "draw",
     "---Módulo 1---",
     "modulo-1-fundamentos-de-zero-trust",
     "---Módulo 2---",

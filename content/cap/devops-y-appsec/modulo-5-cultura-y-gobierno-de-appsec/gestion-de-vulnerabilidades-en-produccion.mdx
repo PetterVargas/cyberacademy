@@ -1,6 +1,6 @@
 ---
 title: Gestión de Vulnerabilidades en Producción
-description: Descripción tema
+description: Priorizar y remediar riesgos ya en operación
 ---
 
-Aún sin contenido.
+Pese al mejor esfuerzo de shift left, ningún programa de AppSec elimina por completo el riesgo de que una vulnerabilidad llegue a producción, ya sea porque se introdujo antes de implementar ciertos controles, porque aparece una nueva vulnerabilidad en una dependencia ya desplegada, o porque un investigador externo la reporta a través de un programa de recompensas por errores. La gestión de vulnerabilidades en producción exige un proceso claro y ágil de triage, donde cada hallazgo se evalúa rápidamente por severidad real, considerando no solo la puntuación técnica genérica sino factores del contexto específico, como si el componente afectado es accesible desde internet o si ya existe un exploit público conocido para esa vulnerabilidad concreta. Un error común es tratar todas las vulnerabilidades con el mismo nivel de urgencia, lo que agota la capacidad del equipo y termina retrasando la corrección de las que realmente importan; la priorización efectiva se basa en el riesgo real combinado de explotabilidad e impacto, no solo en la severidad reportada por la herramienta de escaneo. Igual de importante es mantener un registro histórico de estas vulnerabilidades y su tiempo de remediación, porque esos datos alimentan directamente las métricas de madurez del programa y revelan patrones sistémicos que ameritan una corrección de raíz, no solo un parche puntual.

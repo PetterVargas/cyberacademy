@@ -1,6 +1,6 @@
 ---
 title: Casos de Uso y Arquitectura Típica de Soluciones Basadas en Agentes
-description: Descripción tema
+description: Patrones comunes de diseño de sistemas con agentes
 ---
 
-Aún sin contenido.
+Las soluciones basadas en agentes se están adoptando en casos de uso como asistentes de atención al cliente que consultan y modifican datos en sistemas internos, agentes de desarrollo que leen y escriben código en repositorios reales, y flujos de automatización empresarial que orquestan múltiples sistemas para completar tareas de varios pasos sin intervención humana continua. La arquitectura típica de estas soluciones sigue un patrón común, un orquestador central que recibe la instrucción del usuario, un modelo de lenguaje que planifica los pasos necesarios, un conjunto de herramientas o conexiones MCP que el agente puede invocar para ejecutar acciones reales, y opcionalmente otros agentes especializados que colaboran en subtareas específicas. Desde una perspectiva de seguridad, cada uno de estos componentes es un eslabón de la cadena, y la arquitectura completa es tan segura como el más débil de ellos, un orquestador robusto no compensa una herramienta mal aislada, y un modelo bien alineado no compensa credenciales sobreprivilegiadas en una integración. Comprender este mapa arquitectónico completo, antes de entrar en controles específicos, es lo que permite identificar dónde exactamente aplicar cada defensa.

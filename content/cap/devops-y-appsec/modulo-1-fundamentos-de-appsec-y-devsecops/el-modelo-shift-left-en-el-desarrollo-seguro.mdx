@@ -1,6 +1,6 @@
 ---
 title: El Modelo Shift Left en el Desarrollo Seguro
-description: Descripción tema
+description: Mover la seguridad a las primeras etapas del ciclo
 ---
 
-Aún sin contenido.
+Shift left describe el principio de mover las actividades de seguridad hacia las etapas más tempranas posibles del ciclo de desarrollo, en vez de concentrarlas al final, justo antes del despliegue, donde tradicionalmente se realizaban las auditorías de seguridad como último paso antes de salir a producción. La razón de este cambio es fundamentalmente económica, corregir una vulnerabilidad detectada durante el diseño o la escritura del código cuesta una fracción de lo que cuesta corregir la misma vulnerabilidad una vez que la aplicación ya está en producción y potencialmente ha sido explotada, considerando el tiempo de desarrollo, las pruebas de regresión y el riesgo reputacional involucrado. En la práctica, shift left significa incorporar modelado de amenazas durante el diseño de nuevas funcionalidades, ejecutar análisis estático de código en cada commit, y dar a los propios desarrolladores retroalimentación de seguridad directamente en su entorno de trabajo habitual, en vez de esperar a un reporte de auditoría semanas después. Un matiz que a veces se malinterpreta es que shift left no elimina la necesidad de pruebas de seguridad en etapas posteriores, como pruebas dinámicas o penetración manual, sino que reduce la cantidad de problemas que llegan hasta esas etapas finales, haciendo esas pruebas más eficientes al concentrarse en riesgos que sí requieren el contexto de ejecución real.

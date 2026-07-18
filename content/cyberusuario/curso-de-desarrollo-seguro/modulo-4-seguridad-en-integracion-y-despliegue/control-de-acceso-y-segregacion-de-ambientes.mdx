@@ -1,6 +1,6 @@
 ---
 title: Control de Acceso y Segregación de Ambientes
-description: Descripción tema
+description: Separar entornos de desarrollo y producción
 ---
 
-Aún sin contenido.
+Mezclar los ambientes de desarrollo, pruebas y producción es una de las formas más comunes en que datos reales de clientes terminan expuestos en entornos con mucha menos protección, o en que un cambio experimental afecta directamente a usuarios reales. Segregar estos ambientes implica no solo infraestructura separada, sino también control de acceso diferenciado: no todos los desarrolladores necesitan acceso a producción, y quienes lo tienen deberían pasar por un proceso de aprobación y registro de esa acción. Los datos usados en pruebas idealmente deben ser anonimizados o sintéticos, evitando copiar directamente bases de datos de producción a entornos con controles más laxos. Esta separación clara reduce tanto el riesgo de fugas de datos como el impacto de un error humano durante el desarrollo o las pruebas.

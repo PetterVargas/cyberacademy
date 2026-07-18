@@ -1,6 +1,6 @@
 ---
 title: Validación de Fuentes de Datos y Herramientas Conectadas
-description: Descripción tema
+description: Verificar la confiabilidad de cada integración MCP
 ---
 
-Aún sin contenido.
+No todos los servidores MCP o fuentes de datos que un agente puede consultar merecen el mismo nivel de confianza, y tratar a todos por igual es un error de diseño frecuente en implementaciones tempranas. Un servidor MCP oficial de un proveedor conocido, auditado y con actualizaciones controladas, presenta un riesgo muy distinto al de un servidor comunitario de origen desconocido instalado por conveniencia, ya que este último podría estar diseñado deliberadamente para filtrar datos o ejecutar instrucciones ocultas dentro de las respuestas que entrega al agente. La validación efectiva empieza por revisar el código fuente o la reputación del servidor antes de conectarlo, continúa con la verificación de que las respuestas que devuelve cumplen el esquema esperado sin campos adicionales sospechosos, y se refuerza tratando todo contenido que provenga de una fuente externa, incluidos los resultados de herramientas, como datos potencialmente hostiles que podrían contener instrucciones camufladas dirigidas al modelo. Este último punto es crítico porque un documento, una página web o una respuesta de API que el agente consulta puede convertirse en el vehículo de un ataque de inyección de prompt indirecta, sin que el usuario haya escrito nada malicioso.

@@ -1,6 +1,6 @@
 ---
 title: Bóvedas de Credenciales y Rotación de Contraseñas Privilegiadas
-description: Descripción tema
+description: Almacenar y renovar claves de cuentas críticas
 ---
 
-Aún sin contenido.
+Las bóvedas de credenciales son repositorios cifrados y fuertemente controlados donde se almacenan las contraseñas de cuentas privilegiadas, como administradores de sistemas o bases de datos, de forma que los usuarios nunca necesitan conocer la clave real, sino que la solicitan a la bóveda cuando la necesitan, mientras que la rotación automática cambia esas contraseñas periódicamente o después de cada uso para limitar su vida útil. Esto importa en la práctica porque las cuentas privilegiadas son el objetivo principal de atacantes avanzados una vez dentro de una red, y una contraseña administrativa que nunca cambia y que varios técnicos conocen de memoria representa un riesgo enorme si esa contraseña se filtra o si un empleado con acceso a ella deja la empresa. Un ejemplo concreto es el de un administrador que necesita acceder a un servidor crítico, la bóveda le entrega una credencial temporal válida solo para esa sesión, y al finalizar la rota automáticamente, de modo que esa clave específica queda inútil para cualquier uso posterior no autorizado.

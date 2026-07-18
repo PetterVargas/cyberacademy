@@ -1,6 +1,6 @@
 ---
 title: Extracción y Robo de Modelos (Model Stealing)
-description: Descripción tema
+description: Cómo se roban modelos y cómo prevenirlo
 ---
 
-Aún sin contenido.
+El model stealing es una técnica mediante la cual un atacante realiza múltiples consultas a un modelo expuesto, por ejemplo a través de una API pública, y utiliza las respuestas obtenidas para entrenar un modelo sustituto que replica su comportamiento sin acceso directo a sus pesos ni a sus datos de entrenamiento. El riesgo va más allá de la pérdida de propiedad intelectual, ya que el modelo robado permite además estudiar sus debilidades fuera de línea para diseñar ataques adversarios más efectivos contra el original. Es particularmente relevante para organizaciones que exponen modelos propietarios como servicio, donde cada consulta representa una oportunidad de fuga de conocimiento. Mitigarlo requiere limitar la tasa de consultas por usuario, ofuscar la precisión de las respuestas cuando sea posible, y monitorear patrones de uso que sugieran una extracción sistemática, como volúmenes de consultas muy superiores al uso típico de un cliente legítimo.

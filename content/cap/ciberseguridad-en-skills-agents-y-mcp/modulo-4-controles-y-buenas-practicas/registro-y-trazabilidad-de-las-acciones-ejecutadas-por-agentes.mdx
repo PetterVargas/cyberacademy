@@ -1,6 +1,6 @@
 ---
 title: Registro y Trazabilidad de las Acciones Ejecutadas por Agentes
-description: Descripción tema
+description: Auditar cada acción tomada por un agente autónomo
 ---
 
-Aún sin contenido.
+Cuando un agente actúa de forma autónoma, la pregunta que un equipo de seguridad necesita poder responder tras un incidente no es solo qué dijo el modelo, sino exactamente qué acciones ejecutó, con qué parámetros, sobre qué recursos y en respuesta a qué entrada, y sin un registro detallado de cada paso esa reconstrucción se vuelve imposible. Un log efectivo para agentes captura la cadena completa de razonamiento y acción, la instrucción original recibida, las herramientas invocadas junto con los argumentos exactos usados, la respuesta obtenida de cada una, y la decisión final tomada, no solo un resumen de alto nivel del resultado. Esta trazabilidad es especialmente importante para detectar ataques de inyección de prompt exitosos después del hecho, porque permite identificar el punto exacto donde el comportamiento del agente se desvió de lo esperado tras procesar una fuente de datos externa concreta. Además de servir para investigación forense, estos registros alimentan sistemas de monitoreo en tiempo real que pueden alertar sobre patrones anómalos, como un agente que de pronto invoca una herramienta que nunca usa en su flujo normal, permitiendo intervenir antes de que la acción se complete.

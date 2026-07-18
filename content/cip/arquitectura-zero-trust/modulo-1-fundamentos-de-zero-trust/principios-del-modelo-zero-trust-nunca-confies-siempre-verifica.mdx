@@ -1,6 +1,6 @@
 ---
 title: "Principios del Modelo Zero Trust: Nunca Confíes, Siempre Verifica"
-description: Descripción tema
+description: La verificación explícita como base del modelo
 ---
 
-Aún sin contenido.
+El principio "nunca confíes, siempre verifica" resume la filosofía central de Zero Trust, que consiste en tratar cada intento de acceso como potencialmente hostil, sin importar si proviene de la red interna, de un empleado con años de antigüedad o de un servidor ya autenticado previamente. En la práctica esto se traduce en verificación explícita en cada solicitud, uso del privilegio mínimo necesario para cada tarea, y la suposición constante de que ya existe una brecha, lo que obliga a diseñar controles pensando en contener el daño en lugar de solo prevenir la entrada. Este enfoque importa porque reduce el impacto de credenciales robadas o dispositivos comprometidos, ya que un atacante que logra autenticarse no obtiene automáticamente acceso amplio, sino que debe superar validaciones adicionales de contexto, como la ubicación, el estado del dispositivo o el comportamiento habitual del usuario, antes de tocar cada recurso.

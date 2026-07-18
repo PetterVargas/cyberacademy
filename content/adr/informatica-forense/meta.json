@@ -1,10 +1,11 @@
 {
   "title": "Curso de Informática Forense",
-  "description": "Recolección, preservación y análisis de evidencia digital",
+  "description": "Recolección y análisis de evidencia",
   "root": true,
   "pages": [
     "---Overview---",
     "index",
+    "draw",
     "---Módulo 1---",
     "modulo-1-fundamentos-de-la-informatica-forense",
     "---Módulo 2---",

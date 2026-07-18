@@ -1,6 +1,6 @@
 ---
 title: Tokenización y Enmascaramiento de Datos Sensibles
-description: Descripción tema
+description: Técnicas para ocultar datos sensibles sin perderlos
 ---
 
-Aún sin contenido.
+La tokenización sustituye un dato sensible, como un número de tarjeta o un documento de identidad, por un valor sustituto sin significado matemático que solo puede revincularse al original mediante un sistema centralizado y controlado, mientras que el enmascaramiento oculta parte del dato, como mostrar solo los últimos cuatro dígitos de una tarjeta, para que siga siendo útil visualmente sin exponer el valor completo. Ambas técnicas permiten que equipos de desarrollo, soporte o analítica trabajen con datos realistas sin necesidad de acceder al dato original, reduciendo drásticamente la superficie de exposición en caso de una brecha. La diferencia práctica importa, la tokenización es reversible y adecuada para procesos que necesitan recuperar el valor real, como un pago, mientras que el enmascaramiento suele usarse en entornos de prueba o reportes donde el valor original nunca debería reconstruirse. Aplicar la técnica equivocada, por ejemplo enmascarar datos que luego se necesitan íntegros, genera fricción operativa evitable.

@@ -1,6 +1,6 @@
 ---
 title: Cifrado y Protección de Datos en las Comunicaciones de API
-description: Descripción tema
+description: Proteger datos en tránsito con cifrado adecuado
 ---
 
-Aún sin contenido.
+Cifrar el tráfico de una API con TLS es un requisito mínimo, no una medida de seguridad avanzada, y sin embargo sigue habiendo integraciones internas entre microservicios que se comunican en texto plano bajo el supuesto erróneo de que la red interna ya es un entorno confiable. En un modelo de seguridad realista, cualquier segmento de red puede verse comprometido, por lo que el cifrado en tránsito debe aplicarse tanto en las conexiones expuestas a internet como en la comunicación interna entre servicios, idealmente reforzando además la autenticación mutua entre ellos para que ambos extremos verifiquen la identidad del otro, no solo que el canal esté cifrado. Más allá del transporte, hay datos que requieren protección incluso mientras están siendo procesados en memoria, como números de tarjeta o credenciales, donde técnicas de tokenización o cifrado a nivel de campo reducen el impacto si un componente intermedio queda comprometido. Un error frecuente es asumir que TLS resuelve todo el problema de confidencialidad, cuando en realidad solo protege el tránsito, dejando expuestos los datos en los logs de la aplicación, en las respuestas de error detalladas o en el almacenamiento en caché si no se aplican controles adicionales específicos.

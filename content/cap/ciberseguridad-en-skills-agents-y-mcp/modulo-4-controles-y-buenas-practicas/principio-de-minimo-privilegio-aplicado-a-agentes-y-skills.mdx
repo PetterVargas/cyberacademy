@@ -1,6 +1,6 @@
 ---
 title: Principio de Mínimo Privilegio Aplicado a Agentes y Skills
-description: Descripción tema
+description: Otorgar solo los permisos estrictamente necesarios
 ---
 
-Aún sin contenido.
+El principio de mínimo privilegio, ya conocido en seguridad de identidades tradicionales, cobra una urgencia distinta cuando se aplica a agentes de IA, porque un agente puede ser manipulado para usar mal cualquier permiso que tenga disponible, incluso si el usuario nunca solicitó esa acción. Aplicarlo en la práctica significa que un agente diseñado para resumir documentos no debería tener credenciales con permiso de escritura en el sistema de archivos, y que una skill de análisis financiero no necesita acceso a los correos del usuario solo porque comparten la misma sesión de agente. El desafío particular con agentes es que sus capacidades suelen configurarse de forma agregada, conectando varias herramientas a un mismo asistente por comodidad, lo que fácilmente termina otorgando de forma implícita permisos que ninguna tarea individual justifica. Una práctica efectiva es definir perfiles de permisos específicos por tarea o por skill activada, revocando el acceso a herramientas no utilizadas en esa sesión particular, y revisar periódicamente qué agentes acumulan privilegios amplios "por si acaso", ya que esa acumulación silenciosa es exactamente lo que un atacante busca explotar cuando compromete un agente mediante manipulación de instrucciones.

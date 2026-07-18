@@ -1,6 +1,6 @@
 ---
 title: Evaluación de Riesgo en Nuevas Funcionalidades
-description: Descripción tema
+description: Cómo analizar el riesgo antes de lanzar funciones
 ---
 
-Aún sin contenido.
+Antes de lanzar una nueva funcionalidad, evaluar su riesgo de seguridad significa preguntarse qué podría salir mal, quién podría intentar abusar de ella y qué tan grave sería el impacto si eso ocurriera, un análisis que debería ocurrir en la etapa de planeación y no como un obstáculo de último momento antes del lanzamiento. Esta práctica es especialmente importante cuando la funcionalidad nueva involucra pagos, datos sensibles o cambios en los permisos de los usuarios, porque son las áreas donde un error de diseño puede convertirse rápidamente en una vulnerabilidad explotable a gran escala. Un ejemplo típico es lanzar una función de "compartir perfil con un enlace público" sin evaluar que, si ese enlace no expira ni se puede revocar, cualquier persona que lo obtenga alguna vez tendrá acceso indefinido a información que el usuario asumía privada.

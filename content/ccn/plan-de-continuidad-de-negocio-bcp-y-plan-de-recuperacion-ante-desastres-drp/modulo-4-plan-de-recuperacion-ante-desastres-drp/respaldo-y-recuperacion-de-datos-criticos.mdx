@@ -1,6 +1,6 @@
 ---
 title: Respaldo y Recuperación de Datos Críticos
-description: Descripción tema
+description: Asegurar que los respaldos realmente funcionen
 ---
 
-Aún sin contenido.
+Tener respaldos configurados no es lo mismo que tener respaldos útiles, y esta diferencia solo se descubre en el peor momento posible si no se ha validado antes, cuando una organización intenta restaurar datos tras un incidente y encuentra copias corruptas, incompletas o incompatibles con la infraestructura de recuperación disponible. Una estrategia de respaldo sólida define frecuencia según el RPO de cada sistema, mantiene copias en ubicaciones separadas del entorno principal para resistir un mismo evento que afecte a ambos, y sobre todo, incluye pruebas de restauración periódicas y no solo verificación de que el proceso de copia se ejecutó sin errores. Esto importa especialmente frente a ransomware, donde los atacantes buscan activamente cifrar o borrar también los respaldos accesibles desde la red principal. Un ejemplo práctico y cada vez más común es mantener al menos una copia de respaldo inmutable y aislada de la red, que ni un administrador comprometido pueda modificar o eliminar.

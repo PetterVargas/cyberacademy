@@ -1,6 +1,6 @@
 ---
 title: Herramientas y Técnicas de Adquisición Forense
-description: Descripción tema
+description: Cómo capturar evidencia sin alterarla en el proceso
 ---
 
-Aún sin contenido.
+Adquirir evidencia digital de forma forense significa crear una copia exacta y verificable de los datos originales sin modificar el dispositivo fuente, algo que requiere herramientas especializadas y no simples copias de archivos con el explorador del sistema operativo. Técnicas como la imagen forense a nivel de bit, que replica cada sector del disco incluyendo espacio libre y eliminado, se combinan con bloqueadores de escritura físicos o de software que impiden cualquier modificación accidental al dispositivo original durante el proceso. La elección de la técnica depende del contexto: adquirir un servidor en producción exige métodos que minimicen la interrupción del servicio, mientras que un dispositivo apagado permite una adquisición offline más completa y controlada. Un error frecuente en investigadores sin experiencia es conectar el dispositivo original directamente a una estación de trabajo sin bloqueo de escritura, lo que puede alterar metadatos críticos como fechas de acceso y comprometer la validez legal de toda la evidencia recolectada.

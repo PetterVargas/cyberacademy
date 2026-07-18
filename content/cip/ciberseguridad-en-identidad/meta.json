@@ -1,10 +1,11 @@
 {
   "title": "Curso de Ciberseguridad en Identidad",
-  "description": "IAM, PAM y gestión del ciclo de vida de identidades",
+  "description": "IAM, PAM y gestión de identidades",
   "root": true,
   "pages": [
     "---Overview---",
     "index",
+    "draw",
     "---Módulo 1---",
     "modulo-1-fundamentos-de-la-gestion-de-identidad",
     "---Módulo 2---",

@@ -1,10 +1,11 @@
 {
   "title": "Curso de Threat Intelligence",
-  "description": "Fuentes de inteligencia, IoC e integración operativa",
+  "description": "Fuentes de inteligencia de amenazas",
   "root": true,
   "pages": [
     "---Overview---",
     "index",
+    "draw",
     "---Módulo 1---",
     "modulo-1-fundamentos-de-la-inteligencia-de-amenazas",
     "---Módulo 2---",

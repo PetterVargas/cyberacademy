@@ -1,6 +1,6 @@
 ---
 title: Gestión de Identidad Federada y Single Sign-On (SSO)
-description: Descripción tema
+description: Un solo inicio de sesión para múltiples sistemas
 ---
 
-Aún sin contenido.
+La identidad federada y el inicio de sesión único, o SSO, permiten que un usuario se autentique una sola vez ante un proveedor de identidad central y luego acceda a múltiples aplicaciones y servicios sin tener que volver a ingresar credenciales en cada uno, gracias a protocolos estándar como SAML u OpenID Connect que permiten a las aplicaciones confiar en esa autenticación centralizada. Esto importa en la práctica porque reduce drásticamente la cantidad de contraseñas que un usuario debe gestionar, disminuyendo la tentación de reutilizarlas entre servicios, y al mismo tiempo simplifica enormemente la administración para TI, ya que revocar el acceso de un colaborador que sale de la empresa se resuelve deshabilitando una sola cuenta central en lugar de perseguir decenas de accesos dispersos. Un matiz importante es que SSO también concentra el riesgo, porque si la cuenta central se compromete, el atacante obtiene potencialmente acceso a todos los sistemas federados, razón por la cual esa cuenta central debe protegerse siempre con autenticación multifactor obligatoria.

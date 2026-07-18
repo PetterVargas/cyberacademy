@@ -1,6 +1,6 @@
 ---
 title: Sandboxing y Limitación del Alcance de Acciones del Agente
-description: Descripción tema
+description: Aislar la ejecución del agente para contener errores
 ---
 
-Aún sin contenido.
+El sandboxing consiste en ejecutar las acciones de un agente dentro de un entorno aislado y controlado, de forma que si el agente comete un error o es manipulado para actuar de forma maliciosa, el daño quede contenido dentro de ese entorno y no se propague a sistemas críticos de producción. Esto es especialmente relevante cuando el agente ejecuta código generado dinámicamente, algo cada vez más común en asistentes de programación, donde permitir la ejecución directa en la máquina del desarrollador o en un servidor de producción sin ningún aislamiento equivale a darle a un proceso no confiable acceso total al sistema. Un sandbox bien diseñado limita no solo el sistema de archivos y la red accesibles, sino también el tiempo de ejecución y los recursos de cómputo disponibles, evitando que un bucle infinito o un intento deliberado de agotar recursos afecte a otros servicios. Más allá del aislamiento técnico, limitar el alcance de acciones implica definir explícitamente una lista de operaciones permitidas por contexto, de modo que un agente usado para análisis de datos no tenga, por defecto, la capacidad de borrar archivos o modificar configuraciones del sistema, aunque técnicamente pudiera hacerlo.

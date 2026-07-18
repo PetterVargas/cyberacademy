@@ -1,6 +1,6 @@
 ---
 title: Análisis Estático de Código (SAST)
-description: Descripción tema
+description: Detectar vulnerabilidades leyendo el código fuente
 ---
 
-Aún sin contenido.
+El análisis estático de código, o SAST, examina el código fuente de una aplicación sin ejecutarla, buscando patrones conocidos de vulnerabilidad como concatenación insegura de consultas SQL, uso de funciones criptográficas débiles o manejo inadecuado de entradas de usuario. Su gran ventaja es la rapidez con la que puede integrarse al flujo de desarrollo, ejecutándose en cada commit o pull request y dando retroalimentación al desarrollador en minutos, mucho antes de que ese código llegue a un ambiente de pruebas o producción, lo que reduce drásticamente el costo de corregir el problema. Sin embargo, SAST tiene limitaciones importantes que conviene entender para no depender de él en exceso, genera una cantidad considerable de falsos positivos porque analiza el código fuera de su contexto de ejecución real, y no puede detectar vulnerabilidades que dependen de la configuración del entorno o de la interacción entre componentes en tiempo de ejecución. Por eso la práctica recomendada es usar SAST como primera línea de defensa dentro del pipeline, combinado con revisión humana de los hallazgos más críticos y con pruebas dinámicas que sí ejercitan la aplicación en funcionamiento.

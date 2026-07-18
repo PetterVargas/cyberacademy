@@ -1,6 +1,6 @@
 ---
 title: Threat Modeling Continuo en Entornos Ágiles
-description: Descripción tema
+description: Adaptar el modelado de amenazas a sprints cortos
 ---
 
-Aún sin contenido.
+El threat modeling tradicional, pensado como un ejercicio extenso y exhaustivo realizado una vez al inicio de un proyecto, encaja mal con equipos que trabajan en sprints cortos y despliegan cambios varias veces por semana, porque para cuando termina un análisis completo, el sistema ya evolucionó significativamente. Adaptarlo a entornos ágiles requiere fragmentar el proceso en sesiones pequeñas y enfocadas, ligadas directamente a los cambios concretos que introduce cada sprint, en vez de intentar revisar el sistema completo cada vez; si una historia de usuario agrega una nueva integración externa, la sesión de threat modeling correspondiente se centra específicamente en esa integración y sus flujos de datos nuevos, no en repetir el análisis completo del sistema. Esta aproximación incremental exige mantener un modelo de amenazas vivo y acumulativo que se actualiza con cada iteración, en vez de generar un documento nuevo y desconectado en cada sesión, de forma que el equipo construya una comprensión cada vez más completa del sistema en vez de partir de cero constantemente. Para que esto funcione de forma sostenible, conviene capacitar a los propios desarrolladores en identificar cuándo un cambio amerita una sesión de threat modeling, en vez de depender exclusivamente de un especialista externo que se convierte en cuello de botella del proceso.

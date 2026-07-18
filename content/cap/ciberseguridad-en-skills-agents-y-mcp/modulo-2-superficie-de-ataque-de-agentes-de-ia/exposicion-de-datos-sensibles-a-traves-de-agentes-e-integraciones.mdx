@@ -1,6 +1,6 @@
 ---
 title: Exposición de Datos Sensibles a Través de Agentes e Integraciones
-description: Descripción tema
+description: Cómo los agentes pueden filtrar datos sin querer
 ---
 
-Aún sin contenido.
+Un agente con acceso a múltiples fuentes de datos internas se convierte en un punto de agregación único que, si no se controla cuidadosamente, puede terminar exponiendo información que ninguna de esas fuentes individuales revelaría por separado, simplemente porque el agente combina y resume contenido de distintos sistemas en una sola respuesta. El riesgo se agrava cuando el agente responde a través de un canal menos controlado que el sistema de origen, por ejemplo un asistente conectado a una base de datos de recursos humanos que responde en un chat corporativo abierto, donde una pregunta aparentemente inocente puede provocar que el agente resuma datos salariales o médicos que el usuario no debería ver directamente. También existe el riesgo de que el propio contexto de la conversación, incluyendo fragmentos de datos sensibles recuperados en pasos anteriores, quede retenido en la memoria del agente y se filtre en una respuesta posterior no relacionada. Mitigar esto exige aplicar controles de autorización a nivel del propio agente, no solo en el sistema de origen, verificando que el usuario que hace la pregunta tenga permiso real sobre los datos que el agente está a punto de exponer, y limitando cuánto contexto sensible persiste entre interacciones.

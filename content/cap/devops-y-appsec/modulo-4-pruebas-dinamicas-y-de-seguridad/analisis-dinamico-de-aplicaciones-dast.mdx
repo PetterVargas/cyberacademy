@@ -1,6 +1,6 @@
 ---
 title: Análisis Dinámico de Aplicaciones (DAST)
-description: Descripción tema
+description: Probar la aplicación en ejecución como un atacante
 ---
 
-Aún sin contenido.
+A diferencia del análisis estático, el análisis dinámico de aplicaciones, o DAST, prueba la aplicación mientras está efectivamente en ejecución, enviándole peticiones reales y observando cómo responde, de forma muy similar a como lo haría un atacante externo que no tiene acceso al código fuente. Esto le permite detectar categorías de vulnerabilidades que el análisis estático simplemente no puede ver, como problemas de configuración del servidor, fallos de autenticación que solo se manifiestan en tiempo de ejecución, o vulnerabilidades que dependen de cómo interactúan distintos componentes desplegados juntos. Su principal limitación es que solo puede evaluar los caminos de código que efectivamente se ejercitan durante la prueba, por lo que la cobertura depende directamente de qué tan completo sea el conjunto de rutas y flujos probados, dejando puntos ciegos en funcionalidad poco usada o de difícil acceso automatizado, como flujos que requieren varios pasos de autenticación compleja. En un programa de AppSec maduro, DAST se ejecuta contra ambientes de staging que reflejan fielmente producción, y sus resultados se correlacionan con los hallazgos de SAST para priorizar qué vulnerabilidades representan un riesgo real y explotable, no solo teórico.

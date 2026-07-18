@@ -1,10 +1,11 @@
 {
   "title": "Curso de Ciberseguridad en Equipos de Colaboradores",
-  "description": "EDR, gestión de dispositivos y protección de los equipos de trabajo",
+  "description": "EDR y protección de dispositivos",
   "root": true,
   "pages": [
     "---Overview---",
     "index",
+    "draw",
     "---Módulo 1---",
     "modulo-1-seguridad-del-puesto-de-trabajo",
     "---Módulo 2---",

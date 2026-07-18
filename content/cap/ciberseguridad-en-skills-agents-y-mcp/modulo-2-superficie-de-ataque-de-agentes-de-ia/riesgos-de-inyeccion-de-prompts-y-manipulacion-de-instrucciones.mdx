@@ -1,6 +1,6 @@
 ---
 title: Riesgos de Inyección de Prompts y Manipulación de Instrucciones
-description: Descripción tema
+description: Cómo se manipulan las instrucciones de un agente
 ---
 
-Aún sin contenido.
+La inyección de prompt consiste en insertar instrucciones maliciosas dentro del contenido que un agente procesa, ya sea directamente en la conversación con el usuario o, de forma más peligrosa, escondidas en una fuente de datos externa que el agente consulta como parte de su tarea, como una página web, un correo o un documento compartido. En la variante indirecta, ni siquiera el usuario legítimo escribe algo malicioso, el ataque queda embebido en contenido que el agente leerá durante su operación normal, por ejemplo un archivo con texto invisible que instruye al agente a filtrar credenciales o ejecutar una acción no autorizada en cuanto lo procese. Este riesgo es difícil de mitigar por completo porque los modelos de lenguaje no distinguen de forma inherente y confiable entre instrucciones del sistema, instrucciones del usuario y contenido que solo debería leerse como dato, todo llega mezclado en el mismo contexto de texto. Las defensas prácticas combinan varias capas, delimitar claramente el origen de cada fragmento de contexto, restringir qué acciones puede ejecutar el agente sin confirmación tras procesar contenido externo, y aplicar filtros que detecten patrones típicos de instrucciones inyectadas antes de que lleguen al modelo.

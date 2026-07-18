@@ -1,6 +1,6 @@
 ---
 title: Límites de Tasa (Rate Limiting) y Protección contra Abuso
-description: Descripción tema
+description: Controlar el volumen de peticiones para evitar abuso
 ---
 
-Aún sin contenido.
+El rate limiting restringe la cantidad de peticiones que un cliente puede hacer a una API en una ventana de tiempo determinada, y aunque suena a un control puramente de rendimiento, es en realidad una defensa de seguridad crítica contra ataques de fuerza bruta, enumeración de credenciales, scraping masivo y denegación de servicio a nivel de aplicación. Sin límites de tasa, un atacante puede probar miles de combinaciones de usuario y contraseña por minuto, o recorrer sistemáticamente un rango de identificadores para explotar una vulnerabilidad de tipo BOLA, sin que nada lo detenga hasta que el daño ya esté hecho. Una implementación efectiva no se limita a un límite global por IP, que es fácil de evadir con proxies rotativos, sino que aplica límites diferenciados por usuario autenticado, por endpoint según su sensibilidad, y con umbrales más estrictos en operaciones críticas como login o recuperación de contraseña. También es importante devolver respuestas claras cuando se alcanza el límite, incluyendo cabeceras que indiquen cuándo se puede reintentar, para no romper integraciones legítimas mientras se frena el abuso real.

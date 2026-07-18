@@ -1,6 +1,6 @@
 ---
 title: Descomposición de la Aplicación y Diagramas de Flujo de Datos
-description: Descripción tema
+description: Mapear componentes y flujos antes de buscar amenazas
 ---
 
-Aún sin contenido.
+Antes de poder identificar amenazas de forma sistemática, es necesario entender con precisión cómo está construido el sistema que se va a analizar, y ese es el propósito de la descomposición de la aplicación, dividirla en sus componentes principales, procesos, almacenes de datos, entidades externas y los límites de confianza que los separan. El diagrama de flujo de datos es la herramienta central de esta etapa, representa visualmente cómo se mueve la información entre estos componentes, señalando específicamente dónde cruza un límite de confianza, por ejemplo cuando un dato viaja desde el navegador del usuario hacia el servidor, o desde un microservicio interno hacia una API de un proveedor externo, porque es precisamente en esos cruces donde suelen concentrarse las amenazas más relevantes. Un error común al construir estos diagramas es hacerlos demasiado detallados o demasiado abstractos, el nivel correcto de granularidad muestra los componentes suficientes para razonar sobre amenazas realistas sin perderse en detalles de implementación que no aportan al análisis. Un diagrama bien construido, con los límites de confianza claramente marcados, convierte la búsqueda de amenazas de un ejercicio de intuición dispersa en un recorrido sistemático, componente por componente y flujo por flujo, que reduce la probabilidad de dejar puntos ciegos sin analizar.

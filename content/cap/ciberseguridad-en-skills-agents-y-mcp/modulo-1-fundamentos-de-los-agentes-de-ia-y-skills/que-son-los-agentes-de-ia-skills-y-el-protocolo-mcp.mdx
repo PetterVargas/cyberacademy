@@ -1,6 +1,6 @@
 ---
 title: Qué Son los Agentes de IA, Skills y el Protocolo MCP
-description: Descripción tema
+description: Conceptos base de agentes, skills y MCP
 ---
 
-Aún sin contenido.
+Un agente de IA es un sistema construido sobre un modelo de lenguaje que, además de generar texto, puede planificar pasos y ejecutar acciones concretas usando herramientas externas, en vez de limitarse a responder una pregunta. Las skills son paquetes de instrucciones, contexto o código especializado que extienden lo que el agente sabe hacer en un dominio concreto, funcionando como capacidades adicionales que se activan según la tarea. El Model Context Protocol, o MCP, es el estándar que define cómo un agente se conecta de forma uniforme a fuentes de datos y herramientas externas, como bases de datos, sistemas de archivos o APIs de terceros, reemplazando integraciones a medida por un protocolo común que cualquier cliente y cualquier servidor pueden hablar entre sí. Entender esta arquitectura en capas es clave desde una perspectiva de seguridad, porque cada capa introduce su propio vector de riesgo, una skill mal diseñada puede inyectar instrucciones no deseadas, y un servidor MCP comprometido puede exponer datos o ejecutar acciones más allá de lo que el usuario autorizó, incluso si el modelo subyacente se comporta exactamente como se espera.

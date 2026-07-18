@@ -1,10 +1,11 @@
 {
   "title": "Curso DevOps y AppSec",
-  "description": "Integración de seguridad en pipelines de CI/CD y prácticas DevSecOps",
+  "description": "Seguridad en pipelines de CI/CD",
   "root": true,
   "pages": [
     "---Overview---",
     "index",
+    "draw",
     "---Módulo 1---",
     "modulo-1-fundamentos-de-appsec-y-devsecops",
     "---Módulo 2---",

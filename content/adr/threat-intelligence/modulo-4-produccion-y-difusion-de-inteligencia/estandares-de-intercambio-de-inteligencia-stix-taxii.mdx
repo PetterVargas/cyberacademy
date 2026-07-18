@@ -1,6 +1,6 @@
 ---
 title: Estándares de Intercambio de Inteligencia (STIX/TAXII)
-description: Descripción tema
+description: Formatos estándar para compartir inteligencia
 ---
 
-Aún sin contenido.
+STIX y TAXII son los estándares más adoptados para estructurar e intercambiar inteligencia de amenazas entre organizaciones y herramientas de forma automatizada, resolviendo el problema de que cada equipo describía indicadores y contexto de amenazas con su propio formato ad hoc, imposible de procesar a escala. STIX define el lenguaje estructurado para describir objetos como indicadores, actores, técnicas de ataque y relaciones entre ellos, mientras que TAXII define el protocolo de transporte para compartir esos datos entre plataformas de forma segura y automática. En la práctica, adoptar estos estándares permite que una alerta generada por un feed comercial se integre directamente en un SIEM o una plataforma de inteligencia sin reescritura manual, acelerando drásticamente el tiempo entre publicación de un indicador y su aplicación en detección. El matiz importante es que la calidad del intercambio depende de qué tan bien se etiqueta el contexto, ya que un indicador sin metadatos de confianza o vigencia puede terminar bloqueando tráfico legítimo si se aplica sin criterio adicional.

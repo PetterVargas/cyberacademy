@@ -1,6 +1,6 @@
 ---
 title: Gates de Seguridad y Criterios de Bloqueo de Despliegues
-description: Descripción tema
+description: Definir cuándo un hallazgo debe frenar un despliegue
 ---
 
-Aún sin contenido.
+Un gate de seguridad es un punto de control automatizado dentro del pipeline que decide si un despliegue puede continuar o debe detenerse según los resultados de los controles de seguridad ejecutados previamente, y diseñarlo bien es tan importante como implementar las herramientas de escaneo mismas, porque un gate mal calibrado termina ignorado o deshabilitado por los propios equipos. Bloquear el pipeline ante cualquier hallazgo, sin importar su severidad, genera fricción excesiva y suele terminar en que los desarrolladores busquen formas de evadir el control por completo; el enfoque más efectivo define criterios claros basados en severidad y explotabilidad, por ejemplo bloqueando automáticamente ante vulnerabilidades críticas con exploit conocido, mientras permite avanzar con hallazgos de menor riesgo acompañados de un ticket de seguimiento obligatorio. Estos criterios deben ser conocidos y predecibles para los equipos de desarrollo desde el inicio del proyecto, no una sorpresa que aparece justo antes de un lanzamiento importante, y conviene incluir un mecanismo formal de excepción, documentado y con aprobación explícita, para los casos donde el negocio decide asumir un riesgo conocido de forma consciente en vez de que alguien simplemente lo pase por alto sin registro.

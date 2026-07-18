@@ -1,10 +1,11 @@
 {
   "title": "Curso de Ciberseguridad en los Datos",
-  "description": "Clasificación, DLP y protección de datos sensibles",
+  "description": "Clasificación, DLP y protección de datos",
   "root": true,
   "pages": [
     "---Overview---",
     "index",
+    "draw",
     "---Módulo 1---",
     "modulo-1-fundamentos-de-la-seguridad-de-datos",
     "---Módulo 2---",

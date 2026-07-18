@@ -1,6 +1,6 @@
 ---
 title: Definición de Controles y Contramedidas
-description: Descripción tema
+description: Traducir amenazas identificadas en soluciones reales
 ---
 
-Aún sin contenido.
+Identificar una amenaza y priorizarla no resuelve nada por sí solo, el valor del threat modeling se materializa cuando cada amenaza relevante se traduce en un control concreto y específico que efectivamente reduce el riesgo, no en una recomendación genérica del tipo "mejorar la seguridad" que nadie sabe cómo implementar en la práctica. Definir la contramedida adecuada exige entender exactamente el mecanismo de la amenaza identificada, si el riesgo es que un atacante intercepte datos en tránsito entre dos servicios, el control específico es cifrado con autenticación mutua en ese canal, no una mejora general de seguridad de red que no ataca directamente ese vector. Para cada amenaza suelen existir varias opciones de tratamiento, mitigar el riesgo implementando un control técnico, transferirlo mediante un seguro o un acuerdo contractual con un tercero, evitarlo rediseñando la funcionalidad para eliminar el componente de riesgo, o aceptarlo formalmente cuando el costo de mitigación supera el impacto potencial, y esta última opción es completamente legítima siempre que sea una decisión consciente y documentada, no una omisión por descuido. Un aspecto que fortalece este proceso es verificar posteriormente que el control implementado efectivamente cierra la amenaza como se diseñó, mediante una prueba específica, en vez de asumir que el solo hecho de haberlo desplegado garantiza su efectividad real.

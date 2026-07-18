@@ -1,6 +1,6 @@
 ---
 title: Identificación de Amenazas y Superficies de Ataque
-description: Descripción tema
+description: Encontrar sistemáticamente los puntos de riesgo
 ---
 
-Aún sin contenido.
+Con el diagrama de flujo de datos y los límites de confianza ya definidos, la identificación de amenazas consiste en recorrer sistemáticamente cada componente, cada flujo de datos y cada punto donde el sistema interactúa con un actor externo, preguntando de forma estructurada qué podría salir mal en ese punto específico, en vez de depender de que alguien recuerde espontáneamente los riesgos relevantes. Aplicar un marco como STRIDE en esta etapa aporta justamente esa estructura, revisando cada elemento del diagrama contra cada categoría de amenaza, suplantación, manipulación de datos, repudio, divulgación de información, denegación de servicio y elevación de privilegios, lo que reduce significativamente la probabilidad de pasar por alto una categoría entera de riesgo simplemente porque no era la primera que venía a la mente del equipo. La superficie de ataque, en este contexto, es el conjunto completo de puntos donde un actor externo puede intentar interactuar con el sistema, y suele ser más amplia de lo que el equipo asume inicialmente, incluyendo no solo las interfaces públicas obvias sino también integraciones internas, procesos automatizados con credenciales propias y mecanismos de recuperación o administración que rara vez se usan pero que siguen activos y accesibles. Un resultado típico y valioso de esta etapa es descubrir que ciertos componentes considerados internos y de bajo riesgo son en realidad alcanzables desde fuera del límite de confianza asumido.

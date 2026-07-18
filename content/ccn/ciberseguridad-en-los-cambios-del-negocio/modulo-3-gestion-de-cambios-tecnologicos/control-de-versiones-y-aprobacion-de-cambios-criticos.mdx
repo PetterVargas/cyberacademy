@@ -1,6 +1,6 @@
 ---
 title: Control de Versiones y Aprobación de Cambios Críticos
-description: Descripción tema
+description: Trazabilidad y aprobación formal de cambios
 ---
 
-Aún sin contenido.
+El control de versiones y la aprobación formal de cambios críticos son los mecanismos que evitan que una modificación de código o de configuración llegue a producción sin haber sido revisada por alguien distinto de quien la escribió. Un sistema de control de versiones bien usado deja registro de quién cambió qué, cuándo y por qué, mientras que un proceso de aprobación exige que cambios de alto impacto, como modificaciones a reglas de firewall, permisos de bases de datos o despliegues de infraestructura, pasen por un responsable de seguridad antes de ejecutarse. Esto importa porque la mayoría de los incidentes graves en producción no vienen de ataques sofisticados sino de cambios mal validados aplicados en el momento equivocado. Un ejemplo concreto es exigir doble aprobación y ventana de mantenimiento programada para cualquier cambio en reglas de acceso a la nube, evitando que una modificación urgente de un viernes por la tarde abra un puerto que nadie vuelve a cerrar.

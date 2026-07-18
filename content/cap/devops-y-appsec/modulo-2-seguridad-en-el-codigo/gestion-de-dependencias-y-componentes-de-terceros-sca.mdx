@@ -1,6 +1,6 @@
 ---
 title: Gestión de Dependencias y Componentes de Terceros (SCA)
-description: Descripción tema
+description: Controlar el riesgo de librerías de código abierto
 ---
 
-Aún sin contenido.
+La mayoría del código que compone una aplicación moderna no lo escribe el propio equipo de desarrollo, sino que proviene de librerías y componentes de código abierto de terceros, lo que significa que una vulnerabilidad en una dependencia usada por cientos de miles de proyectos puede convertirse en una amenaza masiva de la noche a la mañana, como ha ocurrido en varios incidentes de alto perfil en librerías de logging o compresión ampliamente adoptadas. El análisis de composición de software, o SCA, escanea el árbol completo de dependencias de un proyecto, incluyendo las dependencias transitivas que la mayoría de los equipos ni siquiera saben que están usando, comparándolas contra bases de datos de vulnerabilidades conocidas para alertar cuando alguna requiere actualización urgente. Un matiz importante es que no basta con detectar la vulnerabilidad, hay que evaluar si el componente vulnerable se usa realmente de forma explotable en el contexto específico de la aplicación, ya que actualizar ciegamente cada dependencia marcada como vulnerable, sin priorización, puede generar una carga de trabajo insostenible y riesgo de romper funcionalidad. Mantener un inventario preciso de todos los componentes usados, conocido como SBOM, es lo que permite responder con rapidez cuando aparece una nueva vulnerabilidad crítica en el ecosistema.

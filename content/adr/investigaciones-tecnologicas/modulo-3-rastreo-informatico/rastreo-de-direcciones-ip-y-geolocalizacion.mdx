@@ -1,0 +1,139 @@
+---
+title: Rastreo de Direcciones IP y Geolocalización
+description: Ubicar el origen técnico de una conexión
+---
+
+## Descripción
+
+El rastreo de direcciones IP consiste en identificar el origen técnico de una conexión o actividad maliciosa a partir 
+de los registros de red, logs de servidores y encabezados de correo o tráfico capturado, para luego estimar su 
+ubicación geográfica aproximada mediante bases de datos de geolocalización y consultas WHOIS. En la práctica, 
+este proceso rara vez entrega una dirección exacta: una IP puede corresponder a un proveedor de hosting, una VPN, 
+un proxy o un nodo de Tor, por lo que el investigador debe interpretar los resultados con cautela y cruzarlos con 
+otras fuentes antes de sacar conclusiones. 
+
+Herramientas como registros ARIN/RIPE/LACNIC, servicios de 
+geolocalización IP y el análisis de rutas de red (traceroute) permiten reconstruir el camino que siguió 
+una comunicación y detectar si el atacante usó infraestructura intermedia para ocultar su origen real. 
+
+El matiz clave es que la dirección IP identifica un dispositivo o red, no necesariamente a una persona, 
+así que vincularla con un responsable exige evidencia adicional como registros de acceso, autenticación o 
+cooperación del proveedor de servicios.
+
+## Rastreo Informático con Conan
+
+[Conan es una herramienta desarrollada por DivisionCero](https://herramientas.divisioncero.com) que permite generar 
+un enlace para ser enviado a ese perfil de red social, número de comunicaciones; con el fin de obtener su dirección IP.
+
+### Pasos
+
+import { Step, Steps } from 'fumadocs-ui/components/steps';
+
+<Steps>
+<Step>
+
+### [Registrarse en DivisionCero](https://app.divisioncero.com/auth/sign-up?utm_source=divisioncero.com&utm_medium=text_link&utm_campaign=principal_website)
+
+</Step>
+
+<Step>
+
+### En la barra de la izquierda encontrás a Conan
+
+</Step>
+<Step>
+
+### Encontras un formulario.
+
+- **Referencia**: Solicita un nombre de referencia para el rastreo. Ejemplo: Rastreo pedófilo.
+- **URL**: Página web donde se va a redireccionar cuando la persona que queremos rastrear da clic.
+
+</Step>
+
+<Step>
+
+### Clic en Crear Conan
+
+</Step>
+<Step>
+
+### Rastreador Creado Exitosamente
+
+Te muestra, principalmente:
+
+- URL Original: Sería la URL que ingresaste en el formulario.
+- URL de Rastreo: La generada para el rastreo informático. Sería algo como https://divisioncero.com/conan/XYSDSSFD
+
+</Step>
+
+<Step>
+
+### Cambiar la URL de Rastreo
+
+Como la URL de rastreo dice divisioncero la persona detrás del perfil falso puede detectar que es un rastreo.
+
+Por ello, utiliza un acortador de URL para tener una url diferente.
+
+</Step>
+<Step>
+
+### Envía el Conan
+
+El éxito está en que esa persona de clic sobre el enlace.
+
+Al dar clic el rastreador, toma la dirección IP y luego muestra la página que digitaste en el formulario.
+
+</Step>
+
+<Step>
+
+### Si el anónimo da clic
+
+En este escenario en tu Conan ya tienes información importante para el rastreo.
+
+Obtiene:
+
+- Dirección IP.
+- Fecha y hora de conexión.
+- Agente de usuario.
+
+</Step>
+<Step>
+
+### Rastreadores
+
+Al ingresar nuevamente a DivisionCero en Conan
+Encontraras una sesión de rastreadores.
+Con el nombre de referencia puedes ingresar y ver los registros obtenidos.
+
+</Step>
+
+<Step>
+
+### Reporte
+
+La herramienta permite exportar un reporte en PDF para ser entregado a las autoridades competentes.
+
+</Step>
+
+<Step>
+
+### Identificar el ISP
+
+Toda dirección IP tiene un propietario, muy posiblemente un ISP (Proveedor de Servicio de Internet)
+
+Para identificar el propietario puedes consulta la IP en este sitio web:
+
+[Consulta Whois IP](https://query.milacnic.lacnic.net/home)
+
+</Step>
+<Step>
+
+### Ubicación Exacta
+
+Con esta información una entidad de investigación facultada, puede solicitar al 
+ISP (Proveedor de Servicio de Internet) la información del suscriptor del servicio de Internet
+que tenía la dirección X.Y.Z.A el día XX/XX/XXX a las XX:XX horas.
+
+</Step>
+</Steps>

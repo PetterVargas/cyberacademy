@@ -3,6 +3,7 @@ import {
   corDocs, cipDocs, cifDocs, capDocs, ccnDocs, thpDocs, diaDocs, adrDocs,
 } from 'collections/server';
 import { loader } from 'fumadocs-core/source';
+import { flattenTree } from 'fumadocs-core/page-tree';
 import { toFumadocsSource } from 'fumadocs-mdx/runtime/server';
 import {
   cyberusuarioRoute, cyberusuarioImageRoute, cyberusuarioContentRoute,
@@ -104,3 +105,22 @@ export async function getLLMText(page: {
 }
 
 export const allDomainSources = [corSource, cipSource, cifSource, capSource, ccnSource, thpSource, diaSource, adrSource];
+
+// ─── Cross-domain content flow ─────────────────────────────────────────────────
+// Orden en el que se navega de forma transparente entre rutas y dominios cuando
+// se llega al último (o primer) post de cada uno, replicando el orden del navbar.
+const contentFlowSources = [cyberusuarioSource, cyberguardianSource, ...allDomainSources];
+
+let contentFlowCache: ReturnType<typeof flattenTree> | null = null;
+
+function getContentFlow() {
+  contentFlowCache ??= contentFlowSources.flatMap((source) => flattenTree(source.getPageTree().children));
+  return contentFlowCache;
+}
+
+export function getContentFlowNeighbours(url: string) {
+  const list = getContentFlow();
+  const idx = list.findIndex((item) => item.url === url);
+  if (idx === -1) return {};
+  return { previous: list[idx - 1], next: list[idx + 1] };
+}

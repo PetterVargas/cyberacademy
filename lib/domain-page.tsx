@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation';
 import { getMDXComponents } from '@/components/mdx';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
 import { gitConfig } from '@/lib/shared';
+import { getContentFlowNeighbours } from '@/lib/source';
 import type { Metadata } from 'next';
 
 type AnySource = {
@@ -29,9 +30,10 @@ export async function renderDomainPage(
 
   const MDX = page.data.body;
   const markdownUrl = fns.getPageMarkdownUrl(page).url;
+  const neighbours = getContentFlowNeighbours(page.url);
 
   return (
-    <DocsPage toc={page.data.toc} full={page.data.full}>
+    <DocsPage toc={page.data.toc} full={page.data.full} footer={{ items: neighbours }}>
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription className="mb-0">{page.data.description}</DocsDescription>
       <div className="flex flex-row gap-2 items-center border-b pb-6">

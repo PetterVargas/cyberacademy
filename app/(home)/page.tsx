@@ -269,7 +269,7 @@ export default function HomePage() {
           {/* ── Escoge el camino ── */}
           <div className="gsap-hi mb-6">
             <p className="text-sm font-semibold tracking-widest uppercase text-fd-muted-foreground mb-6">
-              Escoge la ruta
+              Escoge tu ruta
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -397,7 +397,7 @@ export default function HomePage() {
               <BookOpen className="h-3.5 w-3.5" />
               CyberUsuarios
             </div>
-            <h2 className="text-3xl lg:text-4xl font-bold mb-3">Cursos para colaboradores</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-3">Cursos para Colaboradores</h2>
             <p className="text-fd-muted-foreground text-lg max-w-2xl mx-auto">
               Inicia protegiendote como colaborador en el ecosistema del Ciberespacio.
             </p>
@@ -423,9 +423,9 @@ export default function HomePage() {
               <Shield className="h-3.5 w-3.5" />
               CyberGuardianes
             </div>
-            <h2 className="text-3xl lg:text-4xl font-bold mb-3">Cursos para responsables de ciberseguridad</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-3">Cursos Focalizados de Ciberseguridad</h2>
             <p className="text-fd-muted-foreground text-lg max-w-2xl mx-auto">
-              Profundiza en los 8 dominios técnicos y de gestión diseñados para quienes protegen la organización.
+              Profundiza en los 8 dominios de gestión y técnicos diseñados para áreas específicas de Ciberseguridad
             </p>
           </div>
           <div className="flex justify-center">
@@ -434,7 +434,7 @@ export default function HomePage() {
               className="group inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-white bg-[#4DAE84] hover:bg-[#39b298] rounded-xl transition-colors shadow-lg"
             >
               <Shield className="h-5 w-5" />
-              Cursos CyberGuardianes
+              Dominios y Cursos CyberGuardianes
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>

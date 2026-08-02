@@ -21,6 +21,7 @@ const docsConfig = {
 };
 
 export const cyberusuarioDocs = defineDocs({ dir: 'content/cyberusuario', ...docsConfig });
+export const cyberguardianDocs = defineDocs({ dir: 'content/cyberguardian', ...docsConfig });
 export const corDocs = defineDocs({ dir: 'content/cor', ...docsConfig });
 export const cipDocs = defineDocs({ dir: 'content/cip', ...docsConfig });
 export const cifDocs = defineDocs({ dir: 'content/cif', ...docsConfig });

@@ -1,8 +1,9 @@
 import {
-  cyberusuarioDocs, blogPosts,
+  cyberusuarioDocs, cyberguardianDocs, blogPosts,
   corDocs, cipDocs, cifDocs, capDocs, ccnDocs, thpDocs, diaDocs, adrDocs,
 } from 'collections/server';
 import { loader } from 'fumadocs-core/source';
+import { flattenTree } from 'fumadocs-core/page-tree';
 import { toFumadocsSource } from 'fumadocs-mdx/runtime/server';
 import {
   cyberusuarioRoute, cyberusuarioImageRoute, cyberusuarioContentRoute,
@@ -11,6 +12,12 @@ import {
 export const cyberusuarioSource = loader({
   baseUrl: cyberusuarioRoute,
   source: cyberusuarioDocs.toFumadocsSource(),
+  plugins: [],
+});
+
+export const cyberguardianSource = loader({
+  baseUrl: '/cyberguardian',
+  source: cyberguardianDocs.toFumadocsSource(),
   plugins: [],
 });
 
@@ -84,6 +91,10 @@ const _adr = domainHelpers<(typeof adrSource)['$inferPage']>('adr');
 export const getAdrPageImage = _adr.getPageImage;
 export const getAdrPageMarkdownUrl = _adr.getPageMarkdownUrl;
 
+const _cyberguardian = domainHelpers<(typeof cyberguardianSource)['$inferPage']>('cyberguardian');
+export const getCyberguardianPageImage = _cyberguardian.getPageImage;
+export const getCyberguardianPageMarkdownUrl = _cyberguardian.getPageMarkdownUrl;
+
 // ─── LLM text ─────────────────────────────────────────────────────────────────
 export async function getLLMText(page: {
   data: { getText: (type: 'processed' | 'raw') => Promise<string>; title: string };
@@ -94,3 +105,22 @@ export async function getLLMText(page: {
 }
 
 export const allDomainSources = [corSource, cipSource, cifSource, capSource, ccnSource, thpSource, diaSource, adrSource];
+
+// ─── Cross-domain content flow ─────────────────────────────────────────────────
+// Orden en el que se navega de forma transparente entre rutas y dominios cuando
+// se llega al último (o primer) post de cada uno, replicando el orden del navbar.
+const contentFlowSources = [cyberusuarioSource, cyberguardianSource, ...allDomainSources];
+
+let contentFlowCache: ReturnType<typeof flattenTree> | null = null;
+
+function getContentFlow() {
+  contentFlowCache ??= contentFlowSources.flatMap((source) => flattenTree(source.getPageTree().children));
+  return contentFlowCache;
+}
+
+export function getContentFlowNeighbours(url: string) {
+  const list = getContentFlow();
+  const idx = list.findIndex((item) => item.url === url);
+  if (idx === -1) return {};
+  return { previous: list[idx - 1], next: list[idx + 1] };
+}

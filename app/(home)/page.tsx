@@ -3,7 +3,7 @@
 import { useRef, useEffect } from 'react';
 import Link from 'next/link';
 import {
-  ArrowRight, ArrowDown,
+  ArrowRight,
   Building2, ShieldCheck, Cloud, Code,
   RefreshCw, Search, Users, Database,
   Shield, BookOpen,
@@ -269,7 +269,7 @@ export default function HomePage() {
           {/* ── Escoge el camino ── */}
           <div className="gsap-hi mb-6">
             <p className="text-sm font-semibold tracking-widest uppercase text-fd-muted-foreground mb-6">
-              Escoge la ruta
+              Escoge tu ruta
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -286,8 +286,8 @@ export default function HomePage() {
                 <ArrowRight className="h-4 w-4 text-purple-400 group-hover:translate-x-1 transition-transform" />
               </Link>
 
-              <a
-                href="#cyberguardianes"
+              <Link
+                href="/cyberguardian"
                 className="group relative flex flex-col items-center gap-3 px-10 py-7 rounded-2xl border border-[#4DAE84]/40 bg-gradient-to-br from-[#4DAE84]/15 to-[#39b298]/5 hover:border-[#4DAE84]/70 hover:from-[#4DAE84]/25 transition-all duration-300 shadow-lg hover:shadow-[#4DAE84]/20"
               >
                 <div className="w-14 h-14 rounded-xl bg-[#4DAE84]/20 flex items-center justify-center">
@@ -297,8 +297,8 @@ export default function HomePage() {
                   <div className="text-xl font-bold text-fd-foreground">CyberGuardianes</div>
                   <div className="text-sm text-fd-muted-foreground mt-1">Responsables de la Ciberseguridad</div>
                 </div>
-                <ArrowDown className="h-4 w-4 text-[#4DAE84] group-hover:translate-y-1 transition-transform" />
-              </a>
+                <ArrowRight className="h-4 w-4 text-[#4DAE84] group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
           </div>
         </div>
@@ -397,7 +397,7 @@ export default function HomePage() {
               <BookOpen className="h-3.5 w-3.5" />
               CyberUsuarios
             </div>
-            <h2 className="text-3xl lg:text-4xl font-bold mb-3">Cursos para colaboradores</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-3">Cursos para Colaboradores</h2>
             <p className="text-fd-muted-foreground text-lg max-w-2xl mx-auto">
               Inicia protegiendote como colaborador en el ecosistema del Ciberespacio.
             </p>
@@ -423,9 +423,9 @@ export default function HomePage() {
               <Shield className="h-3.5 w-3.5" />
               CyberGuardianes
             </div>
-            <h2 className="text-3xl lg:text-4xl font-bold mb-3">Cursos para responsables de ciberseguridad</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-3">Cursos Focalizados de Ciberseguridad</h2>
             <p className="text-fd-muted-foreground text-lg max-w-2xl mx-auto">
-              Profundiza en los 8 dominios técnicos y de gestión diseñados para quienes protegen la organización.
+              Profundiza en los 8 dominios de gestión y técnicos diseñados para áreas específicas de Ciberseguridad
             </p>
           </div>
           <div className="flex justify-center">
@@ -434,7 +434,7 @@ export default function HomePage() {
               className="group inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-white bg-[#4DAE84] hover:bg-[#39b298] rounded-xl transition-colors shadow-lg"
             >
               <Shield className="h-5 w-5" />
-              Cursos CyberGuardianes
+              Dominios y Cursos CyberGuardianes
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>

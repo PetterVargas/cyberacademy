@@ -1,10 +1,11 @@
-import { cyberusuarioSource, allDomainSources, getLLMText } from '@/lib/source';
+import { cyberusuarioSource, cyberguardianSource, allDomainSources, getLLMText } from '@/lib/source';
 
 export const revalidate = false;
 
 export async function GET() {
   const pages = [
     ...cyberusuarioSource.getPages(),
+    ...cyberguardianSource.getPages(),
     ...allDomainSources.flatMap((s) => s.getPages()),
   ];
   const scanned = await Promise.all(pages.map(getLLMText));

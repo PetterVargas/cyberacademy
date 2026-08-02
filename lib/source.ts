@@ -1,5 +1,5 @@
 import {
-  cyberusuarioDocs, blogPosts,
+  cyberusuarioDocs, cyberguardianDocs, blogPosts,
   corDocs, cipDocs, cifDocs, capDocs, ccnDocs, thpDocs, diaDocs, adrDocs,
 } from 'collections/server';
 import { loader } from 'fumadocs-core/source';
@@ -11,6 +11,12 @@ import {
 export const cyberusuarioSource = loader({
   baseUrl: cyberusuarioRoute,
   source: cyberusuarioDocs.toFumadocsSource(),
+  plugins: [],
+});
+
+export const cyberguardianSource = loader({
+  baseUrl: '/cyberguardian',
+  source: cyberguardianDocs.toFumadocsSource(),
   plugins: [],
 });
 
@@ -83,6 +89,10 @@ export const getDiaPageMarkdownUrl = _dia.getPageMarkdownUrl;
 const _adr = domainHelpers<(typeof adrSource)['$inferPage']>('adr');
 export const getAdrPageImage = _adr.getPageImage;
 export const getAdrPageMarkdownUrl = _adr.getPageMarkdownUrl;
+
+const _cyberguardian = domainHelpers<(typeof cyberguardianSource)['$inferPage']>('cyberguardian');
+export const getCyberguardianPageImage = _cyberguardian.getPageImage;
+export const getCyberguardianPageMarkdownUrl = _cyberguardian.getPageMarkdownUrl;
 
 // ─── LLM text ─────────────────────────────────────────────────────────────────
 export async function getLLMText(page: {

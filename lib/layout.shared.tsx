@@ -4,7 +4,7 @@ import { appName, gitConfig, cyberusuarioRoute } from './shared';
 import { cyberusuarioSource } from './source';
 import * as PageTree from 'fumadocs-core/page-tree';
 import {
-  ShieldCheck,
+  ShieldCheck, Shield,
   FileText, BookMarked,
   Building2, Cloud, Code, RefreshCw, Users, Database, Search,
 } from 'lucide-react';
@@ -16,6 +16,12 @@ export const sectionTabs: LayoutTab[] = [
     description: 'Sistema de Gestión',
     icon: <ShieldCheck className="size-4" />,
     url: cyberusuarioRoute,
+  },
+  {
+    title: 'CyberGuardián',
+    description: 'Dominios',
+    icon: <Shield className="size-4" />,
+    url: '/cyberguardian',
   },
 ];
 

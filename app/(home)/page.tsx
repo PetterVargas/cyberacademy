@@ -3,7 +3,7 @@
 import { useRef, useEffect } from 'react';
 import Link from 'next/link';
 import {
-  ArrowRight, ArrowDown,
+  ArrowRight,
   Building2, ShieldCheck, Cloud, Code,
   RefreshCw, Search, Users, Database,
   Shield, BookOpen,
@@ -286,8 +286,8 @@ export default function HomePage() {
                 <ArrowRight className="h-4 w-4 text-purple-400 group-hover:translate-x-1 transition-transform" />
               </Link>
 
-              <a
-                href="#cyberguardianes"
+              <Link
+                href="/cyberguardian"
                 className="group relative flex flex-col items-center gap-3 px-10 py-7 rounded-2xl border border-[#4DAE84]/40 bg-gradient-to-br from-[#4DAE84]/15 to-[#39b298]/5 hover:border-[#4DAE84]/70 hover:from-[#4DAE84]/25 transition-all duration-300 shadow-lg hover:shadow-[#4DAE84]/20"
               >
                 <div className="w-14 h-14 rounded-xl bg-[#4DAE84]/20 flex items-center justify-center">
@@ -297,8 +297,8 @@ export default function HomePage() {
                   <div className="text-xl font-bold text-fd-foreground">CyberGuardianes</div>
                   <div className="text-sm text-fd-muted-foreground mt-1">Responsables de la Ciberseguridad</div>
                 </div>
-                <ArrowDown className="h-4 w-4 text-[#4DAE84] group-hover:translate-y-1 transition-transform" />
-              </a>
+                <ArrowRight className="h-4 w-4 text-[#4DAE84] group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
           </div>
         </div>

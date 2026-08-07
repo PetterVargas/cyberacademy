@@ -1,17 +1,35 @@
 import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
 import { Provider } from '@/components/provider';
-import { appName } from '@/lib/shared';
+import { appName, baseUrl, rssAlternateTypes } from '@/lib/shared';
 import type { ReactNode } from 'react';
 import Script from 'next/script';
 import './global.css';
 import 'katex/dist/katex.css';
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000';
+const title = 'DivisionCero - Simplificando juntos la Ciberseguridad de LatAm';
+const description = 'Kudo Framework de Ciberseguridad - DivisionCero';
 
 export const metadata: Metadata = {
-  title: "DivisionCero - Simplificando juntos la Ciberseguridad de LatAm",
-  description: "Kudo Framework de Ciberseguridad - DivisionCero",
+  metadataBase: new URL(baseUrl),
+  title: {
+    default: title,
+    template: `%s | ${appName}`,
+  },
+  description,
+  openGraph: {
+    title,
+    description,
+    siteName: appName,
+    url: baseUrl,
+    type: 'website',
+    locale: 'es_ES',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description,
+  },
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -41,14 +59,8 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    types: {
-      'application/rss+xml': [
-        {
-          title: appName,
-          url: `${baseUrl}/rss.xml`,
-        },
-      ],
-    },
+    canonical: baseUrl,
+    types: rssAlternateTypes,
   },
 };
 

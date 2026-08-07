@@ -13,14 +13,13 @@
   },
   "dependencies": {
     "@floating-ui/react-dom": "^2.1.8",
-    "@orama/orama": "^3.1.18",
     "class-variance-authority": "^0.7.1",
     "d3-force": "^3.0.0",
     "feed": "^5.2.1",
-    "fumadocs-core": "16.9.3",
-    "fumadocs-mdx": "15.0.11",
-    "fumadocs-twoslash": "^3.2.0",
-    "fumadocs-ui": "16.9.3",
+    "fumadocs-core": "16.14.1",
+    "fumadocs-mdx": "15.2.2",
+    "fumadocs-twoslash": "^3.3.0",
+    "fumadocs-ui": "16.14.1",
     "gsap": "^3.15.0",
     "katex": "^0.17.0",
     "lucide-react": "^1.17.0",
@@ -35,6 +34,7 @@
     "remark-math": "^6.0.0",
     "tailwind-merge": "^3.6.0",
     "twoslash": "^0.3.8",
+    "zbsearch": "^3.3.4",
     "zod": "^4.4.3"
   },
   "devDependencies": {

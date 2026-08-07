@@ -1,11 +1,13 @@
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 import { InlineTOC } from 'fumadocs-ui/components/inline-toc';
 import defaultMdxComponents from 'fumadocs-ui/mdx';
 import { blog } from '@/lib/source';
+import { buildPageMetadata } from '@/lib/metadata';
 import { ViewOptions } from '@/components/page-actions';
 
 const owner = 'PetterVargas';
-const repo = 'divisioncero-cyberacademy';
+const repo = 'cyberacademy';
 
 export default async function Page(props: {
   params: Promise<{ slug: string }>;
@@ -47,4 +49,21 @@ export function generateStaticParams(): { slug: string }[] {
   return blog.getPages().map((page) => ({
     slug: page.slugs[0],
   }));
+}
+
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const params = await props.params;
+  const page = blog.getPage([params.slug]);
+  if (!page) notFound();
+
+  return buildPageMetadata({
+    title: page.data.title,
+    description: page.data.description,
+    path: page.url,
+    type: 'article',
+    publishedTime: new Date(page.data.date).toISOString(),
+    authors: page.data.author ? [page.data.author] : undefined,
+  });
 }

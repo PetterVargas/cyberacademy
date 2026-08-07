@@ -1,15 +1,13 @@
 import { Feed } from 'feed';
 import { cyberusuarioSource, cyberguardianSource, allDomainSources } from '@/lib/source';
-import { appName } from '@/lib/shared';
-
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000';
+import { appName, baseUrl } from '@/lib/shared';
 
 export function getRSS() {
   const feed = new Feed({
     title: appName,
     id: baseUrl,
     link: baseUrl,
-    language: 'en',
+    language: 'es',
     copyright: `All rights reserved ${new Date().getFullYear()}`,
   });
 

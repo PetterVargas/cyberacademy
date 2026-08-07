@@ -6,7 +6,7 @@ import {
   NewspaperIcon, UserIcon,
 } from 'lucide-react';
 
-const signUpUrl = 'https://app.divisioncero.com/auth/sign-up?utm_source=cyberacademy.divisioncero.com&utm_medium=text_link&utm_campaign=principal_website';
+const signUpUrl = 'https://app.divisioncero.com/auth/sign-up';
 
 export const baseOptions: BaseLayoutProps = {
   nav: {
@@ -111,7 +111,7 @@ export const baseOptions: BaseLayoutProps = {
     },
     {
       type: 'icon',
-      url: 'https://github.com/PetterVargas/divisioncero-cyberacademy',
+      url: 'https://github.com/PetterVargas/cyberacademy',
       text: 'Github',
       icon: (
         <svg role="img" viewBox="0 0 24 24" fill="currentColor">

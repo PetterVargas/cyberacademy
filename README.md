@@ -62,7 +62,12 @@ app/               # Rutas Next.js (App Router)
 components/        # Componentes React reutilizables
 lib/               # Utilidades y configuración compartida
 scripts/           # Scripts de lint y exportación PDF
+presentaciones/    # Proyecto standalone de slides (ver abajo)
 ```
+
+### `presentaciones/`
+
+Proyecto independiente basado en [Slidev](https://sli.dev/) para las presentaciones que acompañan los cursos (por ejemplo, el Curso de Introducción a la Ciberseguridad). No comparte `node_modules`, workspace ni dependencias con la app de Fumadocs — tiene su propio `package.json` y se gestiona con pnpm dentro de esa carpeta. Está excluido del control de versiones de este repo (`.gitignore`). Ver [presentaciones/README.md](presentaciones/README.md) para el listado de presentaciones disponibles y cómo iniciarlas.
 
 ## Contribuir
 

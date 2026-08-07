@@ -1,12 +1,21 @@
 export const appName = 'CyberAcademy';
 
+export const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://cyberacademy.divisioncero.com';
+
+// Next.js replaces the whole `alternates` object per route segment rather than
+// deep-merging it, so any page that sets its own `alternates.canonical` must
+// re-spread this to keep the RSS autodiscovery link from the root layout.
+export const rssAlternateTypes = {
+  'application/rss+xml': [{ title: appName, url: `${baseUrl}/rss.xml` }],
+};
+
 export const cyberusuarioRoute = '/cyberusuario';
 export const cyberusuarioImageRoute = '/og/cyberusuario';
 export const cyberusuarioContentRoute = '/llms.mdx/cyberusuario';
 
 export const gitConfig = {
   user: 'PetterVargas',
-  repo: 'divisioncero-cyberacademy',
+  repo: 'cyberacademy',
   branch: 'main',
 };
 

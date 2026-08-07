@@ -7,6 +7,7 @@ import { getMDXComponents } from '@/components/mdx';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
 import { gitConfig } from '@/lib/shared';
 import { getContentFlowNeighbours } from '@/lib/source';
+import { buildPageMetadata } from '@/lib/metadata';
 import type { Metadata } from 'next';
 
 type AnySource = {
@@ -57,9 +58,10 @@ export async function generateDomainMetadata(
 ): Promise<Metadata> {
   const page = source.getPage(slug);
   if (!page) notFound();
-  return {
+  return buildPageMetadata({
     title: page.data.title,
     description: page.data.description,
-    openGraph: { images: fns.getPageImage(page).url },
-  };
+    path: page.url,
+    image: fns.getPageImage(page).url,
+  });
 }

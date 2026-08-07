@@ -4,10 +4,9 @@
   "pages": [
     "index",
     "buenas-prácticas-para-crear-contraseñas-seguras",
-    "gestores-de-contrasenas",
+    "generador-de-contrasenas",
     "uso-de-keepsass",
     "uso-de-lastpass",
-    "uso-de-1password",
     "autenticacion-multifactor-mfa",
     "uso-de-google-authenticator",
     "uso-de-microsoft-authenticator"

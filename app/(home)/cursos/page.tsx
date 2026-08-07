@@ -6,12 +6,14 @@ import {
   cyberusuarioSource, corSource, cipSource, cifSource, capSource, ccnSource, thpSource, diaSource, adrSource,
 } from '@/lib/source';
 import { domains } from '@/lib/shared';
+import { buildPageMetadata } from '@/lib/metadata';
 import { CursosExplorer, type Course, type DomainGroup } from '@/components/cursos-explorer';
 
-export const metadata: Metadata = {
-  title: 'Todos los cursos | CyberAcademy',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Todos los cursos',
   description: 'Explora todos los cursos de CyberAcademy: las rutas de CyberUsuario y los cursos de CyberGuardián clasificados en sus 8 dominios.',
-};
+  path: '/cursos',
+});
 
 type MinimalSource = { getPage: (slug?: string[]) => { url: string; data: { title: string; description?: string } } | undefined };
 

@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
 import { Sparkles } from 'lucide-react';
 import { buildCourseIndex } from '@/lib/course-index';
+import { buildPageMetadata } from '@/lib/metadata';
 import { AprendeHoyExplorer } from '@/components/aprende-hoy-explorer';
 
-export const metadata: Metadata = {
-  title: '¿Qué quieres aprender hoy? | CyberAcademy',
+export const metadata: Metadata = buildPageMetadata({
+  title: '¿Qué quieres aprender hoy?',
   description: 'Busca entre todos los cursos, módulos y temas de CyberAcademy — CyberUsuario y CyberGuardián — y llega directo al contenido que necesitas.',
-};
+  path: '/que-quieres-aprender-hoy',
+});
 
 export default function QueQuieresAprenderHoyPage() {
   const sections = buildCourseIndex();

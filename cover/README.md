@@ -52,22 +52,18 @@ regeneran en cada deploy. Cloudflare detecta e instala con pnpm automáticamente
 committeado, y toma `functions/` (dentro de `cover/`, gracias al Root directory) sin configuración
 adicional.
 
-Como el build ya no lo corre GitHub Actions, las variables deben vivir en el propio proyecto de Pages —
-pero ojo con un detalle: al haber un `wrangler.jsonc` en `cover/`, Cloudflare usa ese archivo como fuente
-de verdad para la configuración del build ("Wrangler configuration file" — ver log del build: *"Found
-wrangler.json file. Reading build configuration..."*). Eso significa:
+Como el build ya no lo corre GitHub Actions, ambas variables viven en el propio proyecto de Pages,
+panel **Build → Variables and secrets**:
 
-- **Variables de texto plano** (no sensibles) → van en `wrangler.jsonc`, bloque `vars` (ya está
-  `UNSPLASH_COLLECTION_ID` ahí). Si las pones solo en el dashboard, el build las ignora — por eso el
-  primer deploy falló con `Build environment variables: (none found)`.
-- **Secrets** (sensibles, no se pueden commitear) → sí siguen viviendo en el dashboard del proyecto,
-  Settings → Environment variables, marcados como **Secret**. Estos sí se inyectan igual sin importar el
-  `wrangler.jsonc`.
+| Nombre                    | Tipo               | Valor                         |
+| -------------------------- | ------------------- | ------------------------------- |
+| `UNSPLASH_ACCESS_KEY`       | Secret                | tu access key de unsplash.com/developers |
+| `UNSPLASH_COLLECTION_ID`     | Plaintext                | `STX3OtAI8tM`                              |
 
-| Nombre                    | Dónde vive                         | Valor                         |
-| -------------------------- | ------------------------------------ | ------------------------------- |
-| `UNSPLASH_ACCESS_KEY`       | Dashboard → Environment variables, como **Secret** | tu access key de unsplash.com/developers |
-| `UNSPLASH_COLLECTION_ID`     | `cover/wrangler.jsonc` → `vars`         | `STX3OtAI8tM`                              |
+No las declares en `wrangler.jsonc` (bloque `vars`): en pruebas, una vez que `wrangler.jsonc` declara
+`vars`, Cloudflare deja de inyectar los Secrets del dashboard en el build — solo toma lo que hay en el
+archivo. Como los Secrets no se pueden commitear, todo (plaintext y secret) debe quedar únicamente en
+este panel del dashboard.
 
 Opcional pero recomendado: agrega también `NODE_VERSION=22` como variable en el dashboard, para que el
 build use la misma versión de Node con la que se probó localmente.

@@ -1,6 +1,9 @@
 {
+  // Nota: a propósito sin "pages_build_output_dir". Esa clave hace que Cloudflare trate este
+  // archivo como fuente de verdad para la config del build remoto ("Wrangler configuration file"
+  // BETA), lo que interfirió con las Variables and secrets del dashboard. El build output dir ya
+  // se pasa explícito por CLI en "dev"/"deploy" (package.json) y está definido en el dashboard.
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "cover-divisioncero",
-  "pages_build_output_dir": "public",
   "compatibility_date": "2026-08-01",
 }

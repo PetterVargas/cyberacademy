@@ -60,10 +60,14 @@ panel **Build → Variables and secrets**:
 | `UNSPLASH_ACCESS_KEY`       | Secret                | tu access key de unsplash.com/developers |
 | `UNSPLASH_COLLECTION_ID`     | Plaintext                | `STX3OtAI8tM`                              |
 
-No las declares en `wrangler.jsonc` (bloque `vars`): en pruebas, una vez que `wrangler.jsonc` declara
-`vars`, Cloudflare deja de inyectar los Secrets del dashboard en el build — solo toma lo que hay en el
-archivo. Como los Secrets no se pueden commitear, todo (plaintext y secret) debe quedar únicamente en
-este panel del dashboard.
+No las declares en `wrangler.jsonc`. En pruebas, la sola presencia de la clave
+`pages_build_output_dir` en `wrangler.jsonc` activa el modo beta "Wrangler configuration file" en el
+build remoto de Cloudflare, y ese modo interfiere de forma poco confiable con qué variables del
+dashboard llegan al build (a veces pasaba una, a veces la otra, nunca las dos). Por eso
+`cover/wrangler.jsonc` a propósito **no** tiene esa clave — el build output dir ya se pasa explícito
+por CLI en los scripts `dev`/`deploy` (`package.json`) y está definido en el dashboard (Build
+configuration). Como los Secrets no se pueden commitear de todas formas, todo (plaintext y secret)
+debe quedar únicamente en el panel **Build → Variables and secrets** del dashboard.
 
 Opcional pero recomendado: agrega también `NODE_VERSION=22` como variable en el dashboard, para que el
 build use la misma versión de Node con la que se probó localmente.

@@ -52,22 +52,31 @@ regeneran en cada deploy. Cloudflare detecta e instala con pnpm automáticamente
 committeado, y toma `functions/` (dentro de `cover/`, gracias al Root directory) sin configuración
 adicional.
 
-Como el build ya no lo corre GitHub Actions, las variables deben vivir en el propio proyecto de Pages,
-no en los secrets/variables de GitHub (esos quedan sin uso para este flujo):
-
-Settings del proyecto → Environment variables (en Production, y en Preview si vas a usar preview
-deployments):
+Como el build ya no lo corre GitHub Actions, ambas variables viven en el propio proyecto de Pages,
+panel **Build → Variables and secrets**:
 
 | Nombre                    | Tipo               | Valor                         |
 | -------------------------- | ------------------- | ------------------------------- |
-| `UNSPLASH_ACCESS_KEY`       | Secret (encrypted)    | tu access key de unsplash.com/developers |
-| `UNSPLASH_COLLECTION_ID`     | Variable de texto      | `STX3OtAI8tM`                              |
+| `UNSPLASH_ACCESS_KEY`       | Secret                | tu access key de unsplash.com/developers |
+| `UNSPLASH_COLLECTION_ID`     | Plaintext                | `STX3OtAI8tM`                              |
 
-Opcional pero recomendado: agrega también `NODE_VERSION=22` como variable, para que el build use la
-misma versión de Node con la que se probó localmente.
+No las declares en `wrangler.jsonc`. En pruebas, la sola presencia de la clave
+`pages_build_output_dir` en `wrangler.jsonc` activa el modo beta "Wrangler configuration file" en el
+build remoto de Cloudflare, y ese modo interfiere de forma poco confiable con qué variables del
+dashboard llegan al build (a veces pasaba una, a veces la otra, nunca las dos). Por eso
+`cover/wrangler.jsonc` a propósito **no** tiene esa clave — el build output dir ya se pasa explícito
+por CLI en los scripts `dev`/`deploy` (`package.json`) y está definido en el dashboard (Build
+configuration). Como los Secrets no se pueden commitear de todas formas, todo (plaintext y secret)
+debe quedar únicamente en el panel **Build → Variables and secrets** del dashboard.
+
+Opcional pero recomendado: agrega también `NODE_VERSION=22` como variable en el dashboard, para que el
+build use la misma versión de Node con la que se probó localmente.
 
 ## Dominio custom
 
 Una vez creado el proyecto de Pages (`cover-divisioncero`), agrega el dominio custom en el dashboard de
 Cloudflare: Workers & Pages → cover-divisioncero → Custom domains → `cover.divisioncero.com` (requiere
 que `divisioncero.com` ya esté como zona en tu cuenta de Cloudflare).
+
+Los créditos y los enlaces a las fuentes se encuentran en la carpeta `./public`, junto con las imágenes
+procesadas.

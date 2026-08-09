@@ -77,3 +77,6 @@ build use la misma versión de Node con la que se probó localmente.
 Una vez creado el proyecto de Pages (`cover-divisioncero`), agrega el dominio custom en el dashboard de
 Cloudflare: Workers & Pages → cover-divisioncero → Custom domains → `cover.divisioncero.com` (requiere
 que `divisioncero.com` ya esté como zona en tu cuenta de Cloudflare).
+
+Los créditos y los enlaces a las fuentes se encuentran en la carpeta `./public`, junto con las imágenes
+procesadas.

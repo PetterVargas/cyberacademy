@@ -3,4 +3,9 @@
   "name": "cover-divisioncero",
   "pages_build_output_dir": "public",
   "compatibility_date": "2026-08-01",
+  "vars": {
+    // No sensible: es el id público de la colección de Unsplash. El access key sigue
+    // como Secret en el dashboard de Cloudflare Pages, nunca va aquí.
+    "UNSPLASH_COLLECTION_ID": "STX3OtAI8tM",
+  },
 }

@@ -52,19 +52,25 @@ regeneran en cada deploy. Cloudflare detecta e instala con pnpm automáticamente
 committeado, y toma `functions/` (dentro de `cover/`, gracias al Root directory) sin configuración
 adicional.
 
-Como el build ya no lo corre GitHub Actions, las variables deben vivir en el propio proyecto de Pages,
-no en los secrets/variables de GitHub (esos quedan sin uso para este flujo):
+Como el build ya no lo corre GitHub Actions, las variables deben vivir en el propio proyecto de Pages —
+pero ojo con un detalle: al haber un `wrangler.jsonc` en `cover/`, Cloudflare usa ese archivo como fuente
+de verdad para la configuración del build ("Wrangler configuration file" — ver log del build: *"Found
+wrangler.json file. Reading build configuration..."*). Eso significa:
 
-Settings del proyecto → Environment variables (en Production, y en Preview si vas a usar preview
-deployments):
+- **Variables de texto plano** (no sensibles) → van en `wrangler.jsonc`, bloque `vars` (ya está
+  `UNSPLASH_COLLECTION_ID` ahí). Si las pones solo en el dashboard, el build las ignora — por eso el
+  primer deploy falló con `Build environment variables: (none found)`.
+- **Secrets** (sensibles, no se pueden commitear) → sí siguen viviendo en el dashboard del proyecto,
+  Settings → Environment variables, marcados como **Secret**. Estos sí se inyectan igual sin importar el
+  `wrangler.jsonc`.
 
-| Nombre                    | Tipo               | Valor                         |
-| -------------------------- | ------------------- | ------------------------------- |
-| `UNSPLASH_ACCESS_KEY`       | Secret (encrypted)    | tu access key de unsplash.com/developers |
-| `UNSPLASH_COLLECTION_ID`     | Variable de texto      | `STX3OtAI8tM`                              |
+| Nombre                    | Dónde vive                         | Valor                         |
+| -------------------------- | ------------------------------------ | ------------------------------- |
+| `UNSPLASH_ACCESS_KEY`       | Dashboard → Environment variables, como **Secret** | tu access key de unsplash.com/developers |
+| `UNSPLASH_COLLECTION_ID`     | `cover/wrangler.jsonc` → `vars`         | `STX3OtAI8tM`                              |
 
-Opcional pero recomendado: agrega también `NODE_VERSION=22` como variable, para que el build use la
-misma versión de Node con la que se probó localmente.
+Opcional pero recomendado: agrega también `NODE_VERSION=22` como variable en el dashboard, para que el
+build use la misma versión de Node con la que se probó localmente.
 
 ## Dominio custom
 

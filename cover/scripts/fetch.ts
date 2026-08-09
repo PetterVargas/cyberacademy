@@ -42,9 +42,19 @@ if (USE_CACHE && existsSync(cachePath)) {
 else {
   for (let page = 1; ; page++) {
     console.log('Page:', page)
-    const newPhotos = await ofetch<Photo[]>(`${BASE_URL}/collections/${UNSPLASH_COLLECTION_ID}/photos`, {
-      query: { client_id: UNSPLASH_ACCESS_KEY, per_page: PER_PAGE, page },
-    })
+    let newPhotos: Photo[]
+    try {
+      newPhotos = await ofetch<Photo[]>(`${BASE_URL}/collections/${UNSPLASH_COLLECTION_ID}/photos`, {
+        query: { client_id: UNSPLASH_ACCESS_KEY, per_page: PER_PAGE, page },
+      })
+    }
+    catch (error) {
+      const status = (error as { response?: { status?: number } }).response?.status
+      throw new Error(
+        `Unsplash API request failed (status ${status ?? 'unknown'}) for collection "${UNSPLASH_COLLECTION_ID}", page ${page}. `
+        + `Verifica que la colección exista y sea pública.`,
+      )
+    }
     photos.push(...newPhotos)
     if (newPhotos.length < PER_PAGE)
       break

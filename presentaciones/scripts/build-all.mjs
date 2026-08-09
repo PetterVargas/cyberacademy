@@ -1,5 +1,6 @@
 import { execFileSync } from "node:child_process";
 import {
+  copyFileSync,
   existsSync,
   mkdirSync,
   readFileSync,
@@ -119,6 +120,9 @@ const html = `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Presentaciones · CyberAcademy</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <style>
   :root {
     color-scheme: light dark;
@@ -369,6 +373,11 @@ const html = `<!doctype html>
 `;
 
 writeFileSync(join(outDir, "index.html"), html);
+
+for (const icon of ["favicon.ico", "favicon-32x32.png", "favicon-16x16.png"]) {
+  copyFileSync(join(root, "public", icon), join(outDir, icon));
+}
+
 console.log(
   `\n✓ Índice generado en dist/index.html con ${decks.length} presentación(es).`,
 );

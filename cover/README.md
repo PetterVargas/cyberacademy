@@ -78,5 +78,5 @@ Una vez creado el proyecto de Pages (`cover-divisioncero`), agrega el dominio cu
 Cloudflare: Workers & Pages → cover-divisioncero → Custom domains → `cover.divisioncero.com` (requiere
 que `divisioncero.com` ya esté como zona en tu cuenta de Cloudflare).
 
-Los créditos y los enlaces a las fuentes se encuentran en la carpeta `./public`, junto con las imágenes
-procesadas.
+Los créditos y los enlaces de cualquier imagen los puedes ver cambiando `.webp` por
+`.md`, por ejemplo `https://cover.divisioncero.com/{id}.webp` → `https://cover.divisioncero.com/{id}.md`.

@@ -12,7 +12,7 @@ info: |
   Fundamentos, amenazas, identidad digital, navegación segura y cultura de ciberseguridad.
 
   Basado en  [**CyberAcademy / DivisionCero**](https://sli.dev).
-author: [Peter Vargas](https://petervargas.com)
+author: "[Peter Vargas](https://petervargas.com)"
 keywords: ciberseguridad, seguridad informática
 class: text-center
 drawings:

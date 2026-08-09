@@ -2,13 +2,14 @@ import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
 import { Provider } from '@/components/provider';
 import { appName, baseUrl, rssAlternateTypes } from '@/lib/shared';
+import { JsonLd, organizationJsonLd, websiteJsonLd } from '@/lib/json-ld';
 import type { ReactNode } from 'react';
-import Script from 'next/script';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import './global.css';
 import 'katex/dist/katex.css';
 
 const title = 'DivisionCero - Simplificando juntos la Ciberseguridad de LatAm';
-const description = 'Kudo Framework de Ciberseguridad - DivisionCero';
+const description = 'Aprende Ciberseguridad gratis en español con el Kudo Framework de DivisionCero: cursos para CyberUsuarios y CyberGuardianes cubriendo identidad, infraestructura, aplicaciones, datos e IA, y respuesta a incidentes.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -77,21 +78,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         }} />
       </head>
       <body className={inter.className}>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-SGPVDMK8ED"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-SGPVDMK8ED');
-          `}
-        </Script>
+        <JsonLd data={organizationJsonLd()} />
+        <JsonLd data={websiteJsonLd()} />
         <Provider>
           {children}
         </Provider>
+        <GoogleAnalytics gaId="G-SGPVDMK8ED" />
       </body>
     </html>
   );

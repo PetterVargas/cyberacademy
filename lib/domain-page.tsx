@@ -5,14 +5,17 @@ import {
 import { notFound } from 'next/navigation';
 import { getMDXComponents } from '@/components/mdx';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
-import { gitConfig } from '@/lib/shared';
+import { gitConfig, baseUrl } from '@/lib/shared';
 import { getContentFlowNeighbours } from '@/lib/source';
 import { buildPageMetadata } from '@/lib/metadata';
+import { JsonLd, courseJsonLd, breadcrumbJsonLd } from '@/lib/json-ld';
+import { getBreadcrumbItems } from 'fumadocs-core/breadcrumb';
 import type { Metadata } from 'next';
 
 type AnySource = {
   getPage: (slug?: string[]) => any;
   generateParams: () => any;
+  getPageTree: () => any;
 };
 
 type PageFns = {
@@ -32,22 +35,48 @@ export async function renderDomainPage(
   const MDX = page.data.body;
   const markdownUrl = fns.getPageMarkdownUrl(page).url;
   const neighbours = getContentFlowNeighbours(page.url);
+  const domainRootUrl = source.getPage([])?.url ?? source.getPage()?.url;
+  const breadcrumbItems = [
+    { name: 'Inicio', url: baseUrl },
+    ...getBreadcrumbItems(page.url, source.getPageTree(), {
+      includeRoot: { url: domainRootUrl },
+      includePage: true,
+    }),
+  ];
 
   return (
-    <DocsPage toc={page.data.toc} full={page.data.full} footer={{ items: neighbours }}>
-      <DocsTitle>{page.data.title}</DocsTitle>
-      <DocsDescription className="mb-0">{page.data.description}</DocsDescription>
-      <div className="flex flex-row gap-2 items-center border-b pb-6">
-        <MarkdownCopyButton markdownUrl={markdownUrl} />
-        <ViewOptionsPopover
-          markdownUrl={markdownUrl}
-          githubUrl={`https://github.com/${gitConfig.user}/${gitConfig.repo}/blob/${gitConfig.branch}/content/${contentSlug}/${page.path}`}
-        />
-      </div>
-      <DocsBody>
-        <MDX components={getMDXComponents({ a: createRelativeLink(source as any, page) })} />
-      </DocsBody>
-    </DocsPage>
+    <>
+      <JsonLd
+        data={courseJsonLd({
+          name: page.data.title,
+          description: page.data.description,
+          url: `${baseUrl}${page.url}`,
+        })}
+      />
+      <JsonLd
+        data={breadcrumbJsonLd(
+          breadcrumbItems.map((item) => ({ name: String(item.name), url: item.url })),
+        )}
+      />
+      <DocsPage
+        toc={page.data.toc}
+        full={page.data.full}
+        footer={{ items: neighbours }}
+      >
+        <DocsTitle>{page.data.title}</DocsTitle>
+        <DocsDescription className="mb-0">{page.data.description}</DocsDescription>
+        <div className="flex flex-row gap-2 items-center border-b pb-6">
+          <MarkdownCopyButton markdownUrl={markdownUrl} />
+          <ViewOptionsPopover
+            markdownUrl={markdownUrl}
+            githubUrl={`https://github.com/${gitConfig.user}/${gitConfig.repo}/blob/${gitConfig.branch}/content/${contentSlug}/${page.path}`}
+          />
+        </div>
+        <DocsBody>
+          <MDX components={getMDXComponents({ a: createRelativeLink(source as any, page) })} />
+        </DocsBody>
+      </DocsPage>
+    </>
   );
 }
 

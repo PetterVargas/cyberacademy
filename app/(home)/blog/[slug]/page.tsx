@@ -4,6 +4,8 @@ import { InlineTOC } from 'fumadocs-ui/components/inline-toc';
 import defaultMdxComponents from 'fumadocs-ui/mdx';
 import { blog } from '@/lib/source';
 import { buildPageMetadata } from '@/lib/metadata';
+import { baseUrl } from '@/lib/shared';
+import { JsonLd, articleJsonLd, breadcrumbJsonLd } from '@/lib/json-ld';
 import { ViewOptions } from '@/components/page-actions';
 
 const owner = 'PetterVargas';
@@ -20,6 +22,22 @@ export default async function Page(props: {
 
   return (
     <>
+      <JsonLd
+        data={articleJsonLd({
+          title: page.data.title,
+          description: page.data.description,
+          url: `${baseUrl}${page.url}`,
+          datePublished: new Date(page.data.date).toISOString(),
+          author: page.data.author,
+        })}
+      />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: 'Inicio', url: baseUrl },
+          { name: 'Blog', url: '/blog' },
+          { name: page.data.title, url: page.url },
+        ])}
+      />
       <div className="w-full max-w-(--fd-layout-width) mx-auto px-4 flex flex-col items-center py-12">
         <h1 className="mb-2 text-center text-3xl font-bold">{page.data.title}</h1>
         <p className="mb-2 text-center text-fd-muted-foreground">{page.data.description}</p>

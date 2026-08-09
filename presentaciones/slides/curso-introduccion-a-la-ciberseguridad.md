@@ -4,7 +4,7 @@ addons:
   - .
 theme: seriph
 favicon: /favicon.ico
-background: https://cover.sli.dev
+background: https://cover.divisioncero.com
 title: Curso de Introducción a la Ciberseguridad
 titleTemplate: "%s · CyberAcademy DivisionCero"
 info: |

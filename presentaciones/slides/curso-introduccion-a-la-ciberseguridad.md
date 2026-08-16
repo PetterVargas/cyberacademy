@@ -159,6 +159,8 @@ transition: fade-out
 <!--
 Una imagen vale más que mil palabras.
 
+Este curso pertenece a la learning path de CyberUsuario mostramos esta imagen como una representación gráfica de lo que estamos abarcando, y justo este curso es el paso inicial.
+
 Es necesario en otro escritorio tener listo el archivo. Draw del Dominio de Learning Path CyberUsuario
 -->
 
@@ -170,6 +172,10 @@ transition: slide-left
 # Módulo 1
 
 ## Fundamentos de Ciberseguridad
+
+<!--
+El primer módulo del curso, fundamentos de Ciberseguridad.
+-->
 
 ---
 layout: center
@@ -222,17 +228,17 @@ transition: slide-down
 Las tres propiedades que toda medida de seguridad busca proteger.
 
 <div grid grid-cols-3 gap-4 mt-8>
-  <div v-click border="~ main rounded" p-5>
+  <div v-click.fade.right.scale border="~ main rounded" p-5>
     <ph-eye-closed-bold text-3xl text-sky-500 />
     <div mt-2 font-semibold>Confidencialidad</div>
     <div text-sm op70 mt-1>Solo las personas autorizadas pueden acceder a la información.</div>
   </div>
-  <div v-click border="~ main rounded" p-5>
+  <div v-click.fade.right.scale border="~ main rounded" p-5>
     <ph-check-circle-bold text-3xl text-emerald-500 />
     <div mt-2 font-semibold>Integridad</div>
     <div text-sm op70 mt-1>Los datos no son alterados o manipulados sin permiso.</div>
   </div>
-  <div v-click border="~ main rounded" p-5>
+  <div v-click.fade.right.scale border="~ main rounded" p-5>
     <ph-network-bold text-3xl text-violet-500 />
     <div mt-2 font-semibold>Disponibilidad</div>
     <div text-sm op70 mt-1>Los sistemas y datos están accesibles cuando se necesitan.</div>
@@ -328,66 +334,70 @@ layout: section
 
 ## Amenazas y Actores Maliciosos
 
+<!--
+Continuamos con el módulo 2, amenazas y actores maliciosos.
+-->
+
 ---
 
 # Top 10 amenazas para el usuario final
 
 <div grid grid-cols-5 gap-3 mt-6>
-  <div v-click border="~ main rounded" p-3 relative>
+  <div v-click.fade.right.scale border="~ main rounded" p-3 relative>
     <div abs-tr mr-2 mt-1 text-xs op40 font-mono>01</div>
     <ph-fish-bold text-xl text-sky-500 />
     <div mt-2 font-semibold text-sm>Phishing</div>
     <div text-xs op70 mt-1>Correos o mensajes falsos que buscan robar tus credenciales.</div>
   </div>
-  <div v-click border="~ main rounded" p-3 relative>
+  <div v-click.fade.right.scale border="~ main rounded" p-3 relative>
     <div abs-tr mr-2 mt-1 text-xs op40 font-mono>02</div>
     <ph-lock-key-bold text-xl text-red-500 />
     <div mt-2 font-semibold text-sm>Ransomware</div>
     <div text-xs op70 mt-1>Cifra tus archivos y exige un pago para "liberarlos".</div>
   </div>
-  <div v-click border="~ main rounded" p-3 relative>
+  <div v-click.fade.right.scale border="~ main rounded" p-3 relative>
     <div abs-tr mr-2 mt-1 text-xs op40 font-mono>03</div>
     <ph-bug-bold text-xl text-amber-500 />
     <div mt-2 font-semibold text-sm>Malware</div>
     <div text-xs op70 mt-1>Software malicioso que infecta y daña tus dispositivos.</div>
   </div>
-  <div v-click border="~ main rounded" p-3 relative>
+  <div v-click.fade.right.scale border="~ main rounded" p-3 relative>
     <div abs-tr mr-2 mt-1 text-xs op40 font-mono>04</div>
     <ph-mask-happy-bold text-xl text-violet-500 />
     <div mt-2 font-semibold text-sm>Ingeniería social</div>
     <div text-xs op70 mt-1>Manipulación psicológica para que actúes sin pensar.</div>
   </div>
-  <div v-click border="~ main rounded" p-3 relative>
+  <div v-click.fade.right.scale border="~ main rounded" p-3 relative>
     <div abs-tr mr-2 mt-1 text-xs op40 font-mono>05</div>
     <ph-key-bold text-xl text-emerald-500 />
     <div mt-2 font-semibold text-sm>Contraseñas débiles</div>
     <div text-xs op70 mt-1>Reutilizadas o fáciles de adivinar; abren muchas puertas.</div>
   </div>
-  <div v-click border="~ main rounded" p-3 relative>
+  <div v-click.fade.right.scale border="~ main rounded" p-3 relative>
     <div abs-tr mr-2 mt-1 text-xs op40 font-mono>06</div>
     <ph-wifi-slash-bold text-xl text-sky-500 />
     <div mt-2 font-semibold text-sm>Wi-Fi público inseguro</div>
     <div text-xs op70 mt-1>Permite interceptar tu tráfico en redes abiertas.</div>
   </div>
-  <div v-click border="~ main rounded" p-3 relative>
+  <div v-click.fade.right.scale border="~ main rounded" p-3 relative>
     <div abs-tr mr-2 mt-1 text-xs op40 font-mono>07</div>
     <ph-device-mobile-bold text-xl text-red-500 />
     <div mt-2 font-semibold text-sm>Smishing y vishing</div>
     <div text-xs op70 mt-1>Estafas por SMS o llamadas telefónicas.</div>
   </div>
-  <div v-click border="~ main rounded" p-3 relative>
+  <div v-click.fade.right.scale border="~ main rounded" p-3 relative>
     <div abs-tr mr-2 mt-1 text-xs op40 font-mono>08</div>
     <ph-identification-card-bold text-xl text-amber-500 />
     <div mt-2 font-semibold text-sm>Robo de identidad</div>
     <div text-xs op70 mt-1>Uso indebido de tus datos personales para cometer fraude.</div>
   </div>
-  <div v-click border="~ main rounded" p-3 relative>
+  <div v-click.fade.right.scale border="~ main rounded" p-3 relative>
     <div abs-tr mr-2 mt-1 text-xs op40 font-mono>09</div>
     <ph-warning-circle-bold text-xl text-violet-500 />
     <div mt-2 font-semibold text-sm>Software desactualizado</div>
     <div text-xs op70 mt-1>Vulnerabilidades conocidas sin parchear, fáciles de explotar.</div>
   </div>
-  <div v-click border="~ main rounded" p-3 relative>
+  <div v-click.fade.right.scale border="~ main rounded" p-3 relative>
     <div abs-tr mr-2 mt-1 text-xs op40 font-mono>10</div>
     <ph-chat-centered-dots-bold text-xl text-emerald-500 />
     <div mt-2 font-semibold text-sm>Fraude en redes sociales</div>
@@ -429,6 +439,12 @@ Correos o mensajes falsos que buscan robar tus credenciales.
 
 </div>
 
+<img src="/images/modalidad-delictiva-phishing.webp" class="absolute right-10 top-1/2 -translate-y-1/2 max-h-[80%] rounded shadow-lg border main" />
+
+<!--
+Acá podemos ver gráficamente un ejemplo de phishing. Busca obtener credenciales. Patrones para identificar varios, pero nuestro criterio es vital.
+-->
+
 ---
 
 <div class="abs-tl m-10 text-left max-w-120">
@@ -438,6 +454,8 @@ Correos o mensajes falsos que buscan robar tus credenciales.
 Cifra tus archivos y exige un pago para "liberarlos".
 
 </div>
+
+<img src="/images/modalidad-delictiva-ransomware.webp" class="absolute right-10 top-1/2 -translate-y-1/2 max-h-[80%] rounded shadow-lg border main" />
 
 ---
 
@@ -449,6 +467,8 @@ Software malicioso que infecta y daña tus dispositivos.
 
 </div>
 
+<img src="/images/modalidad-delictiva-malware.webp" class="absolute right-10 top-1/2 -translate-y-1/2 max-h-[80%] rounded shadow-lg border main" />
+
 ---
 
 <div class="abs-tl m-10 text-left max-w-120">
@@ -457,15 +477,8 @@ Software malicioso que infecta y daña tus dispositivos.
 
 Manipulación psicológica para que actúes sin pensar.
 
-</div>
-
----
-
-<div class="abs-tl m-10 text-left max-w-120">
-
-# Contraseñas débiles
-
-Reutilizadas o fáciles de adivinar; abren muchas puertas.
+¿Si te llega un correo con imágenes adjuntas de la infidelidad 
+de tu novio/novia lo abrirías?
 
 </div>
 
@@ -479,6 +492,8 @@ Permite interceptar tu tráfico en redes abiertas.
 
 </div>
 
+<img src="/images/modalidad-delictiva-wifi_mitm.webp" class="absolute right-10 top-1/2 -translate-y-1/2 max-h-[80%] rounded shadow-lg border main" />
+
 ---
 
 <div class="abs-tl m-10 text-left max-w-120">
@@ -487,6 +502,11 @@ Permite interceptar tu tráfico en redes abiertas.
 
 Estafas por SMS o llamadas telefónicas.
 
+</div>
+
+<div class="absolute right-10 top-1/2 -translate-y-1/2 h-[80%] flex gap-4 items-center">
+  <img src="/images/modalidad-delictiva-smishing.webp" class="h-full rounded shadow-lg border main" />
+  <img src="/images/modalidad-delictiva-vishing.webp" class="h-full rounded shadow-lg border main" />
 </div>
 
 ---
@@ -499,6 +519,8 @@ Uso indebido de tus datos personales para cometer fraude.
 
 </div>
 
+<img src="/images/modalidad-delictiva-whatsapp_robo.webp" class="absolute right-10 top-1/2 -translate-y-1/2 max-h-[80%] rounded shadow-lg border main" />
+
 ---
 
 <div class="abs-tl m-10 text-left max-w-120">
@@ -509,6 +531,8 @@ Vulnerabilidades conocidas sin parchear, fáciles de explotar.
 
 </div>
 
+<img src="/images/modalidad-delictiva-software_desactualizado.webp" class="absolute right-10 top-1/2 -translate-y-1/2 max-h-[80%] rounded shadow-lg border main" />
+
 ---
 
 <div class="abs-tl m-10 text-left max-w-120">
@@ -518,6 +542,8 @@ Vulnerabilidades conocidas sin parchear, fáciles de explotar.
 Perfiles falsos, sorteos y enlaces fraudulentos.
 
 </div>
+
+<img src="/images/modalidad-delictiva-fraude_rrss.webp" class="absolute right-10 top-1/2 -translate-y-1/2 max-h-[80%] rounded shadow-lg border main" />
 
 ---
 
@@ -955,6 +981,14 @@ Toda organización debería tener un canal claro para reportar. **Ante la duda, 
   </div>
 </div>
 
+<!--
+Conocer cómo reportar un incidente de seguridad, como en el contexto empresarial, reportar es necesario y en lo posible, en el menor tiempo posible.
+
+No importa el canal, lo importante es conocerlo y reportar cualquier generación de duda.
+
+Puede ser un chat interno, correo, mesa de servicio o tu línes o equipo de seguridad.
+-->
+
 ---
 layout: statement
 transition: slide-down
@@ -965,6 +999,10 @@ transition: slide-down
 Entre todos nos protegemos.
 <br>
 Cada contribución construye un entorno más seguro.
+
+<!--
+No me cansaré de decirlo la Ciberseguridad es de todos, no solo del equipo de seguridad, todos hacemos parte de ella, ten presente esto.
+-->
 
 ---
 layout: center
@@ -981,6 +1019,21 @@ Certifica lo aprendido en la plataforma de DivisionCero
   <a href="https://app.divisioncero.com/home/examenes" target="_blank" border="~ main rounded" px-4 py-2>Presentar evaluación →</a>
   <a href="https://app.divisioncero.com/home/certificaciones" target="_blank" border="~ main rounded" px-4 py-2>Ver mis certificados →</a>
 </div>
+
+<div mt-8 flex items-center justify-center gap-4>
+  <div text-sm op70 max-w-xs text-left>Suscribiéndote y siguiéndonos en nuestras redes sociales nos apoyas a seguir creando contenido de Ciberseguridad.</div>
+  <img src="/images/qr-code-suscribirse-canal-youtube.webp" class="w-24" />
+</div>
+
+<!--
+Toda la academia de CyberAcademy el contenido es abierto y queremos que continúe así, estamos buscando que sea autosostenible, y en estos momentos no lo es, así que tu apoyo es esencial.
+
+Suscribiendote en nuestro canal de Youtube nos ayudaría bastante.
+
+También, en nuestra plataforma puedes comprar una suscripción para presentar exámenes y generar el certificado del curso.
+
+Nuevamente muchas gracias por apoyar nuestro trabajo.
+-->
 
 ---
 transition: slide-down
@@ -1012,10 +1065,19 @@ transition: slide-down
 
 </div>
 
+<!--
+Este viaje aprendimos bastante. Cada check fue creado con amor y un propósito de realizar las cosas correctas, espero le hubiese gustado.
+-->
+
 ---
-layout: intro
+layout: mil-gracias
 class: text-center
-background: https://cover.sli.dev
 ---
 
 # ¡Mil gracias! 🤘🏽
+
+No olvides mantener activo el modo **#GanasDeAprender**
+
+<!--
+Mil gracias y no olvides mantener activo el modo #GanasDeAprender
+-->

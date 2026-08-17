@@ -1,10 +1,9 @@
-import { z } from 'zod';
 import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
 import { remarkMdxMermaid, rehypeCodeDefaultOptions } from 'fumadocs-core/mdx-plugins';
 import { remarkBlockId } from 'fumadocs-core/mdx-plugins/remark-block-id';
 import { transformerTwoslash } from 'fumadocs-twoslash';
-import { defineConfig, defineDocs, defineCollections } from 'fumadocs-mdx/config';
+import { defineConfig, defineDocs } from 'fumadocs-mdx/config';
 import { metaSchema, pageSchema } from 'fumadocs-core/source/schema';
 
 const docsConfig = {
@@ -46,15 +45,4 @@ export default defineConfig({
       ],
     },
   },
-});
-
-export const blogPosts = defineCollections({
-  type: 'doc',
-  dir: 'content/blog',
-  schema: z.object({
-    title: z.string(),
-    description: z.string().optional(),
-    author: z.string().optional(),
-    date: z.union([z.string(), z.date().transform(d => d.toISOString().split('T')[0])]),
-  }),
 });

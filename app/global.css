@@ -21,3 +21,17 @@ html > body[data-scroll-locked] {
   margin-right: 0px !important;
   --removed-body-scroll-bar-size: 0px !important;
 }
+
+/*
+ * En modo claro, --color-fd-muted (96.1%) es casi idéntico a
+ * --color-fd-background (96%), por lo que las secciones alternas del home
+ * (bg-fd-muted/40) no generan contraste visible. En modo oscuro sí hay
+ * separación real (7.04% vs 12.9%), así que aquí solo reforzamos el claro.
+ */
+.home-section-alt {
+  background-color: hsl(0, 0%, 90%);
+}
+
+.dark .home-section-alt {
+  background-color: transparent;
+}

@@ -10,5 +10,215 @@
     "entry": "slides/slides.md",
     "title": "Bienvenida a Slidev",
     "description": "Demo de referencia con los recursos y sintaxis disponibles en Slidev."
+  },
+  {
+    "slug": "curso-de-ciberseguridad-en-el-trabajo-remoto-y-dispositivos-moviles",
+    "entry": "slides/curso-de-ciberseguridad-en-el-trabajo-remoto-y-dispositivos-moviles.md",
+    "title": "Curso de Ciberseguridad en el Trabajo Remoto y Dispositivos Móviles",
+    "description": "VPN, seguridad en el hogar y protección de teléfonos y tablets"
+  },
+  {
+    "slug": "curso-de-ciberseguridad-en-la-gestion-de-informacion-sensible",
+    "entry": "slides/curso-de-ciberseguridad-en-la-gestion-de-informacion-sensible.md",
+    "title": "Curso de Ciberseguridad en la Gestión de Información Sensible",
+    "description": "Clasificación y manejo seguro de datos"
+  },
+  {
+    "slug": "curso-de-ciberseguridad-en-proteccion-de-marca",
+    "entry": "slides/curso-de-ciberseguridad-en-proteccion-de-marca.md",
+    "title": "Curso de Ciberseguridad en Protección de Marca",
+    "description": "Protección de la reputación digital"
+  },
+  {
+    "slug": "curso-de-ciberseguridad-para-el-negocio-y-producto",
+    "entry": "slides/curso-de-ciberseguridad-para-el-negocio-y-producto.md",
+    "title": "Curso de Ciberseguridad para el Negocio y Producto",
+    "description": "Seguridad en la estrategia y productos"
+  },
+  {
+    "slug": "curso-de-ciberseguridad-para-lideres",
+    "entry": "slides/curso-de-ciberseguridad-para-lideres.md",
+    "title": "Curso de Ciberseguridad para Líderes",
+    "description": "El rol del líder en la seguridad"
+  },
+  {
+    "slug": "curso-de-ciberseguridad-para-ninos-ninas-y-adolescentes",
+    "entry": "slides/curso-de-ciberseguridad-para-ninos-ninas-y-adolescentes.md",
+    "title": "Curso de Ciberseguridad para Niños, Niñas y Adolescentes",
+    "description": "Ciberseguridad para niños y adolescentes"
+  },
+  {
+    "slug": "curso-de-ciberseguridad-para-padres-y-adultos-responsables",
+    "entry": "slides/curso-de-ciberseguridad-para-padres-y-adultos-responsables.md",
+    "title": "Curso de Ciberseguridad para Padres y Adultos Responsables",
+    "description": "Proteger a niños y adolescentes en línea"
+  },
+  {
+    "slug": "curso-de-contra-ataques-de-ingenieria-social",
+    "entry": "slides/curso-de-contra-ataques-de-ingenieria-social.md",
+    "title": "Curso contra Ataques de Ingeniería Social",
+    "description": "Cómo detectar phishing y manipulación"
+  },
+  {
+    "slug": "curso-de-desarrollo-seguro",
+    "entry": "slides/curso-de-desarrollo-seguro.md",
+    "title": "Curso de Desarrollo Seguro",
+    "description": "Buenas prácticas de programación segura"
+  },
+  {
+    "slug": "cor-auditoria-de-ciberseguridad",
+    "entry": "slides/cor-auditoria-de-ciberseguridad.md",
+    "title": "Curso de Auditoría de Ciberseguridad",
+    "description": "Planificación y ejecución de auditorías"
+  },
+  {
+    "slug": "cor-cumplimiento-normativo-continuo",
+    "entry": "slides/cor-cumplimiento-normativo-continuo.md",
+    "title": "Curso de Cumplimiento Normativo Continuo",
+    "description": "ISO 27001, NIST CSF y GDPR"
+  },
+  {
+    "slug": "cor-gestion-de-riesgos",
+    "entry": "slides/cor-gestion-de-riesgos.md",
+    "title": "Curso de Gestión de Riesgos",
+    "description": "Análisis y tratamiento del riesgo"
+  },
+  {
+    "slug": "cor-gobierno-en-ciberseguridad",
+    "entry": "slides/cor-gobierno-en-ciberseguridad.md",
+    "title": "Curso de Gobierno en Ciberseguridad",
+    "description": "Roles y responsabilidades del CISO"
+  },
+  {
+    "slug": "cip-arquitectura-zero-trust",
+    "entry": "slides/cip-arquitectura-zero-trust.md",
+    "title": "Curso de Arquitectura Zero Trust",
+    "description": "Principios y diseño de Zero Trust"
+  },
+  {
+    "slug": "cip-ciberseguridad-en-equipos-de-colaboradores",
+    "entry": "slides/cip-ciberseguridad-en-equipos-de-colaboradores.md",
+    "title": "Curso de Ciberseguridad en Equipos de Colaboradores",
+    "description": "EDR y protección de dispositivos"
+  },
+  {
+    "slug": "cip-ciberseguridad-en-identidad",
+    "entry": "slides/cip-ciberseguridad-en-identidad.md",
+    "title": "Curso de Ciberseguridad en Identidad",
+    "description": "IAM, PAM y gestión de identidades"
+  },
+  {
+    "slug": "cif-ciberseguridad-en-infraestructura-en-nube",
+    "entry": "slides/cif-ciberseguridad-en-infraestructura-en-nube.md",
+    "title": "Curso de Ciberseguridad en Infraestructura en Nube",
+    "description": "Controles de seguridad en la nube"
+  },
+  {
+    "slug": "cap-ciberseguridad-en-apis",
+    "entry": "slides/cap-ciberseguridad-en-apis.md",
+    "title": "Curso de Ciberseguridad en APIs",
+    "description": "Diseño y protección segura de APIs"
+  },
+  {
+    "slug": "cap-ciberseguridad-en-skills-agents-y-mcp",
+    "entry": "slides/cap-ciberseguridad-en-skills-agents-y-mcp.md",
+    "title": "Curso de Ciberseguridad en Skills, Agents y MCP",
+    "description": "Seguridad en agentes de IA y MCP"
+  },
+  {
+    "slug": "cap-devops-y-appsec",
+    "entry": "slides/cap-devops-y-appsec.md",
+    "title": "Curso DevOps y AppSec",
+    "description": "Seguridad en pipelines de CI/CD"
+  },
+  {
+    "slug": "cap-threat-modeling",
+    "entry": "slides/cap-threat-modeling.md",
+    "title": "Curso de Threat Modeling",
+    "description": "Identificación y mitigación de amenazas"
+  },
+  {
+    "slug": "ccn-ciberseguridad-en-los-cambios-del-negocio",
+    "entry": "slides/ccn-ciberseguridad-en-los-cambios-del-negocio.md",
+    "title": "Curso de Ciberseguridad en los Cambios del Negocio",
+    "description": "Gestión segura de cambios del negocio"
+  },
+  {
+    "slug": "ccn-plan-de-continuidad-de-negocio-bcp-y-plan-de-recuperacion-ante-desastres-drp",
+    "entry": "slides/ccn-plan-de-continuidad-de-negocio-bcp-y-plan-de-recuperacion-ante-desastres-drp.md",
+    "title": "Curso de Plan de Continuidad de Negocio (BCP) y Plan de Recuperación ante Desastres (DRP)",
+    "description": "Planes BCP y DRP ante incidentes"
+  },
+  {
+    "slug": "adr-creacion-y-gestion-de-un-csirt-y-sirt",
+    "entry": "slides/adr-creacion-y-gestion-de-un-csirt-y-sirt.md",
+    "title": "Curso de Creación y Gestión de un CSIRT y SIRT",
+    "description": "Estructura y operación de un CSIRT/SIRT"
+  },
+  {
+    "slug": "adr-creacion-y-gestion-de-un-soc",
+    "entry": "slides/adr-creacion-y-gestion-de-un-soc.md",
+    "title": "Curso de Creación y Gestión de un SOC",
+    "description": "Diseño y operación de un SOC"
+  },
+  {
+    "slug": "adr-ethical-hacking-red-team-pentesting-y-bug-bounty",
+    "entry": "slides/adr-ethical-hacking-red-team-pentesting-y-bug-bounty.md",
+    "title": "Curso de Ethical Hacking, Red Team, Pentesting y Bug Bounty",
+    "description": "Ataque ético, pentesting y bug bounty"
+  },
+  {
+    "slug": "adr-informatica-forense",
+    "entry": "slides/adr-informatica-forense.md",
+    "title": "Curso de Informática Forense",
+    "description": "Recolección y análisis de evidencia"
+  },
+  {
+    "slug": "adr-investigacion-de-cibercrimen",
+    "entry": "slides/adr-investigacion-de-cibercrimen.md",
+    "title": "Curso de Investigación de CiberCrimen",
+    "description": "Investigación de delitos informáticos"
+  },
+  {
+    "slug": "adr-investigaciones-tecnologicas",
+    "entry": "slides/adr-investigaciones-tecnologicas.md",
+    "title": "Curso de Investigaciones Tecnológicas",
+    "description": "Investigación digital de incidentes"
+  },
+  {
+    "slug": "adr-respuesta-a-incidentes",
+    "entry": "slides/adr-respuesta-a-incidentes.md",
+    "title": "Curso de Respuesta a Incidentes",
+    "description": "Playbooks de respuesta a incidentes"
+  },
+  {
+    "slug": "adr-threat-intelligence",
+    "entry": "slides/adr-threat-intelligence.md",
+    "title": "Curso de Threat Intelligence",
+    "description": "Fuentes de inteligencia de amenazas"
+  },
+  {
+    "slug": "thp-ciberseguridad-en-proteccion-de-proveedores-y-terceros",
+    "entry": "slides/thp-ciberseguridad-en-proteccion-de-proveedores-y-terceros.md",
+    "title": "Curso de Ciberseguridad en Protección de Proveedores y Terceros",
+    "description": "Riesgos en la cadena de suministro"
+  },
+  {
+    "slug": "thp-ciberseguridad-en-recursos-humanos",
+    "entry": "slides/thp-ciberseguridad-en-recursos-humanos.md",
+    "title": "Curso de Ciberseguridad en Recursos Humanos",
+    "description": "Onboarding seguro y cultura de seguridad"
+  },
+  {
+    "slug": "dia-ciberseguridad-en-ia",
+    "entry": "slides/dia-ciberseguridad-en-ia.md",
+    "title": "Curso de Ciberseguridad en IA",
+    "description": "Riesgos y gobernanza de sistemas IA"
+  },
+  {
+    "slug": "dia-ciberseguridad-en-los-datos",
+    "entry": "slides/dia-ciberseguridad-en-los-datos.md",
+    "title": "Curso de Ciberseguridad en los Datos",
+    "description": "Clasificación, DLP y protección de datos"
   }
 ]

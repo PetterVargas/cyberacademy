@@ -149,10 +149,10 @@ function Footer() {
             <div className="flex flex-col gap-y-2.5">
               <h3 className="font-medium mb-4">Legal</h3>
               <ul className="space-y-2">
-                <li><a href="https://divisioncero.com/terminos-de-servicio" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Términos de Servicio</a></li>
-                <li><a href="https://divisioncero.com/politica-de-privacidad" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Política de Privacidad</a></li>
-                <li><a href="https://divisioncero.com/politica-de-cookies" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Política de Cookies</a></li>
-                <li><a href="https://divisioncero.com/trust-center" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Centro de Confianza</a></li>
+                <li><a href="https://divisioncero.com/legal/terminos-de-servicio" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Términos de Servicio</a></li>
+                <li><a href="https://divisioncero.com/legal/politica-de-privacidad" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Política de Privacidad</a></li>
+                <li><a href="https://divisioncero.com/legal/politica-de-cookies" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Política de Cookies</a></li>
+                <li><a href="https://divisioncero.com/legal/trust-center" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Centro de Confianza</a></li>
               </ul>
             </div>
           </div>

@@ -1,10 +1,9 @@
 import {
-  cyberusuarioDocs, cyberguardianDocs, blogPosts,
+  cyberusuarioDocs, cyberguardianDocs,
   corDocs, cipDocs, cifDocs, capDocs, ccnDocs, thpDocs, diaDocs, adrDocs,
 } from 'collections/server';
 import { loader } from 'fumadocs-core/source';
 import { flattenTree } from 'fumadocs-core/page-tree';
-import { toFumadocsSource } from 'fumadocs-mdx/runtime/server';
 import {
   cyberusuarioRoute, cyberusuarioImageRoute, cyberusuarioContentRoute,
 } from './shared';
@@ -29,11 +28,6 @@ export const ccnSource = loader({ baseUrl: '/ccn', source: ccnDocs.toFumadocsSou
 export const thpSource = loader({ baseUrl: '/thp', source: thpDocs.toFumadocsSource(), plugins: [] });
 export const diaSource = loader({ baseUrl: '/dia', source: diaDocs.toFumadocsSource(), plugins: [] });
 export const adrSource = loader({ baseUrl: '/adr', source: adrDocs.toFumadocsSource(), plugins: [] });
-
-export const blog = loader({
-  baseUrl: '/blog',
-  source: toFumadocsSource(blogPosts, []),
-});
 
 // ─── CyberUsuario ─────────────────────────────────────────────────────────────
 export function getCyberusuarioPageImage(page: (typeof cyberusuarioSource)['$inferPage']) {

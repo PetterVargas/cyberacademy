@@ -3,10 +3,11 @@ import {
   FileTextIcon, LayoutGridIcon,
   Building2Icon, ShieldCheckIcon, CloudIcon, CodeIcon,
   RefreshCwIcon, SearchIcon, UsersIcon, DatabaseIcon,
-  NewspaperIcon, UserIcon,
+  UserIcon, PresentationIcon,
 } from 'lucide-react';
 
 const signUpUrl = 'https://app.divisioncero.com/auth/sign-up';
+const presentacionesUrl = 'https://presentaciones.divisioncero.com/';
 
 export const baseOptions: BaseLayoutProps = {
   nav: {
@@ -104,10 +105,11 @@ export const baseOptions: BaseLayoutProps = {
       ],
     },
     {
-      icon: <NewspaperIcon />,
-      text: 'Blog',
-      url: '/blog',
+      icon: <PresentationIcon />,
+      text: 'Presentaciones',
+      url: presentacionesUrl,
       secondary: false,
+      external: true,
     },
     {
       type: 'icon',

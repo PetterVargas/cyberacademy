@@ -6,7 +6,7 @@ import {
   ArrowRight,
   Building2, ShieldCheck, Cloud, Code,
   RefreshCw, Search, Users, Database,
-  Shield, BookOpen,
+  Shield, BookOpen, Presentation,
 } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -147,6 +147,7 @@ export default function HomePage() {
   const domainsRef   = useRef<HTMLElement>(null);
   const guardianesRef = useRef<HTMLElement>(null);
   const usuariosRef  = useRef<HTMLElement>(null);
+  const presentacionesRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const heroEl       = heroRef.current;
@@ -154,8 +155,9 @@ export default function HomePage() {
     const domainsEl    = domainsRef.current;
     const guardianesEl = guardianesRef.current;
     const usuariosEl   = usuariosRef.current;
+    const presentacionesEl = presentacionesRef.current;
 
-    if (!heroEl || !rolesEl || !domainsEl || !guardianesEl || !usuariosEl) return;
+    if (!heroEl || !rolesEl || !domainsEl || !guardianesEl || !usuariosEl || !presentacionesEl) return;
 
     // ── Hero ─────────────────────────────────────────────────────────────
     const heroCtx = gsap.context(() => {
@@ -227,12 +229,21 @@ export default function HomePage() {
       });
     }, usuariosEl);
 
+    // ── Presentaciones CTA ────────────────────────────────────────────────
+    const presentacionesCtx = gsap.context(() => {
+      gsap.from('.presentaciones-content > *', {
+        y: 20, opacity: 0, duration: 0.6, stagger: 0.12, ease: 'power3.out',
+        scrollTrigger: { trigger: '.presentaciones-content', start: 'top 85%', once: true },
+      });
+    }, presentacionesEl);
+
     return () => {
       heroCtx.revert();
       rolesCtx.revert();
       domainsCtx.revert();
       guardianesCtx.revert();
       usuariosCtx.revert();
+      presentacionesCtx.revert();
     };
   }, []);
 
@@ -305,7 +316,7 @@ export default function HomePage() {
       </FullViewportSection>
 
       {/* ── Roles beneficiados ── */}
-      <section ref={rolesRef} className="py-20 px-4 bg-fd-muted/40 overflow-hidden">
+      <section ref={rolesRef} className="py-20 px-4 bg-fd-muted/40 home-section-alt overflow-hidden">
         <div className="max-w-4xl mx-auto">
           <div className="roles-header text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-3">Pensado para tu rol</h2>
@@ -390,7 +401,7 @@ export default function HomePage() {
       </section>
 
       {/* ── CyberUsuarios ── */}
-      <section ref={usuariosRef} className="py-20 px-4 bg-fd-muted/40">
+      <section ref={usuariosRef} className="py-20 px-4 bg-fd-muted/40 home-section-alt">
         <div className="usuarios-content max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-400 text-sm font-medium mb-4">
@@ -435,6 +446,34 @@ export default function HomePage() {
             >
               <Shield className="h-5 w-5" />
               Dominios y Cursos CyberGuardianes
+              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Presentaciones CTA ── */}
+      <section ref={presentacionesRef} className="py-20 px-4 bg-fd-muted/40 home-section-alt">
+        <div className="presentaciones-content max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-fd-primary/30 bg-fd-primary/10 text-fd-primary text-sm font-medium mb-4">
+              <Presentation className="h-3.5 w-3.5" />
+              Presentaciones
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-3">Lleva la Ciberseguridad a tu equipo</h2>
+            <p className="text-fd-muted-foreground text-lg max-w-2xl mx-auto">
+              Explora nuestras presentaciones y compártelas con tu organización.
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <a
+              href="https://presentaciones.divisioncero.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-fd-primary-foreground bg-fd-primary hover:bg-fd-primary/90 rounded-xl transition-colors shadow-lg"
+            >
+              <Presentation className="h-5 w-5" />
+              Ver Presentaciones
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>

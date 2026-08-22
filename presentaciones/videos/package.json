@@ -1,0 +1,16 @@
+{
+  "name": "cyberacademy-videos",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Videos cortos explicativos generados con HyperFrames (HTML -> MP4).",
+  "scripts": {
+    "preview": "hyperframes preview",
+    "render": "hyperframes render",
+    "lint": "hyperframes lint",
+    "check": "hyperframes check"
+  },
+  "devDependencies": {
+    "hyperframes": "^0.8.8"
+  }
+}

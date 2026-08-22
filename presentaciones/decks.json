@@ -6,12 +6,6 @@
     "description": "Fundamentos, amenazas, identidad digital, navegación segura y cultura de ciberseguridad."
   },
   {
-    "slug": "bienvenida-slidev",
-    "entry": "slides/slides.md",
-    "title": "Bienvenida a Slidev",
-    "description": "Demo de referencia con los recursos y sintaxis disponibles en Slidev."
-  },
-  {
     "slug": "curso-de-ciberseguridad-en-el-trabajo-remoto-y-dispositivos-moviles",
     "entry": "slides/curso-de-ciberseguridad-en-el-trabajo-remoto-y-dispositivos-moviles.md",
     "title": "Curso de Ciberseguridad en el Trabajo Remoto y Dispositivos Móviles",
@@ -220,5 +214,11 @@
     "entry": "slides/dia-ciberseguridad-en-los-datos.md",
     "title": "Curso de Ciberseguridad en los Datos",
     "description": "Clasificación, DLP y protección de datos"
+  },
+  {
+    "slug": "bienvenida-slidev",
+    "entry": "slides/slides.md",
+    "title": "Bienvenida a Slidev",
+    "description": "Demo de referencia con los recursos y sintaxis disponibles en Slidev."
   }
 ]

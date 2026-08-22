@@ -51,14 +51,7 @@ duration: 80min
 
 VPN, seguridad en el hogar y protección de teléfonos y tablets
 
-<LightOrDark>
-  <template #dark>
-    <img src="/images/logo-divisioncero-dark.webp" class="mt-6 mx-auto h-6" />
-  </template>
-  <template #light>
-    <img src="/images/logo-divisioncero-light.webp" class="mt-6 mx-auto h-6" />
-  </template>
-</LightOrDark>
+<img src="/images/logo-dark-divisioncero.png" class="mt-6 mx-auto h-6" />
 
 <div mt-4 op70>
 #GanasDeAprender
@@ -569,6 +562,8 @@ class: text-center
 # ¡Mil gracias! 🤘🏽
 
 No olvides mantener activo el modo **#GanasDeAprender**
+
+<img src="/images/logo-dark-divisioncero.png" class="mt-6 mx-auto h-6" />
 
 <!--
 Mil gracias y no olvides mantener activo el modo #GanasDeAprender

@@ -79,7 +79,6 @@ const navbar = `
             ${guardianMenu}
           </div>
         </div>
-        <a href="${baseUrl}/blog">Blog</a>
       </div>
       <div class="nav-actions">
         <a class="icon-link" href="${githubUrl}" target="_blank" rel="noopener" aria-label="Github">
@@ -104,10 +103,11 @@ const cards = decks
     const accent = accents[i % accents.length];
     return `
       <a class="card" href="./${deck.slug}/" style="--accent: ${accent}">
-        <h2>${deck.title}</h2>
-        <p>${deck.description}</p>
+        <div class="card-body">
+          <h2>${deck.title}</h2>
+          <p>${deck.description}</p>
+        </div>
         <div class="card-footer">
-          <span class="slug">${deck.slug}</span>
           <span class="cta">Abrir presentación <span class="arrow">→</span></span>
         </div>
       </a>`;
@@ -123,6 +123,13 @@ const html = `<!doctype html>
 <link rel="icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-16EPG4H9SD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-16EPG4H9SD');
+</script>
 <style>
   :root {
     color-scheme: light dark;
@@ -290,59 +297,52 @@ const html = `<!doctype html>
   }
   header p { margin: 0; color: var(--text-dim); font-size: 1rem; }
   .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
     width: 100%;
-    max-width: 960px;
+    max-width: 760px;
   }
   .card {
     position: relative;
     display: flex;
-    flex-direction: column;
-    padding: 1.2rem;
-    border-radius: 16px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.1rem 1.4rem;
+    border-radius: 14px;
     border: 1px solid var(--surface-border);
     background: var(--surface);
     backdrop-filter: blur(12px);
     text-decoration: none;
     color: inherit;
     overflow: hidden;
-    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.15s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   }
   .card::before {
     content: '';
     position: absolute;
-    inset: 0 0 auto 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent), transparent);
+    inset: 0 auto 0 0;
+    width: 3px;
+    background: linear-gradient(180deg, var(--accent), transparent);
   }
   .card:hover {
-    transform: translateY(-4px);
+    transform: translateX(4px);
     border-color: var(--accent);
-    box-shadow: 0 16px 40px -12px color-mix(in srgb, var(--accent) 35%, transparent);
+    box-shadow: 0 12px 30px -14px color-mix(in srgb, var(--accent) 35%, transparent);
   }
-  .card h2 { margin: 0.3rem 0 0.35rem; font-size: 1.15rem; font-weight: 700; letter-spacing: -0.01em; }
+  .card-body { min-width: 0; }
+  .card h2 { margin: 0 0 0.3rem; font-size: 1.05rem; font-weight: 700; letter-spacing: -0.01em; }
   .card p {
-    margin: 0 0 0.9rem;
-    font-size: 0.9rem;
+    margin: 0;
+    font-size: 0.85rem;
     color: var(--text-dim);
     line-height: 1.5;
-    flex: 1;
   }
   .card-footer {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 0.75rem;
-    padding-top: 0.65rem;
-    border-top: 1px solid var(--surface-border);
-  }
-  .slug {
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-    font-size: 0.72rem;
-    color: var(--text-dim);
-    opacity: 0.8;
+    flex-shrink: 0;
   }
   .cta {
     font-size: 0.85rem;
@@ -356,6 +356,10 @@ const html = `<!doctype html>
   .arrow { transition: transform 0.2s ease; }
   .card:hover .arrow { transform: translateX(3px); }
   footer { color: var(--text-dim); font-size: 0.8rem; }
+  @media (max-width: 640px) {
+    .card { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+    .card-footer { align-self: flex-end; }
+  }
 </style>
 </head>
 <body>

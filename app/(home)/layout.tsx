@@ -128,7 +128,7 @@ function Footer() {
               <ul className="space-y-2">
                 <li><a href="https://cyberacademy.divisioncero.com/" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">CyberAcademy</a></li>
                 <li><a href="https://kudo.divisioncero.com/" className="text-sm hover:underline">Framework Kudo</a></li>
-                <li><a href="https://divisioncero.com/home/empresas" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Ciberseguridad Empresarial</a></li>
+                <li><a href="https://app.divisioncero.com/home/empresas" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Ciberseguridad Empresarial</a></li>
                 <li><a href="https://herramientas.divisioncero.com/" className="text-sm hover:underline" target="_blank" rel="noopener noreferrer">Herramientas</a></li>
               </ul>
             </div>

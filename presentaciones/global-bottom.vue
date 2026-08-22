@@ -13,3 +13,11 @@ const { currentPage } = useNav();
     divisioncero.com
   </div>
 </template>
+
+<style>
+/* El cacheo offline de la PWA se mantiene activo; solo ocultamos el aviso
+   "Caching for offline…" / "Ready offline" para que no tape la presentación. */
+.slidev-pwa-indicator {
+  display: none !important;
+}
+</style>

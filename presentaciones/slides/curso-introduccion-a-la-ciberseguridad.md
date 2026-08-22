@@ -53,14 +53,7 @@ duration: 45min
 
 Primeros pasos en el maravilloso mundo de la Ciberseguridad
 
-<LightOrDark>
-  <template #dark>
-    <img src="/images/logo-divisioncero-dark.webp" class="mt-6 mx-auto h-6" />
-  </template>
-  <template #light>
-    <img src="/images/logo-divisioncero-light.webp" class="mt-6 mx-auto h-6" />
-  </template>
-</LightOrDark>
+<img src="/images/logo-dark-divisioncero.png" class="mt-6 mx-auto h-6" />
 
 <div mt-4 op70>
 #GanasDeAprender
@@ -79,7 +72,9 @@ Primeros pasos en el maravilloso mundo de la Ciberseguridad
 </div>
 
 <!--
-Hola equipo, buen día, bienvenidos a este curso que hemos construido para cualquier persona como primer paso para iniciar en el maravillo mundo de la Ciberseguridad, no necesitas ningún conocimiento previo, solamente estar en modo #GanasdeAprender y ser consciente que la Ciberseguridad es un trabajo de todos, por trivial que consideremos la situación, podemos proteger a muchos.
+Hola equipo, buen día, bienvenidos a su curso que hemos construido para cualquier persona como inicio en el maravilloso mundo de la Ciberseguridad, no necesitas ningún conocimiento previo, solamente estar en modo #GanasDeAprender y ser consciente que la Ciberseguridad es un trabajo de todos, por trivial que consideremos la situación, podemos proteger a muchos.
+
+Nuevamente bienvenidos.
 -->
 
 ---
@@ -128,24 +123,29 @@ transition: fade
 </v-clicks>
 
 <!--
-Este curso tiene cinco módulos en los que en cada uno se buscar lograr que sea aplicable a la realidad de las personas y las compañías.
+Este curso tiene cinco módulos en los que en cada uno se busca lograr que sea aplicable a la realidad de las personas y las compañías.
 
 Primero, fundamentos de Ciberseguridad, lograremos lo básico en ciberseguridad.
 
-Segundo, amanazas y actores maliciosos, conoceremos que atacantes están constantemente buscando el error de nuestra parte.
+Segundo, amenazas y actores maliciosos, conoceremos que atacantes están constantemente buscando el error de nuestra parte.
 
 Tercero, contraseñas e identidad digital, vamos a empezar a aprovisionarnos con herramientas porque no podemos llegar al campo de batalla de una forma tan ingenua.
 
 Cuarto, navegación y comunicación segura, en este viaje necesitamos observar para identificar anomalías digitales y en este módulo nos encargaremos de ello.
 
-Quinto, cultura de Ciberseguridad y reporte de incidentes, lo he dicho y lo voy a decir infinidad de veces, la ciberseguridad es una co-creación de un entorno, y la cultura es vital; para un trabajo colaborativo y reportar se convierte un acto de condescendencia necesario.
+Quinto, cultura de Ciberseguridad y reporte de incidentes, lo he dicho y lo voy a decir infinidad de veces, la ciberseguridad es una co-creación de un entorno, y la cultura es vital; para un trabajo colaborativo, reportar se convierte en un hábito necesario.
 
-El retorno de inversión es bastante:
+Don ROI
+
+En nuestros cursos vamos a mencionar constantemente a Don ROI, porque buscamos justo que nuestro contenido tenga un retorno de inversión.
+
+El retorno de inversión para este curso es bastante:
 
 - [X] Navegar en el ciberespacio siendo conscientes de los riesgos.
 - [X] Regulaciones y frameworks de ciberseguridad exigen esta capacitación.
-- [X] Proteger a nuestros seres queridos.
-- [X] Muchas más; pero, el tiempo no da.
+- [X] Sabías que en algunos países de nuestro entorno, si una entidad gubernamental te va a sancionar por temas de protección de datos y se muestra evidencia de la capacitación de los colaboradores en ciberseguridad, puede existir una disminución de la sanción.
+- [X] Proteger a nuestros seres queridos, que más que esto.
+- [X] Y muchas más... Pero, el tiempo no da.
 -->
 
 ---
@@ -188,9 +188,9 @@ transition: slide-right
 # `coherencia + confianza = ciberseguridad`
 
 <!--
-Equipo siempre para explicar qué es la Ciberseguridad, me encanta esta fórmula coherencia + confianza = Ciberseguridad, se ve bastante pragmática; pero, sin esas dos variables inciales no se logra el objetivo; si no somos coherentes en lo que definimos y en los acuerdos que llegamos, independiente del contexto, nos faltaría una parte que es esencial.
+Equipo siempre para explicar qué es la Ciberseguridad, me encanta esta fórmula coherencia + confianza = Ciberseguridad, se ve bastante pragmática; pero, sin esas dos variables iniciales no se logra el objetivo; si no somos coherentes en lo que definimos y en los acuerdos que llegamos, independiente del contexto, nos faltaría una parte que es esencial.
 
-También, la confianza es necesaria garársela tanto de nuestros colaboradores, como de nuestros líderes, de nuestros hijos y seres queridos, de nuestros clientes que depositan sus datos en nuestros productos, escenarios varios y es necesaria para la Ciberseguridad.
+También, la confianza es necesaria ganársela tanto de nuestros colaboradores, como de nuestros líderes, de nuestros hijos y seres queridos, de nuestros clientes que depositan sus datos en nuestros productos, escenarios varios y es vital para la Ciberseguridad.
 
 Cuando se tiene un contexto propicio para estas dos variables, el terreno está un poco más abonado para trabajar todos en el bien común.
 -->
@@ -203,7 +203,9 @@ transition: slide-up
 
 <ph-shield-check-bold text-4xl text-emerald-500 mb-4 />
 
-El conjunto de **prácticas, tecnologías y procesos** diseñados para proteger sistemas informáticos, redes, dispositivos y datos frente a ataques, accesos no autorizados, daños o robos de información.
+<p class="text-center text-2xl leading-relaxed">
+El conjunto de <strong>prácticas, tecnologías y procesos</strong> diseñados para proteger sistemas informáticos, redes, dispositivos y datos frente a ataques, accesos no autorizados, daños o robos de información.
+</p>
 
 <v-click>
 
@@ -216,7 +218,7 @@ Cuando falla, podemos perder **empresas, empleos y hasta afectar a las personas*
 <!--
 Ya siendo un poco más formales, a nivel de término, la ciberseguridad es el conjunto de prácticas, tecnologías y procesos diseñados para proteger sistemas informáticos, redes, dispositivos y datos frente a ataques, accesos no autorizados, daños o robos de información.
 
-Cerremos esto con una pregunta, ¿Por qué importa? ¿Cuánto perdemos si no la implementamos? podemos perder empresas, afectar a personas, empleos y tristemente hasta familiares, porque hay riesgos que pueden afectar la salud mental de muchos de nosotros; así que cuantitativamente saber las pérdidos en algunos escenarios es invaluable.
+Cerremos esto con estas preguntas, ¿Por qué importa? ¿Cuánto perdemos si no la implementamos? podemos perder empresas, afectar a personas, empleos y tristemente hasta familiares, porque hay riesgos que pueden afectar la salud mental de muchos de nosotros; así que cuantitativamente saber las pérdidos en algunos escenarios, es invaluable.
 -->
 
 ---
@@ -260,13 +262,15 @@ Equipo las tres palabras más mencionadas en el contexto de Seguridad de la Info
 
 Confidencialidad, Integridad y Disponibilidad.
 
-Confidencialidad: que solo las personas autorizadas puedan acceder a la información.
-Integridad: que los datos no sean alterados o manipulados sin permiso.
-Disponibilidad: que los sistemas y datos estén accesibles cuando se necesiten.
+Confidencialidad: que solo las personas autorizadas puedan acceder a la información; ejemplificando un poco, muchas personas trabajan en un banco; pero, sólo algunas específicas pueden ingresar al lugar donde se guarda el dinero en efectivo.
 
-Equipo más de memorizar un tema de definición me interesa en este espacio que identifiquemos cuándo se afecta alguna o algunas de las palabras de la CIA.
+Integridad: que los datos no sean alterados o manipulados sin permiso. Solo imagina que ingreses a tu aplicación bancaria y que el saldo sea diferente al que tienes en tu cuenta, sin ninguna manipulación de tu parte o desde tu cuenta, allí hubo una alteración de la integridad.
 
-Hemos desarrollado una herramienta práctica para realizar ejercicios sobre estas tres palabras claves; está disponible en la url o qr que ven en pantalla.he
+Disponibilidad: que los sistemas y datos estén accesibles cuando se necesiten. La típica frase, no tenemos sistema, o está fallando el sistema, cada indisponibilidad del servicio afecta la seguridad de la información.
+
+Equipo, más de memorizar un tema de definición, me interesa en este espacio que identifiquemos cuándo se afecta alguna o algunas de las palabras de la CIA.
+
+Hemos desarrollado una herramienta práctica para realizar ejercicios sobre estas tres palabras claves; está disponible en la url o qr que ven en pantalla.
 
 Es necesario en otro escritorio tener lista la herramienta. Herramienta Tríada CIA realizar tres ejemplos.
 -->
@@ -282,25 +286,25 @@ Con la adopción acelerada de IA, el número de vulnerabilidades encontradas a n
 ### 📊 Aumento de CVEs publicados — Últimos 3 años {.mt-6}
 
 <div class="flex items-end gap-6 mt-4 mx-auto w-fit">
-  <div v-click flex flex-col items-center gap-2>
+  <div flex flex-col items-center gap-2>
     <div bg-sky-500 rounded-t w-16 h-16 />
     <div text-sm font-semibold>2022</div>
     <div text-xs op70>25,081</div>
     <div text-xs op50>— (base)</div>
   </div>
-  <div v-click flex flex-col items-center gap-2>
+  <div flex flex-col items-center gap-2>
     <div bg-sky-500 rounded-t w-16 h-19 />
     <div text-sm font-semibold>2023</div>
     <div text-xs op70>28,902</div>
     <div text-xs text-emerald-500>+15.2%</div>
   </div>
-  <div v-click flex flex-col items-center gap-2>
+  <div flex flex-col items-center gap-2>
     <div bg-amber-500 rounded-t w-16 h-26 />
     <div text-sm font-semibold>2024</div>
     <div text-xs op70>40,009</div>
     <div text-xs text-amber-500>+38.5%</div>
   </div>
-  <div v-click flex flex-col items-center gap-2>
+  <div flex flex-col items-center gap-2>
     <div bg-red-500 rounded-t w-16 h-32 />
     <div text-sm font-semibold>2025</div>
     <div text-xs op70>48,185</div>
@@ -308,7 +312,7 @@ Con la adopción acelerada de IA, el número de vulnerabilidades encontradas a n
   </div>
 </div>
 
-<div v-click text-center font-semibold text-amber-500 mt-4>
+<div text-center font-semibold text-amber-500 mt-4>
 Incremento acumulado 2022 → 2025: +92.1% — casi el doble en tres años.
 </div>
 
@@ -319,11 +323,11 @@ Fuente: CVE.org / MITRE Corporation — Fuente primaria oficial de CVEs — <a h
 <!--
 El Panorama actual de amenazas digitales
 
-Con la adopción acelerada de IA, el número de vulnerabilidades encontradas a nivel de industria **sigue en aumento**. La capacidad de remediación debe crecer al mismo ritmo que el apetito de riesgo se reduce.
+Con la adopción acelerada de la IA, el número de vulnerabilidades encontradas a nivel de industria **sigue en aumento**. La capacidad de remediación debe crecer al mismo ritmo que el apetito de riesgo se reduce.
 
-A nivel mundial con los cambios relacionados a inteligencia artificial, el panorama no es el más positivo; muestra de ello, el aumento de CVEs que son Vulnerabilidades y Exposiciones Comunes, básicamente el código el código que identifica mundialmente una vulnerabilidades, su incremento acumulado da casi el doble en tres año.
+A nivel mundial con los cambios relacionados a inteligencia artificial, el panorama no es el más positivo; muestra de ello, el aumento de CVEs que son Vulnerabilidades y Exposiciones Comunes, básicamente el código que identifica mundialmente una vulnerabilidades, su incremento acumulado da casi el doble en tres años.
 
-Y esto solo teniendo las vulnerabilidades conocidas y que surten el proceso de publicación; muchas aún no las conocemos y son totalmente funcionales en este momento.
+Y esto solo teniendo las vulnerabilidades conocidas y que surten el proceso de publicación; muchas aún no las conocemos y son totalmente dañinas en este momento, sin conocer la cura aún.
 -->
 
 ---
@@ -406,13 +410,15 @@ Continuamos con el módulo 2, amenazas y actores maliciosos.
 </div>
 
 <!--
+Muy aburrida, corrección.
+
 Este es un resumen de las diez amenazas más conocidas que enfrenta cualquier usuario final hoy en día, muchas de las cuales profundizaremos en los siguientes módulos.
 
 Phishing: Correos o mensajes falsos que buscan robar tus credenciales.
 
-Ransomware:Cifra tus archivos y exige un pago para "liberarlos".
+Ransomware: Cifra tus archivos y exige un pago para "liberarlos". Una extorsión cibernética.
 
-Malware:Software malicioso que infecta y daña tus dispositivos.
+Malware: Software malicioso que infecta y daña tus dispositivos; en algunos casos con fines adicionales de robo de información.
 
 Ingeniería socia: Manipulación psicológica para que actúes sin pensar.
 
@@ -443,6 +449,8 @@ Correos o mensajes falsos que buscan robar tus credenciales.
 
 <!--
 Acá podemos ver gráficamente un ejemplo de phishing. Busca obtener credenciales. Patrones para identificar varios, pero nuestro criterio es vital.
+
+¿Cuáles identificas?
 -->
 
 ---
@@ -457,6 +465,10 @@ Cifra tus archivos y exige un pago para "liberarlos".
 
 <img src="/images/modalidad-delictiva-ransomware.webp" class="absolute right-10 top-1/2 -translate-y-1/2 max-h-[80%] rounded shadow-lg border main" />
 
+<!--
+El Ransomware puede ser considerado el ataque que más acabado compañías en el mundo, todos los datos de la operación cifrados, y para acceder debes pagar una cantidad de dinero exorbitante.
+-->
+
 ---
 
 <div class="abs-tl m-10 text-left max-w-120">
@@ -469,6 +481,10 @@ Software malicioso que infecta y daña tus dispositivos.
 
 <img src="/images/modalidad-delictiva-malware.webp" class="absolute right-10 top-1/2 -translate-y-1/2 max-h-[80%] rounded shadow-lg border main" />
 
+<!--
+Instalemos aplicaciones a lo loco, sin precaución y solo porque funcionan, no todo lo "gratis" entre comillas, es gratis, solo instalemos lo necesario y desde el sitio oficial del aplicativo o la tienda de aplicaciones oficial.
+-->
+
 ---
 
 <div class="abs-tl m-10 text-left max-w-120">
@@ -477,10 +493,23 @@ Software malicioso que infecta y daña tus dispositivos.
 
 Manipulación psicológica para que actúes sin pensar.
 
-¿Si te llega un correo con imágenes adjuntas de la infidelidad 
-de tu novio/novia lo abrirías?
+</div>
+
+<div class="absolute inset-0 flex items-center justify-center px-16">
+
+<p class="text-center font-bold w-full max-w-4xl mx-auto" style="font-size: 2.67rem; line-height: 1.15;">
+¿Si te llega un correo con imágenes adjuntas de la infidelidad de tu novio/novia lo abrirías?
+</p>
 
 </div>
+
+<!--
+Esta pregunta me encanta para definir ingeniería social, ¿Si te llega un correo con imágenes adjuntas de la infidelidad de tu pareja lo abrirías?
+
+En varios lugares que he dado conferencias y es un lugar público con varias personas, somos bastante decentes en decir, yo no lo abriría; pero, en un momento estando solos, con bastante trabajos y cosas al tiempo, muy probablemente sí daríamos clic.
+
+En una de mis vidas pasadas, atendí varios incidentes de fraude financiero porque la persona secretaria o contadora que dio clic, que en nuestro contexto, las pequeñas y las medianas empresas esta persona no solo realiza temas administrativos y contables; sino también, acceden a las cuentas bancarias de las compañías, y preciso, no eran fotos de infidelidad; sino, malware de control remoto y captura de información bancarias, para posteriormente realizar transacciones fraudulentas por parte de los ciberdelincuentes.
+-->
 
 ---
 
@@ -493,6 +522,12 @@ Permite interceptar tu tráfico en redes abiertas.
 </div>
 
 <img src="/images/modalidad-delictiva-wifi_mitm.webp" class="absolute right-10 top-1/2 -translate-y-1/2 max-h-[80%] rounded shadow-lg border main" />
+
+<!--
+Wi-Fi público y gratuito, ¿lo mejor, cierto? Eso pensamos y más cuando trabajamos remoto.
+
+No quiero irme por temas técnicos, pero existen técnicas que permiten a un atacante capturar información tuya, mientras navegas.
+-->
 
 ---
 
@@ -509,6 +544,10 @@ Estafas por SMS o llamadas telefónicas.
   <img src="/images/modalidad-delictiva-vishing.webp" class="h-full rounded shadow-lg border main" />
 </div>
 
+<!--
+Los estafadores buscan cualquier canal para conseguir víctimas, y aún les es efectivo enviar mensajes de texto y llamadas telefónicas, estas dos modalidades tienen el mismo propósito, lo único que las diferencia es el canal, smishing para sms y vishing para llamadas telefónicas.
+-->
+
 ---
 
 <div class="abs-tl m-10 text-left max-w-120">
@@ -519,7 +558,17 @@ Uso indebido de tus datos personales para cometer fraude.
 
 </div>
 
-<img src="/images/modalidad-delictiva-whatsapp_robo.webp" class="absolute right-10 top-1/2 -translate-y-1/2 max-h-[80%] rounded shadow-lg border main" />
+<img src="/images/modalidad-delictiva-whatsapp_robo.webp" class="absolute right-32 top-1/2 -translate-y-1/2 max-h-[80%] rounded shadow-lg border main" />
+
+<!--
+Te llaman de soporte técnico de alguno de los productos que tienes, tu servicio de internet, tu suscripción de streaming, el atacante previamente te hizo una investigación previa, en esta suplantación en busca de abro comillas "ayudarte" cierro comillas, con una mejora en el servicio.
+
+En el proceso de validación del soporte te envían un código, el atacante solicita ese código, pero no se para el soporte; sino para instalar tu whatsapp en otro dispositivo, y después de tomar control de él, contactan a tus conocidos con otro tipo de fraudes, robo de información y varios escenarios fraudulentos.
+
+Por ello, activa la verificación en dos pasos disponible en tu cuenta de whatsapp.
+
+Adicionalmente, introduce un correo electrónico de respaldo para poder recuperar tu cuenta si olvidas el PIN.
+-->
 
 ---
 
@@ -533,6 +582,14 @@ Vulnerabilidades conocidas sin parchear, fáciles de explotar.
 
 <img src="/images/modalidad-delictiva-software_desactualizado.webp" class="absolute right-10 top-1/2 -translate-y-1/2 max-h-[80%] rounded shadow-lg border main" />
 
+<!--
+Existen ataques más sofisticados, que no necesariamente tenemos que dar clic, en nuestro día a día utilizamos herramientas que pueden estar desactualizadas, y una desactualización no solo implica afectación en la funcionalidad; sino, una mayor probabilidad de que ese software tenga vulnerabilidades.
+
+La actualización es necesaria y debe ser constante; porque solo imagina que durante años no realicemos un aseo a nuestra casa, un aseo a nuestros baños; de forma analógica las bacterias y enfermedades llegarían.
+
+Así, que dejemos el sistema quieto solo porque funciona, no es la decisión más sensata; y más como vimos anteriormente donde con IA los atacantes buscan vulnerabilidades por donde quieran. Esa limpieza constante en nuestros sistemas es tan necesaria como la de nuestra casa.
+-->
+
 ---
 
 <div class="abs-tl m-10 text-left max-w-120">
@@ -544,6 +601,14 @@ Perfiles falsos, sorteos y enlaces fraudulentos.
 </div>
 
 <img src="/images/modalidad-delictiva-fraude_rrss.webp" class="absolute right-10 top-1/2 -translate-y-1/2 max-h-[80%] rounded shadow-lg border main" />
+
+<!--
+¿Quién no ha tenido un familiar, amigo o conocido que lo estafaron por internet?
+
+Para un atacante es la modalidad que menos conocimientos técnicos requiere, por eso es tan masiva y ha afectado a tantas personas.
+
+Tipos de engaños muchos, mi recomendación principal es piensa antes de dar clic o transferir cuando el producto, servicio o propuesta sea con una ganancia tan absurdamente grande.
+-->
 
 ---
 
@@ -570,11 +635,11 @@ Perfiles falsos, sorteos y enlaces fraudulentos.
 <!--
 Los perfiles del atacante son tres:
 
-Los cibercriminales, que su principal objetivo es ecómico, buscan que la información que obtienen o la afectación que genera se vea representada en términos económicos.
+Los cibercriminales, que su principal objetivo es económico, buscan que la información que obtienen o la afectación que genera se vea representada en términos económicos.
 
-Los Hacktivista, que por motivaciones ideológicas o políticas trasgreden la confidencialidad, integridad y/o dispobilidad de empresas públicas, privadas y de personas.
+Los Hacktivista, que por motivaciones ideológicas o políticas transgreden la confidencialidad, integridad y/o disponibilidad de empresas públicas, privadas y de personas.
 
-El último, el más peligroso y el más complejo de detectar, el insider, puede ser una persona que trabaja contigo todos los días, un proveedor, alguién que está dentro de nuestro entorno. Me encantaría decirte que vivimos en un paraiso; pero no lo es, la realidad es que tristemente hay personas que por intereses personales, resentimientos, emociones, afectan nuestro entorno con malas intensiones.
+El último, el más peligroso y el más complejo de detectar, el insider, puede ser una persona que trabaja contigo todos los días, un proveedor, alguien que está dentro de nuestro entorno. Me encantaría decirte que vivimos en un paraíso; pero no lo es, la realidad es que tristemente hay personas que por intereses personales, resentimientos, emociones, afectan nuestro entorno con malas intenciones.
 -->
 
 ---
@@ -612,7 +677,7 @@ Una herramienta vale más que mil palabras.
 
 Generador de contraseña, vamos a la herramienta.
 
-Esta herramienta permite generar contraseñas con los criterios y longitud que deseemos, entre mayores criterios y mayor longitud mucho mejor, acá podemos identificar criterios en seguridad de las contraseñas, permiten dificultar el descrubrimiento de la contraseña y la no recordación.
+Esta herramienta permite generar contraseñas con los criterios y longitud que deseemos, entre mayores criterios y mayor longitud mucho mejor, acá podemos identificar criterios en seguridad de las contraseñas, permiten dificultar el descubrimiento de la contraseña y la no recordación.
 
 Esta herramienta es una de las que está en mis favoritos, porque para cada sistema que me solicita una contraseña la utilizo, y luego la almaceno en el gestor de contraseña, tema que veremos más adelante.
 
@@ -642,9 +707,9 @@ Otra herramienta relacionada con contraseña; pero esta, es para identificar cu�
 
 Vamos a la herramienta.
 
-Antes de iniciar es importante aclarar que las contraseñas ingresadas, no quedan almacenadas en el servidor ni en la herramienta, todo el procesador se da en tu navegador.
+Antes de iniciar es importante aclarar que las contraseñas ingresadas, no quedan almacenadas en el servidor ni en la herramienta, todo el procesamiento se da en tu navegador.
 
-Ya después de la lavada de manos de poncio pilatos, ingresemos la famosa contraseña 123456, acá podemos observar el tiempo que se tardaría un atacante en conocerla.
+Ya después de la lavada de manos de Poncio Pilatos, ingresemos la famosa contraseña 123456, acá podemos observar el tiempo que se tardaría un atacante en conocerla.
 
 Un ejemplo palpable de la importancia de implementar criterios en seguridad en contraseña como lo vimos en la sesión anterior.
 
@@ -653,7 +718,7 @@ Es necesario en otro escritorio tener listo la herramienta Analizador de Contras
 
 ---
 
-# Un no negociable, el Multi-Factor Authentication
+# Un no negociable: la Autenticación Multifactor (MFA)
 
 <div class="flex items-start justify-center gap-4 mt-16">
 
@@ -694,7 +759,7 @@ Es necesario en otro escritorio tener listo la herramienta Analizador de Contras
 </div>
 
 <div v-click="4" text-center font-semibold text-amber-500 mt-10>
-Sin MFA, una contraseña filtrada es la única barrera entre un atacante y tu cuenta.
+Sin MFA, tu contraseña es la única barrera entre un atacante y tu cuenta — si se filtra, no queda nada más que lo detenga.
 </div>
 
 <!--
@@ -710,12 +775,10 @@ layout: center
 class: text-center
 ---
 
-# Uso de KeePass
-
-Gestor de contraseñas instalado, gratuito y validado por el mercado.
+# Uso de Gestor de Contraseñas
 
 <!--
-Explicación de instalación y funcionamiento de KeePass.
+Explicación de instalación y funcionamiento de un gestor de contraseñas.
 -->
 
 ---
@@ -723,38 +786,10 @@ layout: center
 class: text-center
 ---
 
-# Uso de LastPass
-
-Gestor de contraseñas con capa gratuita en web, con enfoque en accesos administrativos críticos.
+# Uso de Aplicaciones de Multifactor (MFA)
 
 <!--
-Explicación de instalación y funcionamiento de LastPass.
--->
-
----
-layout: center
-class: text-center
----
-
-# Uso de Google Authenticator
-
-Agrega una **segunda capa de verificación** además de la contraseña: un código temporal, una notificación push o una llave física.
-
-<!--
-Explicación de instalación y funcionamiento de Google Authenticator.
--->
-
----
-layout: center
-class: text-center
----
-
-# Uso de Microsoft Authenticator
-
-Agrega una **segunda capa de verificación** además de la contraseña: un código temporal, una notificación push o una llave física.
-
-<!--
-Explicación de instalación y funcionamiento de Microsoft Authenticator.
+Explicación de instalación y funcionamiento de aplicaciones de Multifactor (MFA), como Google Authenticator y Microsoft Authenticator.
 -->
 
 ---
@@ -777,14 +812,10 @@ El penúltimo módulo del curso se enfoca en lo que realizamos principalmente co
 
 <ph-browser-bold text-4xl text-sky-500 mb-4 />
 
-<v-clicks>
-
 - Verifica el **candado y el protocolo HTTPS**
 - Pasa el cursor sobre el enlace antes de hacer clic — ¿el dominio coincide con lo esperado?
 - Desconfía de **acortadores de URL** en mensajes no solicitados
 - Escribe la dirección directamente si tienes dudas, en vez de seguir el enlace
-
-</v-clicks>
 
 ## 🛠️ Herramienta ¿Es seguro este sitio? {.mt-8}
 
@@ -819,14 +850,10 @@ Es necesario en otro escritorio tener listo la herramienta ¿Es Seguro Este Siti
 
 <ph-envelope-bold text-4xl text-sky-500 mb-4 />
 
-<v-clicks>
-
 - Verifica el **remitente real**, no solo el nombre mostrado
 - Desconfía de adjuntos y enlaces que no esperabas
 - No compartas credenciales ni datos sensibles por correo
 - Activa MFA en tu cuenta de correo — es la puerta a todas las demás
-
-</v-clicks>
 
 ## 🛠️ Herramienta Correos Seguros vs. No Seguros {.mt-8}
 
@@ -839,7 +866,7 @@ Es necesario en otro escritorio tener listo la herramienta ¿Es Seguro Este Siti
 </div>
 
 <!--
-Uso seguro del correo electrónico, y equipo, antes de hablas de las protecciones mi mejor sugerencia es realizar una configuración previa de tu correo, con reglas que detecten que si es temas publicitarios, contactos en frio, si te llega un mensaje de alguien o alguna empresa que no te has registrado reporta como spam, porque en la mayoría de los casos son tansos correos y tantos mensajes que damos ese clic por la masividad de los mensajes.
+Uso seguro del correo electrónico, y equipo, antes de hablar de las protecciones mi mejor sugerencia es realizar una configuración previa de tu correo, con reglas que detecten que si es temas publicitarios, contactos en frío, si te llega un mensaje de alguien o alguna empresa que no te has registrado reporta como spam, porque en la mayoría de los casos son tantos correos y tantos mensajes que damos ese clic por la masividad de los mensajes.
 
 Como recomendaciones generales te tenemos:
 
@@ -876,18 +903,18 @@ Una **VPN** cifra tu tráfico de extremo a extremo, incluso en redes que no cont
 </div>
 </div>
 
-<div v-click text-center mt-8 text-sm op70>
+<div text-center mt-8 text-sm op70>
 Tú → 🔒 VPN cifrada 🔒 → Wi-Fi público → Internet
 </div>
 
 <!--
-Que bueno trabajar remoto desde mi cafetería favorita, cierto?
+¡Qué bueno trabajar remoto desde mi cafetería favorita, cierto?
 
-Yo habitualmente que voy a estos sitios trato en lo posible de conectarme desde mis propios datos; pero hay escenarios que es necesario, ya sea por la ubicación o señal de internet.
+Habitualmente, cuando voy a estos sitios, trato en lo posible de conectarme desde mis propios datos; pero hay escenarios que es necesario, ya sea por la ubicación o señal de internet.
 
-Soy precabido en ese escenario, porque conectandome a una red pública o hasta la de mi hogar, un atacante puede conectar a la red y capturar el tráfico de los equipos que están conectado a la red, conocer sitio que visito y hasta obtener los accesos a servicio que uso.
+Soy precavido en ese escenario, porque conectándome a una red pública o hasta la de mi hogar, un atacante puede conectar a la red y capturar el tráfico de los equipos que están conectado a la red, conocer el sitio que visito y hasta obtener los accesos a los servicios que uso.
 
-En esto, la mejor protección es contar con una VPN que es una red virtual privada, que cifra el tráfico desde nuestro dispositivo hasta el sitio que visito, así un atacante captura el tráfico no va a poder leer la información que capturó.
+En esto, la mejor protección es contar con una VPN que es una red virtual privada, que cifra el tráfico desde nuestro dispositivo hasta el sitio que visito, así un atacante que captura el tráfico no va a poder leer la información que capturó.
 
 Trata en lo posible en navegar por VPN en estos sitios públicos, por tus datos, los de tu empresa o familia y por tu privacidad.
 -->
@@ -901,13 +928,13 @@ layout: section
 ## Cultura de Ciberseguridad y Reporte de Incidentes
 
 <!--
-Huy equipo, llegamos al úlitmo módulo de este curso, Cultura de Ciberseguridad y Reporte de Incidentes.
+Huy equipo, llegamos al último módulo de este curso, Cultura de Ciberseguridad y Reporte de Incidentes.
 
 La Cultura es la esencia de nuestro entorno y construirla no es un trabajo trivial, requiere de tiempo y procesos, ya que somos como humano el principal vector de ataque usado por los ciberdelincuentes.
 -->
 
 ---
-transition: fade-out                                          
+transition: fade-out
 ---
 
 # Políticas de seguridad de la organización
@@ -916,24 +943,20 @@ transition: fade-out
 
 Cuando la compañía crece en clientes, colaboradores y proveedores, las políticas ayudan a resolver dudas y dinamizar la cultura de la organización.
 
-<v-clicks>
-
 - Política de Seguridad de la Información
 - Política de Gestión de Accesos
 - Política de Gestión de Concienciación
 - Términos y Condiciones para Colaboradores
 - Política de Gestión de Incidentes
 
-</v-clicks>
-
-<div v-click mt-6 op70 text-sm>
+<div mt-6 op70 text-sm>
 Documentos del SGX (Sistema de Gestión) en <a href="https://kudo.divisioncero.com/sgx/politicas-y-procedimientos" target="_blank">Kudo</a>, nuestro framework de Ciberseguridad — consúltalos si tu compañía ya los tiene, o úsalos como punto de partida si no.
 </div>
 
 <!--
-Equipo en algunos contextos este apartado de política suena a algo arcaico o innecesario, pero toman relevancia cuando la compañía crece en clientes, en colaboradores, proveedores; son tantas las intepretaciones y dudas que esto nos ayuda a dinamizar la cultura de la organización.
+Equipo en algunos contextos este apartado de política suena a algo arcaico o innecesario, pero toman relevancia cuando la compañía crece en clientes, en colaboradores, proveedores; son tantas las interpretaciones y dudas que esto nos ayuda a dinamizar la cultura de la organización.
 
-En una organización que busca procesos y la mejora continua, hemos desarrollado Kudo, es un framework de Ciberseguridad que permite disminuir la curva de aprendizaje de las compañías en materia de Ciberseguridad, este framework tiene varias verticales y una de ella son los documentos del SGX que es el Sistema de Gestión que aplica para varios sistema de gestión, como Calidad, Seguridad de la Información, Riesgos, Continuidad, Inteligencia Artficial, entre otros...
+En una organización que busca procesos y la mejora continua, hemos desarrollado Kudo, es un framework de Ciberseguridad que permite disminuir la curva de aprendizaje de las compañías en materia de Ciberseguridad, este framework tiene varias verticales y una de ellas son los documentos del SGX, el Sistema de Gestión que integra distintos dominios, como Calidad, Seguridad de la Información, Riesgos, Continuidad, Inteligencia Artificial, entre otros...
 
 https://kudo.divisioncero.com/
 https://kudo.divisioncero.com/sgx
@@ -947,7 +970,7 @@ En políticas y procedimientos y con ocasión al curso que estamos realizando es
 - Términos y Condiciones para Colaboradores.
 - Política de Gestión de Incidentes,
 
-Si llegas a una compañías estos son necesarios que los consultes si la compañía cuenta con alguno de ellos; sino, esta propuesta puede ser un gran comienzo.
+Si llegas a una compañía estos son necesarios que los consultes si la compañía cuenta con alguno de ellos; sino, esta propuesta puede ser un gran comienzo.
 
 Es necesario en otro escritorio tener listo kudo mostrar el framework, sgx y luego las políticas y procedimientos.
 -->
@@ -963,30 +986,30 @@ transition: slide-up
 Toda organización debería tener un canal claro para reportar. **Ante la duda, reporta.**
 
 <div grid grid-cols-4 gap-4 mt-8>
-  <div v-click border="~ main rounded" p-4 text-center>
+  <div border="~ main rounded" p-4 text-center>
     <ph-chat-centered-dots-bold text-2xl mx-auto />
     <div mt-2 text-sm>Chat interno</div>
   </div>
-  <div v-click border="~ main rounded" p-4 text-center>
+  <div border="~ main rounded" p-4 text-center>
     <ph-envelope-bold text-2xl mx-auto />
     <div mt-2 text-sm>Correo</div>
   </div>
-  <div v-click border="~ main rounded" p-4 text-center>
+  <div border="~ main rounded" p-4 text-center>
     <ph-headset-bold text-2xl mx-auto />
     <div mt-2 text-sm>Mesa de servicio</div>
   </div>
-  <div v-click border="~ main rounded" p-4 text-center>
+  <div border="~ main rounded" p-4 text-center>
     <ph-users-four-bold text-2xl mx-auto />
     <div mt-2 text-sm>Tu líder o equipo de seguridad</div>
   </div>
 </div>
 
 <!--
-Conocer cómo reportar un incidente de seguridad, como en el contexto empresarial, reportar es necesario y en lo posible, en el menor tiempo posible.
+Conocer cómo reportar un incidente de seguridad es importante; en el contexto empresarial, hacerlo en el menor tiempo posible.
 
 No importa el canal, lo importante es conocerlo y reportar cualquier generación de duda.
 
-Puede ser un chat interno, correo, mesa de servicio o tu línes o equipo de seguridad.
+Puede ser un chat interno, correo, mesa de servicio o tu líder o equipo de seguridad.
 -->
 
 ---
@@ -1043,8 +1066,6 @@ transition: slide-down
 
 <div grid grid-cols-2 gap-x-8 gap-y-2 text-sm mt-6>
 
-<v-clicks>
-
 - ✅ Panorama actual de amenazas digitales
 - ✅ Qué es la Ciberseguridad, por qué importa y tríada CIA
 - ✅ Top 10 amenazas para el usuario final
@@ -1061,8 +1082,6 @@ transition: slide-down
 - ✅ Cómo reportar un incidente
 - ✅ Responsabilidad compartida
 
-</v-clicks>
-
 </div>
 
 <!--
@@ -1077,6 +1096,8 @@ class: text-center
 # ¡Mil gracias! 🤘🏽
 
 No olvides mantener activo el modo **#GanasDeAprender**
+
+<img src="/images/logo-dark-divisioncero.png" class="mt-6 mx-auto h-6" />
 
 <!--
 Mil gracias y no olvides mantener activo el modo #GanasDeAprender

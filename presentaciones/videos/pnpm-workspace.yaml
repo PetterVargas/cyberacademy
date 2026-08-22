@@ -1,0 +1,4 @@
+# Este archivo aísla videos/ como su propio workspace de pnpm,
+# independiente del workspace raíz de presentaciones/.
+onlyBuiltDependencies:
+  - esbuild

@@ -1,0 +1,25 @@
+{
+  "category": "lower-thirds",
+  "duration_s": 15,
+  "fps": 60,
+  "canvas": { "w": 1920, "h": 1080, "aspect": "16:9" },
+  "style": "minimal, single-line, matte gray text — no bar/box, reads as a quiet on-screen credit rather than a branded graphic. Matches this project's own watermark treatment (rgb(132,135,135), weight 500, 0.02em tracking) rather than a loud news-style lower third.",
+  "palette": ["rgb(132, 135, 135)"],
+  "font": "Inter",
+  "beats": [0.5, 14.3, 14.9],
+  "export": "alpha-overlay",
+
+  "asset_needs": [],
+
+  "block": null,
+  "customize": {
+    "note": "Hand-authored — the catalog's lower-third blocks (lower-third-bild, yt-lower-third) are heavily branded (boxes, logos, name-card treatments) and don't match the requested plain watermark-style single line, so this reuses the project's own watermark CSS pattern instead of a registry block."
+  },
+
+  "content": {
+    "name": "Peter Vargas, Profesor.",
+    "role": "+ info petervargas.com",
+    "position": "lower-left",
+    "brand_colors": ["rgb(132, 135, 135)"]
+  }
+}

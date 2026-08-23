@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape" data-fps="60">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #07080a;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      code,
+      pre,
+      .monospace {
+        font-family: "JetBrains Mono", monospace;
+      }
+
+      #bg-gradient {
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(ellipse 60% 50% at 28% 22%, rgba(77, 174, 132, 0.07), transparent 60%),
+          radial-gradient(ellipse 55% 45% at 78% 82%, rgba(57, 178, 152, 0.06), transparent 60%),
+          #07080a;
+      }
+
+      #brand-logo {
+        position: absolute;
+        left: 1490px;
+        top: 460px;
+        width: 788px;
+        height: auto;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      #network-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1920px;
+        height: 1080px;
+      }
+
+      #watermark {
+        position: absolute;
+        right: 48px;
+        bottom: 40px;
+        font-size: 22px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        color: rgb(132, 135, 135);
+        opacity: 0;
+      }
+
+      /* Diagram nodes + edges */
+      .node {
+        position: absolute;
+        width: 256px;
+        height: 160px;
+        opacity: 0;
+      }
+
+      .node-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 18px;
+        background: rgba(20, 27, 25, 0.6);
+        border: 1.5px solid rgba(77, 174, 132, 0.45);
+        border-radius: 14px;
+        box-shadow:
+          0 0 0 1px rgba(77, 174, 132, 0.08),
+          0 18px 40px rgba(0, 0, 0, 0.35),
+          0 0 32px rgba(77, 174, 132, 0.08);
+      }
+
+      .node-inner::before {
+        content: "";
+        position: absolute;
+        left: 20px;
+        top: 16px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: rgb(120, 214, 172);
+        box-shadow: 0 0 10px 2px rgba(120, 214, 172, 0.55);
+      }
+
+      .node-inner::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 3px;
+        border-radius: 14px 14px 0 0;
+        background: rgba(77, 174, 132, 0.85);
+      }
+
+      .node-label {
+        color: #eef2f0;
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 1.25;
+        text-align: center;
+        letter-spacing: 0.005em;
+      }
+
+      .edge {
+        position: absolute;
+        overflow: visible;
+      }
+
+      .node-label.small {
+        font-size: 21px;
+      }
+
+      /* Scene wrapper: exists purely so a whole diagram (nodes + edges) can
+         exit as one rigid group — GSAP animates the wrapper instead of every
+         child individually, so the group slides/fades as a single unit. */
+      .scene-group {
+        position: absolute;
+        inset: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="21.0"
+      data-width="1920"
+      data-height="1080"
+    >
+      <div id="bg-gradient"></div>
+
+      <img
+        id="brand-logo"
+        class="clip"
+        data-start="0"
+        data-duration="21.0"
+        data-track-index="0"
+        src=".media/images/logo_002.svg"
+        alt=""
+      />
+
+      <div id="network-layer" class="clip" data-start="0" data-duration="14.0" data-track-index="1">
+        <canvas id="network-canvas" width="1920" height="1080"></canvas>
+      </div>
+
+      <div id="watermark" class="clip" data-start="0" data-duration="14.0" data-track-index="2">
+        divisioncero.com
+      </div>
+
+      <!--
+        Three scenes, same choreography, different attacker profile each
+        time: attacker node -> motivation node -> one-to-many fan-out to
+        outcome nodes, revealed one at a time. Each scene lives inside its
+        own .scene-group wrapper so it can exit as a single rigid unit
+        (slide up + fade) once it finishes revealing, clearing the screen
+        for the next scene to enter at the same starting position.
+
+        Scene 1 (0.4s-6.2s): Cybercriminales -> Motivación económica ->
+        {Fraude, Robo de datos, Extorsión}. Exits at 5.5s.
+
+        Scene 2 (6.5s-12.3s): Hacktivistas -> Ideología o política ->
+        {Protesta, Ataques de denegación de servicio, Exposición pública}.
+        Exits at 11.6s.
+
+        Scene 3 (12.7s-21.0s): Insiders -> Ya tienen acceso -> {Empleados,
+        Colaboradores, Contratistas, Socios} (four outcomes instead of
+        three, so the fan-out spacing differs from scenes 1-2). Holds to
+        the end of the video — no exit.
+      -->
+
+      <div id="scene-1" class="scene-group">
+
+      <div id="node-1" class="node clip" data-start="0.4" data-duration="8.1" data-track-index="3" style="left: 100px; top: 460px">
+        <div class="node-inner"><div class="node-label">Cybercriminales</div></div>
+      </div>
+
+      <svg id="edge-1" class="edge clip" data-start="1.0" data-duration="7.5" data-track-index="4"
+        style="left: 356px; top: 525px; width: 120px; height: 30px" viewBox="0 0 120 30">
+        <defs>
+          <marker id="arrowhead-1" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+            <path id="arrowhead-1-tip" d="M0,0 L10,5 L0,10 Z" fill="rgba(120, 214, 172, 0.95)" opacity="0" />
+          </marker>
+        </defs>
+        <line x1="4" y1="15" x2="112" y2="15" stroke="rgba(120, 214, 172, 0.85)" stroke-width="3"
+          pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" marker-end="url(#arrowhead-1)" />
+      </svg>
+
+      <div id="node-2" class="node clip" data-start="1.4" data-duration="7.1" data-track-index="5"
+        style="left: 476px; top: 460px; width: 300px">
+        <div class="node-inner"><div class="node-label">Motivación económica</div></div>
+      </div>
+
+      <!-- Branch 1 of 3: Motivación -> Fraude (up-diagonal) -->
+      <svg id="edge-2" class="edge clip" data-start="2.0" data-duration="6.5" data-track-index="6"
+        style="left: 776px; top: 220px; width: 680px; height: 320px" viewBox="0 0 680 320">
+        <defs>
+          <marker id="arrowhead-2" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+            <path id="arrowhead-2-tip" d="M0,0 L10,5 L0,10 Z" fill="rgba(120, 214, 172, 0.95)" opacity="0" />
+          </marker>
+        </defs>
+        <line x1="6" y1="314" x2="674" y2="6" stroke="rgba(120, 214, 172, 0.85)" stroke-width="3"
+          pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" marker-end="url(#arrowhead-2)" />
+      </svg>
+
+      <div id="node-3" class="node clip" data-start="2.4" data-duration="6.1" data-track-index="7"
+        style="left: 1450px; top: 140px; width: 280px">
+        <div class="node-inner"><div class="node-label">Fraude</div></div>
+      </div>
+
+      <!-- Branch 2 of 3: Motivación -> Robo de datos (horizontal) -->
+      <svg id="edge-3" class="edge clip" data-start="3.0" data-duration="5.5" data-track-index="8"
+        style="left: 776px; top: 525px; width: 680px; height: 30px" viewBox="0 0 680 30">
+        <defs>
+          <marker id="arrowhead-3" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+            <path id="arrowhead-3-tip" d="M0,0 L10,5 L0,10 Z" fill="rgba(120, 214, 172, 0.95)" opacity="0" />
+          </marker>
+        </defs>
+        <line x1="6" y1="15" x2="674" y2="15" stroke="rgba(120, 214, 172, 0.85)" stroke-width="3"
+          pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" marker-end="url(#arrowhead-3)" />
+      </svg>
+
+      <div id="node-4" class="node clip" data-start="3.4" data-duration="5.1" data-track-index="9"
+        style="left: 1450px; top: 460px; width: 280px">
+        <div class="node-inner"><div class="node-label">Robo de datos</div></div>
+      </div>
+
+      <!-- Branch 3 of 3: Motivación -> Extorsión (down-diagonal) -->
+      <svg id="edge-4" class="edge clip" data-start="4.0" data-duration="4.5" data-track-index="10"
+        style="left: 776px; top: 540px; width: 680px; height: 320px" viewBox="0 0 680 320">
+        <defs>
+          <marker id="arrowhead-4" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+            <path id="arrowhead-4-tip" d="M0,0 L10,5 L0,10 Z" fill="rgba(120, 214, 172, 0.95)" opacity="0" />
+          </marker>
+        </defs>
+        <line x1="6" y1="6" x2="674" y2="314" stroke="rgba(120, 214, 172, 0.85)" stroke-width="3"
+          pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" marker-end="url(#arrowhead-4)" />
+      </svg>
+
+      <div id="node-5" class="node clip" data-start="4.4" data-duration="4.1" data-track-index="11"
+        style="left: 1450px; top: 780px; width: 280px">
+        <div class="node-inner"><div class="node-label">Extorsión</div></div>
+      </div>
+
+      </div><!-- /#scene-1 -->
+
+      <div id="scene-2" class="scene-group">
+
+      <div id="node-6" class="node clip" data-start="6.5" data-duration="7.5" data-track-index="12"
+        style="left: 100px; top: 460px">
+        <div class="node-inner"><div class="node-label">Hacktivistas</div></div>
+      </div>
+
+      <svg id="edge-5" class="edge clip" data-start="7.1" data-duration="6.9" data-track-index="13"
+        style="left: 356px; top: 525px; width: 120px; height: 30px" viewBox="0 0 120 30">
+        <defs>
+          <marker id="arrowhead-5" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+            <path id="arrowhead-5-tip" d="M0,0 L10,5 L0,10 Z" fill="rgba(120, 214, 172, 0.95)" opacity="0" />
+          </marker>
+        </defs>
+        <line x1="4" y1="15" x2="112" y2="15" stroke="rgba(120, 214, 172, 0.85)" stroke-width="3"
+          pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" marker-end="url(#arrowhead-5)" />
+      </svg>
+
+      <div id="node-7" class="node clip" data-start="7.5" data-duration="6.5" data-track-index="14"
+        style="left: 476px; top: 460px; width: 300px">
+        <div class="node-inner"><div class="node-label">Ideología o política</div></div>
+      </div>
+
+      <!-- Branch 1 of 3: Ideología o política -> Protesta (up-diagonal) -->
+      <svg id="edge-6" class="edge clip" data-start="8.1" data-duration="5.9" data-track-index="15"
+        style="left: 776px; top: 220px; width: 680px; height: 320px" viewBox="0 0 680 320">
+        <defs>
+          <marker id="arrowhead-6" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+            <path id="arrowhead-6-tip" d="M0,0 L10,5 L0,10 Z" fill="rgba(120, 214, 172, 0.95)" opacity="0" />
+          </marker>
+        </defs>
+        <line x1="6" y1="314" x2="674" y2="6" stroke="rgba(120, 214, 172, 0.85)" stroke-width="3"
+          pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" marker-end="url(#arrowhead-6)" />
+      </svg>
+
+      <div id="node-8" class="node clip" data-start="8.5" data-duration="5.5" data-track-index="16"
+        style="left: 1450px; top: 140px; width: 280px">
+        <div class="node-inner"><div class="node-label">Protesta</div></div>
+      </div>
+
+      <!-- Branch 2 of 3: Ideología o política -> Ataques de denegación de servicio (horizontal) -->
+      <svg id="edge-7" class="edge clip" data-start="9.1" data-duration="4.9" data-track-index="17"
+        style="left: 776px; top: 525px; width: 680px; height: 30px" viewBox="0 0 680 30">
+        <defs>
+          <marker id="arrowhead-7" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+            <path id="arrowhead-7-tip" d="M0,0 L10,5 L0,10 Z" fill="rgba(120, 214, 172, 0.95)" opacity="0" />
+          </marker>
+        </defs>
+        <line x1="6" y1="15" x2="674" y2="15" stroke="rgba(120, 214, 172, 0.85)" stroke-width="3"
+          pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" marker-end="url(#arrowhead-7)" />
+      </svg>
+
+      <div id="node-9" class="node clip" data-start="9.5" data-duration="4.5" data-track-index="18"
+        style="left: 1450px; top: 460px; width: 280px">
+        <div class="node-inner"><div class="node-label small">Ataques de denegación de servicio</div></div>
+      </div>
+
+      <!-- Branch 3 of 3: Ideología o política -> Exposición pública (down-diagonal) -->
+      <svg id="edge-8" class="edge clip" data-start="10.1" data-duration="3.9" data-track-index="19"
+        style="left: 776px; top: 540px; width: 680px; height: 320px" viewBox="0 0 680 320">
+        <defs>
+          <marker id="arrowhead-8" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+            <path id="arrowhead-8-tip" d="M0,0 L10,5 L0,10 Z" fill="rgba(120, 214, 172, 0.95)" opacity="0" />
+          </marker>
+        </defs>
+        <line x1="6" y1="6" x2="674" y2="314" stroke="rgba(120, 214, 172, 0.85)" stroke-width="3"
+          pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" marker-end="url(#arrowhead-8)" />
+      </svg>
+
+      <div id="node-10" class="node clip" data-start="10.5" data-duration="3.5" data-track-index="20"
+        style="left: 1450px; top: 780px; width: 280px">
+        <div class="node-inner"><div class="node-label">Exposición pública</div></div>
+      </div>
+
+      </div><!-- /#scene-2 -->
+
+      <div id="node-11" class="node clip" data-start="12.7" data-duration="8.3" data-track-index="21"
+        style="left: 100px; top: 460px">
+        <div class="node-inner"><div class="node-label">Insiders</div></div>
+      </div>
+
+      <svg id="edge-9" class="edge clip" data-start="13.3" data-duration="7.7" data-track-index="22"
+        style="left: 356px; top: 525px; width: 120px; height: 30px" viewBox="0 0 120 30">
+        <defs>
+          <marker id="arrowhead-9" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+            <path id="arrowhead-9-tip" d="M0,0 L10,5 L0,10 Z" fill="rgba(120, 214, 172, 0.95)" opacity="0" />
+          </marker>
+        </defs>
+        <line x1="4" y1="15" x2="112" y2="15" stroke="rgba(120, 214, 172, 0.85)" stroke-width="3"
+          pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" marker-end="url(#arrowhead-9)" />
+      </svg>
+
+      <div id="node-12" class="node clip" data-start="13.7" data-duration="7.3" data-track-index="23"
+        style="left: 476px; top: 460px; width: 300px">
+        <div class="node-inner"><div class="node-label">Ya tienen acceso</div></div>
+      </div>
+
+      <!-- Branch 1 of 4: Ya tienen acceso -> Empleados (up-diagonal, steep) -->
+      <svg id="edge-10" class="edge clip" data-start="14.3" data-duration="6.7" data-track-index="24"
+        style="left: 776px; top: 150px; width: 680px; height: 390px" viewBox="0 0 680 390">
+        <defs>
+          <marker id="arrowhead-10" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+            <path id="arrowhead-10-tip" d="M0,0 L10,5 L0,10 Z" fill="rgba(120, 214, 172, 0.95)" opacity="0" />
+          </marker>
+        </defs>
+        <line x1="6" y1="384" x2="674" y2="6" stroke="rgba(120, 214, 172, 0.85)" stroke-width="3"
+          pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" marker-end="url(#arrowhead-10)" />
+      </svg>
+
+      <div id="node-13" class="node clip" data-start="14.7" data-duration="6.3" data-track-index="25"
+        style="left: 1450px; top: 70px; width: 280px">
+        <div class="node-inner"><div class="node-label">Empleados</div></div>
+      </div>
+
+      <!-- Branch 2 of 4: Ya tienen acceso -> Colaboradores (up-diagonal, shallow) -->
+      <svg id="edge-11" class="edge clip" data-start="15.3" data-duration="5.7" data-track-index="26"
+        style="left: 776px; top: 410px; width: 680px; height: 130px" viewBox="0 0 680 130">
+        <defs>
+          <marker id="arrowhead-11" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+            <path id="arrowhead-11-tip" d="M0,0 L10,5 L0,10 Z" fill="rgba(120, 214, 172, 0.95)" opacity="0" />
+          </marker>
+        </defs>
+        <line x1="6" y1="124" x2="674" y2="6" stroke="rgba(120, 214, 172, 0.85)" stroke-width="3"
+          pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" marker-end="url(#arrowhead-11)" />
+      </svg>
+
+      <div id="node-14" class="node clip" data-start="15.7" data-duration="5.3" data-track-index="27"
+        style="left: 1450px; top: 330px; width: 280px">
+        <div class="node-inner"><div class="node-label">Colaboradores</div></div>
+      </div>
+
+      <!-- Branch 3 of 4: Ya tienen acceso -> Contratistas (down-diagonal, shallow) -->
+      <svg id="edge-12" class="edge clip" data-start="16.3" data-duration="4.7" data-track-index="28"
+        style="left: 776px; top: 540px; width: 680px; height: 130px" viewBox="0 0 680 130">
+        <defs>
+          <marker id="arrowhead-12" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+            <path id="arrowhead-12-tip" d="M0,0 L10,5 L0,10 Z" fill="rgba(120, 214, 172, 0.95)" opacity="0" />
+          </marker>
+        </defs>
+        <line x1="6" y1="6" x2="674" y2="124" stroke="rgba(120, 214, 172, 0.85)" stroke-width="3"
+          pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" marker-end="url(#arrowhead-12)" />
+      </svg>
+
+      <div id="node-15" class="node clip" data-start="16.7" data-duration="4.3" data-track-index="29"
+        style="left: 1450px; top: 590px; width: 280px">
+        <div class="node-inner"><div class="node-label">Contratistas</div></div>
+      </div>
+
+      <!-- Branch 4 of 4: Ya tienen acceso -> Socios (down-diagonal, steep) -->
+      <svg id="edge-13" class="edge clip" data-start="17.3" data-duration="3.7" data-track-index="30"
+        style="left: 776px; top: 540px; width: 680px; height: 390px" viewBox="0 0 680 390">
+        <defs>
+          <marker id="arrowhead-13" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+            <path id="arrowhead-13-tip" d="M0,0 L10,5 L0,10 Z" fill="rgba(120, 214, 172, 0.95)" opacity="0" />
+          </marker>
+        </defs>
+        <line x1="6" y1="6" x2="674" y2="384" stroke="rgba(120, 214, 172, 0.85)" stroke-width="3"
+          pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" marker-end="url(#arrowhead-13)" />
+      </svg>
+
+      <div id="node-16" class="node clip" data-start="17.7" data-duration="3.3" data-track-index="31"
+        style="left: 1450px; top: 850px; width: 280px">
+        <div class="node-inner"><div class="node-label">Socios</div></div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        "use strict";
+
+        var DUR = 21.0;
+        var W = 1920;
+        var H = 1080;
+        var PRIMARY = "77, 174, 132";
+
+        var LINK_DISTANCE = 210;
+        var PARTICLE_COUNT = 140;
+        var PULSE_DURATION = 1.0;
+        var PULSE_INTERVAL = 1.1;
+        var PULSE_MAX_RADIUS = 46;
+
+        // Deterministic hash, pure function of n — no Math.random, no Date.now.
+        // Same shape as the sin-based hash used across the HyperFrames catalog
+        // (e.g. cosmic-orb's h1), so every render and every seek reproduces
+        // identical particle placement, velocity, and phase.
+        function hash(n) {
+          var s = Math.sin(n * 127.1) * 43758.5453;
+          return s - Math.floor(s);
+        }
+
+        var particles = [];
+        for (var i = 0; i < PARTICLE_COUNT; i++) {
+          var base = i * 9.1701;
+          var angle = hash(base + 1.1) * Math.PI * 2;
+          var speed = 10 + hash(base + 2.3) * 22; // px/s — brisker drift than a static field
+          particles.push({
+            x0: hash(base + 0.7) * W,
+            y0: hash(base + 3.9) * H,
+            vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed,
+            r: 1 + hash(base + 5.3) * 2,
+            twinkleSpeed: 0.6 + hash(base + 6.7) * 1.5, // rad/s
+            twinklePhase: hash(base + 8.1) * Math.PI * 2,
+          });
+        }
+
+        function posAt(p, t) {
+          var x = ((p.x0 + p.vx * t) % W + W) % W;
+          var y = ((p.y0 + p.vy * t) % H + H) % H;
+          return { x: x, y: y };
+        }
+
+        var pulseCount = Math.ceil(DUR / PULSE_INTERVAL);
+        var pulses = [];
+        for (var pIdx = 0; pIdx < pulseCount; pIdx++) {
+          var start = 0.4 + pIdx * PULSE_INTERVAL;
+          if (start >= DUR) continue;
+          var targetIndex = Math.floor(hash(pIdx * 97.7 + 4.2) * PARTICLE_COUNT) % PARTICLE_COUNT;
+          var target = particles[targetIndex];
+          var origin = posAt(target, start);
+          pulses.push({ x: origin.x, y: origin.y, start: start });
+        }
+
+        var canvas = document.getElementById("network-canvas");
+        var ctx = canvas.getContext("2d");
+
+        function draw(t) {
+          ctx.clearRect(0, 0, W, H);
+
+          var positions = particles.map(function (p) {
+            return posAt(p, t);
+          });
+
+          for (var a = 0; a < particles.length; a++) {
+            for (var b = a + 1; b < particles.length; b++) {
+              var dx = positions[a].x - positions[b].x;
+              var dy = positions[a].y - positions[b].y;
+              var dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < LINK_DISTANCE) {
+                var alpha = (1 - dist / LINK_DISTANCE) * 0.32;
+                ctx.strokeStyle = "rgba(" + PRIMARY + ", " + alpha + ")";
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(positions[a].x, positions[a].y);
+                ctx.lineTo(positions[b].x, positions[b].y);
+                ctx.stroke();
+              }
+            }
+          }
+
+          for (var i2 = 0; i2 < particles.length; i2++) {
+            var p2 = particles[i2];
+            var pos = positions[i2];
+            var twinkle = 0.6 + Math.sin(t * p2.twinkleSpeed + p2.twinklePhase) * 0.35;
+            ctx.fillStyle = "rgba(" + PRIMARY + ", " + Math.max(0.3, twinkle) + ")";
+            ctx.beginPath();
+            ctx.arc(pos.x, pos.y, p2.r, 0, Math.PI * 2);
+            ctx.fill();
+          }
+
+          for (var pu = 0; pu < pulses.length; pu++) {
+            var pulse = pulses[pu];
+            var elapsed = t - pulse.start;
+            if (elapsed < 0 || elapsed > PULSE_DURATION) continue;
+            var progress = elapsed / PULSE_DURATION;
+            var radius = progress * PULSE_MAX_RADIUS;
+            var pAlpha = (1 - progress) * 0.35;
+            ctx.strokeStyle = "rgba(" + PRIMARY + ", " + pAlpha + ")";
+            ctx.lineWidth = 1.2;
+            ctx.beginPath();
+            ctx.arc(pulse.x, pulse.y, radius, 0, Math.PI * 2);
+            ctx.stroke();
+          }
+        }
+
+        window.__timelines = window.__timelines || {};
+        var tl = gsap.timeline({ paused: true });
+
+        // The canvas repaints from a property SETTER, not onUpdate: gsap's
+        // seek() suppresses events by default, so onUpdate silently never
+        // fires on a scrub and the canvas would freeze on frame 0. Tweened
+        // values are always written during render, suppressed or not.
+        var driver = { _t: 0 };
+        Object.defineProperty(driver, "t", {
+          get: function () {
+            return this._t;
+          },
+          set: function (v) {
+            this._t = v;
+            draw(v);
+          },
+        });
+        tl.to(driver, { t: DUR, duration: DUR, ease: "none" }, 0);
+
+        // Brand mark: large but tenue — off-center to the right, tilted
+        // diagonally (asymmetric on both axes), behind whatever explainer
+        // text/code block sits on top of this base. xPercent/yPercent anchor
+        // the rotation pivot at the mark's own center; x/y then carry the
+        // drift on top of that anchor without fighting it.
+        gsap.set("#brand-logo", { xPercent: -50, yPercent: -50, rotation: 12 });
+        tl.to("#brand-logo", { opacity: 0.0225, duration: 1.0, ease: "power1.out" }, 0);
+        tl.to(
+          "#brand-logo",
+          { x: "+=22", y: "-=18", rotation: "+=5", duration: 4.2, ease: "sine.inOut", yoyo: true, repeat: 1 },
+          0,
+        );
+
+        // Watermark: a quiet fade-in so the frame isn't fully static from t=0,
+        // then it holds — a signature, not a callout.
+        tl.to("#watermark", { opacity: 1, duration: 0.6, ease: "power1.out" }, 0.2);
+
+        // Diagram reveal: each node pops in, then the edge leading to it
+        // draws in (stroke-dashoffset -> 0), so the arrowhead only appears
+        // once the line has fully reached the box. Branches 2-4 (and 6-8)
+        // all originate at their motivation node's edge (a one-to-many
+        // fan-out) and reveal one at a time in sequence. Scene 2 reuses the
+        // exact same relative choreography as scene 1, just shifted to
+        // start once scene 1 has exited.
+        var nodes = [
+          "#node-1", "#node-2", "#node-3", "#node-4", "#node-5",
+          "#node-6", "#node-7", "#node-8", "#node-9", "#node-10",
+          "#node-11", "#node-12", "#node-13", "#node-14", "#node-15", "#node-16",
+        ];
+        var nodeStarts = [
+          0.4, 1.4, 2.4, 3.4, 4.4,
+          6.5, 7.5, 8.5, 9.5, 10.5,
+          12.7, 13.7, 14.7, 15.7, 16.7, 17.7,
+        ];
+        var edges = [
+          "#edge-1", "#edge-2", "#edge-3", "#edge-4",
+          "#edge-5", "#edge-6", "#edge-7", "#edge-8",
+          "#edge-9", "#edge-10", "#edge-11", "#edge-12", "#edge-13",
+        ];
+        var edgeStarts = [1.0, 2.0, 3.0, 4.0, 7.1, 8.1, 9.1, 10.1, 13.3, 14.3, 15.3, 16.3, 17.3];
+
+        nodes.forEach(function (sel, idx) {
+          gsap.set(sel, { transformOrigin: "50% 50%" });
+          tl.fromTo(
+            sel,
+            { opacity: 0, scale: 0.86, y: 14 },
+            { opacity: 1, scale: 1, y: 0, duration: 0.6, ease: "back.out(1.6)" },
+            nodeStarts[idx],
+          );
+        });
+
+        edges.forEach(function (sel, idx) {
+          var drawStart = edgeStarts[idx];
+          tl.to(sel + " line", { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" }, drawStart);
+          // Markers ignore stroke-dasharray/dashoffset entirely, so the
+          // arrowhead is faded in separately, timed to land exactly as the
+          // dash animation finishes drawing the line beneath it.
+          tl.to("#arrowhead-" + (idx + 1) + "-tip", { opacity: 1, duration: 0.16, ease: "power1.in" }, drawStart + 0.34);
+        });
+
+        // Scene transitions: each scene finishes revealing, holds for a
+        // beat, then exits as one rigid group (wrapper slides up past the
+        // top edge + fades out) before the next scene reveals into the same
+        // now-empty screen space. 1100px comfortably clears the lowest
+        // element in either exiting scene well before each tween ends.
+        tl.to("#scene-1", { y: -1100, opacity: 0, duration: 0.7, ease: "power2.in" }, 5.5);
+        tl.to("#scene-2", { y: -1100, opacity: 0, duration: 0.7, ease: "power2.in" }, 11.6);
+
+        tl.seek(0);
+        window.__timelines["main"] = tl;
+      })();
+    </script>
+  </body>
+</html>

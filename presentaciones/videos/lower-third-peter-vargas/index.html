@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es" data-fps="60">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/TextPlugin.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: transparent;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      #lower-third {
+        position: absolute;
+        left: 48px;
+        bottom: 48px;
+        font-size: 22px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        color: rgb(132, 135, 135);
+        white-space: nowrap;
+      }
+
+      #cursor {
+        margin-left: 1px;
+      }
+
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+      }
+      .cursor-blink {
+        animation: blink 0.8s step-end infinite;
+      }
+      .cursor-solid {
+        animation: none;
+        opacity: 1;
+      }
+      .cursor-hide {
+        animation: none;
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="15"
+      data-width="1920"
+      data-height="1080"
+    >
+      <div id="lower-third" class="clip" data-start="0" data-duration="15" data-track-index="0">
+        <span id="typed-text"></span><span id="cursor" class="cursor-blink">|</span>
+      </div>
+    </div>
+
+    <script>
+      gsap.registerPlugin(TextPlugin);
+
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      var TEXT = "Peter Vargas, Profesor, para + info petervargas.com";
+      var typedEl = document.getElementById("typed-text");
+      var cursorEl = document.getElementById("cursor");
+
+      var TYPE_START = 0.3;
+      var TYPE_CPS = 20;
+      var typeDur = TEXT.length / TYPE_CPS;
+      var typeEnd = TYPE_START + typeDur;
+
+      var BACKSPACE_START = 12.3;
+      var BACKSPACE_CPS = 32;
+      var backspaceDur = TEXT.length / BACKSPACE_CPS;
+      var backspaceEnd = BACKSPACE_START + backspaceDur;
+
+      var FADE_START = 14.3;
+
+      // Type in: cursor goes solid, TextPlugin reveals the string at a steady cadence,
+      // cursor returns to idle blink once typing settles.
+      tl.call(() => cursorEl.className = "cursor-solid", [], TYPE_START);
+      tl.to(typedEl, { text: { value: TEXT }, duration: typeDur, ease: "none" }, TYPE_START);
+      tl.call(() => cursorEl.className = "cursor-blink", [], typeEnd);
+
+      // Backspace out: TextPlugin only removes from the front, so the erase runs as
+      // manual substring removal from the end, one character per call.
+      tl.call(() => cursorEl.className = "cursor-solid", [], BACKSPACE_START);
+      for (var i = TEXT.length - 1; i >= 0; i--) {
+        (function (idx) {
+          tl.call(
+            () => (typedEl.textContent = TEXT.slice(0, idx)),
+            [],
+            BACKSPACE_START + (TEXT.length - idx) / BACKSPACE_CPS,
+          );
+        })(i);
+      }
+      tl.call(() => cursorEl.className = "cursor-blink", [], backspaceEnd);
+
+      // Once erased, let the cursor idle-blink briefly, then the whole credit fades away.
+      tl.call(() => cursorEl.className = "cursor-hide", [], FADE_START);
+      tl.to("#lower-third", { opacity: 0, y: -8, duration: 0.5, ease: "power1.in" }, FADE_START);
+
+      tl.seek(0);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape" data-fps="60">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #07080a;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      code,
+      pre,
+      .monospace {
+        font-family: "JetBrains Mono", monospace;
+      }
+
+      #bg-gradient {
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(ellipse 60% 50% at 28% 22%, rgba(77, 174, 132, 0.07), transparent 60%),
+          radial-gradient(ellipse 55% 45% at 78% 82%, rgba(57, 178, 152, 0.06), transparent 60%),
+          #07080a;
+      }
+
+      #brand-logo {
+        position: absolute;
+        left: 1490px;
+        top: 460px;
+        width: 788px;
+        height: auto;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      #network-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1920px;
+        height: 1080px;
+      }
+
+      #watermark {
+        position: absolute;
+        right: 48px;
+        bottom: 40px;
+        font-size: 22px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        color: rgb(132, 135, 135);
+        opacity: 0;
+      }
+
+      #text-content {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+      }
+
+      #def-title {
+        font-style: italic;
+        font-size: 40px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.92);
+        text-align: center;
+        opacity: 0;
+      }
+
+      #def-panel {
+        background: rgba(255, 255, 255, 0.06);
+        border-radius: 12px;
+        padding: 32px 44px;
+        opacity: 0;
+      }
+
+      .def-line-mask {
+        overflow: hidden;
+      }
+
+      .def-line {
+        display: block;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 34px;
+        line-height: 1.55;
+        color: rgb(77, 174, 132);
+        white-space: nowrap;
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="20"
+      data-width="1920"
+      data-height="1080"
+    >
+      <div id="bg-gradient"></div>
+
+      <img
+        id="brand-logo"
+        class="clip"
+        data-start="0"
+        data-duration="20"
+        data-track-index="0"
+        src=".media/images/logo_001.svg"
+        alt=""
+      />
+
+      <div id="network-layer" class="clip" data-start="0" data-duration="20" data-track-index="1">
+        <canvas id="network-canvas" width="1920" height="1080"></canvas>
+      </div>
+
+      <div id="watermark" class="clip" data-start="0" data-duration="20" data-track-index="2">
+        divisioncero.com
+      </div>
+
+      <div id="text-content" class="clip" data-start="0" data-duration="20" data-track-index="3">
+        <div id="def-title">¿Qué es la Ciberseguridad?</div>
+        <div id="def-panel">
+          <div class="def-line-mask"><span class="def-line">El conjunto de prácticas, tecnologías y procesos</span></div>
+          <div class="def-line-mask"><span class="def-line">diseñados para proteger sistemas informáticos,</span></div>
+          <div class="def-line-mask"><span class="def-line">redes, dispositivos y datos frente a ataques,</span></div>
+          <div class="def-line-mask"><span class="def-line">accesos no autorizados, daños o robos de información.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        "use strict";
+
+        var DUR = 20;
+        var W = 1920;
+        var H = 1080;
+        var PRIMARY = "77, 174, 132";
+
+        var LINK_DISTANCE = 210;
+        var PARTICLE_COUNT = 140;
+        var PULSE_DURATION = 1.0;
+        var PULSE_INTERVAL = 1.1;
+        var PULSE_MAX_RADIUS = 46;
+
+        // Deterministic hash, pure function of n — no Math.random, no Date.now.
+        // Same shape as the sin-based hash used across the HyperFrames catalog
+        // (e.g. cosmic-orb's h1), so every render and every seek reproduces
+        // identical particle placement, velocity, and phase.
+        function hash(n) {
+          var s = Math.sin(n * 127.1) * 43758.5453;
+          return s - Math.floor(s);
+        }
+
+        var particles = [];
+        for (var i = 0; i < PARTICLE_COUNT; i++) {
+          var base = i * 9.1701;
+          var angle = hash(base + 1.1) * Math.PI * 2;
+          var speed = 10 + hash(base + 2.3) * 22; // px/s — brisker drift than a static field
+          particles.push({
+            x0: hash(base + 0.7) * W,
+            y0: hash(base + 3.9) * H,
+            vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed,
+            r: 1 + hash(base + 5.3) * 2,
+            twinkleSpeed: 0.6 + hash(base + 6.7) * 1.5, // rad/s
+            twinklePhase: hash(base + 8.1) * Math.PI * 2,
+          });
+        }
+
+        function posAt(p, t) {
+          var x = ((p.x0 + p.vx * t) % W + W) % W;
+          var y = ((p.y0 + p.vy * t) % H + H) % H;
+          return { x: x, y: y };
+        }
+
+        var pulseCount = Math.ceil(DUR / PULSE_INTERVAL);
+        var pulses = [];
+        for (var pIdx = 0; pIdx < pulseCount; pIdx++) {
+          var start = 0.4 + pIdx * PULSE_INTERVAL;
+          if (start >= DUR) continue;
+          var targetIndex = Math.floor(hash(pIdx * 97.7 + 4.2) * PARTICLE_COUNT) % PARTICLE_COUNT;
+          var target = particles[targetIndex];
+          var origin = posAt(target, start);
+          pulses.push({ x: origin.x, y: origin.y, start: start });
+        }
+
+        var canvas = document.getElementById("network-canvas");
+        var ctx = canvas.getContext("2d");
+
+        function draw(t) {
+          ctx.clearRect(0, 0, W, H);
+
+          var positions = particles.map(function (p) {
+            return posAt(p, t);
+          });
+
+          for (var a = 0; a < particles.length; a++) {
+            for (var b = a + 1; b < particles.length; b++) {
+              var dx = positions[a].x - positions[b].x;
+              var dy = positions[a].y - positions[b].y;
+              var dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < LINK_DISTANCE) {
+                var alpha = (1 - dist / LINK_DISTANCE) * 0.32;
+                ctx.strokeStyle = "rgba(" + PRIMARY + ", " + alpha + ")";
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(positions[a].x, positions[a].y);
+                ctx.lineTo(positions[b].x, positions[b].y);
+                ctx.stroke();
+              }
+            }
+          }
+
+          for (var i2 = 0; i2 < particles.length; i2++) {
+            var p2 = particles[i2];
+            var pos = positions[i2];
+            var twinkle = 0.6 + Math.sin(t * p2.twinkleSpeed + p2.twinklePhase) * 0.35;
+            ctx.fillStyle = "rgba(" + PRIMARY + ", " + Math.max(0.3, twinkle) + ")";
+            ctx.beginPath();
+            ctx.arc(pos.x, pos.y, p2.r, 0, Math.PI * 2);
+            ctx.fill();
+          }
+
+          for (var pu = 0; pu < pulses.length; pu++) {
+            var pulse = pulses[pu];
+            var elapsed = t - pulse.start;
+            if (elapsed < 0 || elapsed > PULSE_DURATION) continue;
+            var progress = elapsed / PULSE_DURATION;
+            var radius = progress * PULSE_MAX_RADIUS;
+            var pAlpha = (1 - progress) * 0.35;
+            ctx.strokeStyle = "rgba(" + PRIMARY + ", " + pAlpha + ")";
+            ctx.lineWidth = 1.2;
+            ctx.beginPath();
+            ctx.arc(pulse.x, pulse.y, radius, 0, Math.PI * 2);
+            ctx.stroke();
+          }
+        }
+
+        window.__timelines = window.__timelines || {};
+        var tl = gsap.timeline({ paused: true });
+
+        // The canvas repaints from a property SETTER, not onUpdate: gsap's
+        // seek() suppresses events by default, so onUpdate silently never
+        // fires on a scrub and the canvas would freeze on frame 0. Tweened
+        // values are always written during render, suppressed or not.
+        var driver = { _t: 0 };
+        Object.defineProperty(driver, "t", {
+          get: function () {
+            return this._t;
+          },
+          set: function (v) {
+            this._t = v;
+            draw(v);
+          },
+        });
+        tl.to(driver, { t: DUR, duration: DUR, ease: "none" }, 0);
+
+        // Brand mark: large but tenue — off-center to the right, tilted
+        // diagonally (asymmetric on both axes), behind whatever explainer
+        // text/code block sits on top of this base. xPercent/yPercent anchor
+        // the rotation pivot at the mark's own center; x/y then carry the
+        // drift on top of that anchor without fighting it.
+        gsap.set("#brand-logo", { xPercent: -50, yPercent: -50, rotation: 12 });
+        tl.to("#brand-logo", { opacity: 0.0225, duration: 1.0, ease: "power1.out" }, 0);
+        tl.to(
+          "#brand-logo",
+          { x: "+=22", y: "-=18", rotation: "+=5", duration: 4.2, ease: "sine.inOut", yoyo: true, repeat: 1 },
+          0,
+        );
+
+        // Watermark: a quiet fade-in so the frame isn't fully static from t=0,
+        // then it holds — a signature, not a callout.
+        tl.to("#watermark", { opacity: 1, duration: 0.6, ease: "power1.out" }, 0.2);
+
+        // Definition beat: title settles first, then the code-style panel
+        // appears, then each line reveals through its own mask (a code-editor
+        // "lines appearing" read) — legible well before the halfway mark,
+        // holds through most of the 20s, then a single quiet fade-out.
+        var lines = gsap.utils.toArray("#def-panel .def-line");
+        gsap.set("#def-title", { y: 14 });
+        gsap.set("#def-panel", { scale: 0.97 });
+        gsap.set(lines, { yPercent: 110 });
+
+        tl.to("#def-title", { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }, 0.4);
+        tl.to("#def-panel", { opacity: 1, scale: 1, duration: 0.5, ease: "power2.out" }, 1.1);
+        tl.to(
+          lines,
+          { yPercent: 0, opacity: 1, duration: 0.55, ease: "power3.out", stagger: 0.18 },
+          1.5,
+        );
+
+        tl.to(
+          ["#def-title", "#def-panel"],
+          { opacity: 0, y: -12, duration: 0.8, ease: "power2.in" },
+          18.8,
+        );
+
+        tl.seek(0);
+        window.__timelines["main"] = tl;
+      })();
+    </script>
+  </body>
+</html>

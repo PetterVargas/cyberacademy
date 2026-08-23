@@ -123,6 +123,19 @@ npm run check
 
 Fix all errors before presenting the result. Warnings should be reviewed before rendering.
 
+## Render convention — ALWAYS 60fps
+
+Every video project in this workspace renders at **60fps**. `<html data-fps="60">` in a composition's `index.html` is only a hint — `hyperframes render` does **not** read it, and silently defaults to 30fps when `-f`/`--fps` is omitted. Two things must both be true for a project to actually produce 60fps output:
+
+1. The composition declares `data-fps="60"` on the `<html>` tag (documents intent).
+2. The project's `package.json` `render` script bakes in `-f 60` — e.g. `npx --yes hyperframes@X.Y.Z render -f 60` — so plain `npm run render` is safe by default.
+
+When creating a new project (`hyperframes init`), add `data-fps="60"` and the `-f 60` render flag as part of scaffolding, not as an afterthought. If rendering via the raw CLI instead of `npm run render` (including through the `hyperframes-cli` skill), always pass `-f 60` explicitly. Verify any render before handing it off:
+
+```bash
+ffprobe -v error -select_streams v:0 -show_entries stream=r_frame_rate <file>   # expect 60/1
+```
+
 ## Key Rules
 
 1. Every timed element needs `data-start`, `data-duration`, and `data-track-index`

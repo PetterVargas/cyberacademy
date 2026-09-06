@@ -103,6 +103,7 @@ export function ViewOptions({
           <a
             key={item.href}
             href={item.href}
+            title={item.title}
             rel="noreferrer noopener"
             target="_blank"
             className={cn(optionClass)}

@@ -285,6 +285,7 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/cyberusuario"
+                title="CyberUsuarios: protegernos como usuarios finales"
                 className="group relative flex flex-col items-center gap-3 px-10 py-7 rounded-2xl border border-purple-500/40 bg-gradient-to-br from-purple-500/15 to-purple-600/5 hover:border-purple-400/70 hover:from-purple-500/25 transition-all duration-300 shadow-lg hover:shadow-purple-500/20"
               >
                 <div className="w-14 h-14 rounded-xl bg-purple-500/20 flex items-center justify-center">
@@ -299,6 +300,7 @@ export default function HomePage() {
 
               <Link
                 href="/cyberguardian"
+                title="CyberGuardianes: responsables de la Ciberseguridad"
                 className="group relative flex flex-col items-center gap-3 px-10 py-7 rounded-2xl border border-[#4DAE84]/40 bg-gradient-to-br from-[#4DAE84]/15 to-[#39b298]/5 hover:border-[#4DAE84]/70 hover:from-[#4DAE84]/25 transition-all duration-300 shadow-lg hover:shadow-[#4DAE84]/20"
               >
                 <div className="w-14 h-14 rounded-xl bg-[#4DAE84]/20 flex items-center justify-center">
@@ -347,6 +349,7 @@ export default function HomePage() {
           <div className="roles-cta mt-14 flex justify-center">
             <Link
               href="/que-quieres-aprender-hoy"
+              title="¿Qué quieres aprender hoy?"
               className="group inline-flex items-center gap-3 px-6 py-4 rounded-2xl border border-fd-primary/30 bg-fd-primary/5 hover:border-fd-primary/60 hover:bg-fd-primary/10 transition-all duration-300 shadow-sm hover:shadow-md"
             >
               <Search className="h-5 w-5 text-fd-primary shrink-0" />
@@ -378,6 +381,7 @@ export default function HomePage() {
                 <Link
                   key={domain.slug}
                   href={`/${domain.slug}`}
+                  title={`${domain.name} — ${domain.title}`}
                   className={`domain-card group flex flex-col gap-3 p-6 rounded-xl border bg-gradient-to-br ${domain.color} transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5`}
                 >
                   <div className="flex items-center justify-between">
@@ -416,6 +420,7 @@ export default function HomePage() {
           <div className="flex justify-center">
             <Link
               href="/cyberusuario"
+              title="Cursos CyberUsuario"
               className="group inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-fd-primary-foreground bg-fd-primary hover:bg-fd-primary/90 rounded-xl transition-colors shadow-lg"
             >
               <BookOpen className="h-5 w-5" />
@@ -442,6 +447,7 @@ export default function HomePage() {
           <div className="flex justify-center">
             <a
               href="#cyberguardianes"
+              title="Dominios y Cursos CyberGuardianes"
               className="group inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-white bg-[#4DAE84] hover:bg-[#39b298] rounded-xl transition-colors shadow-lg"
             >
               <Shield className="h-5 w-5" />
@@ -470,6 +476,7 @@ export default function HomePage() {
               href="https://presentaciones.divisioncero.com/"
               target="_blank"
               rel="noopener noreferrer"
+              title="Ver Presentaciones de DivisionCero"
               className="group inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-fd-primary-foreground bg-fd-primary hover:bg-fd-primary/90 rounded-xl transition-colors shadow-lg"
             >
               <Presentation className="h-5 w-5" />

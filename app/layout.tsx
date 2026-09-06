@@ -10,6 +10,27 @@ import 'katex/dist/katex.css';
 
 const title = 'DivisionCero - Simplificando juntos la Ciberseguridad de LatAm';
 const description = 'Aprende Ciberseguridad gratis en español con el Kudo Framework de DivisionCero: cursos para CyberUsuarios y CyberGuardianes cubriendo identidad, infraestructura, aplicaciones, datos e IA, y respuesta a incidentes.';
+const keywords = [
+  'ciberseguridad',
+  'ciberseguridad en español',
+  'cursos de ciberseguridad',
+  'ciberseguridad LatAm',
+  'CyberAcademy',
+  'DivisionCero',
+  'Kudo Framework',
+  'CyberUsuario',
+  'CyberGuardian',
+  'seguridad de la información',
+  'seguridad informática',
+  'phishing',
+  'seguridad de identidad',
+  'seguridad de infraestructura',
+  'seguridad de aplicaciones',
+  'continuidad del negocio',
+  'respuesta a incidentes',
+  'seguridad de datos e inteligencia artificial',
+  'cursos gratis de ciberseguridad',
+];
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -18,6 +39,14 @@ export const metadata: Metadata = {
     template: `%s | ${appName}`,
   },
   description,
+  keywords,
+  authors: [{ name: 'Peter Vargas', url: 'https://petervargas.com' }],
+  creator: 'Peter Vargas',
+  publisher: 'divisioncero.com',
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title,
     description,

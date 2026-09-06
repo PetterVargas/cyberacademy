@@ -1,4 +1,7 @@
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
+import Link from 'fumadocs-core/link';
+import { cn } from '@/lib/cn';
+import { NavLogo } from '@/components/nav-logo';
 import {
   FileTextIcon, LayoutGridIcon,
   Building2Icon, ShieldCheckIcon, CloudIcon, CodeIcon,
@@ -9,46 +12,39 @@ import {
 const signUpUrl = 'https://app.divisioncero.com/auth/sign-up';
 const presentacionesUrl = 'https://presentaciones.divisioncero.com/';
 
+// Mirrors fumadocs-ui's `navItemVariants()` output (fumadocs-ui/layouts/home/slots/header) —
+// that helper is a "use client" export and can't be called from this server-rendered config.
+const navItemMainClass = '[&_svg]:size-4 inline-flex items-center gap-1 p-2 text-fd-muted-foreground transition-colors hover:text-fd-accent-foreground data-[active=true]:text-fd-primary';
+const navItemIconClass = '[&_svg]:size-4 inline-flex items-center justify-center rounded-md p-2 text-sm font-medium transition-colors duration-100 disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fd-ring hover:bg-fd-accent hover:text-fd-accent-foreground p-1.5 [&_svg]:size-5';
+
+const githubIcon = (
+  <svg role="img" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+  </svg>
+);
+
 export const baseOptions: BaseLayoutProps = {
   nav: {
-    title: (
-      <>
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 790 790"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-label="Logo"
-        >
-          <path
-            className="dark:fill-white"
-            transform="translate(746,1)"
-            d="m0 0 13 2 9 4 6 4 8 9 5 11 1 10v591l-1 17-4 10-8 10-8 5-21 7-69 19-212 58-59 16-5 1h-14l-45-12-62-17-117-32-62-17-58-16-16-5-8-4-8-7-6-10-2-6-1-7-1-233v-97l1-233 1-46 4-11 6-8 7-6 10-5 3-1h12l28 7 44 12 73 20 149 41 47 13 11 2 50-14 47-13 225-62zm-39 92-35 9-65 18-166 46-35 10-14 2-31-8-229-63-47-13h-3l-1 177v336l8 3 47 13 132 37 107 30 17 5 8-1 128-35 135-37 37-10 8-3 1-515z"
-            fill="currentColor"
-          />
-          <path
-            className="dark:fill-white"
-            transform="translate(149,219)"
-            d="m0 0h490l14 7 9 9 6 12 2 15v15l-1 20-1 1h-470v221l12 3 119 33 50 14 17 4 13-4 68-19 119-33 69-19 4 1v57l-3 10-6 9-5 5-7 5-27 8-214 60-9 2h-9l-122-34-82-23-42-12-10-6-7-8-6-12-2-11v-291l2-10 7-14 7-7 10-6z"
-            fill="#4DAE84"
-          />
-        </svg>
-        CyberAcademy
-      </>
-    ),
+    title: NavLogo,
   },
   links: [
     {
-      icon: <LayoutGridIcon />,
-      text: 'Cursos',
-      url: '/cursos',
+      type: 'custom',
       secondary: false,
+      children: (
+        <Link href="/cursos" title="Todos los cursos" className={cn(navItemMainClass, 'text-sm')}>
+          Cursos
+        </Link>
+      ),
     },
     {
-      icon: <FileTextIcon />,
-      text: 'CyberUsuario',
-      url: '/cyberusuario',
+      type: 'custom',
       secondary: false,
+      children: (
+        <Link href="/cyberusuario" title="Cursos de CyberUsuario" className={cn(navItemMainClass, 'text-sm')}>
+          CyberUsuario
+        </Link>
+      ),
     },
     {
       type: 'menu',
@@ -59,74 +55,101 @@ export const baseOptions: BaseLayoutProps = {
           text: 'COR — Coherencia Organizacional',
           description: 'Gobernanza y estructura organizacional',
           url: '/cor',
+          menu: { title: 'COR — Coherencia Organizacional' },
         },
         {
           icon: <ShieldCheckIcon />,
           text: 'CIP — Identidad y Puntos Finales',
           description: 'Gestión de identidades y dispositivos',
           url: '/cip',
+          menu: { title: 'CIP — Identidad y Puntos Finales' },
         },
         {
           icon: <CloudIcon />,
           text: 'CIF — Infraestructura',
           description: 'Seguridad en infraestructura y redes',
           url: '/cif',
+          menu: { title: 'CIF — Infraestructura' },
         },
         {
           icon: <CodeIcon />,
           text: 'CAP — Aplicaciones',
           description: 'Desarrollo seguro y AppSec',
           url: '/cap',
+          menu: { title: 'CAP — Aplicaciones' },
         },
         {
           icon: <RefreshCwIcon />,
           text: 'CCN — Continuidad del Negocio',
           description: 'Gestión de cambios y continuidad',
           url: '/ccn',
+          menu: { title: 'CCN — Continuidad del Negocio' },
         },
         {
           icon: <SearchIcon />,
           text: 'ADR — Detección y Respuesta',
           description: 'Detección y respuesta a incidentes',
           url: '/adr',
+          menu: { title: 'ADR — Detección y Respuesta' },
         },
         {
           icon: <UsersIcon />,
           text: 'THP — Talento Humano',
           description: 'Gestión de personas y proveedores',
           url: '/thp',
+          menu: { title: 'THP — Talento Humano' },
         },
         {
           icon: <DatabaseIcon />,
           text: 'DIA — Datos e IA',
           description: 'Protección de datos e inteligencia artificial',
           url: '/dia',
+          menu: { title: 'DIA — Datos e IA' },
         },
       ],
     },
     {
-      icon: <PresentationIcon />,
-      text: 'Presentaciones',
-      url: presentacionesUrl,
+      type: 'custom',
       secondary: false,
-      external: true,
-    },
-    {
-      type: 'icon',
-      url: 'https://github.com/PetterVargas/cyberacademy',
-      text: 'Github',
-      icon: (
-        <svg role="img" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-        </svg>
+      children: (
+        <Link
+          href={presentacionesUrl}
+          external
+          title="Ver Presentaciones de DivisionCero"
+          className={cn(navItemMainClass, 'text-sm')}
+        >
+          Presentaciones
+        </Link>
       ),
-      external: true,
     },
     {
-      icon: <UserIcon />,
-      text: <span className="bg-fd-primary hover:bg-fd-primary/90 dark:bg-fd-primary/80 dark:hover:bg-fd-primary text-fd-primary-foreground rounded-md px-3 py-1 font-bold block md:inline-block">Co-creemos</span>,
-      url: signUpUrl,
+      type: 'custom',
       secondary: true,
+      children: (
+        <Link
+          href="https://github.com/PetterVargas/cyberacademy"
+          external
+          title="Repositorio en GitHub"
+          aria-label="Github"
+          className={cn(navItemIconClass, '-mx-1 first:ms-0 last:me-0')}
+        >
+          {githubIcon}
+        </Link>
+      ),
+    },
+    {
+      type: 'custom',
+      secondary: true,
+      children: (
+        <Link
+          href={signUpUrl}
+          title="Regístrate y co-crea con DivisionCero"
+          className={navItemMainClass}
+        >
+          <UserIcon />
+          <span className="bg-fd-primary hover:bg-fd-primary/90 dark:bg-fd-primary/80 dark:hover:bg-fd-primary text-fd-primary-foreground rounded-md px-3 py-1 font-bold block md:inline-block">Co-creemos</span>
+        </Link>
+      ),
     },
   ],
 };

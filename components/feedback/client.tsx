@@ -133,6 +133,7 @@ export function Feedback({
             <div className="flex flex-row items-center gap-2">
               <a
                 href={previous.response?.githubUrl}
+                title="View on GitHub"
                 rel="noreferrer noopener"
                 target="_blank"
                 className={cn(
@@ -421,6 +422,7 @@ function FeedbackTextForm({
         <div className="flex flex-row items-center gap-2">
           <a
             href={previous.response?.githubUrl}
+            title="View on GitHub"
             rel="noreferrer noopener"
             target="_blank"
             className={cn(

@@ -37,6 +37,7 @@ function CourseCard({ course, color, iconColor }: { course: Course; color: strin
   return (
     <Link
       href={course.url}
+      title={course.title}
       className={`group flex flex-col gap-3 p-5 rounded-xl border bg-gradient-to-br ${color} transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5`}
     >
       <div className="font-semibold text-fd-foreground leading-snug">{course.title}</div>
@@ -90,6 +91,7 @@ export function CursosExplorer({ cyberusuario, domains }: Props) {
         <div className="flex flex-wrap gap-2">
           <a
             href="#cyberusuario"
+            title="Ir a cursos de CyberUsuario"
             className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${cyberusuarioVisual.badge}`}
           >
             <BookOpen className="h-3 w-3" /> CyberUsuario
@@ -101,6 +103,7 @@ export function CursosExplorer({ cyberusuario, domains }: Props) {
               <a
                 key={d.slug}
                 href={`#${d.slug}`}
+                title={`Ir a cursos de ${d.name}`}
                 className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${v.badge}`}
               >
                 <Icon className="h-3 w-3" /> {d.name}

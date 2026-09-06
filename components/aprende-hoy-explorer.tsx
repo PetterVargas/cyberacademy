@@ -179,6 +179,7 @@ function SearchResults({ results, query }: { results: FlatItem[]; query: string 
             <Link
               key={item.url}
               href={item.url}
+              title={item.title}
               className={`group flex flex-col gap-1.5 p-4 rounded-xl border bg-gradient-to-br ${v.color} transition-all hover:shadow-md hover:-translate-y-0.5`}
             >
               <div className="flex items-center gap-2 flex-wrap">
@@ -230,7 +231,7 @@ function BrowseTree({ sections }: { sections: SectionNode[] }) {
                 <details key={curso.url} className={`group rounded-xl border bg-gradient-to-br ${v.color}`}>
                   <summary className="cursor-pointer select-none list-none p-4 flex items-center justify-between gap-3">
                     <div className="min-w-0">
-                      <Link href={curso.url} className="font-semibold text-fd-foreground hover:underline">
+                      <Link href={curso.url} title={curso.title} className="font-semibold text-fd-foreground hover:underline">
                         {curso.title}
                       </Link>
                       <p className="text-sm text-fd-muted-foreground line-clamp-1 mt-0.5">{curso.description}</p>
@@ -241,7 +242,7 @@ function BrowseTree({ sections }: { sections: SectionNode[] }) {
                     {curso.modulos.map((modulo) => (
                       <details key={modulo.url} className="group/mod rounded-lg border border-fd-border/60 bg-fd-background/40">
                         <summary className="cursor-pointer select-none list-none p-3 flex items-center justify-between gap-3">
-                          <Link href={modulo.url} className="text-sm font-medium text-fd-foreground hover:underline">
+                          <Link href={modulo.url} title={modulo.title} className="text-sm font-medium text-fd-foreground hover:underline">
                             {modulo.title}
                           </Link>
                           <ChevronDown className="h-3.5 w-3.5 shrink-0 text-fd-muted-foreground transition-transform group-open/mod:rotate-180" />
@@ -251,6 +252,7 @@ function BrowseTree({ sections }: { sections: SectionNode[] }) {
                             <li key={tema.url}>
                               <Link
                                 href={tema.url}
+                                title={tema.title}
                                 className="block py-1.5 text-sm text-fd-muted-foreground hover:text-fd-foreground transition-colors"
                               >
                                 {tema.title}

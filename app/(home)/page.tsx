@@ -272,11 +272,6 @@ export default function HomePage() {
             </span>
           </h1>
 
-          <p className="gsap-hi text-xl text-fd-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
-            Aprende Ciberseguridad con el marco de referencia de DivisionCero.
-            Elige tu camino y empieza hoy.
-          </p>
-
           {/* ── Escoge el camino ── */}
           <div className="gsap-hi mb-6">
             <p className="text-sm font-semibold tracking-widest uppercase text-fd-muted-foreground mb-6">

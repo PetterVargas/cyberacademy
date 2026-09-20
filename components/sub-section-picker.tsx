@@ -6,7 +6,7 @@ export function SubSectionPicker({ tabs }: { tabs: LayoutTab[] }) {
   return (
     <SidebarTabsDropdown
       options={tabs}
-      placeholder="Seleccionar categoría"
+      placeholder="Seleccionar curso"
     />
   );
 }

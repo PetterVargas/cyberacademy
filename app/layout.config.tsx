@@ -6,7 +6,7 @@ import {
   FileTextIcon, LayoutGridIcon,
   Building2Icon, ShieldCheckIcon, CloudIcon, CodeIcon,
   RefreshCwIcon, SearchIcon, UsersIcon, DatabaseIcon,
-  UserIcon, PresentationIcon,
+  PresentationIcon,
 } from 'lucide-react';
 
 const signUpUrl = 'https://app.divisioncero.com/auth/sign-up';
@@ -144,10 +144,11 @@ export const baseOptions: BaseLayoutProps = {
         <Link
           href={signUpUrl}
           title="Regístrate y co-crea con DivisionCero"
-          className={navItemMainClass}
+          className={cn(navItemMainClass, 'p-0')}
         >
-          <UserIcon />
-          <span className="bg-fd-primary hover:bg-fd-primary/90 dark:bg-fd-primary/80 dark:hover:bg-fd-primary text-fd-primary-foreground rounded-md px-3 py-1 font-bold block md:inline-block">Co-creemos</span>
+          <span className="inline-flex items-center bg-fd-primary hover:bg-fd-primary/90 dark:bg-fd-primary/80 dark:hover:bg-fd-primary text-fd-primary-foreground rounded-md px-3 py-1 font-bold">
+            Co-creemos
+          </span>
         </Link>
       ),
     },

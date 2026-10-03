@@ -4,7 +4,7 @@ const cache = new Map<string, Date | undefined>();
 
 /**
  * Best-effort lastModified from git history for a sitemap entry.
- * Returns undefined (caller falls back to build date) when the repo has no
+ * Returns undefined (the sitemap then omits lastModified) when the repo has no
  * history for the path — e.g. a shallow CI checkout — rather than guessing.
  */
 export function getLastModified(relativePath: string): Date | undefined {

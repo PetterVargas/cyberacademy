@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
 import { Provider } from '@/components/provider';
+import { WhatsAppButton } from '@/components/whatsapp-button';
 import { appName, baseUrl, rssAlternateTypes } from '@/lib/shared';
 import { JsonLd, organizationJsonLd, websiteJsonLd } from '@/lib/json-ld';
 import type { ReactNode } from 'react';
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     siteName: appName,
     url: baseUrl,
     type: 'website',
-    locale: 'es_ES',
+    locale: 'es_419',
   },
   twitter: {
     card: 'summary_large_image',
@@ -112,6 +113,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Provider>
           {children}
         </Provider>
+        <WhatsAppButton />
         <GoogleAnalytics gaId="G-SGPVDMK8ED" />
       </body>
     </html>

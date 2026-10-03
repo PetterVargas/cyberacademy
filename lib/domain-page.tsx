@@ -6,9 +6,10 @@ import { notFound } from 'next/navigation';
 import { getMDXComponents } from '@/components/mdx';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
 import { gitConfig, baseUrl } from '@/lib/shared';
-import { getContentFlowNeighbours } from '@/lib/source';
+import { getContentFlowNeighbours, allDomainSources, cyberusuarioSource, cyberguardianSource } from '@/lib/source';
+import { findDuplicateTitles, getSeoTitleAndDescription } from '@/lib/seo-context';
 import { buildPageMetadata } from '@/lib/metadata';
-import { JsonLd, courseJsonLd, breadcrumbJsonLd } from '@/lib/json-ld';
+import { JsonLd, courseJsonLd, learningResourceJsonLd, breadcrumbJsonLd } from '@/lib/json-ld';
 import { getBreadcrumbItems } from 'fumadocs-core/breadcrumb';
 import type { Metadata } from 'next';
 
@@ -17,6 +18,20 @@ type AnySource = {
   generateParams: () => any;
   getPageTree: () => any;
 };
+
+let duplicateTitles: Set<string> | undefined;
+function getDuplicateTitles() {
+  duplicateTitles ??= findDuplicateTitles(
+    [cyberusuarioSource, cyberguardianSource, ...allDomainSources].flatMap(
+      (source) => source.getPages() as { data: { title: string } }[],
+    ),
+  );
+  return duplicateTitles;
+}
+
+function getSeo(source: AnySource, page: any) {
+  return getSeoTitleAndDescription(page, source.getPageTree(), getDuplicateTitles());
+}
 
 type PageFns = {
   getPageImage: (page: any) => { url: string };
@@ -35,6 +50,7 @@ export async function renderDomainPage(
   const MDX = page.data.body;
   const markdownUrl = fns.getPageMarkdownUrl(page).url;
   const neighbours = getContentFlowNeighbours(page.url);
+  const seo = getSeo(source, page);
   const domainRootUrl = source.getPage([])?.url ?? source.getPage()?.url;
   const breadcrumbItems = [
     { name: 'Inicio', url: baseUrl },
@@ -47,11 +63,16 @@ export async function renderDomainPage(
   return (
     <>
       <JsonLd
-        data={courseJsonLd({
-          name: page.data.title,
-          description: page.data.description,
-          url: `${baseUrl}${page.url}`,
-        })}
+        data={
+          seo.isCourseRoot || !seo.course
+            ? courseJsonLd({ name: seo.title, description: seo.description, url: `${baseUrl}${page.url}` })
+            : learningResourceJsonLd({
+                name: seo.title,
+                description: seo.description,
+                url: `${baseUrl}${page.url}`,
+                courseName: seo.course,
+              })
+        }
       />
       <JsonLd
         data={breadcrumbJsonLd(
@@ -87,9 +108,10 @@ export async function generateDomainMetadata(
 ): Promise<Metadata> {
   const page = source.getPage(slug);
   if (!page) notFound();
+  const seo = getSeo(source, page);
   return buildPageMetadata({
-    title: page.data.title,
-    description: page.data.description,
+    title: seo.title,
+    description: seo.description,
     path: page.url,
     image: fns.getPageImage(page).url,
   });

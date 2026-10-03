@@ -59,6 +59,30 @@ export function courseJsonLd(opts: { name: string; description?: string; url: st
   };
 }
 
+export function learningResourceJsonLd(opts: {
+  name: string;
+  description?: string;
+  url: string;
+  courseName: string;
+}) {
+  const { name, description, url, courseName } = opts;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LearningResource',
+    name,
+    description: description || name,
+    url,
+    inLanguage: 'es',
+    isAccessibleForFree: true,
+    isPartOf: {
+      '@type': 'Course',
+      name: courseName,
+      provider: { '@type': 'EducationalOrganization', name: appName, url: baseUrl },
+    },
+    provider: { '@type': 'EducationalOrganization', name: appName, url: baseUrl },
+  };
+}
+
 export function breadcrumbJsonLd(items: { name: string; url?: string }[]) {
   return {
     '@context': 'https://schema.org',

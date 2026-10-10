@@ -1,4 +1,5 @@
 import { type FileObject, printErrors, scanURLs, validateFiles } from 'next-validate-link';
+import remarkMath from 'remark-math';
 import { cyberusuarioSource, cyberguardianSource, allDomainSources } from '@/lib/source';
 import { domains } from '@/lib/shared';
 
@@ -40,7 +41,7 @@ async function checkLinks() {
   printErrors(
     await validateFiles(files, {
       scanned,
-      markdown: { components: { Card: { attributes: ['href'] } } },
+      markdown: { components: { Card: { attributes: ['href'] } }, remarkPlugins: [remarkMath] },
       checkRelativePaths: 'as-url',
     }),
     true,

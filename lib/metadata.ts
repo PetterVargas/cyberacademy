@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
-import { baseUrl, rssAlternateTypes } from './shared';
+import { appName, baseUrl, homeImageRoute, rssAlternateTypes } from './shared';
 
 // Next.js replaces `openGraph`/`twitter` wholesale per route segment instead of
 // deep-merging with the parent, so every page must restate its own title and
-// description here or it silently falls back to the root layout's.
+// description here or it silently falls back to the root layout's. The same
+// goes for siteName, locale and the fallback image.
 export function buildPageMetadata(opts: {
   title: string;
   description?: string;
@@ -15,6 +16,7 @@ export function buildPageMetadata(opts: {
 }): Metadata {
   const { title, description, path, image, type = 'website', publishedTime, authors } = opts;
   const url = `${baseUrl}${path}`;
+  const images = image ?? homeImageRoute;
 
   return {
     title,
@@ -26,7 +28,9 @@ export function buildPageMetadata(opts: {
       description,
       url,
       type,
-      ...(image ? { images: image } : {}),
+      siteName: appName,
+      locale: 'es_419',
+      images,
       ...(publishedTime ? { publishedTime } : {}),
       ...(authors ? { authors } : {}),
     },
@@ -34,6 +38,7 @@ export function buildPageMetadata(opts: {
       card: 'summary_large_image',
       title,
       description,
+      images,
     },
   };
 }

@@ -2,14 +2,14 @@ import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
 import { Provider } from '@/components/provider';
 import { WhatsAppButton } from '@/components/whatsapp-button';
-import { appName, baseUrl, rssAlternateTypes } from '@/lib/shared';
+import { appName, baseUrl, homeImageRoute, rssAlternateTypes } from '@/lib/shared';
 import { JsonLd, organizationJsonLd, websiteJsonLd } from '@/lib/json-ld';
 import type { ReactNode } from 'react';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import './global.css';
 import 'katex/dist/katex.css';
 
-const title = 'DivisionCero - Simplificando juntos la Ciberseguridad de LatAm';
+const title = 'CyberAcademy: cursos de Ciberseguridad gratis en español';
 const description = 'Aprende Ciberseguridad gratis en español con el Kudo Framework de DivisionCero: cursos para CyberUsuarios y CyberGuardianes cubriendo identidad, infraestructura, aplicaciones, datos e IA, y respuesta a incidentes.';
 const keywords = [
   'ciberseguridad',
@@ -44,10 +44,6 @@ export const metadata: Metadata = {
   authors: [{ name: 'Peter Vargas', url: 'https://petervargas.com' }],
   creator: 'Peter Vargas',
   publisher: 'divisioncero.com',
-  robots: {
-    index: true,
-    follow: true,
-  },
   openGraph: {
     title,
     description,
@@ -55,11 +51,13 @@ export const metadata: Metadata = {
     url: baseUrl,
     type: 'website',
     locale: 'es_419',
+    images: homeImageRoute,
   },
   twitter: {
     card: 'summary_large_image',
     title,
     description,
+    images: homeImageRoute,
   },
   icons: {
     icon: [

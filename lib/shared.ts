@@ -9,6 +9,8 @@ export const rssAlternateTypes = {
   'application/rss+xml': [{ title: appName, url: `${baseUrl}/rss.xml` }],
 };
 
+export const homeImageRoute = '/og/home/image.png';
+
 export const cyberusuarioRoute = '/cyberusuario';
 export const cyberusuarioImageRoute = '/og/cyberusuario';
 export const cyberusuarioContentRoute = '/llms.mdx/cyberusuario';
